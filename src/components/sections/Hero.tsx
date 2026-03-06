@@ -89,7 +89,7 @@ export default function Hero() {
           >
             {[
               ["500+", "Zufriedene Kunden"],
-              ["4.9 ★", "Google Bewertung"],
+              ["5.0 ★", "Google (68 Bewertungen)"],
               ["10+", "Jahre Erfahrung"],
             ].map(([value, label]) => (
               <div key={label}>

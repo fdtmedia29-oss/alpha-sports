@@ -3,6 +3,7 @@ import SocialProof from "@/components/sections/SocialProof";
 import PainPoints from "@/components/sections/PainPoints";
 import HowItWorks from "@/components/sections/HowItWorks";
 import ServicesOverview from "@/components/sections/ServicesOverview";
+import OnlineCoachingTeaser from "@/components/sections/OnlineCoachingTeaser";
 import GroupClasses from "@/components/sections/GroupClasses";
 import StudioGallery from "@/components/sections/StudioGallery";
 import Trainers from "@/components/sections/Trainers";
@@ -17,6 +18,7 @@ export default function Home() {
       <PainPoints />
       <HowItWorks />
       <ServicesOverview />
+      <OnlineCoachingTeaser />
       <GroupClasses />
       <StudioGallery />
       <Trainers />

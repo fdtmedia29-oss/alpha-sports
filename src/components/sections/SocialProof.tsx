@@ -34,8 +34,8 @@ export default function SocialProof() {
           <div className="flex items-center gap-1.5 text-sm font-medium text-dark">
             <span className="text-lg text-amber-500">★</span>
             <span>
-              4.9 auf Google{" "}
-              <span className="text-muted">— 80+ Bewertungen</span>
+              5.0 auf Google{" "}
+              <span className="text-muted">— 68 Bewertungen</span>
             </span>
           </div>
         </div>

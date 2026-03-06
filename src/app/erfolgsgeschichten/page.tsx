@@ -51,11 +51,11 @@ export default function ErfolgsgeschichtenPage() {
 
           <div className="mt-16 rounded-2xl bg-bg-alt p-8 text-center md:p-12">
             <h2 className="text-2xl font-bold text-text">
-              4.9 auf Google — 80+ Bewertungen
+              5.0 auf Google — 68 Bewertungen
             </h2>
             <p className="mt-4 text-text-secondary">
-              Unsere Kunden bewerten uns durchschnittlich mit 4.9 von 5 Sternen.
-              Überzeuge dich selbst.
+              Unsere Kunden bewerten uns mit 5.0 von 5 Sternen.
+              Überzeuge dich selbst auf Google Maps.
             </p>
             <a
               href="https://www.google.com/maps/place/Alpha+Sports"

@@ -116,20 +116,45 @@ export default function KontaktPage() {
                 Kostenloses Beratungsgespräch
               </h2>
               <p className="mt-4 text-text-secondary">
-                30 Minuten, unverbindlich. Wir lernen dich kennen, besprechen
-                deine Ziele und zeigen dir unser Studio. Melde dich per WhatsApp,
-                Telefon oder E-Mail — wir finden einen Termin.
+                Mit dem kostenlosen Beratungsgespräch machst du den ersten
+                Schritt zu deiner Bestform! 30 Minuten, unverbindlich. Melde
+                dich per WhatsApp, Telefon oder E-Mail.
               </p>
 
               <div className="mt-8 rounded-2xl bg-bg-alt p-6">
+                <h3 className="font-semibold text-text">
+                  Was dich erwartet:
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {[
+                    "Kennenlernen",
+                    "Ermittlung des IST-Zustandes",
+                    "Klares Definieren der Ziele",
+                    "Check Up deines Gesundheitszustandes",
+                    "Planung der individuellen Strategie",
+                    "Passendes Angebot",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-text-secondary"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 rounded-2xl bg-bg-alt p-6">
                 <h3 className="font-semibold text-text">
                   Stell dir vorab folgende Fragen:
                 </h3>
                 <ul className="mt-4 space-y-3">
                   {[
                     "Willst du in deinem Leben wirklich etwas verändern?",
-                    "Bist du bereit, dir Zeit für dein Ziel zu nehmen?",
-                    "Hast du ein Budget für deine Gesundheit eingeplant?",
+                    "Wie viel Zeit kannst du dir für dein Ziel pro Woche nehmen?",
+                    "Welches Budget hast du für dein Ziel?",
+                    "Können wir dein Ziel sofort in Angriff nehmen?",
                   ].map((q) => (
                     <li
                       key={q}
@@ -140,10 +165,6 @@ export default function KontaktPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-xs text-muted">
-                  Wenn du alle drei mit Ja beantworten kannst, bist du bei uns
-                  richtig.
-                </p>
               </div>
 
               {/* Google Maps embed */}

@@ -28,18 +28,25 @@ export default function UeberUnsPage() {
                 Unsere Mission
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Deine persönliche Entwicklung steht im Zentrum.
+                Dein Weg zur Bestform beginnt jetzt.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-                Bei Alpha Sports geht es um mehr als Fitness. Wir kombinieren
-                individualisiertes Coaching mit bewährter Strategie für nachhaltige
-                Körpertransformation und funktionelle Performance.
+                Schnell, effektiv & individuell — mit der bewährten Alpha Sports
+                Strategie kommst du ohne Umwege zu deiner ästhetischen Bestform.
+                Gemeinsam entfalten wir dein volles Potenzial und formen deinen
+                Körper — für mehr Stärke, Selbstvertrauen und nachhaltigen
+                Erfolg.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-                In unserem privaten Studio in St. Gallen trainierst du in
-                familiärer Atmosphäre — mit voller Aufmerksamkeit und modernster
-                Diagnostik. Kein anonymes Fitnessstudio, sondern dein persönlicher
-                Trainingsort.
+                Bei Alpha Sports kombinieren wir persönliche Betreuung mit
+                modernster Diagnostik — damit du dich schnell wohlfühlst und
+                sichtbar veränderst. In unserem privaten Studio in St. Gallen
+                trainierst du in familiärer Atmosphäre — mit voller
+                Aufmerksamkeit. Kein anonymes Fitnessstudio, sondern dein
+                persönlicher Trainingsort.
+              </p>
+              <p className="mt-4 text-sm font-semibold uppercase tracking-wider text-orange">
+                Definiert — Kraftvoll — Selbstbewusst
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
@@ -50,6 +57,37 @@ export default function UeberUnsPage() {
                 className="object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Angebot */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 max-w-2xl">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Unser Angebot
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Abnehmen war noch nie so zielgerichtet.
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              "Modernste Leistungsdiagnostik",
+              "Personal Training in privatem Studio",
+              "Persönliche Online-Coachings",
+              "Hybrid-Modell (Studio + Online)",
+              "Gruppenkurse",
+              "Krankenkassen anerkannt (Qualitop, EMR, SwissActive)",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-border bg-white p-6 text-center"
+              >
+                <span className="text-sm font-medium text-text">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -107,6 +145,14 @@ export default function UeberUnsPage() {
       {/* Values */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Unsere Werte
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Was uns ausmacht.
+            </h2>
+          </div>
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
@@ -129,6 +175,34 @@ export default function UeberUnsPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Standorte */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Standorte
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Unsere Studios in St. Gallen.
+            </h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-white p-8 text-center">
+              <h3 className="text-lg font-bold text-text">Studio 1</h3>
+              <p className="mt-2 text-text-secondary">
+                Unterer Graben 21, 9000 St. Gallen
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-white p-8 text-center">
+              <h3 className="text-lg font-bold text-text">Studio 2</h3>
+              <p className="mt-2 text-text-secondary">
+                Rorschacher Str. 59, 9000 St. Gallen
+              </p>
+            </div>
           </div>
         </div>
       </section>

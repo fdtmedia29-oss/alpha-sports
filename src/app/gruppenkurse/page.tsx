@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
-import { Clock, User, Check, Dumbbell, Flame, Heart, Zap, StretchHorizontal } from "lucide-react";
+import { Clock, User, Check, Dumbbell, Flame, Heart, Zap, StretchHorizontal, Baby } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Gruppenkurse",
@@ -19,15 +19,15 @@ const detailedClasses = [
     icon: Flame,
     image: "/images/classes/bootcamp.png",
     shortDescription:
-      "Der energiegeladene Indoor-Gruppenkurs fuer jedes Fitness-Level.",
+      "Der energiegeladene Gruppenkurs fuer jedes Fitness-Level.",
     description:
-      "Unser Bootcamp ist ein hochintensives Gruppentraining mit abwechslungsreichen Uebungen. Kraft-Ausdauer, Herz-Kreislauf-Training, Fettverbrennung und Muskelaufbau stehen im Fokus. Der Nachbrenneffekt haelt bis zu 72 Stunden an — dein Stoffwechsel bleibt angekurbelt, Sauerstoffaufnahme verbessert und Muskeln werden aufgebaut.",
+      "Du willst fit werden, Koerperfett verbrennen und Muskeln aufbauen — aber nicht alleine? Unser Bootcamp ist ein hochintensives Gruppentraining mit abwechslungsreichen Uebungen. Kraft-Ausdauer, Herz-Kreislauf-Training, Fettverbrennung und Muskelaufbau stehen im Fokus. Der Nachbrenneffekt haelt bis zu 72 Stunden an — dein Stoffwechsel bleibt angekurbelt, Sauerstoffaufnahme verbessert und Muskeln werden aufgebaut.",
     highlights: [
-      "Kraft, Ausdauer & Mobilitaet",
+      "Kraft, Ausdauer & Beweglichkeit",
       "Fettverbrennung & Muskelaufbau",
-      "Nachbrenneffekt bis 72 Stunden",
-      "Fuer Anfaenger & Fortgeschrittene",
       "Motivierende Gruppendynamik",
+      "Funktionelles Training",
+      "Musik, Energie & Spass",
     ],
   },
   {
@@ -133,7 +133,7 @@ const pregnancyPrograms = [
     trainer: "Isabell Tatzl",
     schedule: "Sonntags 09:00–10:00",
     description:
-      "Sanfte Kraft- und Beweglichkeitsuebungen, die die Ausdauer foerdern. Beckenbodentraining fuer die Geburtsvorbereitung. Entspannungsuebungen und Atemtechniken. Geschuetzter Raum zum Austausch mit anderen werdenden Muettern. Max. 6 Teilnehmerinnen.",
+      "Sanfte Kraft- und Beweglichkeitsuebungen, die die Ausdauer foerdern. Beckenbodentraining fuer die Geburtsvorbereitung. Uebungen zur Entspannung und Atemtechniken. Geschuetzter Raum zum Austausch mit anderen werdenden Muettern. Max. 6 Teilnehmerinnen.",
     price: "CHF 180 (6 Wochen)",
   },
   {
@@ -260,12 +260,11 @@ export default function GruppenkursePage() {
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-bold text-text">
-            Probetraining kostenlos. Immer.
+            Schnupperstunde kostenlos. Immer.
           </h2>
           <p className="mt-4 text-text-secondary">
-            Egal welcher Kurs — dein erstes Training ist immer kostenlos und
-            unverbindlich. Indoor- und Outdoor-Training moeglich. Komm vorbei und
-            probiere es aus.
+            Egal welcher Kurs — deine erste Schnupperstunde ist immer kostenlos und
+            unverbindlich. Komm vorbei und probiere es aus.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {[
@@ -288,6 +287,7 @@ export default function GruppenkursePage() {
             <h3 className="font-bold text-text">Preise Gruppenkurse</h3>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               {[
+                { name: "Schnupperstunde", price: "Kostenlos" },
                 { name: "Einzeleintritt", price: "CHF 30" },
                 { name: "12er Karte", price: "CHF 324 (CHF 27/Kurs)" },
                 { name: "24er Karte", price: "CHF 600 (CHF 25/Kurs)" },

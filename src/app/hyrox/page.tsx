@@ -6,7 +6,7 @@ import { Zap, Target, Users, Trophy, Dumbbell, Heart, Check } from "lucide-react
 export const metadata: Metadata = {
   title: "HYROX Training",
   description:
-    "HYROX Training und Wettkampfvorbereitung bei Alpha Sports St. Gallen. HYROX365 zertifizierte Trainer. Funktionelle Kraft und Ausdauer. Gruppen- und 1:1-Training. Von Anfaenger bis Wettkampf.",
+    "HYROX Training und Wettkampfvorbereitung bei Alpha Sports St. Gallen. HYROX365 zertifizierte Trainer. Funktionelle Kraft und Ausdauer.",
 };
 
 export default function HyroxPage() {
@@ -14,13 +14,13 @@ export default function HyroxPage() {
     <>
       <PageHero
         badge="HYROX"
-        title="Train. Race. Repeat."
-        description="Der weltweit erste Fitness-Wettkampf — funktionelle Kraft und Ausdauer in einer ultimativen Trainingserfahrung. HYROX-spezifisches Training fuer alle Level."
+        title="Ein Ziel. Eine Challenge. Ein Team, das dich pusht!"
+        description="HYROX ist mehr als nur ein Workout — es ist die perfekte Kombination aus Kraft, Ausdauer und mentaler Staerke."
       />
 
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-16 max-w-3xl">
             <span className="text-sm font-semibold uppercase tracking-widest text-orange">
               Was ist HYROX?
             </span>
@@ -28,35 +28,40 @@ export default function HyroxPage() {
               Der Fitness-Wettkampf fuer alle.
             </h2>
             <p className="mt-4 text-lg text-text-secondary">
-              HYROX kombiniert 8 km Laufen mit 8 funktionellen Workouts — Sled
-              Push, SkiErg, Burpees, Rowing und mehr. Egal ob Anfaenger oder
-              Profi, HYROX ist fuer alle zugaenglich und misst sich an deiner
-              eigenen Zeit. Effektiv, fordernd und motivierend in einer
-              unterstuetzenden Community.
+              HYROX ist mehr als nur ein Workout — es ist die perfekte Kombination
+              aus Kraft, Ausdauer und mentaler Staerke. Dieses einzigartige
+              Wettkampfformat fordert dich mit 8 x 1 km Laufen und 8 intensiven
+              Workouts heraus.
+            </p>
+            <p className="mt-4 text-lg text-text-secondary">
+              Als offizieller HYROX-Partner bieten wir dir die perfekte Vorbereitung
+              auf dieses einzigartige Event. Mit professioneller Betreuung und einer
+              motivierenden Community helfen wir dir, dein volles Potenzial zu
+              entfalten und deine Bestleistung zu erreichen.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                icon: Target,
-                title: "Gezieltes Training",
-                text: "Spezifische Vorbereitung auf alle 8 HYROX-Stationen plus Laufeinheiten. Funktionelle Kraft mit Ausdauer kombiniert.",
-              },
-              {
                 icon: Zap,
-                title: "HYROX365 zertifiziert",
-                text: "Unsere Trainer sind HYROX365 Foundation zertifiziert und kennen jeden Aspekt des Wettkampfs — Luigi und Nicole fuehren dich sicher zum Race Day.",
+                title: "Explosives Workout",
+                text: "HYROX fordert deinen gesamten Koerper — 8 x 1 km Laufen kombiniert mit 8 funktionellen Workouts fuer die ultimative Trainingserfahrung.",
               },
               {
-                icon: Users,
-                title: "Gruppen & 1:1",
-                text: "Trainiere im HYROX-Gruppenkurs fuer Motivation oder 1:1 fuer maximale Performance und individuelle Rennstrategie.",
+                icon: Target,
+                title: "Fight your limits",
+                text: "Geh an deine Grenzen und darueber hinaus. Mentale Staerke aufbauen, Ausdauer pushen und deine persoenliche Bestleistung erreichen.",
               },
               {
                 icon: Trophy,
-                title: "Race Day Ready",
-                text: "Von der Technik bis zur Rennstrategie — wir bereiten dich komplett vor. Lass dich von Gleichgesinnten pushen und ueberschreite deine Grenzen.",
+                title: "Wettkampf Feeling",
+                text: "Von der Technik bis zur Rennstrategie — wir bereiten dich komplett auf den Race Day vor. Strukturierte Wettkampfvorbereitung fuer alle Level.",
+              },
+              {
+                icon: Users,
+                title: "Team Spirit",
+                text: "Lass dich von Gleichgesinnten pushen und ueberschreite deine Grenzen. Motivierende Community und gegenseitige Unterstuetzung.",
               },
             ].map((item) => (
               <div

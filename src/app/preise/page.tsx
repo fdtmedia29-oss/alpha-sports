@@ -7,7 +7,7 @@ import { pricing } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Preise",
   description:
-    "Preise fuer Personal Training, Online Coaching, Gruppenkurse, Analysen, Ernaehrungsberatung und Add-On Pakete bei Alpha Sports St. Gallen. Transparent und fair. Krankenkassen anerkannt.",
+    "Preise fuer Personal Training, Online Coaching, Gruppenkurse, Trainingspakete, Analysen, Ernaehrungsberatung und mehr bei Alpha Sports St. Gallen. Transparent und fair. Krankenkassen anerkannt.",
 };
 
 export default function PreisePage() {
@@ -94,7 +94,7 @@ export default function PreisePage() {
         </div>
       </section>
 
-      {/* Discounted trainers note */}
+      {/* Notes */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2">
@@ -126,11 +126,11 @@ export default function PreisePage() {
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Alle 1:1 Sessions inkl. Protein Shake, Sportgetraenk und Handtuch-Service
+                  Alle 1:1 Sessions inkl. 1 Proteinshake, 1 Sportgetraenk und Handtuchservice
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Verguenstigte Tarife bei Trainern Isabell/David (CHF 10–15 weniger pro Stunde)
+                  Verguenstigte Tarife bei Trainern Isabell und David
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />

@@ -8,7 +8,7 @@ import { Check, Shield, Users, Eye } from "lucide-react";
 export const metadata: Metadata = {
   title: "Ueber uns",
   description:
-    "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Koerpertransformation und funktionelle Performance. Qualitop, EMR und SwissActive zertifiziert.",
+    "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Qualitop, EMR und SwissActive zertifiziert.",
 };
 
 const whatClientsValue = [
@@ -187,22 +187,16 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* Locations */}
+      {/* Location */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-text">Unsere Standorte</h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-border p-6">
-                <h3 className="font-bold text-text">Studio 1</h3>
+            <h2 className="text-2xl font-bold text-text">Unser Standort</h2>
+            <div className="mt-6">
+              <div className="mx-auto max-w-sm rounded-2xl border border-border p-6">
+                <h3 className="font-bold text-text">Studio</h3>
                 <p className="mt-2 text-sm text-text-secondary">
                   Unterer Graben 21, 9000 St. Gallen
-                </p>
-              </div>
-              <div className="rounded-2xl border border-border p-6">
-                <h3 className="font-bold text-text">Studio 2</h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  Rorschacher Str. 59, 9000 St. Gallen
                 </p>
               </div>
             </div>

@@ -6,16 +6,23 @@ import { siteConfig } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontaktiere Alpha Sports St. Gallen. Kostenloses Beratungsgespraech buchen, WhatsApp, Telefon, E-Mail. Unterer Graben 21 & Rorschacher Str. 59, 9000 St. Gallen.",
+    "Kontaktiere Alpha Sports St. Gallen. Kostenloses Beratungsgespraech buchen, WhatsApp, Telefon, E-Mail. Unterer Graben 21, 9000 St. Gallen.",
 };
 
 const consultationSteps = [
-  { step: "01", text: "Kennenlernen — wer bist du und wo stehst du?" },
-  { step: "02", text: "Standortbestimmung — deine aktuelle Situation erfassen" },
-  { step: "03", text: "Zieldefinition — klar formulieren, was du erreichen willst" },
-  { step: "04", text: "Gesundheits-Check — deinen Gesundheitszustand pruefen" },
-  { step: "05", text: "Strategieplanung — einen personalisierten Ansatz entwickeln" },
-  { step: "06", text: "Massgeschneidertes Angebot — das passende Programm fuer dich" },
+  { step: "01", text: "Kennenlernen" },
+  { step: "02", text: "Ermittlung IST-Zustand" },
+  { step: "03", text: "Klares Definieren der Ziele" },
+  { step: "04", text: "Check Up Gesundheitszustand" },
+  { step: "05", text: "Planung individuelle Strategie" },
+  { step: "06", text: "Passendes Angebot" },
+];
+
+const qualificationQuestions = [
+  "Willst du in deinem Leben wirklich etwas veraendern?",
+  "Wie viel Zeit kannst du dir fuer dein Ziel pro Woche nehmen?",
+  "Welches Budget hast du fuer dein Ziel?",
+  "Koennen wir dein Ziel sofort in Angriff nehmen, wenn dir unser Angebot gefaellt?",
 ];
 
 const interestOptions = [
@@ -45,9 +52,9 @@ export default function KontaktPage() {
   return (
     <>
       <PageHero
-        badge="Kontakt"
-        title="Wir freuen uns auf dich."
-        description="Buche ein kostenloses Beratungsgespraech oder schreib uns direkt. Wir melden uns innerhalb von 24 Stunden."
+        badge="Kostenloses Beratungsgespraech"
+        title="Dein erster Schritt zu deiner Bestform."
+        description="Mit dem kostenlosen Beratungsgespraech machst du den ersten Schritt zu deiner Bestform!"
       />
 
       <section className="section-padding bg-white">
@@ -109,21 +116,9 @@ export default function KontaktPage() {
                     <MapPin className="h-5 w-5 text-orange" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted">Studio 1</div>
+                    <div className="text-sm text-muted">Studio</div>
                     <div className="font-semibold text-text">
                       {siteConfig.address}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 rounded-xl border border-border p-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-light">
-                    <MapPin className="h-5 w-5 text-orange" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-muted">Studio 2</div>
-                    <div className="font-semibold text-text">
-                      {siteConfig.addressSecondary}
                     </div>
                   </div>
                 </div>
@@ -160,15 +155,22 @@ export default function KontaktPage() {
                 Kostenloses Beratungsgespraech
               </h2>
               <p className="mt-4 text-text-secondary">
-                Dein erster Schritt zu deiner Bestform. 30 Minuten, unverbindlich.
-                Wir lernen dich kennen, besprechen deine Ziele und entwickeln eine
-                nachhaltige Strategie, die in deinen Alltag passt.
+                Bei diesem Gespraech nehmen wir deine Ziele und deinen
+                Gesundheitszustand ins Visier, um herauszufinden, wo du aktuell
+                stehst. Anhand der gesammelten Daten erarbeiten wir uns eine
+                Strategie, welche du langfristig umsetzen kannst und in deinen
+                Alltag passt. Somit koennen wir dir garantieren, dass du dein Ziel
+                auf schnellstem Weg erreichst.
+              </p>
+              <p className="mt-4 text-text-secondary">
+                Du erhaeltst dann von uns ein individuelles Angebot und die
+                Moeglichkeit, mit der Reise zu deiner besten Version zu starten.
               </p>
 
               {/* What happens in the consultation */}
               <div className="mt-8">
                 <h3 className="font-semibold text-text">
-                  Was dich im Beratungsgespraech erwartet:
+                  Was dich erwartet:
                 </h3>
                 <div className="mt-4 space-y-4">
                   {consultationSteps.map((s) => (
@@ -185,15 +187,10 @@ export default function KontaktPage() {
               {/* Qualification questions */}
               <div className="mt-8 rounded-2xl bg-bg-alt p-6">
                 <h3 className="font-semibold text-text">
-                  Stell dir vorab folgende Fragen:
+                  Stelle dir vorab folgende Fragen:
                 </h3>
                 <ul className="mt-4 space-y-3">
-                  {[
-                    "Willst du in deinem Leben wirklich etwas veraendern?",
-                    "Hast du woechentlich Zeit fuer deine Ziele?",
-                    "Hast du ein Budget fuer deine Gesundheit eingeplant?",
-                    "Bist du bereit, sofort zu starten, wenn das Angebot passt?",
-                  ].map((q) => (
+                  {qualificationQuestions.map((q) => (
                     <li
                       key={q}
                       className="flex items-start gap-2 text-sm text-text-secondary"
@@ -203,10 +200,16 @@ export default function KontaktPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-xs text-muted">
-                  Wenn du alle mit Ja beantworten kannst, bist du bei uns
-                  richtig. Wir bringen dich auf dem schnellsten Weg zu deinem
-                  Ziel.
+              </div>
+
+              {/* CTA */}
+              <div className="mt-8 rounded-2xl border border-orange bg-orange-light/30 p-6">
+                <p className="font-semibold text-text">
+                  Buche jetzt dein kostenloses Beratungsgespraech!
+                </p>
+                <p className="mt-2 text-sm text-text-secondary">
+                  Bevor dir wieder eine Ausrede einfaellt, um deine Gesundheit
+                  einmal mehr aufs naechste Jahr zu verschieben.
                 </p>
               </div>
 

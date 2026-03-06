@@ -20,47 +20,23 @@ export const metadata: Metadata = {
     "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernaehrungsplan, persoenliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von ueberall trainieren.",
 };
 
-const pillars = [
-  {
-    icon: BarChart3,
-    title: "Training",
-    text: "Individueller Trainingsplan, regelmaessige Fortschrittsanalysen und Anpassungen basierend auf deinem Feedback. Du trainierst flexibel — wann und wo du willst.",
-  },
-  {
-    icon: Utensils,
-    title: "Ernaehrung",
-    text: "Alltagstaugliche Ernaehrungsberatung mit strukturiertem Makronaehrstoff-Plan (Protein, Kohlenhydrate, Fette). Keine restriktiven Diaeten — woechentlicher Daten-Review.",
-  },
-  {
-    icon: Moon,
-    title: "Lifestyle",
-    text: "Schlafdauer und -qualitaet verbessern, Stresslevel reduzieren, Energie steigern, Tagesstruktur und Routinen aufbauen — fuer ganzheitliche Ergebnisse.",
-  },
-  {
-    icon: Video,
-    title: "1:1 Support",
-    text: "Video-Calls mit deinem Coach, In-App Chat fuer schnelle Fragen, regelmaessige Dokumentation und gemeinsame Analyse deiner Fortschritte.",
-  },
-];
-
-const forYou = [
-  "Du hast ein Abo, aber keinen Plan",
-  "Du trainierst, siehst aber keine Ergebnisse",
+const problemPoints = [
+  "Du hast ein Abo im Fitnessstudio, aber keinen richtigen Plan",
+  "Du balancierst Job und Familie mit wenig Zeit",
+  "Du trainierst regelmaessig, ohne sichtbare Fortschritte",
   "Du willst von zu Hause oder unterwegs trainieren",
   "Du brauchst klare Ziele und ehrliches Feedback",
-  "Job und Familie lassen wenig Zeit fuers Studio",
-  "Du willst zeiteffiziente Workouts",
-  "Kein Studio in der Naehe oder du bevorzugst Hometraining",
-  "Du brauchst Motivation und einen Fahrplan",
+  "Du brauchst externe Motivation",
+  "Du willst zeiteffizientes Training",
 ];
 
-const sixComponents = [
+const sixFeatures = [
   { icon: MapPin, text: "Flexibles Training von ueberall" },
   { icon: Clock, text: "Maximale Zeiteffizienz" },
   { icon: Utensils, text: "Individuelle Ernaehrung inklusive" },
   { icon: BarChart3, text: "Progress-Tracking" },
-  { icon: Video, text: "Support via App und Video" },
-  { icon: Zap, text: "Standortunabhaengiges Coaching" },
+  { icon: Video, text: "App & Video Coaching" },
+  { icon: Zap, text: "Premium Coaching" },
 ];
 
 export default function OnlineCoachingPage() {
@@ -68,12 +44,38 @@ export default function OnlineCoachingPage() {
     <>
       <PageHero
         badge="Online Coaching"
-        title="Deine Bestform ist nur einen Klick entfernt."
+        title="In 12 Wochen zu deiner Bestform."
         description="12-Wochen intensives 1:1 Online Coaching mit persoenlicher Betreuung via App — Training, Ernaehrung und Lifestyle. Von ueberall."
       />
 
-      {/* What you get */}
+      {/* Problem section */}
       <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+                Kennst du das?
+              </span>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+                Online Coaching ist fuer dich, wenn...
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {problemPoints.map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
+                    <Check className="h-3.5 w-3.5 text-orange" />
+                  </div>
+                  <span className="text-sm text-text-secondary">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6 Key Features */}
+      <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-2xl">
             <span className="text-sm font-semibold uppercase tracking-widest text-orange">
@@ -85,7 +87,7 @@ export default function OnlineCoachingPage() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {sixComponents.map((c) => (
+            {sixFeatures.map((c) => (
               <div
                 key={c.text}
                 className="flex items-center gap-4 rounded-2xl border border-border bg-white p-6 transition-all hover:shadow-lg"
@@ -100,106 +102,8 @@ export default function OnlineCoachingPage() {
         </div>
       </section>
 
-      {/* 4 Pillars */}
-      <section className="section-padding bg-bg-alt">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16 max-w-2xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Das Programm
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-              Ganzheitlich. Nicht nur Training.
-            </h2>
-            <p className="mt-4 text-lg text-text-secondary">
-              Unser Online Coaching verbindet individuelles Training, strukturierte
-              Ernaehrung und Lifestyle-Optimierung — alles zugaenglich ueber eine
-              Coaching-App.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((p) => (
-              <div
-                key={p.title}
-                className="rounded-2xl border border-border bg-white p-8 transition-all hover:shadow-lg"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-light">
-                  <p.icon className="h-5 w-5 text-orange" />
-                </div>
-                <h3 className="mt-6 text-lg font-bold text-text">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                  {p.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
-                So laeuft es ab
-              </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                12 Wochen, die alles veraendern.
-              </h2>
-              <div className="mt-8 space-y-6">
-                {[
-                  {
-                    step: "01",
-                    text: "Kostenloses Beratungsgespraech — Ziele, Alltag, Erwartungen klaeren",
-                  },
-                  {
-                    step: "02",
-                    text: "Individueller Plan — Training, Ernaehrung, Lifestyle auf dich abgestimmt",
-                  },
-                  {
-                    step: "03",
-                    text: "Woechentliche Check-ins — Fortschritt messen, Daten reviewen, Plan anpassen",
-                  },
-                  {
-                    step: "04",
-                    text: "Regelmaessige Dokumentation — Progress-Fotos, Koerpermasse, Gewicht",
-                  },
-                  {
-                    step: "05",
-                    text: "Ergebnisse feiern — sichtbare Veraenderung in 12 Wochen",
-                  },
-                ].map((s) => (
-                  <div key={s.step} className="flex gap-4">
-                    <span className="text-2xl font-black text-orange">
-                      {s.step}
-                    </span>
-                    <p className="pt-1 text-text-secondary">{s.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="mb-6 text-lg font-bold text-text">
-                Online Coaching ist fuer dich, wenn...
-              </h3>
-              <div className="space-y-4">
-                {forYou.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
-                      <Check className="h-3.5 w-3.5 text-orange" />
-                    </div>
-                    <span className="text-sm text-text-secondary">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Packages */}
-      <section className="section-padding bg-bg-alt">
+      <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-orange">
@@ -282,14 +186,14 @@ export default function OnlineCoachingPage() {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted">
-            Optional: Umwandlung in ein Hybrid-Programm moeglich — kombiniere Online
-            Coaching mit Sessions vor Ort im Studio.
+            Optional koennen alle Online Programme in Hybrid Programme umgewandelt
+            werden.
           </p>
         </div>
       </section>
 
       {/* Progress tracking */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-3xl text-center">
           <div className="flex justify-center">
             <Smartphone className="h-12 w-12 text-orange" />
@@ -303,25 +207,6 @@ export default function OnlineCoachingPage() {
             uebersichtlich, motivierend. Regelmaessige Dokumentation und gemeinsame
             Analyse.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {[
-              "Progress-Fotos",
-              "Koerpermasse",
-              "Gewichtstracking",
-              "Chat mit Coach",
-              "Trainingsplan",
-              "Ernaehrungsplan",
-              "Video-Calls",
-              "Daten-Reviews",
-            ].map((f) => (
-              <span
-                key={f}
-                className="rounded-full bg-bg-alt px-4 py-2 text-sm font-medium text-text-secondary"
-              >
-                {f}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 

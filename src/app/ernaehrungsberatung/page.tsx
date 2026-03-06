@@ -1,44 +1,35 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
-import { Check, Leaf, BarChart3, Utensils, Heart, Star, Smartphone } from "lucide-react";
+import { Check, Leaf, BarChart3, Utensils, Heart, Star, Smartphone, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Ernaehrungsberatung",
   description:
-    "Professionelle Ernaehrungsberatung in St. Gallen. Massgeschneiderte Ernaehrungsplaene fuer Abnehmen, Muskelaufbau und Wohlbefinden. Messbasierte Strategien, individuelle Rezepte, Tracking-App. Qualitop zertifiziert.",
+    "Professionelle Ernaehrungsberatung in St. Gallen. Massgeschneiderte Ernaehrungsplaene fuer Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",
 };
 
-const features = [
+const keyBenefits = [
   {
-    icon: Utensils,
-    title: "Alltagstauglich",
-    text: "Keine Crash-Diaeten. Ernaehrungsplaene, die in deinen Alltag passen und langfristig funktionieren. Schluss mit Diaet-Mythen und Verzicht.",
+    icon: Heart,
+    title: "Gesund abnehmen & wohlfuehlen",
+    text: "Nachhaltige Ernaehrungsstrategien, die in deinen Alltag passen. Kein Verzicht, keine Crash-Diaeten — sondern ein klarer Plan fuer deine Bestform.",
   },
   {
-    icon: BarChart3,
-    title: "Messbasiert",
+    icon: Utensils,
+    title: "Individuelle Ernaehrungsplaene",
     text: "Basierend auf deinen persoenlichen Messdaten, Grundumsatz und Energiebedarf — keine Ratespiele. Individuelle Makronaehrstoff-Verteilung berechnet.",
   },
   {
-    icon: Leaf,
-    title: "Nachhaltig",
-    text: "Lerne, wie Ernaehrung funktioniert. Wir geben dir das Wissen, Sport- und Alltagsernaehrung langfristig selbststaendig umzusetzen.",
+    icon: Zap,
+    title: "Stoffwechsel-Optimierung",
+    text: "Verstehe, wie dein Koerper arbeitet. Mit gezielter Stoffwechselanalyse optimieren wir deine Ernaehrung fuer maximale Energie und Effizienz.",
   },
   {
-    icon: Heart,
-    title: "Mehr Energie & Selbstvertrauen",
+    icon: Leaf,
+    title: "Mehr Energie",
     text: "Neues Koerperbewusstsein, mehr Energie, besserer Schlaf, weniger Stress — gute Ernaehrung veraendert alles. Erreiche deine koerperliche Bestform.",
   },
-];
-
-const benefits = [
-  "Mehr Energie und Selbstvertrauen",
-  "Neues Koerperbewusstsein",
-  "Sport- und Alltagsernaehrung langfristig umsetzen",
-  "Koerperliche Bestform erreichen",
-  "Schluss mit Diaeten und Ernaehrungsmythen",
-  "Persoenliche Coaching-Unterstuetzung",
 ];
 
 export default function ErnaehrungsberatungPage() {
@@ -47,28 +38,39 @@ export default function ErnaehrungsberatungPage() {
       <PageHero
         badge="Ernaehrungsberatung"
         title="Dein Schluessel zur nachhaltigen Veraenderung."
-        description="Koerperfett reduzieren, Muskeln aufbauen, dich wohlfuehlen — alles beginnt mit der richtigen Ernaehrung. Ohne Verzicht, ohne Diaet-Mythen — mit einem klaren Plan."
+        description="Entdecke, wie eine gezielte Ernaehrungsstrategie dein Leben veraendern kann."
       />
 
+      {/* Intro */}
       <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-lg leading-relaxed text-text-secondary">
+              Entdecke, wie eine gezielte Ernaehrungsstrategie dein Leben veraendern
+              kann. Mit unserer individuellen Beratung optimierst du deinen
+              Stoffwechsel, erreichst deine Fitnessziele und findest die perfekte
+              Balance fuer Gesundheit und Wohlbefinden. Egal, ob Fettabbau,
+              Muskelaufbau oder einfach mehr Energie — wir begleiten dich Schritt
+              fuer Schritt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits */}
+      <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-2xl">
             <span className="text-sm font-semibold uppercase tracking-widest text-orange">
               Unser Ansatz
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-              Kein Verzicht. Nur Strategie.
+              Was dich erwartet.
             </h2>
-            <p className="mt-4 text-lg text-text-secondary">
-              Unsere Ernaehrungsberatung hilft dir, Koerperfett zu reduzieren,
-              Muskeln effizienter aufzubauen und gesund zu essen — trotz vollem
-              Alltag. Messbasierte Strategien statt Schaetzungen, individuell auf
-              dich abgestimmt und wissenschaftlich fundiert.
-            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => (
+            {keyBenefits.map((f) => (
               <div
                 key={f.title}
                 className="rounded-2xl border border-border bg-white p-8 transition-all hover:shadow-lg"
@@ -82,61 +84,6 @@ export default function ErnaehrungsberatungPage() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits and what's included */}
-      <section className="section-padding bg-bg-alt">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-                Das erreichst du
-              </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Mehr als nur Ernaehrungsplaene.
-              </h2>
-              <p className="mt-4 text-lg text-text-secondary">
-                Egal wo du gerade stehst — ob du deine Fitnessreise gerade erst
-                beginnst oder schon mehrere Ansaetze ausprobiert hast. Wir holen
-                dich ab und begleiten dich zum Ziel.
-              </p>
-              <div className="mt-8 space-y-4">
-                {benefits.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
-                      <Check className="h-3.5 w-3.5 text-orange" />
-                    </div>
-                    <span className="text-sm font-medium text-text">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="mb-6 text-lg font-bold text-text">
-                Was beinhaltet die Beratung?
-              </h3>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  "Persoenliche Messdaten-Erfassung",
-                  "Grundumsatz & Energiebedarf berechnen",
-                  "Individuelle Makronaehrstoff-Verteilung",
-                  "Grosse Auswahl individueller Rezepte",
-                  "Alpha Sports Tracking-App Zugang",
-                  "Trainingsempfehlungen",
-                  "Ernaehrungsdossier",
-                  "Kombination mit Training moeglich",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
-                      <Check className="h-3.5 w-3.5 text-orange" />
-                    </div>
-                    <span className="text-sm font-medium text-text">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -187,7 +134,7 @@ export default function ErnaehrungsberatungPage() {
                 <Star className="h-3 w-3" />
                 Empfohlen
               </div>
-              <h3 className="text-xl font-bold text-text">Shape Light Paket</h3>
+              <h3 className="text-xl font-bold text-text">Shape Light</h3>
               <div className="mt-2 flex items-baseline gap-1">
                 <span className="text-sm text-muted">CHF</span>
                 <span className="text-3xl font-black text-text">592.40</span>

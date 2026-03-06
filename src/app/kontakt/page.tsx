@@ -1,13 +1,45 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Check } from "lucide-react";
 import { siteConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontaktiere Alpha Sports St. Gallen. Kostenloses Beratungsgespräch buchen, WhatsApp, Telefon, E-Mail. Unterer Graben 21, 9000 St. Gallen.",
+    "Kontaktiere Alpha Sports St. Gallen. Kostenloses Beratungsgespraech buchen, WhatsApp, Telefon, E-Mail. Unterer Graben 21 & Rorschacher Str. 59, 9000 St. Gallen.",
 };
+
+const consultationSteps = [
+  { step: "01", text: "Kennenlernen — wer bist du und wo stehst du?" },
+  { step: "02", text: "Standortbestimmung — deine aktuelle Situation erfassen" },
+  { step: "03", text: "Zieldefinition — klar formulieren, was du erreichen willst" },
+  { step: "04", text: "Gesundheits-Check — deinen Gesundheitszustand pruefen" },
+  { step: "05", text: "Strategieplanung — einen personalisierten Ansatz entwickeln" },
+  { step: "06", text: "Massgeschneidertes Angebot — das passende Programm fuer dich" },
+];
+
+const interestOptions = [
+  "Beratungsgespraech",
+  "Probetraining",
+  "Personal Training",
+  "Gruppenkurs",
+  "HYROX",
+  "Schwangerschaftscoaching",
+  "Schwangerschaftskurs",
+  "Ernaehrungscoaching",
+  "Analyse",
+  "Massagen",
+  "Frau-zu-Frau Personal Training",
+  "Geschenkgutschein",
+];
+
+const goalOptions = [
+  "Gewicht reduzieren",
+  "Schmerzfrei werden",
+  "Muskeln aufbauen",
+  "Sportartspezifisch trainieren",
+  "Fit & gesund durch die Schwangerschaft",
+];
 
 export default function KontaktPage() {
   return (
@@ -15,7 +47,7 @@ export default function KontaktPage() {
       <PageHero
         badge="Kontakt"
         title="Wir freuen uns auf dich."
-        description="Buche ein kostenloses Beratungsgespräch oder schreib uns direkt. Wir melden uns innerhalb von 24 Stunden."
+        description="Buche ein kostenloses Beratungsgespraech oder schreib uns direkt. Wir melden uns innerhalb von 24 Stunden."
       />
 
       <section className="section-padding bg-white">
@@ -77,9 +109,21 @@ export default function KontaktPage() {
                     <MapPin className="h-5 w-5 text-orange" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted">Studio</div>
+                    <div className="text-sm text-muted">Studio 1</div>
                     <div className="font-semibold text-text">
                       {siteConfig.address}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 rounded-xl border border-border p-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-light">
+                    <MapPin className="h-5 w-5 text-orange" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted">Studio 2</div>
+                    <div className="font-semibold text-text">
+                      {siteConfig.addressSecondary}
                     </div>
                   </div>
                 </div>
@@ -110,51 +154,45 @@ export default function KontaktPage() {
               </div>
             </div>
 
-            {/* Map & Booking */}
+            {/* Booking & Consultation */}
             <div>
               <h2 className="text-2xl font-bold text-text">
-                Kostenloses Beratungsgespräch
+                Kostenloses Beratungsgespraech
               </h2>
               <p className="mt-4 text-text-secondary">
-                Mit dem kostenlosen Beratungsgespräch machst du den ersten
-                Schritt zu deiner Bestform! 30 Minuten, unverbindlich. Melde
-                dich per WhatsApp, Telefon oder E-Mail.
+                Dein erster Schritt zu deiner Bestform. 30 Minuten, unverbindlich.
+                Wir lernen dich kennen, besprechen deine Ziele und entwickeln eine
+                nachhaltige Strategie, die in deinen Alltag passt.
               </p>
 
-              <div className="mt-8 rounded-2xl bg-bg-alt p-6">
+              {/* What happens in the consultation */}
+              <div className="mt-8">
                 <h3 className="font-semibold text-text">
-                  Was dich erwartet:
+                  Was dich im Beratungsgespraech erwartet:
                 </h3>
-                <ul className="mt-4 space-y-3">
-                  {[
-                    "Kennenlernen",
-                    "Ermittlung des IST-Zustandes",
-                    "Klares Definieren der Ziele",
-                    "Check Up deines Gesundheitszustandes",
-                    "Planung der individuellen Strategie",
-                    "Passendes Angebot",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-text-secondary"
-                    >
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                      {item}
-                    </li>
+                <div className="mt-4 space-y-4">
+                  {consultationSteps.map((s) => (
+                    <div key={s.step} className="flex gap-3">
+                      <span className="text-lg font-black text-orange">
+                        {s.step}
+                      </span>
+                      <p className="pt-0.5 text-sm text-text-secondary">{s.text}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
 
-              <div className="mt-6 rounded-2xl bg-bg-alt p-6">
+              {/* Qualification questions */}
+              <div className="mt-8 rounded-2xl bg-bg-alt p-6">
                 <h3 className="font-semibold text-text">
                   Stell dir vorab folgende Fragen:
                 </h3>
                 <ul className="mt-4 space-y-3">
                   {[
-                    "Willst du in deinem Leben wirklich etwas verändern?",
-                    "Wie viel Zeit kannst du dir für dein Ziel pro Woche nehmen?",
-                    "Welches Budget hast du für dein Ziel?",
-                    "Können wir dein Ziel sofort in Angriff nehmen?",
+                    "Willst du in deinem Leben wirklich etwas veraendern?",
+                    "Hast du woechentlich Zeit fuer deine Ziele?",
+                    "Hast du ein Budget fuer deine Gesundheit eingeplant?",
+                    "Bist du bereit, sofort zu starten, wenn das Angebot passt?",
                   ].map((q) => (
                     <li
                       key={q}
@@ -165,6 +203,44 @@ export default function KontaktPage() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-4 text-xs text-muted">
+                  Wenn du alle mit Ja beantworten kannst, bist du bei uns
+                  richtig. Wir bringen dich auf dem schnellsten Weg zu deinem
+                  Ziel.
+                </p>
+              </div>
+
+              {/* Interest and goals tags */}
+              <div className="mt-8">
+                <h3 className="mb-3 text-sm font-semibold text-text">
+                  Wofuer interessierst du dich?
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {interestOptions.map((opt) => (
+                    <span
+                      key={opt}
+                      className="rounded-full bg-bg-alt px-3 py-1.5 text-xs font-medium text-text-secondary"
+                    >
+                      {opt}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="mb-3 text-sm font-semibold text-text">
+                  Was ist dein Ziel?
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {goalOptions.map((opt) => (
+                    <span
+                      key={opt}
+                      className="rounded-full bg-orange-light px-3 py-1.5 text-xs font-medium text-orange"
+                    >
+                      {opt}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Google Maps embed */}

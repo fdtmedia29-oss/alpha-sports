@@ -30,7 +30,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+              <span className="h-1.5 w-1.5 rounded-full bg-orange" />
               Privates Studio in St. Gallen
             </span>
           </motion.div>

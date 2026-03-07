@@ -259,34 +259,54 @@ export const painPointCards = [
 
 export const googleReviews = [
   {
+    name: "Artiola Lenjani",
+    quote:
+      "Luigi ist der beste Personaltrainer überhaupt! Ich hatte bereits mehrere Gespräche und Probetrainings bei verschiedenen Personaltrainern und kann mit voller Überzeugung sagen, dass Luigi heraussticht.",
+  },
+  {
+    name: "Melanie Frei",
+    quote:
+      "Ich trainiere seit rund 6 Monaten bei Lui und bin sehr happy damit. Lui ist ein ausgezeichneter Trainer, der auf meine Bedürfnisse eingeht, Schwachpunkte erkennt und diese gezielt mit mir trainiert.",
+  },
+  {
+    name: "Ornella Vicentini",
+    quote:
+      "Ich trainiere seit 3 Monaten 2 mal die Woche bei Alpha Sports. Das Training ist super effektiv, anstrengend und macht wahnsinnig viel Spass. Trainer Luigi ist hoch professionell, super nett und ein toller Motivator.",
+  },
+  {
+    name: "Rebecca Pfau",
+    quote:
+      "Luigi ist ein super Personal Trainer! Sehr motivierend, professionell und immer gut gelaunt. Das Training ist effektiv und macht richtig Spass. Klare Empfehlung!",
+  },
+  {
+    name: "Simon",
+    quote:
+      "Luigi geht sehr auf die individuellen Ziele von einem ein. Er nimmt sich Zeit für jede einzelne Frage und man spürt seine Begeisterung für sein Fachgebiet. Man merkt, dass er das Beste für einen rausholen möchte.",
+  },
+  {
+    name: "Michi",
+    quote:
+      "Das Training bei Luigi und David ist einfach nur top und macht Spass. Ich kann es allen empfehlen — auch solchen, die vorher nie ein Fitnessstudio besucht haben.",
+  },
+  {
     name: "Reto Scherrer",
     quote:
-      "Die Trainings bei Luigi von Alpha Sports sind perfekt auf meine Bedürfnisse abgestimmt. Er versteht es die Trainings herausfordernd und mit Spass zu gestalten. Schwachstellen erkennt er sofort und bearbeitet diese konsequent. Ich habe gerade wieder mein Training bei ihm verlängert und kann ihn nur weiterempfehlen.",
+      "Die Trainings bei Luigi von Alpha Sports sind perfekt auf meine Bedürfnisse abgestimmt. Er versteht es die Trainings herausfordernd und mit Spass zu gestalten. Schwachstellen erkennt er sofort und bearbeitet diese konsequent.",
+  },
+  {
+    name: "Markus Richina",
+    quote:
+      "Gute Übungen, beobachtet mich immer und korrigiert sofort meine Fehlhaltungen. Bringt mich an die Grenzen (ohne ihn hätte ich schon lange vorher aufgegeben). Verbesserungen sind im Sport spürbar.",
   },
   {
     name: "Claudine Giason",
     quote:
-      "Luigi ist eine offene und herzliche Persönlichkeit. Seine Freude an seiner Arbeit ist spürbar und es war schön auf diese Weise von seinem Fachwissen profitieren zu können. Er ist bedacht das passende Training für einem zu finden und ist dabei sehr aufmerksam. Zusammen mit seiner Partnerin Julia war die Betreuung fachlich wie auch menschlich super.",
+      "Luigi ist eine offene und herzliche Persönlichkeit. Seine Freude an seiner Arbeit ist spürbar. Er ist bedacht das passende Training für einem zu finden und ist dabei sehr aufmerksam. Zusammen mit seiner Partnerin Julia war die Betreuung fachlich wie auch menschlich super.",
   },
   {
     name: "Sandrine Benz",
     quote:
       "Sehr kompetentes und engagiertes Trainerteam, sei es für ein Einzel- oder auch für ein Gruppentraining, adaptieren die Belastung sehr gut an das Fitnesslevel ihrer Kundschaft. Man fühlt sich gut aufgehoben und hat nach einer Stunde ein richtig gutes Workout gemacht.",
-  },
-  {
-    name: "Markus Richina",
-    quote:
-      "Gute Übungen, beobachtet mich immer und korrigiert sofort meine Fehlhaltungen. Bringt mich an die Grenzen (ohne ihn hätte ich schon lange vorher aufgegeben). Verbesserung sind im Sport spürbar.",
-  },
-  {
-    name: "Laura (Oh Philia)",
-    quote:
-      "Ich habe über knapp drei Monate Personaltraining bei Lui geniessen dürfen. Bei Lui habe ich mich sehr gut aufgehoben gefühlt, er ging jedes Training aufs Neue auf meine Bedürfnisse und Befindlichkeiten ein. Selbst nach der intensiven, kurzen Zeit habe ich körperliche Veränderungen gesehen und gespürt.",
-  },
-  {
-    name: "Mona S.",
-    quote:
-      "Pilates und Stretching Sonntags: wunderbarer Einstieg in den Tag mit sympathischen Menschen, Trainer mit sehr fundiertem Wissen, persönlicher Betreuung und Beratung. Fühle mich superwohl dort.",
   },
 ];
 

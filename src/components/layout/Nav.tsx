@@ -159,15 +159,17 @@ export default function Nav() {
         </div>
 
         {/* Secondary row — hides on scroll down, returns on scroll up */}
-        <div
-          className={`hidden overflow-hidden border-t transition-all duration-300 lg:block ${
-            scrolled ? "border-border/50" : "border-white/10"
-          } ${collapsed ? "max-h-0 opacity-0" : "max-h-16 opacity-100"}`}
-        >
-          <div className="flex items-center justify-center gap-x-1 pb-3 pt-2">
-            {secondaryItems.map(renderNavItem)}
+        {!collapsed && (
+          <div
+            className={`hidden border-t lg:block ${
+              scrolled ? "border-border/50" : "border-white/10"
+            }`}
+          >
+            <div className="flex items-center justify-center gap-x-1 pb-3 pt-2">
+              {secondaryItems.map(renderNavItem)}
+            </div>
           </div>
-        </div>
+        )}
       </nav>
 
       {/* Mobile menu */}

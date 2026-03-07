@@ -31,7 +31,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-orange" />
-              Privates Studio in St. Gallen
+              Personal Training Studio in St. Gallen
             </span>
           </motion.div>
 
@@ -42,9 +42,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Dein Körper.
+            Schnell, effektiv
             <br />
-            Deine Regeln.
+            & individuell.
           </motion.h1>
 
           {/* Subline */}
@@ -54,8 +54,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Individuelles Personal Training, Ernährungsberatung und
-            Körperanalysen — alles unter einem Dach, in privatem Umfeld.
+            Deine Experten, wenn es um deine Bestform geht! Gemeinsam nehmen
+            wir deine Ziele in die Hand.
           </motion.p>
 
           {/* CTAs */}
@@ -69,7 +69,7 @@ export default function Hero() {
               href={siteConfig.bookingUrl}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-dark transition-all hover:bg-white/90 hover:gap-3"
             >
-              Kostenlos beraten lassen
+              Jetzt Starten
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
@@ -80,25 +80,23 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Quick stats */}
+          {/* Motto */}
           <motion.div
-            className="mt-16 flex flex-wrap gap-8 md:gap-16"
+            className="mt-16 border-l-2 border-orange pl-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            {[
-              ["500+", "Zufriedene Kunden"],
-              ["5.0 ★", "Google (68 Bewertungen)"],
-              ["10+", "Jahre Erfahrung"],
-            ].map(([value, label]) => (
-              <div key={label}>
-                <div className="text-2xl font-bold text-white md:text-3xl">
-                  {value}
-                </div>
-                <div className="mt-1 text-sm text-white/50">{label}</div>
-              </div>
-            ))}
+            <p className="text-sm font-semibold uppercase tracking-widest text-white/50">
+              Unser Motto
+            </p>
+            <p className="mt-2 text-xl font-bold text-white md:text-2xl">
+              Definiert — Kraftvoll — Selbstbewusst
+            </p>
+            <p className="mt-2 text-sm text-white/60">
+              Gemeinsam entfalten wir dein volles Potenzial und formen deinen
+              Körper — für mehr Stärke, Selbstvertrauen und nachhaltigen Erfolg.
+            </p>
           </motion.div>
         </div>
       </div>

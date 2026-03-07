@@ -1,64 +1,82 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowDown, X, Check } from "lucide-react";
-import { painPoints } from "@/lib/content";
+import { ArrowRight, Quote } from "lucide-react";
+import { painPoints, siteConfig } from "@/lib/content";
 
 export default function PainPoints() {
   return (
     <section className="section-padding bg-white">
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
-        <div className="mb-16 max-w-2xl">
-          <span className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
-            Kommt dir das bekannt vor?
+        <div className="mb-12 max-w-2xl">
+          <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+            Erkennst du dich wieder?
           </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-            Schluss mit Stillstand.
-          </h2>
-          <p className="mt-4 text-lg text-text-secondary">
-            Wir kennen die typischen Hürden — und haben die Lösung.
-          </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-3">
-          {painPoints.map((item, i) => (
+        {/* Quote grid */}
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {painPoints.map((point, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group rounded-2xl border border-border bg-white p-8 transition-all hover:shadow-lg"
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="relative rounded-2xl border border-border bg-bg-alt p-6"
             >
-              {/* Problem */}
-              <div className="flex items-start gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-50">
-                  <X className="h-4 w-4 text-red-500" />
-                </div>
-                <p className="text-base font-medium text-text">
-                  {item.problem}
-                </p>
-              </div>
-
-              {/* Arrow */}
-              <div className="my-6 flex justify-center">
-                <ArrowDown className="h-5 w-5 text-border" />
-              </div>
-
-              {/* Solution */}
-              <div className="flex items-start gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-50">
-                  <Check className="h-4 w-4 text-green-600" />
-                </div>
-                <p className="text-base text-text-secondary group-hover:text-text transition-colors">
-                  {item.solution}
-                </p>
-              </div>
+              <Quote className="absolute right-4 top-4 h-6 w-6 text-surface" />
+              <p className="text-base font-medium leading-relaxed text-text">
+                &laquo;{point}&raquo;
+              </p>
             </motion.div>
           ))}
         </div>
+
+        {/* Answer */}
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <p className="text-xl font-bold text-text md:text-2xl">
+            Ja? Dann bist du bei uns genau richtig!
+          </p>
+          <p className="mt-4 text-lg text-text-secondary">
+            Wir bringen dich auf schnellstem Weg zu deinem Ziel mit:
+          </p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "Personal Training in unserem privaten Studio",
+              "Persönliche Gym-Coachings",
+              "Massgeschneiderter Ernährung",
+              "Unserem Hybrid-Modell",
+              "Gruppenkursen",
+              "Modernster Leistungsdiagnostik",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 rounded-xl bg-bg-alt px-4 py-3"
+              >
+                <span className="h-2 w-2 shrink-0 rounded-full bg-orange" />
+                <span className="text-sm font-medium text-text">{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Link
+              href={siteConfig.bookingUrl}
+              className="group inline-flex items-center gap-2 rounded-full bg-dark px-8 py-4 text-base font-semibold text-white transition-all hover:bg-dark-light hover:gap-3"
+            >
+              Kostenloses Beratungsgespräch buchen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

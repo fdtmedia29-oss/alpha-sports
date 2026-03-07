@@ -1,37 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
-import { testimonials } from "@/lib/content";
+import { Star } from "lucide-react";
+import { googleReviews } from "@/lib/content";
 
 export default function Testimonials() {
   return (
     <section className="section-padding bg-bg-alt">
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
-        <div className="mb-16 text-center">
-          <span className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
-            Erfolgsgeschichten
-          </span>
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-            Was unsere Kunden sagen.
-          </h2>
+        <div className="mb-4 text-center">
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-2xl font-bold text-text">
+              Alpha Sports Personal Training
+            </span>
+          </div>
+          <div className="mt-3 flex items-center justify-center gap-1">
+            {Array.from({ length: 5 }).map((_, j) => (
+              <Star
+                key={j}
+                className="h-5 w-5 fill-amber-400 text-amber-400"
+              />
+            ))}
+          </div>
+          <p className="mt-2 text-sm text-text-secondary">
+            60 Google Bewertungen
+          </p>
         </div>
 
-        {/* Testimonial cards */}
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) => (
+        {/* Review cards */}
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {googleReviews.map((review, i) => (
             <motion.div
-              key={t.name}
+              key={review.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative rounded-2xl border border-border bg-white p-8"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="rounded-2xl border border-border bg-white p-6"
             >
-              {/* Quote icon */}
-              <Quote className="absolute right-6 top-6 h-8 w-8 text-surface" />
-
               {/* Stars */}
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, j) => (
@@ -43,19 +50,33 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="mt-6 text-base leading-relaxed text-text-secondary">
-                &ldquo;{t.quote}&rdquo;
+              <p className="mt-4 text-sm leading-relaxed text-text-secondary">
+                {review.quote}
               </p>
 
               {/* Author */}
-              <div className="mt-6 border-t border-border pt-6">
-                <div className="font-semibold text-text">{t.name}</div>
-                <div className="mt-1 text-sm font-medium text-text-secondary">
-                  {t.result}
+              <div className="mt-4 flex items-center gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-dark text-xs font-bold text-white">
+                  {review.name.charAt(0)}
                 </div>
+                <span className="text-sm font-semibold text-text">
+                  {review.name}
+                </span>
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Google link */}
+        <div className="mt-10 text-center">
+          <a
+            href="https://www.google.com/maps/place/Alpha+Sports"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-text transition-colors hover:bg-white hover:shadow-sm"
+          >
+            Alle Bewertungen auf Google lesen
+          </a>
         </div>
       </div>
     </section>

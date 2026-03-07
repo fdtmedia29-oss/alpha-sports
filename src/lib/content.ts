@@ -232,18 +232,44 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const painPoints = [
+  "Ich will mich wieder wohl in meinem Körper fühlen.",
+  "Ich brauche jemanden, der eine Strategie hat, die funktioniert und mir zeigt, wie es wirklich geht.",
+  "Ich habe keine Zeit für Umwege.",
+  "Ich will mich endlich wieder gerne im Spiegel ansehen.",
+  "Ich brauche Verbindlichkeit, ansonsten finde ich immer eine passende Ausrede, um nicht zum Sport zu gehen.",
+  "Ich finde in meinem Alltag einfach keine Zeit für mich und meine Ziele.",
+];
+
+export const googleReviews = [
   {
-    problem: "Du trainierst regelmaessig, siehst aber keine Ergebnisse?",
-    solution: "Individuelle Trainingsplaene basierend auf deiner Koerperanalyse.",
+    name: "Reto Scherrer",
+    quote:
+      "Die Trainings bei Luigi von Alpha Sports sind perfekt auf meine Bedürfnisse abgestimmt. Er versteht es die Trainings herausfordernd und mit Spass zu gestalten. Schwachstellen erkennt er sofort und bearbeitet diese konsequent. Ich habe gerade wieder mein Training bei ihm verlängert und kann ihn nur weiterempfehlen.",
   },
   {
-    problem: "Du weisst nicht, wo du anfangen sollst?",
-    solution:
-      "Kostenloses Beratungsgespraech — wir erstellen deinen persoenlichen Fahrplan.",
+    name: "Claudine Giason",
+    quote:
+      "Luigi ist eine offene und herzliche Persönlichkeit. Seine Freude an seiner Arbeit ist spürbar und es war schön auf diese Weise von seinem Fachwissen profitieren zu können. Er ist bedacht das passende Training für einem zu finden und ist dabei sehr aufmerksam. Zusammen mit seiner Partnerin Julia war die Betreuung fachlich wie auch menschlich super.",
   },
   {
-    problem: "Fitnessstudios sind dir zu ueberfuellt und anonym?",
-    solution: "Privates Studio mit max. 2 Personen — volle Aufmerksamkeit.",
+    name: "Sandrine Benz",
+    quote:
+      "Sehr kompetentes und engagiertes Trainerteam, sei es für ein Einzel- oder auch für ein Gruppentraining, adaptieren die Belastung sehr gut an das Fitnesslevel ihrer Kundschaft. Man fühlt sich gut aufgehoben und hat nach einer Stunde ein richtig gutes Workout gemacht.",
+  },
+  {
+    name: "Markus Richina",
+    quote:
+      "Gute Übungen, beobachtet mich immer und korrigiert sofort meine Fehlhaltungen. Bringt mich an die Grenzen (ohne ihn hätte ich schon lange vorher aufgegeben). Verbesserung sind im Sport spürbar.",
+  },
+  {
+    name: "Laura (Oh Philia)",
+    quote:
+      "Ich habe über knapp drei Monate Personaltraining bei Lui geniessen dürfen. Bei Lui habe ich mich sehr gut aufgehoben gefühlt, er ging jedes Training aufs Neue auf meine Bedürfnisse und Befindlichkeiten ein. Selbst nach der intensiven, kurzen Zeit habe ich körperliche Veränderungen gesehen und gespürt.",
+  },
+  {
+    name: "Mona S.",
+    quote:
+      "Pilates und Stretching Sonntags: wunderbarer Einstieg in den Tag mit sympathischen Menschen, Trainer mit sehr fundiertem Wissen, persönlicher Betreuung und Beratung. Fühle mich superwohl dort.",
   },
 ];
 

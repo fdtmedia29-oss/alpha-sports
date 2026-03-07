@@ -25,22 +25,56 @@ export default function Nav() {
           : "bg-dark/90 backdrop-blur-xl"
       }`}
     >
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-        <Link href="/" className="relative h-12 w-36">
-          <Image
-            src="/images/logo-white.png"
-            alt="Alpha Sports"
-            fill
-            className={`object-contain object-left transition-all duration-300 ${
-              scrolled ? "brightness-0" : ""
-            }`}
-            priority
-          />
-        </Link>
+      <nav className="mx-auto max-w-7xl px-6">
+        {/* Top row: logo + CTA + mobile toggle */}
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="relative h-10 w-32">
+            <Image
+              src="/images/logo-white.png"
+              alt="Alpha Sports"
+              fill
+              className={`object-contain object-left transition-all duration-300 ${
+                scrolled ? "brightness-0" : ""
+              }`}
+              priority
+            />
+          </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-1 lg:flex">
+          {/* Desktop CTA */}
+          <Link
+            href={siteConfig.bookingUrl}
+            className={`hidden rounded-full px-5 py-2 text-sm font-semibold transition-colors lg:block ${
+              scrolled
+                ? "bg-dark text-white hover:bg-dark-surface"
+                : "bg-white text-dark hover:bg-white/90"
+            }`}
+          >
+            Beratung buchen
+          </Link>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`rounded-lg p-2 lg:hidden ${
+              scrolled ? "text-text" : "text-white"
+            }`}
+            aria-label="Menu"
+          >
+            {mobileOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Desktop nav — second row */}
+        <div
+          className={`hidden border-t pb-3 pt-2 lg:flex lg:flex-wrap lg:items-center lg:justify-center lg:gap-x-1 ${
+            scrolled ? "border-border/50" : "border-white/10"
+          }`}
+        >
           {navItems.map((item) =>
             "children" in item && item.children ? (
               <div
@@ -50,14 +84,14 @@ export default function Nav() {
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button
-                  className={`flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors ${
                     scrolled
                       ? "text-text-secondary hover:text-text"
                       : "text-white/70 hover:text-white"
                   }`}
                 >
                   {item.label}
-                  <ChevronDown className="h-3.5 w-3.5" />
+                  <ChevronDown className="h-3 w-3" />
                 </button>
                 {openDropdown === item.label && (
                   <div className="absolute left-0 top-full pt-2">
@@ -79,7 +113,7 @@ export default function Nav() {
               <Link
                 key={item.label}
                 href={"href" in item ? item.href : "#"}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                className={`rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors ${
                   scrolled
                     ? "text-text-secondary hover:text-text"
                     : "text-white/70 hover:text-white"
@@ -90,38 +124,11 @@ export default function Nav() {
             )
           )}
         </div>
-
-        {/* Desktop CTA */}
-        <Link
-          href={siteConfig.bookingUrl}
-          className={`hidden rounded-full px-6 py-2.5 text-sm font-semibold transition-colors lg:block ${
-            scrolled
-              ? "bg-dark text-white hover:bg-dark-surface"
-              : "bg-white text-dark hover:bg-white/90"
-          }`}
-        >
-          Beratung buchen
-        </Link>
-
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className={`rounded-lg p-2 lg:hidden ${
-            scrolled ? "text-text" : "text-white"
-          }`}
-          aria-label="Menu"
-        >
-          {mobileOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
       </nav>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-20 z-40 overflow-y-auto bg-white lg:hidden">
+        <div className="fixed inset-0 top-16 z-40 overflow-y-auto bg-white lg:hidden">
           <div className="flex flex-col gap-2 p-6">
             {navItems.map((item) =>
               "children" in item && item.children ? (

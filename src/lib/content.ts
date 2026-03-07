@@ -23,16 +23,16 @@ export interface Trainer {
 export const trainers: Trainer[] = [
   {
     name: "Luigi Lieberherr",
-    role: "Geschaeftsfuehrer & Personal Trainer",
+    role: "Geschäftsführer & Personal Trainer",
     credentials: [
       "Personal Trainer",
       "HYROX365 Foundation",
-      "Ernaehrungscoach",
+      "Ernährungscoach",
       "Fitness & Functional Trainer",
       "InBody Specialist",
     ],
     image: "/images/trainers/team.jpg",
-    bio: "10+ Jahre Fitness-Erfahrung, Breakdance-Instruktor, Swiss Breakdance Champion und Thai-Boxing-Erfahrung. Luigi verbindet Leidenschaft mit Expertise fuer deine Transformation.",
+    bio: "10+ Jahre Fitness-Erfahrung, Breakdance-Instruktor, Swiss Breakdance Champion und Thai-Boxing-Erfahrung. Luigi verbindet Leidenschaft mit Expertise für deine Transformation.",
   },
   {
     name: "Julia Lau",
@@ -45,20 +45,20 @@ export const trainers: Trainer[] = [
       "Group Fitness",
     ],
     image: "/images/trainers/team.jpg",
-    bio: "10+ Jahre Erfahrung, ehemalige Wettkampf-Tennisspielerin. Verbindet therapeutisches Wissen mit gezieltem Fitness-Training fuer nachhaltige Ergebnisse.",
+    bio: "10+ Jahre Erfahrung, ehemalige Wettkampf-Tennisspielerin. Verbindet therapeutisches Wissen mit gezieltem Fitness-Training für nachhaltige Ergebnisse.",
   },
   {
     name: "David Rogers",
     role: "Personal Training & Group Fitness",
     credentials: [
-      "Bewegungs- & Gesundheitsfoerderung",
+      "Bewegungs- & Gesundheitsförderung",
       "Fitness Instruktor",
       "Pilates & Yoga",
       "Kung Fu & Judo",
       "Selbstverteidigung",
     ],
     image: "/images/trainers/team.jpg",
-    bio: "Spezialist fuer funktionelle Bewegung, Pilates, Yoga und Kampfsport. Bringt Koerper und Geist in Einklang.",
+    bio: "Spezialist für funktionelle Bewegung, Pilates, Yoga und Kampfsport. Bringt Körper und Geist in Einklang.",
   },
   {
     name: "Nicole Walser",
@@ -66,10 +66,10 @@ export const trainers: Trainer[] = [
     credentials: [
       "Fitness Instruktorin",
       "HYROX365 Foundation",
-      "Ernaehrungscoach",
+      "Ernährungscoach",
     ],
     image: "/images/trainers/team.jpg",
-    bio: "HYROX-Athletin, CrossFit, Klettern, Bouldern, Snowboarden — motiviert dich zu Hoechstleistungen in der Gruppe und am Race Day.",
+    bio: "HYROX-Athletin, CrossFit, Klettern, Bouldern, Snowboarden — motiviert dich zu Höchstleistungen in der Gruppe und am Race Day.",
   },
   {
     name: "Isabell Tatzl",
@@ -79,7 +79,7 @@ export const trainers: Trainer[] = [
       "Mutter von zwei Kindern",
     ],
     image: "/images/trainers/team.jpg",
-    bio: "Ausgebildete Expertin und Mutter von zwei Kindern. Begleitet werdende Muetter mit sanften Kraft- und Beweglichkeitsuebungen sicher durch die Schwangerschaft.",
+    bio: "Ausgebildete Expertin und Mutter von zwei Kindern. Begleitet werdende Mütter mit sanften Kraft- und Beweglichkeitsübungen sicher durch die Schwangerschaft.",
   },
 ];
 
@@ -103,15 +103,15 @@ export const services: Service[] = [
   {
     title: "Online Coaching",
     description:
-      "12-Wochen Programme mit persoenlicher Betreuung via App — von ueberall. Training, Ernaehrung und Lifestyle.",
+      "12-Wochen Programme mit persönlicher Betreuung via App — von überall. Training, Ernährung und Lifestyle.",
     href: "/online-coaching",
     icon: "monitor",
     image: "/images/studio/studio-7.jpg",
   },
   {
-    title: "Ernaehrungsberatung",
+    title: "Ernährungsberatung",
     description:
-      "Massgeschneiderte Ernaehrungsplaene fuer nachhaltige Ergebnisse. Ohne Verzicht, ohne Crash-Diaet.",
+      "Massgeschneiderte Ernährungspläne für nachhaltige Ergebnisse. Ohne Verzicht, ohne Crash-Diät.",
     href: "/ernaehrungsberatung",
     icon: "apple",
     image: "/images/studio/studio-8.jpg",
@@ -119,7 +119,7 @@ export const services: Service[] = [
   {
     title: "Analysen & Diagnostik",
     description:
-      "InBody, Stoffwechsel- & Leistungsanalyse fuer datenbasiertes Training. Messbare Fortschritte.",
+      "InBody, Stoffwechsel- & Leistungsanalyse für datenbasiertes Training. Messbare Fortschritte.",
     href: "/analysen",
     icon: "activity",
     image: "/images/studio/studio-1.jpg",
@@ -141,7 +141,7 @@ export const groupClasses: GroupClass[] = [
     trainer: "Nicole Walser",
     schedule: "Mo 18:30 & Fr 17:30",
     description:
-      "Energiegeladener Indoor-Gruppenkurs fuer jedes Fitness-Level. Kraft-Ausdauer, Herz-Kreislauf, Fettverbrennung und Muskelaufbau mit abwechslungsreichen Uebungen. Nachbrenneffekt bis zu 72 Stunden.",
+      "Energiegeladener Indoor-Gruppenkurs für jedes Fitness-Level. Kraft-Ausdauer, Herz-Kreislauf, Fettverbrennung und Muskelaufbau mit abwechslungsreichen Übungen. Nachbrenneffekt bis zu 72 Stunden.",
     href: "/gruppenkurse#bootcamp",
     image: "/images/classes/bootcamp.png",
   },
@@ -150,7 +150,7 @@ export const groupClasses: GroupClass[] = [
     trainer: "Team Alpha Sports",
     schedule: "Mi 18:00–19:00",
     description:
-      "Fundiertes Hypertrophie-Training mit Fokus auf korrekte Technik bei Grunduebungen. Progressive Ueberlastung, Muskelspannung und gezielter Reiz fuer maximalen Muskelaufbau und Body Recomposition.",
+      "Fundiertes Hypertrophie-Training mit Fokus auf korrekte Technik bei Grundübungen. Progressive Überlastung, Muskelspannung und gezielter Reiz für maximalen Muskelaufbau und Body Recomposition.",
     href: "/gruppenkurse#hypertrophic",
     image: "/images/studio/studio-6.jpg",
   },
@@ -159,7 +159,7 @@ export const groupClasses: GroupClass[] = [
     trainer: "Luigi Lieberherr",
     schedule: "Do 18:30–19:30",
     description:
-      "Fusion aus Thaiboxen (Muay Thai) und HIIT-Training. Kicks, Schlaege, Knie und Ellbogen kombiniert mit hochintensiven Intervallen. Ganzkoerper-Workout fuer Kondition, Kraft und Schnelligkeit.",
+      "Fusion aus Thaiboxen (Muay Thai) und HIIT-Training. Kicks, Schläge, Knie und Ellbogen kombiniert mit hochintensiven Intervallen. Ganzkörper-Workout für Kondition, Kraft und Schnelligkeit.",
     href: "/gruppenkurse#hiit-boxing",
     image: "/images/studio/studio-7.jpg",
   },
@@ -168,7 +168,7 @@ export const groupClasses: GroupClass[] = [
     trainer: "Julia Lau",
     schedule: "So 10:00–11:00",
     description:
-      "Staerke deine Mitte und finde die Balance. Core-Stabilitaet, Mobilitaet und Koerperhaltung verbessern. Bauch-, Ruecken- und Beckenbodentraining. Ideale Ergaenzung zum Krafttraining.",
+      "Stärke deine Mitte und finde die Balance. Core-Stabilität, Mobilität und Körperhaltung verbessern. Bauch-, Rücken- und Beckenbodentraining. Ideale Ergänzung zum Krafttraining.",
     href: "/gruppenkurse#pilates",
     image: "/images/studio/studio-3.jpg",
   },
@@ -177,7 +177,7 @@ export const groupClasses: GroupClass[] = [
     trainer: "David Rogers",
     schedule: "Mi 19:30–20:30",
     description:
-      "Koerper, Geist und Seele in Einklang bringen. Gezielte Atemtechniken, fliessende Bewegungen und achtsame Praxis fuer koerperliches Wohlbefinden und innere Balance. Rueckenmuskulatur staerken, Flexibilitaet verbessern.",
+      "Körper, Geist und Seele in Einklang bringen. Gezielte Atemtechniken, fliessende Bewegungen und achtsame Praxis für körperliches Wohlbefinden und innere Balance. Rückenmuskulatur stärken, Flexibilität verbessern.",
     href: "/gruppenkurse#yoga",
     image: "/images/studio/studio-4.jpg",
   },
@@ -186,7 +186,7 @@ export const groupClasses: GroupClass[] = [
     trainer: "David Rogers",
     schedule: "So 11:30–12:30",
     description:
-      "Dynamische und statische Dehnuebungen fuer erhoehte Flexibilitaet, verbesserte Koerperhaltung und reduziertes Verletzungsrisiko. Gelenke mobilisieren, Muskulatur entspannen, Verspannungen loesen.",
+      "Dynamische und statische Dehnübungen für erhöhte Flexibilität, verbesserte Körperhaltung und reduziertes Verletzungsrisiko. Gelenke mobilisieren, Muskulatur entspannen, Verspannungen lösen.",
     href: "/gruppenkurse#stretching",
     image: "/images/studio/studio-5.jpg",
   },
@@ -203,31 +203,31 @@ export const testimonials: Testimonial[] = [
     name: "Dr. med. univ. Philipp Krenn",
     result: "Arzt & Sportler",
     quote:
-      "Luigi ist einer der Besten in seinem Fach. Er hat umfangreiches Wissen in Ernaehrung und passt das Training perfekt an meine Beduerfnisse an — trotz Skoliose. Das gut ausgestattete Studio und die Boot Camp Kurse runden das Angebot ab.",
+      "Luigi ist einer der Besten in seinem Fach. Er hat umfangreiches Wissen in Ernährung und passt das Training perfekt an meine Bedürfnisse an — trotz Skoliose. Das gut ausgestattete Studio und die Boot Camp Kurse runden das Angebot ab.",
   },
   {
     name: "Peter M.",
     result: "Muskelaufbau & Fettabbau",
     quote:
-      "Personal Training hat mir auf vielfaeltige Weise weitergeholfen. Deutlich Muskelmasse aufgebaut, Koerperfett reduziert. Meine Blutwerte haben sich innerhalb kurzer Zeit massiv verbessert. Mehr Mobilitaet, besserer Schlaf, mehr Selbstvertrauen. Ich nehme jetzt die Treppe statt den Lift.",
+      "Personal Training hat mir auf vielfältige Weise weitergeholfen. Deutlich Muskelmasse aufgebaut, Körperfett reduziert. Meine Blutwerte haben sich innerhalb kurzer Zeit massiv verbessert. Mehr Mobilität, besserer Schlaf, mehr Selbstvertrauen. Ich nehme jetzt die Treppe statt den Lift.",
   },
   {
     name: "Chantal S.",
     result: "Zielgewicht erreicht & gehalten",
     quote:
-      "Das Personal Training ist mein physischer Ausgleich. Mein Zielgewicht erreicht und gehalten — durch Training und Ernaehrungsbildung. Immunsystem gestaerkt, weniger krank. Die abwechslungsreichen Uebungen und die persoenlich angepassten Trainings machen jede Session einzigartig.",
+      "Das Personal Training ist mein physischer Ausgleich. Mein Zielgewicht erreicht und gehalten — durch Training und Ernährungsbildung. Immunsystem gestärkt, weniger krank. Die abwechslungsreichen Übungen und die persönlich angepassten Trainings machen jede Session einzigartig.",
   },
   {
     name: "Livio C.",
     result: "+10 kg Muskelmasse in 2 Jahren",
     quote:
-      "10 kg Muskelmasse in 2 Jahren aufgebaut. Ich fuehle mich im Alltag ausgeglichener. Training hilft mir, den Arbeitsstress auszugleichen. Modernes Studio mit viel Platz und top motivierte Trainer. Positives Feedback von Bekannten motiviert zusaetzlich.",
+      "10 kg Muskelmasse in 2 Jahren aufgebaut. Ich fühle mich im Alltag ausgeglichener. Training hilft mir, den Arbeitsstress auszugleichen. Modernes Studio mit viel Platz und top motivierte Trainer. Positives Feedback von Bekannten motiviert zusätzlich.",
   },
   {
     name: "Michele",
-    result: "Gewichtsverlust & weniger Rueckenschmerzen",
+    result: "Gewichtsverlust & weniger Rückenschmerzen",
     quote:
-      "Gewicht verloren, Rueckenschmerzen reduziert. Die groesste Veraenderung war mental — ich habe gelernt, meinen Koerper zu akzeptieren und mich selbst wieder mehr zu lieben. Luigi hat mich auch ausserhalb des Trainings unterstuetzt, mit Leidenschaft und echtem Interesse an meinen Zielen.",
+      "Gewicht verloren, Rückenschmerzen reduziert. Die grösste Veränderung war mental — ich habe gelernt, meinen Körper zu akzeptieren und mich selbst wieder mehr zu lieben. Luigi hat mich auch ausserhalb des Trainings unterstützt, mit Leidenschaft und echtem Interesse an meinen Zielen.",
   },
 ];
 
@@ -328,10 +328,10 @@ export const studioImages = [
 ];
 
 export const navItems = [
-  { label: "Kostenloses Beratungsgespraech", href: "/kontakt" },
+  { label: "Kostenloses Beratungsgespräch", href: "/kontakt" },
   { label: "Personal Training", href: "/personal-training" },
   { label: "Online Coaching", href: "/online-coaching" },
-  { label: "Ernaehrungsberatung", href: "/ernaehrungsberatung" },
+  { label: "Ernährungsberatung", href: "/ernaehrungsberatung" },
   {
     label: "Analysen",
     children: [
@@ -355,7 +355,7 @@ export const navItems = [
   {
     label: "Mehr",
     children: [
-      { label: "Ueber uns", href: "/ueber-uns" },
+      { label: "Über uns", href: "/ueber-uns" },
       { label: "Erfolgsgeschichten", href: "/erfolgsgeschichten" },
       { label: "Preise", href: "/preise" },
       { label: "Kontakt", href: "/kontakt" },
@@ -381,7 +381,7 @@ export const pricing: PricingCategory[] = [
   {
     title: "Einzelbuchungen",
     items: [
-      { name: "Beratungsgespraech", price: "Kostenlos", unit: "30 Min" },
+      { name: "Beratungsgespräch", price: "Kostenlos", unit: "30 Min" },
       { name: "1:1 Personal Training", price: "150", unit: "60 Min" },
       { name: "1:2 Personal Training", price: "90", unit: "pro Person / 60 Min" },
       { name: "Trainingsplanung", price: "65" },
@@ -394,26 +394,26 @@ export const pricing: PricingCategory[] = [
         name: "12er Stempelkarte",
         price: "580",
         note: "CHF 145/h | Mit Isabell/David: CHF 125/h (500/mtl)",
-        includes: ["1 Proteinshake pro Training", "1 Sportgetraenk pro Training", "Handtuchservice"],
+        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
       {
         name: "24er Stempelkarte",
         price: "1'120",
         note: "CHF 140/h | Mit Isabell/David: CHF 120/h (960/mtl)",
         popular: true,
-        includes: ["1 Proteinshake pro Training", "1 Sportgetraenk pro Training", "Handtuchservice"],
+        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
       {
         name: "36er Stempelkarte",
         price: "1'560",
         note: "CHF 130/h | Mit Isabell/David: CHF 115/h (1'380/mtl)",
-        includes: ["1 Proteinshake pro Training", "1 Sportgetraenk pro Training", "Handtuchservice"],
+        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
       {
         name: "48er Stempelkarte",
         price: "1'920",
         note: "CHF 120/h | Mit Isabell/David: CHF 110/h (1'760/mtl)",
-        includes: ["1 Proteinshake pro Training", "1 Sportgetraenk pro Training", "Handtuchservice"],
+        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
     ],
   },
@@ -462,12 +462,12 @@ export const pricing: PricingCategory[] = [
         unit: "/mtl",
         includes: [
           "24 Personal Trainings",
-          "2h Ernaehrungsberatung",
+          "2h Ernährungsberatung",
           "4x InBody Analyse",
           "Stoffwechselanalyse",
           "Leistungsanalyse",
-          "4 Erfolgsgespraeche",
-          "Woechentliche Follow-ups",
+          "4 Erfolgsgespräche",
+          "Wöchentliche Follow-ups",
         ],
       },
       {
@@ -477,12 +477,12 @@ export const pricing: PricingCategory[] = [
         popular: true,
         includes: [
           "36 Personal Trainings",
-          "2h Ernaehrungsberatung",
+          "2h Ernährungsberatung",
           "4x InBody Analyse",
           "Stoffwechselanalyse",
           "Leistungsanalyse",
-          "4 Erfolgsgespraeche",
-          "Woechentliche Follow-ups",
+          "4 Erfolgsgespräche",
+          "Wöchentliche Follow-ups",
         ],
       },
       {
@@ -491,11 +491,11 @@ export const pricing: PricingCategory[] = [
         unit: "/mtl",
         includes: [
           "24 Personal Trainings",
-          "2h Ernaehrungsberatung",
+          "2h Ernährungsberatung",
           "4x InBody Analyse",
           "Stoffwechselanalyse",
-          "4 Erfolgsgespraeche",
-          "Woechentliche Follow-ups",
+          "4 Erfolgsgespräche",
+          "Wöchentliche Follow-ups",
         ],
       },
       {
@@ -504,11 +504,11 @@ export const pricing: PricingCategory[] = [
         unit: "/mtl",
         includes: [
           "36 Personal Trainings",
-          "2h Ernaehrungsberatung",
+          "2h Ernährungsberatung",
           "4x InBody Analyse",
           "Stoffwechselanalyse",
-          "4 Erfolgsgespraeche",
-          "Woechentliche Follow-ups",
+          "4 Erfolgsgespräche",
+          "Wöchentliche Follow-ups",
         ],
       },
     ],
@@ -545,7 +545,7 @@ export const pricing: PricingCategory[] = [
         includes: [
           "Alles aus Shape",
           "Stoffwechsel- & Leistungsanalyse",
-          "InBody Koerperanalyse",
+          "InBody Körperanalyse",
           "FMS-Test",
           "Personal Training Session",
           "Priority Support",
@@ -557,17 +557,17 @@ export const pricing: PricingCategory[] = [
         unit: "/mtl",
         includes: [
           "Individueller Trainingsplan",
-          "Ernaehrungsplan",
+          "Ernährungsplan",
           "App-Zugang",
           "Lifestyle-Optimierung",
-          "Woechentliche Anpassungen",
+          "Wöchentliche Anpassungen",
           "3 Monate Premium Support",
         ],
       },
     ],
   },
   {
-    title: "Ernaehrungsberatung",
+    title: "Ernährungsberatung",
     items: [
       { name: "Einzelsession", price: "150", unit: "/Stunde" },
       { name: "Shape Light", price: "592.40" },

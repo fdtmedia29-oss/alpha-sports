@@ -72,12 +72,6 @@ export default function Hero() {
               Jetzt Starten
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
-            <Link
-              href="/preise"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-8 py-4 text-base font-medium text-white transition-colors hover:border-white/40 hover:bg-white/10"
-            >
-              Preise ansehen
-            </Link>
           </motion.div>
 
           {/* Motto */}

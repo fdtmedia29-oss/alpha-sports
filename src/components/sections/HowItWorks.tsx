@@ -11,47 +11,43 @@ const steps = [
     icon: MessageCircle,
     title: "Kostenloses Beratungsgespräch",
     description:
-      "Wir lernen dich und deine Ziele kennen — ob Abnehmen, Muskelaufbau, Schmerzfreiheit oder Wettkampfvorbereitung. 30 Minuten, unverbindlich.",
+      "Wir lernen dich und deine Ziele kennen — ob Abnehmen, Muskelaufbau oder Schmerzfreiheit. 30 Minuten, unverbindlich.",
   },
   {
     number: "02",
     icon: ClipboardCheck,
     title: "Analyse & individueller Plan",
     description:
-      "Basierend auf InBody-Analyse, Stoffwechseltest oder Leistungsdiagnostik erstellen wir deinen massgeschneiderten Trainings- und Ernährungsplan.",
+      "Basierend auf InBody-Analyse, Stoffwechseltest oder Leistungsdiagnostik erstellen wir deinen massgeschneiderten Plan.",
   },
   {
     number: "03",
     icon: Dumbbell,
     title: "Training im privaten Studio",
     description:
-      "Du trainierst 1:1 oder in Kleingruppen — mit voller Aufmerksamkeit deines Trainers. Kein Warten auf Geräte, keine Ablenkung.",
+      "Du trainierst 1:1 oder in Kleingruppen — mit voller Aufmerksamkeit deines Trainers. Keine Ablenkung.",
   },
   {
     number: "04",
     icon: TrendingUp,
     title: "Fortschritt messen & anpassen",
     description:
-      "Regelmässige Check-ins und Analysen zeigen dir schwarz auf weiss, was sich verändert. Wir passen deinen Plan laufend an.",
+      "Regelmässige Check-ins und Analysen zeigen dir, was sich verändert. Wir passen deinen Plan laufend an.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-bg-alt">
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mb-16 max-w-2xl">
-          <span className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
+          <span className="text-sm font-semibold uppercase tracking-widest text-orange">
             So funktioniert&apos;s
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
             In 4 Schritten zum Ziel.
           </h2>
-          <p className="mt-4 text-lg text-text-secondary">
-            Vom ersten Gespräch bis zu messbaren Ergebnissen — wir begleiten
-            dich auf dem ganzen Weg.
-          </p>
         </div>
 
         {/* Steps */}
@@ -67,16 +63,16 @@ export default function HowItWorks() {
             >
               {/* Connector line (desktop only) */}
               {i < steps.length - 1 && (
-                <div className="absolute right-0 top-10 hidden h-px w-8 translate-x-full bg-border lg:block" />
+                <div className="absolute right-0 top-10 hidden h-px w-8 translate-x-full bg-orange/30 lg:block" />
               )}
 
-              <div className="rounded-2xl border border-border bg-bg-alt p-8">
+              <div className="rounded-2xl border border-border bg-white p-8">
                 {/* Number + Icon */}
                 <div className="flex items-center justify-between">
-                  <span className="text-4xl font-black text-surface-dark">
+                  <span className="text-4xl font-black text-orange/20">
                     {step.number}
                   </span>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-dark text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange text-white">
                     <step.icon className="h-5 w-5" />
                   </div>
                 </div>

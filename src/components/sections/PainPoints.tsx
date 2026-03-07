@@ -2,47 +2,60 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowDown, X, Check, Quote } from "lucide-react";
+import { ArrowRight, ArrowDown, X, Check } from "lucide-react";
 import { painPointQuotes, painPointCards, siteConfig } from "@/lib/content";
 
 export default function PainPoints() {
   return (
     <section className="section-padding bg-white">
       <div className="mx-auto max-w-7xl">
-        {/* Erkennst du dich wieder? */}
-        <div className="mb-12">
-          <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-            Erkennst du dich wieder?
-          </span>
-        </div>
+        {/* Header + quotes as simple text */}
+        <div className="mb-16 grid items-start gap-12 lg:grid-cols-2">
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Erkennst du dich wieder?
+            </span>
+            <div className="mt-8 space-y-4">
+              {painPointQuotes.map((quote, i) => (
+                <motion.p
+                  key={i}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.06 }}
+                  className="text-lg text-text-secondary"
+                >
+                  &laquo;{quote}&raquo;
+                </motion.p>
+              ))}
+            </div>
+          </div>
 
-        {/* Quote pills */}
-        <div className="mb-16 flex flex-wrap gap-3">
-          {painPointQuotes.map((quote, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.06 }}
-              className="flex items-center gap-2 rounded-full border border-border bg-bg-alt px-5 py-3"
-            >
-              <Quote className="h-3.5 w-3.5 shrink-0 text-orange" />
-              <span className="text-sm font-medium text-text">{quote}</span>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Ja? Dann bist du bei uns genau richtig.
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+              Wir bringen dich auf schnellstem Weg zu deinem Ziel — mit
+              Personal Training im privaten Studio, massgeschneiderter
+              Ernährung, modernster Leistungsdiagnostik und Gruppenkursen.
+            </p>
+            <div className="mt-8">
+              <Link
+                href={siteConfig.bookingUrl}
+                className="group inline-flex items-center gap-2 rounded-full bg-dark px-8 py-4 text-base font-semibold text-white transition-all hover:bg-dark-light hover:gap-3"
+              >
+                Kostenloses Beratungsgespräch
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Answer */}
-        <motion.p
-          className="mb-10 text-xl font-bold text-text md:text-2xl"
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          Ja? Dann bist du bei uns genau richtig.
-        </motion.p>
 
         {/* Problem → Solution cards */}
         <div className="grid gap-6 md:grid-cols-3">
@@ -81,40 +94,6 @@ export default function PainPoints() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Services + CTA */}
-        <div className="mt-14">
-          <p className="text-lg font-medium text-text-secondary">
-            Wir bringen dich auf schnellstem Weg zu deinem Ziel mit:
-          </p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "Personal Training im privaten Studio",
-              "Persönliche Gym-Coachings",
-              "Massgeschneiderter Ernährung",
-              "Unserem Hybrid-Modell",
-              "Gruppenkursen",
-              "Modernster Leistungsdiagnostik",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 rounded-xl bg-bg-alt px-4 py-3"
-              >
-                <span className="h-2 w-2 shrink-0 rounded-full bg-orange" />
-                <span className="text-sm font-medium text-text">{item}</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8">
-            <Link
-              href={siteConfig.bookingUrl}
-              className="group inline-flex items-center gap-2 rounded-full bg-dark px-8 py-4 text-base font-semibold text-white transition-all hover:bg-dark-light hover:gap-3"
-            >
-              Kostenloses Beratungsgespräch buchen
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-          </div>
         </div>
       </div>
     </section>

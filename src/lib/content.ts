@@ -231,13 +231,30 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-export const painPoints = [
+export const painPointQuotes = [
   "Ich will mich wieder wohl in meinem Körper fühlen.",
-  "Ich brauche jemanden, der eine Strategie hat, die funktioniert und mir zeigt, wie es wirklich geht.",
-  "Ich habe keine Zeit für Umwege.",
+  "Ich brauche jemanden, der eine Strategie hat, die funktioniert.",
   "Ich will mich endlich wieder gerne im Spiegel ansehen.",
-  "Ich brauche Verbindlichkeit, ansonsten finde ich immer eine passende Ausrede, um nicht zum Sport zu gehen.",
-  "Ich finde in meinem Alltag einfach keine Zeit für mich und meine Ziele.",
+  "Ich brauche Verbindlichkeit, sonst finde ich immer eine Ausrede.",
+  "Ich finde in meinem Alltag einfach keine Zeit für mich.",
+];
+
+export const painPointCards = [
+  {
+    problem: "Du trainierst regelmässig, siehst aber keine Ergebnisse?",
+    solution:
+      "Individuelle Trainingspläne basierend auf InBody-Analyse und Leistungsdiagnostik.",
+  },
+  {
+    problem: "Du weisst nicht, wo du anfangen sollst?",
+    solution:
+      "Kostenloses Beratungsgespräch — wir erstellen deine persönliche Strategie.",
+  },
+  {
+    problem: "Fitnessstudios sind dir zu überfüllt und anonym?",
+    solution:
+      "Privates Studio, max. 2 Personen — volle Aufmerksamkeit, familiäre Atmosphäre.",
+  },
 ];
 
 export const googleReviews = [

@@ -93,7 +93,7 @@ export default function RootLayout({
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
-                reviewCount: "60",
+                reviewCount: "68",
                 bestRating: "5",
               },
               priceRange: "CHF 30 - CHF 1760",

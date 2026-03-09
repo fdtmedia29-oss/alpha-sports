@@ -97,15 +97,22 @@ function VideoCard({
                 </div>
               </div>
             )}
-            {/* Mute/unmute button — shown when playing */}
+            {/* Mute/unmute — prominent label when muted, small icon when unmuted */}
             {playing && (
               <button
                 onClick={toggleMute}
-                className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm transition-colors hover:bg-black/60"
+                className={`absolute bottom-4 flex items-center gap-2 backdrop-blur-sm transition-all ${
+                  muted
+                    ? "left-1/2 -translate-x-1/2 animate-pulse rounded-full bg-white/90 px-5 py-2.5 text-dark shadow-lg"
+                    : "right-4 rounded-full bg-black/40 p-2.5 hover:bg-black/60"
+                }`}
                 aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
               >
                 {muted ? (
-                  <VolumeX className="h-5 w-5 text-white" />
+                  <>
+                    <VolumeX className="h-5 w-5" />
+                    <span className="text-sm font-semibold">Ton einschalten</span>
+                  </>
                 ) : (
                   <Volume2 className="h-5 w-5 text-white" />
                 )}

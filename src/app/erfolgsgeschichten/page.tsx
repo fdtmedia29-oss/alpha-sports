@@ -159,12 +159,12 @@ export default function ErfolgsgeschichtenPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "/images/results/vorher-nachher-dietmar-grichnik.jpg",
-              "/images/results/vorher-nachher-simon-gisler.jpg",
-              "/images/results/vorher-nachher-claudine-g.png",
-              "/images/results/vorher-nachher-markus-richina.jpg",
-              "/images/results/vorher-nachher-peter-meier.png",
-              "/images/results/vorher-nachher-izadora-d.png",
+              "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
+              "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
+              "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
+              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
+              "/images/results/vorher-nachher-vergleich-peter-meier.png",
+              "/images/results/vorher-nacher-vergleich-izadora-d..png",
             ].map((src, i) => (
               <div
                 key={src}

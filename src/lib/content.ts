@@ -112,7 +112,7 @@ export const services: Service[] = [
       "InBody, Stoffwechsel- & Leistungsanalyse für datenbasiertes Training. Messbare Fortschritte.",
     href: "/analysen",
     icon: "activity",
-    image: "/images/analysen/erklar-foto-lui.jpg",
+    image: "/images/analysen/erkl-r-foto-lui.jpg",
   },
 ];
 
@@ -133,16 +133,34 @@ export const groupClasses: GroupClass[] = [
     description:
       "Energiegeladener Indoor-Gruppenkurs für jedes Fitness-Level. Kraft-Ausdauer, Herz-Kreislauf, Fettverbrennung und Muskelaufbau mit abwechslungsreichen Übungen. Nachbrenneffekt bis zu 72 Stunden.",
     href: "/gruppenkurse#bootcamp",
-    image: "/images/pt/alpha-personal-07.jpg",
+    image: "/images/classes/bootcamp.png",
   },
   {
     name: "Pilates",
     trainer: "Julia Lau",
-    schedule: "So 10:00–11:00",
+    schedule: "Di 19:00 & Fr 12:00",
     description:
       "Stärke deine Mitte und finde die Balance. Core-Stabilität, Mobilität und Körperhaltung verbessern. Bauch-, Rücken- und Beckenbodentraining. Ideale Ergänzung zum Krafttraining.",
     href: "/gruppenkurse#pilates",
     image: "/images/pt/alpha-personal-15.jpg",
+  },
+  {
+    name: "Strength",
+    trainer: "David Rogers",
+    schedule: "Mi 12:00",
+    description:
+      "Gezieltes Krafttraining in der Gruppe. Strukturierte Workouts für Muskelaufbau und funktionelle Stärke — für alle Levels.",
+    href: "/gruppenkurse#strength",
+    image: "/images/pt/alpha-personal-26.jpg",
+  },
+  {
+    name: "HYROX",
+    trainer: "Nicole Walser",
+    schedule: "Mo 12:00, Mi 06:30 & 18:30, Fr 17:30",
+    description:
+      "Race-Day Vorbereitung als Gruppenkurs. Kombiniert Laufen mit funktionellen Übungen — Sled Push, Burpee Broad Jumps, Farmers Carry und mehr. Für Einsteiger und Wettkämpfer.",
+    href: "/hyrox",
+    image: "/images/classes/hyrox-gruppenkurs.jpg",
   },
 ];
 

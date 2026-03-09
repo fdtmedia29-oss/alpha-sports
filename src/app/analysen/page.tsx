@@ -208,8 +208,8 @@ export default function AnalysenPage() {
           <PhotoCarousel
             title="Analysen & Diagnostik"
             images={[
-              "/images/analysen/erklar-foto-lui.jpg",
-              "/images/analysen/2-inbody-koerperanalyse.png",
+              "/images/analysen/erkl-r-foto-lui.jpg",
+              "/images/analysen/2-inbody-k-rperanalyse.png",
               "/images/analysen/leistungsanalyse.jpg",
               "/images/analysen/stoffwechselanalyse.jpg",
               "/images/analysen/inbody-analyse.webp",

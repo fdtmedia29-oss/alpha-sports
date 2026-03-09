@@ -57,11 +57,13 @@ export default function Trainers() {
               className="rounded-2xl border border-border bg-white p-6 transition-all hover:shadow-lg"
             >
               {/* Avatar */}
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-dark text-2xl font-black text-white">
-                {trainer.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
+              <div className="relative mx-auto h-24 w-24 overflow-hidden rounded-full">
+                <Image
+                  src={trainer.image}
+                  alt={trainer.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Info */}

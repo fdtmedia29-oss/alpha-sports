@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Clock, User, ArrowRight, Play } from "lucide-react";
+import { Clock, User, ArrowRight } from "lucide-react";
 import { groupClasses } from "@/lib/content";
 
 /* Map course names to optional video sources */
@@ -15,7 +15,26 @@ const courseVideos: Record<string, string | undefined> = {
 function CourseMedia({ name, image }: { name: string; image: string }) {
   const videoSrc = courseVideos[name];
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  /* Autoplay when scrolled into view, pause when out */
+  useEffect(() => {
+    if (!videoSrc || !videoRef.current || !containerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play();
+        } else {
+          videoRef.current?.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [videoSrc]);
 
   if (!videoSrc) {
     return (
@@ -29,7 +48,7 @@ function CourseMedia({ name, image }: { name: string; image: string }) {
   }
 
   return (
-    <>
+    <div ref={containerRef} className="absolute inset-0">
       <video
         ref={videoRef}
         src={videoSrc}
@@ -37,27 +56,9 @@ function CourseMedia({ name, image }: { name: string; image: string }) {
         loop
         playsInline
         poster={image}
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        onClick={(e) => {
-          e.preventDefault();
-          if (videoRef.current) {
-            if (playing) {
-              videoRef.current.pause();
-            } else {
-              videoRef.current.play();
-            }
-            setPlaying(!playing);
-          }
-        }}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      {!playing && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg">
-            <Play className="h-5 w-5 fill-dark text-dark ml-0.5" />
-          </div>
-        </div>
-      )}
-    </>
+    </div>
   );
 }
 

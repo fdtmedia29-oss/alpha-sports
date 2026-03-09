@@ -23,13 +23,17 @@ export default function OnlineCoachingTeaser() {
           className="grid items-center gap-12 lg:grid-cols-2"
         >
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white">
-              <span className="h-1.5 w-1.5 rounded-full bg-orange" />
-              Neu: Online Coaching
-            </span>
-            <h2 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-4xl">
+            <div className="flex items-center gap-3">
+              <h2 className="text-4xl font-black tracking-tight text-white md:text-5xl lg:text-6xl">
+                Online Coaching
+              </h2>
+              <span className="rounded-full bg-orange px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                Neu
+              </span>
+            </div>
+            <p className="mt-3 text-xl font-semibold text-white/60 md:text-2xl">
               Dein Coach. Überall dabei.
-            </h2>
+            </p>
             <p className="mt-4 text-lg text-white/60">
               12-Wochen Programme mit persönlicher Betreuung via App — Training,
               Ernährung und Lifestyle. Von überall trainieren, mit dem gleichen
@@ -48,7 +52,7 @@ export default function OnlineCoachingTeaser() {
             {features.map((f) => (
               <div
                 key={f.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center"
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center"
               >
                 <f.icon className="mx-auto h-8 w-8 text-orange" />
                 <p className="mt-3 text-sm font-medium text-white/80">

@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import SocialProof from "@/components/sections/SocialProof";
+import VideoTestimonials from "@/components/sections/VideoTestimonials";
 import Testimonials from "@/components/sections/Testimonials";
 import PainPoints from "@/components/sections/PainPoints";
 import AboutTeaser from "@/components/sections/AboutTeaser";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <VideoTestimonials />
       <SocialProof />
       <Testimonials />
       <PainPoints />

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/content";
@@ -9,16 +8,18 @@ import { siteConfig } from "@/lib/content";
 export default function Hero() {
   return (
     <section className="relative flex min-h-[calc(100vh-7rem)] items-center overflow-hidden bg-dark">
-      {/* Background image */}
+      {/* Background video */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero.jpg"
-          alt="Alpha Sports Personal Training"
-          fill
-          className="object-cover opacity-40"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-dark/40" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover opacity-50"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/70 via-dark/50 to-transparent" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
@@ -54,8 +55,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Deine Experten, wenn es um deine Bestform geht! Gemeinsam nehmen
-            wir deine Ziele in die Hand.
+            Gemeinsam sorgen wir dafür, dass du dich in deinem Körper
+            endlich wieder wohlfühlst.
           </motion.p>
 
           {/* CTAs */}

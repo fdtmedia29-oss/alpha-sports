@@ -20,7 +20,7 @@ export default function GroupClasses() {
               Gemeinsam stärker.
             </h2>
             <p className="mt-3 text-text-secondary">
-              Probetraining ist bei allen Kursen kostenlos.
+              Kostenlose Schnupperwoche bei allen Kursen.
             </p>
           </div>
           <Link
@@ -45,7 +45,7 @@ export default function GroupClasses() {
             >
               <Link
                 href={cls.href}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white transition-all hover:shadow-lg"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-white transition-all hover:shadow-lg"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-surface">

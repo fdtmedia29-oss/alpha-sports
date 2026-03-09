@@ -32,7 +32,7 @@ export default function ServicesOverview() {
             >
               <Link
                 href={service.href}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white transition-all hover:shadow-lg md:flex-row"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-white transition-all hover:shadow-lg md:flex-row"
               >
                 {/* Image */}
                 <div className="relative aspect-[16/10] w-full md:aspect-auto md:w-2/5">

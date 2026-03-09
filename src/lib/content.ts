@@ -71,16 +71,6 @@ export const trainers: Trainer[] = [
     image: "/images/trainers/team.jpg",
     bio: "HYROX-Athletin, CrossFit, Klettern, Bouldern, Snowboarden — motiviert dich zu Höchstleistungen in der Gruppe und am Race Day.",
   },
-  {
-    name: "Isabell Tatzl",
-    role: "Schwangerschaftscoaching & Kurse",
-    credentials: [
-      "Zertifizierte Schwangerschafts-Trainerin",
-      "Mutter von zwei Kindern",
-    ],
-    image: "/images/trainers/team.jpg",
-    bio: "Ausgebildete Expertin und Mutter von zwei Kindern. Begleitet werdende Mütter mit sanften Kraft- und Beweglichkeitsübungen sicher durch die Schwangerschaft.",
-  },
 ];
 
 export interface Service {
@@ -95,7 +85,7 @@ export const services: Service[] = [
   {
     title: "Personal Training",
     description:
-      "1:1 Training im privaten Studio — individuell auf dich abgestimmt. Abnehmen, Muskelaufbau oder Schmerzfreiheit.",
+      "1:1 Coaching in unserem privaten Studio — individuell auf dich abgestimmt. Abnehmen, Muskelaufbau oder Schmerzfreiheit.",
     href: "/personal-training",
     icon: "dumbbell",
     image: "/images/studio/studio-6.jpg",
@@ -146,24 +136,6 @@ export const groupClasses: GroupClass[] = [
     image: "/images/classes/bootcamp.png",
   },
   {
-    name: "Hypertrophic",
-    trainer: "Team Alpha Sports",
-    schedule: "Mi 18:00–19:00",
-    description:
-      "Fundiertes Hypertrophie-Training mit Fokus auf korrekte Technik bei Grundübungen. Progressive Überlastung, Muskelspannung und gezielter Reiz für maximalen Muskelaufbau und Body Recomposition.",
-    href: "/gruppenkurse#hypertrophic",
-    image: "/images/studio/studio-6.jpg",
-  },
-  {
-    name: "HIIT Boxing",
-    trainer: "Luigi Lieberherr",
-    schedule: "Do 18:30–19:30",
-    description:
-      "Fusion aus Thaiboxen (Muay Thai) und HIIT-Training. Kicks, Schläge, Knie und Ellbogen kombiniert mit hochintensiven Intervallen. Ganzkörper-Workout für Kondition, Kraft und Schnelligkeit.",
-    href: "/gruppenkurse#hiit-boxing",
-    image: "/images/studio/studio-7.jpg",
-  },
-  {
     name: "Pilates",
     trainer: "Julia Lau",
     schedule: "So 10:00–11:00",
@@ -171,24 +143,6 @@ export const groupClasses: GroupClass[] = [
       "Stärke deine Mitte und finde die Balance. Core-Stabilität, Mobilität und Körperhaltung verbessern. Bauch-, Rücken- und Beckenbodentraining. Ideale Ergänzung zum Krafttraining.",
     href: "/gruppenkurse#pilates",
     image: "/images/studio/studio-3.jpg",
-  },
-  {
-    name: "Yoga",
-    trainer: "David Rogers",
-    schedule: "Mi 19:30–20:30",
-    description:
-      "Körper, Geist und Seele in Einklang bringen. Gezielte Atemtechniken, fliessende Bewegungen und achtsame Praxis für körperliches Wohlbefinden und innere Balance. Rückenmuskulatur stärken, Flexibilität verbessern.",
-    href: "/gruppenkurse#yoga",
-    image: "/images/studio/studio-4.jpg",
-  },
-  {
-    name: "Stretching & Mobility",
-    trainer: "David Rogers",
-    schedule: "So 11:30–12:30",
-    description:
-      "Dynamische und statische Dehnübungen für erhöhte Flexibilität, verbesserte Körperhaltung und reduziertes Verletzungsrisiko. Gelenke mobilisieren, Muskulatur entspannen, Verspannungen lösen.",
-    href: "/gruppenkurse#stretching",
-    image: "/images/studio/studio-5.jpg",
   },
 ];
 
@@ -243,7 +197,7 @@ export const painPointCards = [
   {
     problem: "Du trainierst regelmässig, siehst aber keine Ergebnisse?",
     solution:
-      "Individuelle Trainingspläne basierend auf InBody-Analyse und Leistungsdiagnostik.",
+      "Individuelle Trainingspläne basierend auf umfangreicher Diagnostik.",
   },
   {
     problem: "Du weisst nicht, wo du anfangen sollst?",
@@ -253,7 +207,7 @@ export const painPointCards = [
   {
     problem: "Fitnessstudios sind dir zu überfüllt und anonym?",
     solution:
-      "Privates Studio, max. 2 Personen — volle Aufmerksamkeit, familiäre Atmosphäre.",
+      "Privates Studio — volle Aufmerksamkeit, familiäre Atmosphäre.",
   },
 ];
 
@@ -312,8 +266,6 @@ export const googleReviews = [
 
 export const certifications = [
   { name: "Qualitop", logo: "/images/certs/qualitop.png" },
-  { name: "EMR", logo: "/images/certs/emr.png" },
-  { name: "SwissActive", logo: "/images/certs/swissactive.png" },
 ];
 
 export const studioImages = [
@@ -336,7 +288,7 @@ export const navItems = [
     label: "Analysen",
     children: [
       { label: "InBody Analyse", href: "/analysen#inbody" },
-      { label: "Stoffwechselanalyse", href: "/analysen#stoffwechsel" },
+      { label: "Stoffwechsel & Stressanalyse", href: "/analysen#stoffwechsel" },
       { label: "Leistungsanalyse", href: "/analysen#leistung" },
     ],
   },
@@ -344,11 +296,9 @@ export const navItems = [
     label: "Gruppenkurse",
     children: [
       { label: "Bootcamp", href: "/gruppenkurse#bootcamp" },
-      { label: "Hypertrophic", href: "/gruppenkurse#hypertrophic" },
-      { label: "HIIT Boxing", href: "/gruppenkurse#hiit-boxing" },
       { label: "Pilates", href: "/gruppenkurse#pilates" },
-      { label: "Yoga", href: "/gruppenkurse#yoga" },
-      { label: "Stretching & Mobility", href: "/gruppenkurse#stretching" },
+      { label: "Strength", href: "/gruppenkurse#strength" },
+      { label: "HYROX", href: "/hyrox" },
     ],
   },
   { label: "Hyrox", href: "/hyrox" },
@@ -356,6 +306,7 @@ export const navItems = [
     label: "Mehr",
     children: [
       { label: "Über uns", href: "/ueber-uns" },
+      { label: "Einblicke", href: "/einblicke" },
       { label: "Erfolgsgeschichten", href: "/erfolgsgeschichten" },
       { label: "Preise", href: "/preise" },
       { label: "Kontakt", href: "/kontakt" },
@@ -381,7 +332,7 @@ export const pricing: PricingCategory[] = [
   {
     title: "Einzelbuchungen",
     items: [
-      { name: "Beratungsgespräch", price: "Kostenlos", unit: "30 Min" },
+      { name: "Beratungsgespräch", price: "Kostenlos", unit: "45 Min" },
       { name: "1:1 Personal Training", price: "150", unit: "60 Min" },
       { name: "1:2 Personal Training", price: "90", unit: "pro Person / 60 Min" },
       { name: "Trainingsplanung", price: "65" },
@@ -393,26 +344,26 @@ export const pricing: PricingCategory[] = [
       {
         name: "12er Stempelkarte",
         price: "580",
-        note: "CHF 145/h | Mit Isabell/David: CHF 125/h (500/mtl)",
+        note: "CHF 145/h | Mit David: CHF 125/h (500/mtl)",
         includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
       {
         name: "24er Stempelkarte",
         price: "1'120",
-        note: "CHF 140/h | Mit Isabell/David: CHF 120/h (960/mtl)",
+        note: "CHF 140/h | Mit David: CHF 120/h (960/mtl)",
         popular: true,
         includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
       {
         name: "36er Stempelkarte",
         price: "1'560",
-        note: "CHF 130/h | Mit Isabell/David: CHF 115/h (1'380/mtl)",
+        note: "CHF 130/h | Mit David: CHF 115/h (1'380/mtl)",
         includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
       {
         name: "48er Stempelkarte",
         price: "1'920",
-        note: "CHF 120/h | Mit Isabell/David: CHF 110/h (1'760/mtl)",
+        note: "CHF 120/h | Mit David: CHF 110/h (1'760/mtl)",
         includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
       },
     ],
@@ -423,22 +374,22 @@ export const pricing: PricingCategory[] = [
       {
         name: "12er Stempelkarte",
         price: "360",
-        note: "CHF 90/h p.P. | Mit Isabell/David: CHF 70/h (280/mtl p.P.)",
+        note: "CHF 90/h p.P. | Mit David: CHF 70/h (280/mtl p.P.)",
       },
       {
         name: "24er Stempelkarte",
         price: "680",
-        note: "CHF 85/h p.P. | Mit Isabell/David: CHF 65/h (520/mtl p.P.)",
+        note: "CHF 85/h p.P. | Mit David: CHF 65/h (520/mtl p.P.)",
       },
       {
         name: "36er Stempelkarte",
         price: "960",
-        note: "CHF 80/h p.P. | Mit Isabell/David: CHF 60/h (720/mtl p.P.)",
+        note: "CHF 80/h p.P. | Mit David: CHF 60/h (720/mtl p.P.)",
       },
       {
         name: "48er Stempelkarte",
         price: "1'200",
-        note: "CHF 75/h p.P. | Mit Isabell/David: CHF 60/h (960/mtl p.P.)",
+        note: "CHF 75/h p.P. | Mit David: CHF 60/h (960/mtl p.P.)",
       },
     ],
   },

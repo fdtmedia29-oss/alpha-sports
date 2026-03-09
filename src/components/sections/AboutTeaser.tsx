@@ -19,7 +19,7 @@ const highlights = [
   {
     icon: Heart,
     title: "Mental & körperlich",
-    text: "Nicht nur abnehmen und Muskeln aufbauen — sondern leistungsfähig im Alltag und stark im Auftreten.",
+    text: "Nicht nur abnehmen und Muskeln aufbauen — sondern auch Leistungsfähigkeit im Alltag begleitet von einem starken Auftreten.",
   },
   {
     icon: Shield,
@@ -47,7 +47,7 @@ export default function AboutTeaser() {
               Dein Weg zur Bestform beginnt jetzt.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-white/70">
-              In unserem exklusiven Personal Training Studio in St. Gallen dreht
+              In unserem exklusiven Personal Training Studio im Herzen von St. Gallen dreht
               sich alles um dich — deine Ziele, deine Transformation, dein neues
               Körpergefühl. Wir glauben nicht an Zufälle, sondern an gezielte
               Strategien, individuelle Diagnostik und die Kraft von Erfahrung.
@@ -76,7 +76,7 @@ export default function AboutTeaser() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6"
+                className="rounded-3xl border border-white/10 bg-white/5 p-6"
               >
                 <h.icon className="h-7 w-7 text-orange" />
                 <h3 className="mt-4 text-base font-bold text-white">

@@ -31,8 +31,8 @@ export default function StudioGallery() {
               Privat. Modern. Für dich.
             </h2>
             <p className="mt-4 max-w-xl text-lg text-text-secondary">
-              Training in privater Atmosphäre — max. 2 Personen gleichzeitig,
-              volle Aufmerksamkeit garantiert.
+              Training in privater Atmosphäre — volle Aufmerksamkeit
+              garantiert.
             </p>
           </div>
 

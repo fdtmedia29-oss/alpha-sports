@@ -12,9 +12,9 @@ export default function PainPoints() {
         {/* Header + quotes as simple text */}
         <div className="mb-16 grid items-start gap-12 lg:grid-cols-2">
           <div>
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+            <h2 className="text-2xl font-bold uppercase tracking-widest text-orange md:text-3xl">
               Erkennst du dich wieder?
-            </span>
+            </h2>
             <div className="mt-8 space-y-4">
               {painPointQuotes.map((quote, i) => (
                 <motion.p
@@ -42,8 +42,8 @@ export default function PainPoints() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
               Wir bringen dich auf schnellstem Weg zu deinem Ziel — mit
-              Personal Training im privaten Studio, massgeschneiderter
-              Ernährung, modernster Leistungsdiagnostik und Gruppenkursen.
+              Personal Training in unserem privaten Studio, massgeschneiderter
+              Ernährung, modernster Diagnostik und Gruppenkursen.
             </p>
             <div className="mt-8">
               <Link
@@ -66,7 +66,7 @@ export default function PainPoints() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group rounded-2xl border border-border bg-white p-8 transition-all hover:shadow-lg"
+              className="group rounded-3xl border border-border bg-white p-8 transition-all hover:shadow-lg"
             >
               {/* Problem */}
               <div className="flex items-start gap-3">

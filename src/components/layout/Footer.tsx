@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              Personal Training Studio in St. Gallen. Individuell, privat,
+              Personal Training Studio im Herzen von St. Gallen. Individuell, privat,
               effektiv. Krankenkassen anerkannt.
             </p>
             <div className="mt-6 flex gap-4">
@@ -61,9 +61,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 ["Personal Training", "/personal-training"],
-                ["Online Coaching", "/online-coaching"],
                 ["Gruppenkurse", "/gruppenkurse"],
-                ["HYROX", "/gruppenkurse/hyrox"],
+                ["Online Coaching", "/online-coaching"],
+                ["HYROX", "/hyrox"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link

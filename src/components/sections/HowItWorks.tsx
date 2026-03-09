@@ -11,28 +11,28 @@ const steps = [
     icon: MessageCircle,
     title: "Kostenloses Beratungsgespräch",
     description:
-      "Wir lernen dich und deine Ziele kennen — ob Abnehmen, Muskelaufbau oder Schmerzfreiheit. 30 Minuten, unverbindlich.",
+      "Wir lernen dich und deine Ziele kennen — ob Abnehmen, Muskelaufbau oder Schmerzfreiheit. 45 Minuten, unverbindlich.",
   },
   {
     number: "02",
     icon: ClipboardCheck,
     title: "Analyse & individueller Plan",
     description:
-      "Basierend auf InBody-Analyse, Stoffwechseltest oder Leistungsdiagnostik erstellen wir deinen massgeschneiderten Plan.",
+      "Basierend auf Körper, Stoffwechsel und Leistungsanalysen erstellen wir deinen massgeschneiderten Plan.",
   },
   {
     number: "03",
     icon: Dumbbell,
     title: "Training im privaten Studio",
     description:
-      "Du trainierst 1:1 oder in Kleingruppen — mit voller Aufmerksamkeit deines Trainers. Keine Ablenkung.",
+      "Du trainierst 1:1 oder 1:2 — mit voller Aufmerksamkeit deines Trainers. Keine Ablenkung.",
   },
   {
     number: "04",
     icon: TrendingUp,
     title: "Fortschritt messen & anpassen",
     description:
-      "Regelmässige Check-ins und Analysen zeigen dir, was sich verändert. Wir passen deinen Plan laufend an.",
+      "Regelmässiges Fortschrittstracking mittels Analysen zeigen dir wo du stehst. Wir passen deinen Plan laufend an.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function HowItWorks() {
                 <div className="absolute right-0 top-10 hidden h-px w-8 translate-x-full bg-orange/30 lg:block" />
               )}
 
-              <div className="rounded-2xl border border-border bg-white p-8">
+              <div className="flex h-full flex-col rounded-3xl border border-border bg-white p-8">
                 {/* Number + Icon */}
                 <div className="flex items-center justify-between">
                   <span className="text-4xl font-black text-orange/20">
@@ -81,7 +81,7 @@ export default function HowItWorks() {
                 <h3 className="mt-6 text-lg font-bold text-text">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">
                   {step.description}
                 </p>
               </div>

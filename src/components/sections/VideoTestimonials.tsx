@@ -74,7 +74,6 @@ function VideoCard({
               ref={videoRef}
               src={video.src}
               playsInline
-              muted
               loop
               className="h-full w-full object-cover"
             />

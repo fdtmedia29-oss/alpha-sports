@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/content";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-dark">
+    <section className="relative flex min-h-screen items-end overflow-hidden bg-dark">
       {/* Background video */}
       <div className="absolute inset-0">
         <video
@@ -22,8 +22,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-dark/70 via-dark/50 to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 md:pt-40 md:pb-32">
-        <div className="max-w-3xl">
+      <div className="relative mx-auto w-full max-w-7xl px-6 pb-16 pt-40 md:pb-24 md:pt-48">
+        <div className="mx-auto max-w-3xl text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function Hero() {
 
           {/* Subline */}
           <motion.p
-            className="mt-6 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl"
+            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -59,9 +59,9 @@ export default function Hero() {
             endlich wieder wohlfühlst.
           </motion.p>
 
-          {/* CTAs */}
+          {/* CTA */}
           <motion.div
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-10 flex justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -77,20 +77,16 @@ export default function Hero() {
 
           {/* Motto */}
           <motion.div
-            className="mt-16 border-l-2 border-orange pl-6"
+            className="mx-auto mt-12 max-w-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <p className="text-sm font-semibold uppercase tracking-widest text-white/50">
+            <p className="text-sm font-semibold uppercase tracking-widest text-white/40">
               Unser Motto
             </p>
             <p className="mt-2 text-xl font-bold text-white md:text-2xl">
               Definiert — Kraftvoll — Selbstbewusst
-            </p>
-            <p className="mt-2 text-sm text-white/60">
-              Gemeinsam entfalten wir dein volles Potenzial und formen deinen
-              Körper — für mehr Stärke, Selbstvertrauen und nachhaltigen Erfolg.
             </p>
           </motion.div>
         </div>

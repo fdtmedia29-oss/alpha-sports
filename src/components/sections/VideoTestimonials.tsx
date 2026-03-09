@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react";
 
 const videos = [
   { src: "/videos/testimonial-1.mp4", title: "Testimonial 1" },
@@ -20,10 +20,11 @@ function VideoCard({
   autoPlay?: boolean;
 }) {
   const [playing, setPlaying] = useState(false);
+  const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  /* Autoplay first video when scrolled into view, pause when out */
+  /* Autoplay first video (muted) when scrolled into view, pause when out */
   useEffect(() => {
     if (!autoPlay || !video.src || !videoRef.current || !containerRef.current)
       return;
@@ -55,6 +56,13 @@ function VideoCard({
     setPlaying(!playing);
   };
 
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    videoRef.current.muted = !muted;
+    setMuted(!muted);
+  };
+
   return (
     <motion.div
       ref={containerRef}
@@ -73,10 +81,12 @@ function VideoCard({
             <video
               ref={videoRef}
               src={video.src}
+              muted
               playsInline
               loop
               className="h-full w-full object-cover"
             />
+            {/* Play overlay — shown when paused */}
             {!playing && (
               <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/40 bg-black/30 backdrop-blur-sm transition-all group-hover:border-orange group-hover:bg-orange/20">
@@ -86,6 +96,20 @@ function VideoCard({
                   />
                 </div>
               </div>
+            )}
+            {/* Mute/unmute button — shown when playing */}
+            {playing && (
+              <button
+                onClick={toggleMute}
+                className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm transition-colors hover:bg-black/60"
+                aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
+              >
+                {muted ? (
+                  <VolumeX className="h-5 w-5 text-white" />
+                ) : (
+                  <Volume2 className="h-5 w-5 text-white" />
+                )}
+              </button>
             )}
           </>
         ) : (

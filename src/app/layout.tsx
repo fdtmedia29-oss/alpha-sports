@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
-import MobileBottomBar from "@/components/layout/MobileBottomBar";
+
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import "./globals.css";
 
@@ -159,11 +159,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} bg-white text-text antialiased`}>
         <Nav />
-        <main className="min-h-screen bg-white pt-20 pb-20 lg:pb-0">
+        <main className="min-h-screen bg-white pt-20">
           {children}
         </main>
         <Footer />
-        <MobileBottomBar />
         <WhatsAppButton />
       </body>
     </html>

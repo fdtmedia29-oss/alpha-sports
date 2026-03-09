@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -10,9 +10,40 @@ const videos = [
   { src: null, title: "Testimonial 3" },
 ];
 
-function VideoCard({ video, index }: { video: (typeof videos)[number]; index: number }) {
+function VideoCard({
+  video,
+  index,
+  autoPlay,
+}: {
+  video: (typeof videos)[number];
+  index: number;
+  autoPlay?: boolean;
+}) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  /* Autoplay first video when scrolled into view, pause when out */
+  useEffect(() => {
+    if (!autoPlay || !video.src || !videoRef.current || !containerRef.current)
+      return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play();
+          setPlaying(true);
+        } else {
+          videoRef.current?.pause();
+          setPlaying(false);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [autoPlay, video.src]);
 
   const togglePlay = () => {
     if (!videoRef.current || !video.src) return;
@@ -26,6 +57,7 @@ function VideoCard({ video, index }: { video: (typeof videos)[number]; index: nu
 
   return (
     <motion.div
+      ref={containerRef}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -42,13 +74,17 @@ function VideoCard({ video, index }: { video: (typeof videos)[number]; index: nu
               ref={videoRef}
               src={video.src}
               playsInline
+              muted
               loop
               className="h-full w-full object-cover"
             />
             {!playing && (
               <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/40 bg-black/30 backdrop-blur-sm transition-all group-hover:border-orange group-hover:bg-orange/20">
-                  <Play className="h-7 w-7 text-white transition-colors group-hover:text-orange" fill="currentColor" />
+                  <Play
+                    className="h-7 w-7 text-white transition-colors group-hover:text-orange"
+                    fill="currentColor"
+                  />
                 </div>
               </div>
             )}
@@ -95,10 +131,20 @@ export default function VideoTestimonials() {
           <div
             ref={scrollRef}
             className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible md:pb-0"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              touchAction: "pan-y pinch-zoom",
+              overscrollBehaviorX: "none",
+            }}
           >
             {videos.map((video, i) => (
-              <VideoCard key={i} video={video} index={i} />
+              <VideoCard
+                key={i}
+                video={video}
+                index={i}
+                autoPlay={i === 0}
+              />
             ))}
           </div>
 

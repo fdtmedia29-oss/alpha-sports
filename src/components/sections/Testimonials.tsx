@@ -107,7 +107,12 @@ export default function Testimonials() {
         <div
           ref={scrollRef}
           className="mt-8 flex gap-5 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            touchAction: "pan-y pinch-zoom",
+            overscrollBehaviorX: "none",
+          }}
         >
           {googleReviews.map((review, i) => (
             <motion.div

@@ -48,7 +48,12 @@ export default function PhotoCarousel({ title, images }: PhotoCarouselProps) {
       <div
         ref={scrollRef}
         className="mt-6 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          touchAction: "pan-y pinch-zoom",
+          overscrollBehaviorX: "none",
+        }}
       >
         {images.map((src, i) => (
           <motion.div

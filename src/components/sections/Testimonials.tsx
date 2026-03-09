@@ -110,7 +110,6 @@ export default function Testimonials() {
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
-            touchAction: "pan-y pinch-zoom",
             overscrollBehaviorX: "none",
           }}
         >

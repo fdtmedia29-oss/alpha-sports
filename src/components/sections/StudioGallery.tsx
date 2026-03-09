@@ -62,7 +62,6 @@ export default function StudioGallery() {
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
-            touchAction: "pan-y pinch-zoom",
             overscrollBehaviorX: "none",
           }}
         >

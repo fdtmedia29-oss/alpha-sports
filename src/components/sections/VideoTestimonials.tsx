@@ -133,7 +133,6 @@ export default function VideoTestimonials() {
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
-              touchAction: "pan-y pinch-zoom",
               overscrollBehaviorX: "none",
             }}
           >

@@ -77,7 +77,7 @@ export default function Hero() {
 
           {/* Motto */}
           <motion.div
-            className="mx-auto mt-14 inline-flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-6 backdrop-blur-sm"
+            className="mx-auto mt-14 max-w-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -85,10 +85,10 @@ export default function Hero() {
             <p className="text-xs font-semibold uppercase tracking-widest text-white/40">
               Unser Motto
             </p>
-            <p className="text-xl font-bold text-white md:text-2xl">
+            <p className="mt-2 text-xl font-bold text-white md:text-2xl">
               Definiert — Kraftvoll — Selbstbewusst
             </p>
-            <p className="max-w-md text-sm leading-relaxed text-white/50">
+            <p className="mt-2 text-sm leading-relaxed text-white/50">
               Gemeinsam entfalten wir dein volles Potenzial und formen deinen
               Körper — für mehr Stärke, Selbstvertrauen und nachhaltigen Erfolg.
             </p>

@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/content";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[calc(100vh-7rem)] items-center overflow-hidden bg-dark">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-dark">
       {/* Background video */}
       <div className="absolute inset-0">
         <video

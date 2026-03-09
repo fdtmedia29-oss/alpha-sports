@@ -104,7 +104,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || mobileOpen
           ? "bg-white/95 backdrop-blur-xl shadow-sm border-b border-border"
           : "bg-dark/90 backdrop-blur-xl"
       }`}
@@ -115,11 +115,11 @@ export default function Nav() {
           {/* Logo */}
           <Link href="/" className="relative h-10 w-32 shrink-0">
             <Image
-              src="/images/logo-white.png"
+              src="/images/alpha-logo-B-personaltraining.png"
               alt="Alpha Sports"
               fill
               className={`object-contain object-left transition-all duration-300 ${
-                scrolled ? "brightness-0" : ""
+                scrolled || mobileOpen ? "" : "invert"
               }`}
               priority
             />
@@ -146,7 +146,7 @@ export default function Nav() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`rounded-lg p-2 lg:hidden ${
-              scrolled ? "text-text" : "text-white"
+              scrolled || mobileOpen ? "text-text" : "text-white"
             }`}
             aria-label="Menu"
           >

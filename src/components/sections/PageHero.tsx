@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 export default function PageHero({ badge, title, description }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-dark py-20 md:py-28">
+    <section className="relative overflow-hidden bg-dark pt-28 pb-20 md:pt-36 md:pb-28">
       <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-dark-surface" />
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div

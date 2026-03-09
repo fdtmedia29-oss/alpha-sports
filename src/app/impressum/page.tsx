@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white pt-28">
       <div className="mx-auto max-w-3xl">
         <h1 className="text-3xl font-bold text-text">Impressum</h1>
 

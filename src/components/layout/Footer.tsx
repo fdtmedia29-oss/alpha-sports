@@ -12,10 +12,10 @@ export default function Footer() {
           <div>
             <Link href="/" className="relative inline-block h-12 w-36">
               <Image
-                src="/images/logo-white.png"
+                src="/images/alpha-logo-B-personaltraining.png"
                 alt="Alpha Sports"
                 fill
-                className="object-contain object-left"
+                className="object-contain object-left invert"
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60">

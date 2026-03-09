@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import { Clock, User, Check, Dumbbell, Flame, Heart, Zap, StretchHorizontal, Baby } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -301,6 +302,20 @@ export default function GruppenkursePage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Photo Carousel */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <PhotoCarousel
+            title="Gruppenkurse"
+            images={[
+              "/images/classes/hyrox-gruppenkurs.jpg",
+              "/images/pt/alpha-personal-07.jpg",
+              "/images/pt/alpha-personal-15.jpg",
+            ]}
+          />
         </div>
       </section>
 

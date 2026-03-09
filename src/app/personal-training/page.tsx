@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import {
   Check,
   Dumbbell,
@@ -221,6 +222,28 @@ export default function PersonalTrainingPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Photo Carousel */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <PhotoCarousel
+            title="Personal Training"
+            images={[
+              "/images/pt/alpha-personal-03.jpg",
+              "/images/pt/alpha-personal-07.jpg",
+              "/images/pt/alpha-personal-09.jpg",
+              "/images/pt/alpha-personal-15.jpg",
+              "/images/pt/alpha-personal-24.jpg",
+              "/images/pt/alpha-personal-26.jpg",
+              "/images/pt/alpha-personal-32.jpg",
+              "/images/pt/lerchenfeld-73.jpg",
+              "/images/pt/kal00470.jpg",
+              "/images/pt/kal00633.jpg",
+              "/images/pt/kal00693.jpg",
+            ]}
+          />
         </div>
       </section>
 

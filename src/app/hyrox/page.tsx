@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import { Zap, Target, Users, Trophy, Dumbbell, Heart, Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -166,6 +167,18 @@ export default function HyroxPage() {
             mit CrossFit-, Kletter- und Bouldern-Erfahrung. Luigi bringt 10+ Jahre
             Fitness-Erfahrung und Kampfsport-Hintergrund mit.
           </p>
+        </div>
+      </section>
+
+      {/* Photo Carousel */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <PhotoCarousel
+            title="HYROX Training"
+            images={[
+              "/images/classes/hyrox-gruppenkurs.jpg",
+            ]}
+          />
         </div>
       </section>
 

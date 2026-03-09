@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import { Check, Leaf, BarChart3, Utensils, Heart, Star, Smartphone, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -179,6 +180,20 @@ export default function ErnaehrungsberatungPage() {
             Makronaehrstoff-Verteilung, einen Ueberblick ueber dein taegliches
             Kalorienbudget und viele weitere nuetzliche Tools und Informationen.
           </p>
+        </div>
+      </section>
+
+      {/* Photo Carousel */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <PhotoCarousel
+            title="Ernährungsberatung"
+            images={[
+              "/images/ernaehrung/food-1898194-1280.jpg",
+              "/images/ernaehrung/food-3654199-1280.jpg",
+              "/images/ernaehrung/design-ohne-titel.png",
+            ]}
+          />
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import { Activity, Flame, Zap, BarChart3, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -198,6 +199,22 @@ export default function AnalysenPage() {
             — mit individuellen Trainingszonen, Ernaehrungsempfehlungen, Rezepten und
             deinem persoenlichen Kalorienbudget.
           </p>
+        </div>
+      </section>
+
+      {/* Photo Carousel */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <PhotoCarousel
+            title="Analysen & Diagnostik"
+            images={[
+              "/images/analysen/erklar-foto-lui.jpg",
+              "/images/analysen/2-inbody-koerperanalyse.png",
+              "/images/analysen/leistungsanalyse.jpg",
+              "/images/analysen/stoffwechselanalyse.jpg",
+              "/images/analysen/inbody-analyse.webp",
+            ]}
+          />
         </div>
       </section>
 

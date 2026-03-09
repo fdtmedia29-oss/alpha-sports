@@ -31,7 +31,7 @@ export const trainers: Trainer[] = [
       "Fitness & Functional Trainer",
       "InBody Specialist",
     ],
-    image: "/images/trainers/team.jpg",
+    image: "/images/trainers/luigi-lieberherr.jpg",
     bio: "10+ Jahre Fitness-Erfahrung, Breakdance-Instruktor, Swiss Breakdance Champion und Thai-Boxing-Erfahrung. Luigi verbindet Leidenschaft mit Expertise für deine Transformation.",
   },
   {
@@ -44,7 +44,7 @@ export const trainers: Trainer[] = [
       "GLA:D Arthrose",
       "Group Fitness",
     ],
-    image: "/images/trainers/team.jpg",
+    image: "/images/trainers/julia-lau.jpg",
     bio: "10+ Jahre Erfahrung, ehemalige Wettkampf-Tennisspielerin. Verbindet therapeutisches Wissen mit gezieltem Fitness-Training für nachhaltige Ergebnisse.",
   },
   {
@@ -57,7 +57,7 @@ export const trainers: Trainer[] = [
       "Kung Fu & Judo",
       "Selbstverteidigung",
     ],
-    image: "/images/trainers/team.jpg",
+    image: "/images/trainers/david-rogers.jpg",
     bio: "Spezialist für funktionelle Bewegung, Pilates, Yoga und Kampfsport. Bringt Körper und Geist in Einklang.",
   },
   {
@@ -68,7 +68,7 @@ export const trainers: Trainer[] = [
       "HYROX365 Foundation",
       "Ernährungscoach",
     ],
-    image: "/images/trainers/team.jpg",
+    image: "/images/trainers/nicole-walser.jpg",
     bio: "HYROX-Athletin, CrossFit, Klettern, Bouldern, Snowboarden — motiviert dich zu Höchstleistungen in der Gruppe und am Race Day.",
   },
 ];
@@ -88,7 +88,7 @@ export const services: Service[] = [
       "1:1 Coaching in unserem privaten Studio — individuell auf dich abgestimmt. Abnehmen, Muskelaufbau oder Schmerzfreiheit.",
     href: "/personal-training",
     icon: "dumbbell",
-    image: "/images/studio/studio-6.jpg",
+    image: "/images/pt/alpha-personal-03.jpg",
   },
   {
     title: "Online Coaching",
@@ -104,7 +104,7 @@ export const services: Service[] = [
       "Massgeschneiderte Ernährungspläne für nachhaltige Ergebnisse. Ohne Verzicht, ohne Crash-Diät.",
     href: "/ernaehrungsberatung",
     icon: "apple",
-    image: "/images/studio/studio-8.jpg",
+    image: "/images/ernaehrung/food-3654199-1280.jpg",
   },
   {
     title: "Analysen & Diagnostik",
@@ -112,7 +112,7 @@ export const services: Service[] = [
       "InBody, Stoffwechsel- & Leistungsanalyse für datenbasiertes Training. Messbare Fortschritte.",
     href: "/analysen",
     icon: "activity",
-    image: "/images/studio/studio-1.jpg",
+    image: "/images/analysen/erklar-foto-lui.jpg",
   },
 ];
 
@@ -133,7 +133,7 @@ export const groupClasses: GroupClass[] = [
     description:
       "Energiegeladener Indoor-Gruppenkurs für jedes Fitness-Level. Kraft-Ausdauer, Herz-Kreislauf, Fettverbrennung und Muskelaufbau mit abwechslungsreichen Übungen. Nachbrenneffekt bis zu 72 Stunden.",
     href: "/gruppenkurse#bootcamp",
-    image: "/images/classes/bootcamp.png",
+    image: "/images/pt/alpha-personal-07.jpg",
   },
   {
     name: "Pilates",
@@ -142,7 +142,7 @@ export const groupClasses: GroupClass[] = [
     description:
       "Stärke deine Mitte und finde die Balance. Core-Stabilität, Mobilität und Körperhaltung verbessern. Bauch-, Rücken- und Beckenbodentraining. Ideale Ergänzung zum Krafttraining.",
     href: "/gruppenkurse#pilates",
-    image: "/images/studio/studio-3.jpg",
+    image: "/images/pt/alpha-personal-15.jpg",
   },
 ];
 

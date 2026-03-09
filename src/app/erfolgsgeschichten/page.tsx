@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import { Star, Quote } from "lucide-react";
@@ -138,6 +139,45 @@ export default function ErfolgsgeschichtenPage() {
             >
               Google Bewertungen lesen
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Before/After Photo Grid */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Transformationen
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Vorher — Nachher
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-text-secondary">
+              Echte Ergebnisse unserer Kunden. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "/images/results/vorher-nachher-dietmar-grichnik.jpg",
+              "/images/results/vorher-nachher-simon-gisler.jpg",
+              "/images/results/vorher-nachher-claudine-g.png",
+              "/images/results/vorher-nachher-markus-richina.jpg",
+              "/images/results/vorher-nachher-peter-meier.png",
+              "/images/results/vorher-nachher-izadora-d.png",
+            ].map((src, i) => (
+              <div
+                key={src}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white"
+              >
+                <Image
+                  src={src}
+                  alt={`Vorher-Nachher Transformation ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

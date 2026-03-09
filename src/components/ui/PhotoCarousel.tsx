@@ -47,7 +47,7 @@ export default function PhotoCarousel({ title, images }: PhotoCarouselProps) {
 
       <div
         ref={scrollRef}
-        className="mt-6 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory"
+        className="mt-6 flex gap-4 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",

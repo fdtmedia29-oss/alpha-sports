@@ -106,7 +106,7 @@ export default function Testimonials() {
         {/* Carousel */}
         <div
           ref={scrollRef}
-          className="mt-8 flex gap-5 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory"
+          className="mt-8 flex gap-5 overflow-x-auto overflow-y-hidden pb-4 scrollbar-hide snap-x snap-mandatory"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",

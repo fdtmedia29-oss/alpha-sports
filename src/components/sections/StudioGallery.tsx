@@ -58,7 +58,7 @@ export default function StudioGallery() {
         {/* Carousel */}
         <div
           ref={scrollRef}
-          className="mt-10 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory"
+          className="mt-10 flex gap-4 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",

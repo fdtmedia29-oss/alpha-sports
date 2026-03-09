@@ -116,7 +116,7 @@ export default function GroupClasses() {
         </div>
 
         {/* Course cards — horizontal scroll on mobile, grid on desktop */}
-        <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory md:overflow-visible md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory md:overflow-visible md:overflow-y-visible md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4">
           <AnimatePresence mode="popLayout">
             {filtered.map((cls) => (
               <motion.div

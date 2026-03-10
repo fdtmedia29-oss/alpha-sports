@@ -47,7 +47,7 @@ const analyses = [
     description:
       "Eine 5-minuetige Atemgasanalyse in Ruhe bestimmt deine exakte Stoffwechselsituation. Du erfaehrst, welche Energiequelle (Kohlenhydrate, Proteine oder Fette) dein Körper aktuell bevorzugt und wie hoch dein genauer Grundumsatz ist.",
     detailedDescription:
-      "Während des Termins fuehrst du einen kurzen Atemtest in Ruhe durch. Unsere Spezialisten erfragen deine täglichen körperlichen Aktivitaeten, um deinen Leistungsumsatz zu berechnen und deinen täglichen Gesamtkalorienbedarf zu ermitteln. Ergebnisse werden sofort ueber eine App bereitgestellt — mit Rezepten, optimaler Makronährstoff-Verteilung und deinem täglichen Kalorienbudget.",
+      "Während des Termins fuehrst du einen kurzen Atemtest in Ruhe durch. Unsere Spezialisten erfragen deine täglichen körperlichen Aktivitaeten, um deinen Leistungsumsatz zu berechnen und deinen täglichen Gesamtkalorienbedarf zu ermitteln. Ergebnisse werden sofort über eine App bereitgestellt — mit Rezepten, optimaler Makronährstoff-Verteilung und deinem täglichen Kalorienbudget.",
     measures: [],
     includes: [
       "Exakte Messung Grundumsatz",
@@ -64,9 +64,9 @@ const analyses = [
     subtitle: "Trainiere gezielt & effizient auf dem Weg zu deiner Bestform",
     price: "CHF 159",
     description:
-      "Ein 20-minuetiger Stufentest (Spiroergometrie) bestimmt dein aktuelles Fitness-Level, deine kardiovaskulaere Kapazitaet und Stoffwechselfunktion. Du erfaehrst den Pulsbereich, in dem du am meisten Fett verbrennst, deine VO2max-Werte und den Punkt, an dem deine Muskulatur beginnt zu uebersaeuern.",
+      "Ein 20-minuetiger Stufentest (Spiroergometrie) bestimmt dein aktuelles Fitness-Level, deine kardiovaskulaere Kapazitaet und Stoffwechselfunktion. Du erfaehrst den Pulsbereich, in dem du am meisten Fett verbrennst, deine VO2max-Werte und den Punkt, an dem deine Muskulatur beginnt zu übersaeuern.",
     detailedDescription:
-      "Die Ergebnisse werden sofort ueber eine App bereitgestellt und beinhalten einen personalisierten 6-Monats-Ausdauertrainingsplan mit individualisierten Herzfrequenz-Zonen. Ideal für gezieltes Ausdauer- und Krafttraining oder Wettkampfvorbereitung wie HYROX.",
+      "Die Ergebnisse werden sofort über eine App bereitgestellt und beinhalten einen personalisierten 6-Monats-Ausdauertrainingsplan mit individualisierten Herzfrequenz-Zonen. Ideal für gezieltes Ausdauer- und Krafttraining oder Wettkampfvorbereitung wie HYROX.",
     measures: [],
     includes: [
       "Maximale Sauerstoffaufnahme (VO2max)",
@@ -195,7 +195,7 @@ export default function AnalysenPage() {
             Ergebnisse sofort in der App.
           </h2>
           <p className="mt-4 text-text-secondary">
-            Die Resultate aller Analysen werden direkt ueber eine App bereitgestellt
+            Die Resultate aller Analysen werden direkt über eine App bereitgestellt
             — mit individuellen Trainingszonen, Ernährungsempfehlungen, Rezepten und
             deinem persönlichen Kalorienbudget.
           </p>
@@ -220,7 +220,7 @@ export default function AnalysenPage() {
 
       <CTABanner
         title="Bereit, deinen Körper kennenzulernen?"
-        description="Buche eine Analyse und erfahre, was in dir steckt. Alle Analysen koennen kombiniert oder als Add-On zu anderen Leistungen gebucht werden."
+        description="Buche eine Analyse und erfahre, was in dir steckt. Alle Analysen können kombiniert oder als Add-On zu anderen Leistungen gebucht werden."
       />
     </>
   );

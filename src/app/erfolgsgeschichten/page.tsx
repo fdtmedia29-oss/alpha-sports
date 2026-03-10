@@ -79,7 +79,7 @@ export default function ErfolgsgeschichtenPage() {
       <PageHero
         badge="Erfolgsgeschichten"
         title="Echte Ergebnisse. Echte Menschen."
-        description="Was unsere Kunden ueber ihre Transformation bei Alpha Sports sagen. Physische und mentale Veränderungen, die das Leben veraendern."
+        description="Was unsere Kunden über ihre Transformation bei Alpha Sports sagen. Physische und mentale Veränderungen, die das Leben verändern."
       />
 
       <section className="section-padding bg-white">
@@ -183,8 +183,8 @@ export default function ErfolgsgeschichtenPage() {
       </section>
 
       <CTABanner
-        title="Werde die naechste Erfolgsgeschichte."
-        description="Starte jetzt mit einem kostenlosen Beratungsgespraech und schreibe deine eigene Story."
+        title="Werde die nächste Erfolgsgeschichte."
+        description="Starte jetzt mit einem kostenlosen Beratungsgespräch und schreibe deine eigene Story."
       />
     </>
   );

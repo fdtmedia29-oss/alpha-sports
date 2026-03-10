@@ -170,7 +170,7 @@ export default function ÜberUnsPage() {
               {
                 icon: Shield,
                 title: "Anerkannt",
-                text: "Qualitop, EMR und SwissActive zertifiziert. Professionelle Standards und Krankenkassen-Anerkennung. Ein Teil der Kosten kann uebernommen werden.",
+                text: "Qualitop, EMR und SwissActive zertifiziert. Professionelle Standards und Krankenkassen-Anerkennung. Ein Teil der Kosten kann übernommen werden.",
               },
             ].map((v) => (
               <div key={v.title} className="text-center">
@@ -206,7 +206,7 @@ export default function ÜberUnsPage() {
 
       <CTABanner
         title="Lerne uns persönlich kennen."
-        description="Komm vorbei für ein kostenloses Beratungsgespraech und lerne unser Studio und Team kennen."
+        description="Komm vorbei für ein kostenloses Beratungsgespräch und lerne unser Studio und Team kennen."
       />
     </>
   );

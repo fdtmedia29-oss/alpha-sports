@@ -38,8 +38,8 @@ export default function ErnährungsberatungPage() {
     <>
       <PageHero
         badge="Ernährungsberatung"
-        title="Dein Schluessel zur nachhaltigen Veränderung."
-        description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben veraendern kann."
+        title="Dein Schlüssel zur nachhaltigen Veränderung."
+        description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verändern kann."
       />
 
       {/* Intro */}
@@ -47,7 +47,7 @@ export default function ErnährungsberatungPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-text-secondary">
-              Entdecke, wie eine gezielte Ernährungsstrategie dein Leben veraendern
+              Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verändern
               kann. Mit unserer individuellen Beratung optimierst du deinen
               Stoffwechsel, erreichst deine Fitnessziele und findest die perfekte
               Balance für Gesundheit und Wohlbefinden. Egal, ob Fettabbau,
@@ -110,11 +110,11 @@ export default function ErnährungsberatungPage() {
                 <span className="text-sm text-muted">/Stunde</span>
               </div>
               <p className="mt-4 text-sm text-text-secondary">
-                Erstgespraech, Analyse und individuelle Beratung in einer Session.
+                Erstgespräch, Analyse und individuelle Beratung in einer Session.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  "Persönliches Erstgespraech",
+                  "Persönliches Erstgespräch",
                   "Analyse deiner aktuellen Ernährung",
                   "Individuelle Empfehlungen",
                   "Für alle Altersgruppen geeignet",
@@ -177,8 +177,8 @@ export default function ErnährungsberatungPage() {
           </h2>
           <p className="mt-4 text-text-secondary">
             Die Alpha Sports Tracking-App liefert dir Rezepte mit optimaler
-            Makronährstoff-Verteilung, einen Überblick ueber dein tägliches
-            Kalorienbudget und viele weitere nuetzliche Tools und Informationen.
+            Makronährstoff-Verteilung, einen Überblick über dein tägliches
+            Kalorienbudget und viele weitere nützliche Tools und Informationen.
           </p>
         </div>
       </section>
@@ -199,7 +199,7 @@ export default function ErnährungsberatungPage() {
 
       <CTABanner
         title="Bereit für den Wandel?"
-        description="Vereinbare ein kostenloses Beratungsgespraech und erfahre, wie die richtige Ernährung dein Leben veraendern kann."
+        description="Vereinbare ein kostenloses Beratungsgespräch und erfahre, wie die richtige Ernährung dein Leben verändern kann."
       />
     </>
   );

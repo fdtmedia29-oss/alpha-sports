@@ -52,7 +52,7 @@ export default function HyroxPage() {
               {
                 icon: Target,
                 title: "Fight your limits",
-                text: "Geh an deine Grenzen und darueber hinaus. Mentale Staerke aufbauen, Ausdauer pushen und deine persönliche Bestleistung erreichen.",
+                text: "Geh an deine Grenzen und darüber hinaus. Mentale Staerke aufbauen, Ausdauer pushen und deine persönliche Bestleistung erreichen.",
               },
               {
                 icon: Trophy,
@@ -62,7 +62,7 @@ export default function HyroxPage() {
               {
                 icon: Users,
                 title: "Team Spirit",
-                text: "Lass dich von Gleichgesinnten pushen und ueberschreite deine Grenzen. Motivierende Community und gegenseitige Unterstützung.",
+                text: "Lass dich von Gleichgesinnten pushen und überschreite deine Grenzen. Motivierende Community und gegenseitige Unterstützung.",
               },
             ].map((item) => (
               <div
@@ -107,7 +107,7 @@ export default function HyroxPage() {
                   "Strukturierte Wettkampfvorbereitung",
                   "Muskelaufbau & Körperkomposition",
                   "Mentale Staerke aufbauen",
-                  "An deine Grenzen gehen — und darueber hinaus",
+                  "An deine Grenzen gehen — und darüber hinaus",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
@@ -184,7 +184,7 @@ export default function HyroxPage() {
 
       <CTABanner
         title="Bereit für HYROX?"
-        description="Egal ob dein erstes Race oder deine neue Bestzeit — wir bringen dich hin. Starte mit einem kostenlosen Beratungsgespraech."
+        description="Egal ob dein erstes Race oder deine neue Bestzeit — wir bringen dich hin. Starte mit einem kostenlosen Beratungsgespräch."
       />
     </>
   );

@@ -16,7 +16,7 @@ export default function PreisePage() {
       <PageHero
         badge="Preise"
         title="Transparent. Fair. Flexibel."
-        description="Alle Preise auf einen Blick. Keine versteckten Kosten. Beratungsgespraech immer kostenlos. Stempelkarten 12 Monate gueltig."
+        description="Alle Preise auf einen Blick. Keine versteckten Kosten. Beratungsgespräch immer kostenlos. Stempelkarten 12 Monate gültig."
       />
 
       <section className="section-padding bg-white">
@@ -108,10 +108,10 @@ export default function PreisePage() {
               <p className="mt-4 text-text-secondary">
                 Alpha Sports ist Qualitop, EMR und SwissActive zertifiziert. Je nach
                 Zusatzversicherung kann ein Teil der Kosten für Personal Training und
-                Gruppenkurse von deiner Krankenkasse uebernommen werden.
+                Gruppenkurse von deiner Krankenkasse übernommen werden.
               </p>
               <p className="mt-2 text-sm text-muted">
-                Informiere dich auf qualitop.ch ueber mögliche finanzielle
+                Informiere dich auf qualitop.ch über mögliche finanzielle
                 Unterstützung.
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function PreisePage() {
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Stempelkarten sind 12 Monate gueltig
+                  Stempelkarten sind 12 Monate gültig
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
@@ -144,7 +144,7 @@ export default function PreisePage() {
 
       <CTABanner
         title="Fragen zu den Preisen?"
-        description="Im kostenlosen Beratungsgespraech finden wir das passende Angebot für dich und dein Budget."
+        description="Im kostenlosen Beratungsgespräch finden wir das passende Angebot für dich und dein Budget."
       />
     </>
   );

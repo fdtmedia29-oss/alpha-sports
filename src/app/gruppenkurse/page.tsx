@@ -321,7 +321,7 @@ export default function GruppenkursePage() {
 
       <CTABanner
         title="Lust auf ein kostenloses Probetraining?"
-        description="Waehle deinen Kurs und melde dich an. Einfach per WhatsApp oder ueber unser Kontaktformular."
+        description="Waehle deinen Kurs und melde dich an. Einfach per WhatsApp oder über unser Kontaktformular."
       />
     </>
   );

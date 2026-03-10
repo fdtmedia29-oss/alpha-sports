@@ -23,14 +23,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Personal Training",
   description:
-    "Individuelles 1:1 Personal Training im privaten Studio in St. Gallen. Abnehmen, Muskelaufbau, Schmerzfreiheit — massgeschneiderte Trainings- und Ernährungsstrategien. Krankenkassen anerkannt. Kostenloses Beratungsgespraech.",
+    "Individuelles 1:1 Personal Training im privaten Studio in St. Gallen. Abnehmen, Muskelaufbau, Schmerzfreiheit — massgeschneiderte Trainings- und Ernährungsstrategien. Krankenkassen anerkannt. Kostenloses Beratungsgespräch.",
 };
 
 const schwerpunkte = [
   "Individuelle Coachings",
   "Leistungsdiagnostik",
   "Persönliche Trainingsplanung mit individueller Strategie",
-  "Korrekte Übungsausfuehrung für maximale Effizienz ohne Verletzungen",
+  "Korrekte Übungsausführung für maximale Effizienz ohne Verletzungen",
   "Spürbare Fortschritte und sichtbare Ergebnisse",
   "Flexible Terminwahl (auch am Wochenende)",
 ];
@@ -116,7 +116,7 @@ export default function PersonalTrainingPage() {
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg leading-relaxed text-text-secondary">
-            Vereinbare jetzt ein kostenloses Beratungsgespraech, in dem wir eine
+            Vereinbare jetzt ein kostenloses Beratungsgespräch, in dem wir eine
             Strategie zur Erreichung deiner Ziele ausarbeiten.
           </p>
           <div className="mt-6">
@@ -124,7 +124,7 @@ export default function PersonalTrainingPage() {
               href="/kostenloses-beratungsgespraech"
               className="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90"
             >
-              Kostenloses Beratungsgespraech buchen
+              Kostenloses Beratungsgespräch buchen
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -248,8 +248,8 @@ export default function PersonalTrainingPage() {
       </section>
 
       <CTABanner
-        title="Starte mit einem kostenlosen Beratungsgespraech."
-        description="30 Minuten, unverbindlich. Wir lernen dich kennen, analysieren deine Ziele und zeigen dir, wie wir dich auf dem schnellsten Weg zu deiner Bestform begleiten koennen."
+        title="Starte mit einem kostenlosen Beratungsgespräch."
+        description="30 Minuten, unverbindlich. Wir lernen dich kennen, analysieren deine Ziele und zeigen dir, wie wir dich auf dem schnellsten Weg zu deiner Bestform begleiten können."
       />
     </>
   );

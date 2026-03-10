@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: "Online Coaching",
   description:
-    "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernährungsplan, persönliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von ueberall trainieren.",
+    "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernährungsplan, persönliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von überall trainieren.",
 };
 
 const problemPoints = [
@@ -31,7 +31,7 @@ const problemPoints = [
 ];
 
 const sixFeatures = [
-  { icon: MapPin, text: "Flexibles Training von ueberall" },
+  { icon: MapPin, text: "Flexibles Training von überall" },
   { icon: Clock, text: "Maximale Zeiteffizienz" },
   { icon: Utensils, text: "Individuelle Ernährung inklusive" },
   { icon: BarChart3, text: "Progress-Tracking" },
@@ -45,7 +45,7 @@ export default function OnlineCoachingPage() {
       <PageHero
         badge="Online Coaching"
         title="In 12 Wochen zu deiner Bestform."
-        description="12-Wochen intensives 1:1 Online Coaching mit persönlicher Betreuung via App — Training, Ernährung und Lifestyle. Von ueberall."
+        description="12-Wochen intensives 1:1 Online Coaching mit persönlicher Betreuung via App — Training, Ernährung und Lifestyle. Von überall."
       />
 
       {/* Problem section */}
@@ -186,7 +186,7 @@ export default function OnlineCoachingPage() {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted">
-            Optional koennen alle Online Programme in Hybrid Programme umgewandelt
+            Optional können alle Online Programme in Hybrid Programme umgewandelt
             werden.
           </p>
         </div>
@@ -204,7 +204,7 @@ export default function OnlineCoachingPage() {
           <p className="mt-4 text-lg text-text-secondary">
             Progress-Fotos, Körpermasse (Taille, Huefte, Brust, Arme, Beine),
             Gewicht, Chat mit deinem Coach — alles an einem Ort. Einfach,
-            uebersichtlich, motivierend. Regelmässige Dokumentation und gemeinsame
+            übersichtlich, motivierend. Regelmässige Dokumentation und gemeinsame
             Analyse.
           </p>
         </div>
@@ -212,7 +212,7 @@ export default function OnlineCoachingPage() {
 
       <CTABanner
         title="Starte jetzt — werde die beste Version deiner selbst."
-        description="Kostenloses Beratungsgespraech buchen. Wir zeigen dir, welches Programm am besten zu dir passt."
+        description="Kostenloses Beratungsgespräch buchen. Wir zeigen dir, welches Programm am besten zu dir passt."
       />
     </>
   );

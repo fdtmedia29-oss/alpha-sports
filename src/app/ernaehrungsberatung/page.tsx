@@ -14,17 +14,17 @@ const keyBenefits = [
   {
     icon: Heart,
     title: "Gesund abnehmen & wohlfühlen",
-    text: "Nachhaltige Ernährungsstrategien, die in deinen Alltag passen. Kein Verzicht, keine Crash-Diaeten — sondern ein klarer Plan für deine Bestform.",
+    text: "Nachhaltige Ernährungsstrategien, die in deinen Alltag passen. Kein Verzicht, keine Crash-Diäten — sondern ein klarer Plan für dein Wohlfühlkörper.",
   },
   {
     icon: Utensils,
-    title: "Individuelle Ernährungsplaene",
-    text: "Basierend auf deinen persönlichen Messdaten, Grundumsatz und Energiebedarf — keine Ratespiele. Individuelle Makronährstoff-Verteilung berechnet.",
+    title: "Messen statt raten",
+    text: "Wir erstellen dir eine individuelle Ernährungsstrategie basierend auf deinem Grundumsatz, deiner Körperzusammensetzung und deinen Leistungsparametern — um zu garantieren, dass wir dich auf schnellstem Weg zu deinem Ziel begleiten.",
   },
   {
     icon: Zap,
     title: "Stoffwechsel-Optimierung",
-    text: "Verstehe, wie dein Körper arbeitet. Mit gezielter Stoffwechselanalyse optimieren wir deine Ernährung für maximale Energie und Effizienz.",
+    text: "Mit unserer Stoffwechselanalyse optimieren wir deine Ernährung für maximale Energie und Effizienz.",
   },
   {
     icon: Leaf,
@@ -39,7 +39,9 @@ export default function ErnährungsberatungPage() {
       <PageHero
         badge="Ernährungsberatung"
         title="Dein Schlüssel zur nachhaltigen Veränderung."
-        description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verändern kann."
+        description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verbessert."
+        ctaText="Beratung buchen"
+        ctaHref="/kostenloses-beratungsgespraech"
       />
 
       {/* Intro */}
@@ -47,10 +49,10 @@ export default function ErnährungsberatungPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-text-secondary">
-              Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verändern
-              kann. Mit unserer individuellen Beratung optimierst du deinen
-              Stoffwechsel, erreichst deine Fitnessziele und findest die perfekte
-              Balance für Gesundheit und Wohlbefinden. Egal, ob Fettabbau,
+              Entdecke, wie eine gezielte Ernährungsstrategie dein Leben
+              verbessert. Mit unserer individuellen Beratung optimierst du deinen
+              Stoffwechsel, erreichst deine Fitnessziele und findest deine perfekte
+              Balance für Gesundheit und dein Wohlbefinden. Egal, ob Fettabbau,
               Muskelaufbau oder einfach mehr Energie — wir begleiten dich Schritt
               für Schritt.
             </p>
@@ -101,7 +103,8 @@ export default function ErnährungsberatungPage() {
             </h2>
           </div>
 
-          <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+            {/* Einzelsession */}
             <div className="rounded-2xl border border-border bg-white p-8">
               <h3 className="text-xl font-bold text-text">Einzelsession</h3>
               <div className="mt-2 flex items-baseline gap-1">
@@ -130,12 +133,9 @@ export default function ErnährungsberatungPage() {
               </ul>
             </div>
 
-            <div className="relative rounded-2xl border border-orange bg-orange-light/30 p-8">
-              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white">
-                <Star className="h-3 w-3" />
-                Empfohlen
-              </div>
-              <h3 className="text-xl font-bold text-text">Shape Light</h3>
+            {/* Shape Light */}
+            <div className="rounded-2xl border border-border bg-white p-8">
+              <h3 className="text-xl font-bold text-text">Alpha Sports Shape Light</h3>
               <div className="mt-2 flex items-baseline gap-1">
                 <span className="text-sm text-muted">CHF</span>
                 <span className="text-3xl font-black text-text">592.40</span>
@@ -145,12 +145,47 @@ export default function ErnährungsberatungPage() {
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  "2 Stunden Beratung",
-                  "Körperanalysen",
+                  "2h Ernährungsberatung",
+                  "1x Leistungsanalyse",
+                  "1x Stoffwechsel- und Stressanalyse",
+                  "1x InBody Körperanalyse",
                   "Ernährungsdossier",
-                  "Trainingsempfehlungen",
-                  "Individuelle Rezepte",
-                  "Tracking-App Zugang",
+                  "Trainingsempfehlung",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-2 text-sm text-text-secondary"
+                  >
+                    <Check className="h-3.5 w-3.5 text-orange" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Shape Plus */}
+            <div className="relative rounded-2xl border border-orange bg-orange-light/30 p-8">
+              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white">
+                <Star className="h-3 w-3" />
+                Empfohlen
+              </div>
+              <h3 className="text-xl font-bold text-text">Alpha Sports Shape Plus</h3>
+              <div className="mt-2 flex items-baseline gap-1">
+                <span className="text-sm text-muted">CHF</span>
+                <span className="text-3xl font-black text-text">389.50</span>
+                <span className="text-sm text-muted">/Monat</span>
+              </div>
+              <p className="mt-4 text-sm text-text-secondary">
+                Das Premium-Paket mit laufender Betreuung und Erfolgskontrolle.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "4x InBody Analyse",
+                  "4x Erfolgsgespräch à 15 Min.",
+                  "1x Stoffwechsel- und Stressanalyse",
+                  "4 Körpervermessungen + Vorher-Nachher-Fotos",
+                  "Ernährungsberatung inkl. Dossier",
+                  "3 Ernährungspläne",
                 ].map((item) => (
                   <li
                     key={item}
@@ -176,9 +211,7 @@ export default function ErnährungsberatungPage() {
             Ergebnisse direkt in der App.
           </h2>
           <p className="mt-4 text-text-secondary">
-            Die Alpha Sports Tracking-App liefert dir Rezepte mit optimaler
-            Makronährstoff-Verteilung, einen Überblick über dein tägliches
-            Kalorienbudget und viele weitere nützliche Tools und Informationen.
+            Die Alpha Sports Tracking-App liefert dir Rezepte, Ernährungspläne und Trainingsempfehlungen, welche individuell auf dich angepasst sind.
           </p>
         </div>
       </section>
@@ -199,7 +232,7 @@ export default function ErnährungsberatungPage() {
 
       <CTABanner
         title="Bereit für den Wandel?"
-        description="Vereinbare ein kostenloses Beratungsgespräch und erfahre, wie die richtige Ernährung dein Leben verändern kann."
+        description="Vereinbare jetzt ein kostenloses Beratungsgespräch und erfahre, wie die richtige Ernährung dein Leben verändert."
       />
     </>
   );

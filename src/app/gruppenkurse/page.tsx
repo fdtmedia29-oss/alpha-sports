@@ -3,12 +3,12 @@ import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
-import { Clock, User, Check, Dumbbell, Flame, Heart, Zap, StretchHorizontal, Baby } from "lucide-react";
+import { Clock, User, Check, Dumbbell, Flame, Heart, Zap, StretchHorizontal } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Gruppenkurse",
   description:
-    "Gruppenkurse bei Alpha Sports St. Gallen: Bootcamp, HIIT Boxing, Hypertrophic, Yoga, Pilates, Stretching & Mobility, Schwangerschaftskurs. Max. 8 Teilnehmer. Probetraining kostenlos.",
+    "Gruppenkurse bei Alpha Sports St. Gallen: Bootcamp, HIIT Boxing, Hypertrophic, Yoga, Pilates, Stretching & Mobility. Max. 8 Teilnehmer. Probetraining kostenlos.",
 };
 
 const detailedClasses = [
@@ -128,25 +128,6 @@ const detailedClasses = [
   },
 ];
 
-const pregnancyPrograms = [
-  {
-    title: "Schwangerschaftskurs",
-    trainer: "Isabell Tatzl",
-    schedule: "Sonntags 09:00–10:00",
-    description:
-      "Sanfte Kraft- und Beweglichkeitsübungen, die die Ausdauer fördern. Beckenbodentraining für die Geburtsvorbereitung. Übungen zur Entspannung und Atemtechniken. Geschuetzter Raum zum Austausch mit anderen werdenden Muettern. Max. 6 Teilnehmerinnen.",
-    price: "CHF 180 (6 Wochen)",
-  },
-  {
-    title: "Schwangerschaftscoaching 1:1",
-    trainer: "Isabell Tatzl",
-    schedule: "Individuell",
-    description:
-      "Personalisierte Sessions angepasst an deine Schwangerschaftsphase und dein Fitness-Level. Gezielte Staerkung durch sanfte Übungen, Schmerzlinderung (z.B. Rückenschmerzen), Beckenbodentraining, Stressabbau und optimale Geburtsvorbereitung. Dein Wohlbefinden und das deines Babys stehen an erster Stelle.",
-    price: "CHF 150 / Session",
-  },
-];
-
 export default function GruppenkursePage() {
   return (
     <>
@@ -204,52 +185,6 @@ export default function GruppenkursePage() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pregnancy programs */}
-      <section className="section-padding bg-bg-alt">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 max-w-2xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Schwangerschaft
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Gesund und voller Energie durch die Schwangerschaft.
-            </h2>
-            <p className="mt-4 text-text-secondary">
-              Speziell ausgebildete Trainerin, sicheres und individuell angepasstes
-              Training, verbesserte körperliche und mentale Fitness, optimale
-              Geburtsvorbereitung.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {pregnancyPrograms.map((p) => (
-              <div
-                key={p.title}
-                className="rounded-2xl border border-border bg-white p-8"
-              >
-                <h3 className="text-lg font-bold text-text">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                  {p.description}
-                </p>
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-muted">
-                    <Clock className="h-4 w-4" />
-                    {p.schedule}
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted">
-                    <User className="h-4 w-4" />
-                    {p.trainer}
-                  </div>
-                </div>
-                <div className="mt-4 inline-block rounded-full bg-orange-light px-4 py-1.5 text-sm font-semibold text-orange">
-                  {p.price}
                 </div>
               </div>
             ))}

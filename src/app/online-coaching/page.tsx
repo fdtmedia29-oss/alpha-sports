@@ -33,7 +33,7 @@ const problemPoints = [
 const sixFeatures = [
   { icon: MapPin, text: "Flexibles Training von überall" },
   { icon: Clock, text: "Maximale Zeiteffizienz" },
-  { icon: Utensils, text: "Individuelle Ernährung inklusive" },
+  { icon: Utensils, text: "Individuelle Ernährungsstrategie" },
   { icon: BarChart3, text: "Progress-Tracking" },
   { icon: Video, text: "App & Video Coaching" },
   { icon: Zap, text: "Premium Coaching" },
@@ -56,7 +56,7 @@ export default function OnlineCoachingPage() {
               <span className="text-sm font-semibold uppercase tracking-widest text-orange">
                 Kennst du das?
               </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              <h2 className="mt-4 text-4xl font-bold tracking-tight text-text md:text-5xl">
                 Online Coaching ist für dich, wenn...
               </h2>
             </div>
@@ -129,7 +129,7 @@ export default function OnlineCoachingPage() {
               <ul className="mt-6 space-y-3">
                 {[
                   "Individueller Trainingsplan",
-                  "Ernährungsplan",
+                  "Ernährungsstrategie",
                   "Lifestyle-Optimierung",
                   "Coaching-App Zugang",
                   "Wöchentliche Anpassungen",
@@ -203,8 +203,8 @@ export default function OnlineCoachingPage() {
           <p className="mt-4 text-lg text-text-secondary">
             Progress-Fotos, Körpermasse (Taille, Hüfte, Brust, Arme, Beine),
             Gewicht, Chat mit deinem Coach — alles an einem Ort. Einfach,
-            übersichtlich, motivierend. Regelmässige Dokumentation und gemeinsame
-            Analyse.
+            übersichtlich, motivierend. Regelmässige Dokumentation und
+            Fortschrittsanalyse.
           </p>
         </div>
       </section>

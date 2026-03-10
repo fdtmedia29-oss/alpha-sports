@@ -175,9 +175,8 @@ export default function KontaktPage() {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-lg shadow-orange/20">
                   {s.step}
                 </div>
-                <div className="pt-2">
+                <div className="pt-3">
                   <h3 className="text-lg font-bold text-text">{s.title}</h3>
-                  <p className="mt-1 text-base text-text-secondary">{s.description}</p>
                 </div>
               </motion.div>
             ))}

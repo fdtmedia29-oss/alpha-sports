@@ -37,7 +37,7 @@ export default function Trainers() {
             className="relative aspect-[16/10] overflow-hidden rounded-2xl"
           >
             <Image
-              src="/images/trainers/team.jpg"
+              src="/images/trainers/team-foto-neu.jpg"
               alt="Alpha Sports Team"
               fill
               className="object-cover"
@@ -77,7 +77,7 @@ export default function Trainers() {
 
                 {/* Credentials */}
                 <div className="mt-4 flex flex-wrap justify-center gap-1.5">
-                  {trainer.credentials.slice(0, 3).map((cred) => (
+                  {trainer.credentials.map((cred) => (
                     <span
                       key={cred}
                       className="rounded-full bg-bg-alt px-2.5 py-1 text-[11px] text-text-secondary"

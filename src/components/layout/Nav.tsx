@@ -10,7 +10,7 @@ import { navItems, siteConfig } from "@/lib/content";
 const primaryLabels = new Set([
   "Kostenloses Beratungsgespräch",
   "Personal Training",
-  "Online Coaching",
+  "Gruppenkurse",
   "Ernährungsberatung",
 ]);
 

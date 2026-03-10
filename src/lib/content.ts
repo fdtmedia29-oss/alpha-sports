@@ -8,7 +8,7 @@ export const siteConfig = {
   instagram: "https://instagram.com/alpha_sports_studio",
   facebook: "https://facebook.com/Alpha-Sports-Studio",
   youtube: "https://youtube.com/channel/UCL2frzl8mszclBbDItizUFg",
-  bookingUrl: "/kontakt",
+  bookingUrl: "/kostenloses-beratungsgespraech",
   companyName: "Alpha Sports GmbH",
 } as const;
 
@@ -28,8 +28,10 @@ export const trainers: Trainer[] = [
       "Personal Trainer",
       "HYROX365 Foundation",
       "Ernährungscoach",
-      "Fitness & Functional Trainer",
-      "InBody Specialist",
+      "Fitness Trainer",
+      "Workout Trainer",
+      "Functional Trainer",
+      "InBody Spezialist",
     ],
     image: "/images/trainers/luigi-lieberherr.jpg",
     bio: "10+ Jahre Fitness-Erfahrung, Breakdance-Instruktor, Swiss Breakdance Champion und Thai-Boxing-Erfahrung. Luigi verbindet Leidenschaft mit Expertise für deine Transformation.",
@@ -129,7 +131,7 @@ export const groupClasses: GroupClass[] = [
   {
     name: "Bootcamp",
     trainer: "Nicole Walser",
-    schedule: "Mo 18:30 & Fr 17:30",
+    schedule: "Mo 18:30",
     description:
       "Energiegeladener Indoor-Gruppenkurs für jedes Fitness-Level. Kraft-Ausdauer, Herz-Kreislauf, Fettverbrennung und Muskelaufbau mit abwechslungsreichen Übungen. Nachbrenneffekt bis zu 72 Stunden.",
     href: "/gruppenkurse#bootcamp",
@@ -137,7 +139,7 @@ export const groupClasses: GroupClass[] = [
   },
   {
     name: "Pilates",
-    trainer: "Julia Lau",
+    trainer: "David Rogers",
     schedule: "Di 19:00 & Fr 12:00",
     description:
       "Stärke deine Mitte und finde die Balance. Core-Stabilität, Mobilität und Körperhaltung verbessern. Bauch-, Rücken- und Beckenbodentraining. Ideale Ergänzung zum Krafttraining.",
@@ -154,7 +156,7 @@ export const groupClasses: GroupClass[] = [
     image: "/images/pt/alpha-personal-26.jpg",
   },
   {
-    name: "HYROX",
+    name: "Hyrox",
     trainer: "Nicole Walser",
     schedule: "Mo 12:00, Mi 06:30 & 18:30, Fr 17:30",
     description:
@@ -298,8 +300,17 @@ export const studioImages = [
 ];
 
 export const navItems = [
-  { label: "Kostenloses Beratungsgespräch", href: "/kontakt" },
+  { label: "Kostenloses Beratungsgespräch", href: "/kostenloses-beratungsgespraech" },
   { label: "Personal Training", href: "/personal-training" },
+  {
+    label: "Gruppenkurse",
+    children: [
+      { label: "Bootcamp", href: "/gruppenkurse#bootcamp" },
+      { label: "Pilates", href: "/gruppenkurse#pilates" },
+      { label: "Strength", href: "/gruppenkurse#strength" },
+      { label: "HYROX", href: "/hyrox" },
+    ],
+  },
   { label: "Online Coaching", href: "/online-coaching" },
   { label: "Ernährungsberatung", href: "/ernaehrungsberatung" },
   {
@@ -310,15 +321,6 @@ export const navItems = [
       { label: "Leistungsanalyse", href: "/analysen#leistung" },
     ],
   },
-  {
-    label: "Gruppenkurse",
-    children: [
-      { label: "Bootcamp", href: "/gruppenkurse#bootcamp" },
-      { label: "Pilates", href: "/gruppenkurse#pilates" },
-      { label: "Strength", href: "/gruppenkurse#strength" },
-      { label: "HYROX", href: "/hyrox" },
-    ],
-  },
   { label: "Hyrox", href: "/hyrox" },
   {
     label: "Mehr",
@@ -327,7 +329,7 @@ export const navItems = [
       { label: "Einblicke", href: "/einblicke" },
       { label: "Erfolgsgeschichten", href: "/erfolgsgeschichten" },
       { label: "Preise", href: "/preise" },
-      { label: "Kontakt", href: "/kontakt" },
+      { label: "Kontakt", href: "/kostenloses-beratungsgespraech" },
     ],
   },
 ] as const;

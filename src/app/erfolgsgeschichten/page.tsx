@@ -15,19 +15,19 @@ const detailedTestimonials = [
     name: "Dr. med. univ. Philipp Krenn",
     result: "Arzt & Sportler",
     quote:
-      "Luigi ist einer der Besten in seinem Fach. Er hat umfangreiches Wissen in Ernaehrung und passt das Training perfekt an meine Beduerfnisse an — trotz Skoliose. Mein Training wurde auf ein neues Level gehoben. Das gut ausgestattete Studio und die Boot Camp Kurse runden das Angebot perfekt ab. Luigi ist flexibel bei der Terminplanung und zeigt echtes physiologisches Verstaendnis.",
+      "Luigi ist einer der Besten in seinem Fach. Er hat umfangreiches Wissen in Ernährung und passt das Training perfekt an meine Bedürfnisse an — trotz Skoliose. Mein Training wurde auf ein neues Level gehoben. Das gut ausgestattete Studio und die Boot Camp Kurse runden das Angebot perfekt ab. Luigi ist flexibel bei der Terminplanung und zeigt echtes physiologisches Verständnis.",
     details: [
       "Training auf neues Level gehoben trotz Skoliose",
-      "Umfangreiches Ernaehrungswissen",
+      "Umfangreiches Ernährungswissen",
       "Flexible Terminplanung",
-      "Vertrauen und physiologisches Verstaendnis",
+      "Vertrauen und physiologisches Verständnis",
     ],
   },
   {
     name: "Peter M.",
     result: "Muskelaufbau & Fettabbau",
     quote:
-      "Personal Training hat mir auf vielfaeltige Weise weitergeholfen. Individualisierte Programme, Motivation, Disziplin, korrekte Technik, Trainingsvielfalt und schnelle Fortschritte. Deutlich Muskelmasse aufgebaut, Koerperfett reduziert. Meine Blutwerte haben sich innerhalb kurzer Zeit auf hervorragende Werte verbessert.",
+      "Personal Training hat mir auf vielfältige Weise weitergeholfen. Individualisierte Programme, Motivation, Disziplin, korrekte Technik, Trainingsvielfalt und schnelle Fortschritte. Deutlich Muskelmasse aufgebaut, Körperfett reduziert. Meine Blutwerte haben sich innerhalb kurzer Zeit auf hervorragende Werte verbessert.",
     details: [
       "Signifikanter Muskelaufbau mit Fettabbau",
       "Blutwerte in kurzer Zeit hervorragend verbessert",
@@ -39,12 +39,12 @@ const detailedTestimonials = [
     name: "Chantal S.",
     result: "Zielgewicht erreicht & gehalten",
     quote:
-      "Das Personal Training ist mein physischer Ausgleich. Mein Zielgewicht erreicht und gehalten — durch Training und richtige Ernaehrung. Immunsystem gestaerkt, weniger krank. Besseres Stressmanagement und mentale Fitness durch das Training. Die abwechslungsreichen Uebungen und die persoenlich angepassten Trainings machen jede Session einzigartig.",
+      "Das Personal Training ist mein physischer Ausgleich. Mein Zielgewicht erreicht und gehalten — durch Training und richtige Ernährung. Immunsystem gestärkt, weniger krank. Besseres Stressmanagement und mentale Fitness durch das Training. Die abwechslungsreichen Übungen und die persönlich angepassten Trainings machen jede Session einzigartig.",
     details: [
       "Zielgewicht erreicht und langfristig gehalten",
-      "Immunsystem gestaerkt, weniger Krankheitstage",
+      "Immunsystem gestärkt, weniger Krankheitstage",
       "Besseres Stressmanagement",
-      "Richtige Ernaehrung gelernt",
+      "Richtige Ernährung gelernt",
     ],
   },
   {
@@ -61,13 +61,13 @@ const detailedTestimonials = [
   },
   {
     name: "Michele",
-    result: "Gewichtsverlust & weniger Rueckenschmerzen",
+    result: "Gewichtsverlust & weniger Rückenschmerzen",
     quote:
-      "Gewicht verloren, Rueckenschmerzen reduziert — durch die richtige Uebungsauswahl. Die groesste Veraenderung war mental: Ich habe Struktur, Energie und Ausdauer gewonnen. Ich habe gelernt, meinen Koerper zu akzeptieren und mich selbst wieder mehr zu lieben. Luigi hat mich auch ausserhalb des Trainings unterstuetzt, mit Leidenschaft und echtem Interesse an meinen Zielen.",
+      "Gewicht verloren, Rückenschmerzen reduziert — durch die richtige Übungsauswahl. Die grösste Veränderung war mental: Ich habe Struktur, Energie und Ausdauer gewonnen. Ich habe gelernt, meinen Körper zu akzeptieren und mich selbst wieder mehr zu lieben. Luigi hat mich auch ausserhalb des Trainings unterstützt, mit Leidenschaft und echtem Interesse an meinen Zielen.",
     details: [
-      "Gewichtsverlust und Rueckenschmerzen reduziert",
+      "Gewichtsverlust und Rückenschmerzen reduziert",
       "Mentale Transformation: Struktur, Energie, Ausdauer",
-      "Koerperakzeptanz und Selbstliebe gelernt",
+      "Körperakzeptanz und Selbstliebe gelernt",
       "Trainiert jetzt selbststaendig mit positiver Einstellung",
     ],
   },
@@ -79,7 +79,7 @@ export default function ErfolgsgeschichtenPage() {
       <PageHero
         badge="Erfolgsgeschichten"
         title="Echte Ergebnisse. Echte Menschen."
-        description="Was unsere Kunden ueber ihre Transformation bei Alpha Sports sagen. Physische und mentale Veraenderungen, die das Leben veraendern."
+        description="Was unsere Kunden ueber ihre Transformation bei Alpha Sports sagen. Physische und mentale Veränderungen, die das Leben veraendern."
       />
 
       <section className="section-padding bg-white">
@@ -129,7 +129,7 @@ export default function ErfolgsgeschichtenPage() {
             </h2>
             <p className="mt-4 text-text-secondary">
               Unsere Kunden bewerten uns mit 5.0 von 5 Sternen.
-              Ueberzeuge dich selbst auf Google Maps.
+              Überzeuge dich selbst auf Google Maps.
             </p>
             <a
               href="https://www.google.com/maps/place/Alpha+Sports"

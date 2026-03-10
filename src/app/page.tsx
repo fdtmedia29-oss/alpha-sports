@@ -18,13 +18,13 @@ export default function Home() {
       <Hero />
       <VideoTestimonials />
       <SocialProof />
-      <Testimonials />
       <PainPoints />
       <HowItWorks />
+      <GroupClasses />
       <AboutTeaser />
       <ServicesOverview />
       <OnlineCoachingTeaser />
-      <GroupClasses />
+      <Testimonials />
       <Trainers />
       <StudioGallery />
       <FinalCTA />

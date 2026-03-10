@@ -26,7 +26,7 @@ export default function HyroxPage() {
               Was ist HYROX?
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-              Der Fitness-Wettkampf fuer alle.
+              Der Fitness-Wettkampf für alle.
             </h2>
             <p className="mt-4 text-lg text-text-secondary">
               HYROX ist mehr als nur ein Workout — es ist die perfekte Kombination
@@ -47,22 +47,22 @@ export default function HyroxPage() {
               {
                 icon: Zap,
                 title: "Explosives Workout",
-                text: "HYROX fordert deinen gesamten Koerper — 8 x 1 km Laufen kombiniert mit 8 funktionellen Workouts fuer die ultimative Trainingserfahrung.",
+                text: "HYROX fordert deinen gesamten Körper — 8 x 1 km Laufen kombiniert mit 8 funktionellen Workouts für die ultimative Trainingserfahrung.",
               },
               {
                 icon: Target,
                 title: "Fight your limits",
-                text: "Geh an deine Grenzen und darueber hinaus. Mentale Staerke aufbauen, Ausdauer pushen und deine persoenliche Bestleistung erreichen.",
+                text: "Geh an deine Grenzen und darueber hinaus. Mentale Staerke aufbauen, Ausdauer pushen und deine persönliche Bestleistung erreichen.",
               },
               {
                 icon: Trophy,
                 title: "Wettkampf Feeling",
-                text: "Von der Technik bis zur Rennstrategie — wir bereiten dich komplett auf den Race Day vor. Strukturierte Wettkampfvorbereitung fuer alle Level.",
+                text: "Von der Technik bis zur Rennstrategie — wir bereiten dich komplett auf den Race Day vor. Strukturierte Wettkampfvorbereitung für alle Level.",
               },
               {
                 icon: Users,
                 title: "Team Spirit",
-                text: "Lass dich von Gleichgesinnten pushen und ueberschreite deine Grenzen. Motivierende Community und gegenseitige Unterstuetzung.",
+                text: "Lass dich von Gleichgesinnten pushen und ueberschreite deine Grenzen. Motivierende Community und gegenseitige Unterstützung.",
               },
             ].map((item) => (
               <div
@@ -93,19 +93,19 @@ export default function HyroxPage() {
                 Was du trainierst
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Ganzkoerper-Athletik auf neuem Level.
+                Ganzkörper-Athletik auf neuem Level.
               </h2>
               <p className="mt-4 text-lg text-text-secondary">
-                HYROX fordert deinen gesamten Koerper. Unser Training kombiniert
-                funktionelle Kraft mit Ausdauer fuer die ultimative
+                HYROX fordert deinen gesamten Körper. Unser Training kombiniert
+                funktionelle Kraft mit Ausdauer für die ultimative
                 Trainingserfahrung — effektiv, fordernd und motivierend.
               </p>
               <div className="mt-8 space-y-4">
                 {[
                   "Kraft, Ausdauer & funktionelle Performance",
-                  "Ganzkoerper-athletisches Training",
+                  "Ganzkörper-athletisches Training",
                   "Strukturierte Wettkampfvorbereitung",
-                  "Muskelaufbau & Koerperkomposition",
+                  "Muskelaufbau & Körperkomposition",
                   "Mentale Staerke aufbauen",
                   "An deine Grenzen gehen — und darueber hinaus",
                 ].map((item) => (
@@ -122,8 +122,8 @@ export default function HyroxPage() {
               <div className="rounded-2xl border border-border bg-white p-8">
                 <h3 className="text-lg font-bold text-text">HYROX Gruppenkurs</h3>
                 <p className="mt-3 text-sm text-text-secondary">
-                  Trainiere in der motivierenden Gruppenatmosphaere mit
-                  Gleichgesinnten. Fuer Anfaenger und Fortgeschrittene — egal ob du
+                  Trainiere in der motivierenden Gruppenatmosphäre mit
+                  Gleichgesinnten. Für Anfänger und Fortgeschrittene — egal ob du
                   dich auf ein HYROX-Race vorbereitest oder eine neue
                   Fitness-Herausforderung suchst.
                 </p>
@@ -146,7 +146,7 @@ export default function HyroxPage() {
                 <h3 className="text-lg font-bold text-text">HYROX 1:1 Coaching</h3>
                 <p className="mt-3 text-sm text-text-secondary">
                   Maximale Performance mit individuellem Training. Rennstrategie,
-                  Technik-Optimierung und gezielter Aufbau — fuer deine Bestzeit am
+                  Technik-Optimierung und gezielter Aufbau — für deine Bestzeit am
                   Race Day.
                 </p>
               </div>
@@ -183,7 +183,7 @@ export default function HyroxPage() {
       </section>
 
       <CTABanner
-        title="Bereit fuer HYROX?"
+        title="Bereit für HYROX?"
         description="Egal ob dein erstes Race oder deine neue Bestzeit — wir bringen dich hin. Starte mit einem kostenlosen Beratungsgespraech."
       />
     </>

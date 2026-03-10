@@ -7,30 +7,30 @@ import { Activity, Flame, Zap, BarChart3, Smartphone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Analysen & Diagnostik",
   description:
-    "InBody Koerperanalyse, Stoffwechselanalyse und Leistungsanalyse in St. Gallen. Datenbasiertes Training fuer messbare Ergebnisse bei Alpha Sports.",
+    "InBody Körperanalyse, Stoffwechselanalyse und Leistungsanalyse in St. Gallen. Datenbasiertes Training für messbare Ergebnisse bei Alpha Sports.",
 };
 
 const analyses = [
   {
     id: "inbody",
     icon: Activity,
-    title: "InBody Koerperanalyse",
+    title: "InBody Körperanalyse",
     subtitle: "Dein Start in Richtung Bestform",
     price: "CHF 80",
     description:
-      "Die InBody-Analyse nutzt bioelektrische Impedanzanalyse (BIA), um deine Koerperzusammensetzung in nur einer Minute zu bestimmen. Ein schwacher Strom wird durch deinen Koerper geleitet — der spezifische elektrische Widerstand zeigt, wie viel fettfreie Koerpermasse, Muskulatur, Fett sowie intra- und extrazellulaeres Wasser dein Koerper enthaelt.",
+      "Die InBody-Analyse nutzt bioelektrische Impedanzanalyse (BIA), um deine Körperzusammensetzung in nur einer Minute zu bestimmen. Ein schwacher Strom wird durch deinen Körper geleitet — der spezifische elektrische Widerstand zeigt, wie viel fettfreie Körpermasse, Muskulatur, Fett sowie intra- und extrazellulaeres Wasser dein Körper enthaelt.",
     detailedDescription:
-      "Du erhaeltst ein detailliertes Datenblatt, das deinen aktuellen koerperlichen Zustand, Trainingsstatus und Grundumsatz erklaert. Die Analyse bildet die Grundlage fuer individuell angepasste Trainings- und Ernaehrungsplaene.",
+      "Du erhältst ein detailliertes Datenblatt, das deinen aktuellen körperlichen Zustand, Trainingsstatus und Grundumsatz erklärt. Die Analyse bildet die Grundlage für individuell angepasste Trainings- und Ernährungsplaene.",
     measures: [
-      "Koerperfettanteil",
+      "Körperfettanteil",
       "Muskelmasse",
       "Viszeralfett",
       "Segmentale Muskulatur",
       "Wasserhaushalt",
     ],
     includes: [
-      "Muskelmasse / Koerperfett / Knochenmasse / Wasserhaushalt",
-      "Ueberblick Gesundheit",
+      "Muskelmasse / Körperfett / Knochenmasse / Wasserhaushalt",
+      "Überblick Gesundheit",
       "Muskulaere Dysbalance",
       "Fortschrittskontrolle",
       "Individuelle Empfehlung",
@@ -42,18 +42,18 @@ const analyses = [
     id: "stoffwechsel",
     icon: Flame,
     title: "Stoffwechselanalyse",
-    subtitle: "Verstehe deinen Koerper & erreiche deine Bestform",
+    subtitle: "Verstehe deinen Körper & erreiche deine Bestform",
     price: "CHF 149",
     description:
-      "Eine 5-minuetige Atemgasanalyse in Ruhe bestimmt deine exakte Stoffwechselsituation. Du erfaehrst, welche Energiequelle (Kohlenhydrate, Proteine oder Fette) dein Koerper aktuell bevorzugt und wie hoch dein genauer Grundumsatz ist.",
+      "Eine 5-minuetige Atemgasanalyse in Ruhe bestimmt deine exakte Stoffwechselsituation. Du erfaehrst, welche Energiequelle (Kohlenhydrate, Proteine oder Fette) dein Körper aktuell bevorzugt und wie hoch dein genauer Grundumsatz ist.",
     detailedDescription:
-      "Waehrend des Termins fuehrst du einen kurzen Atemtest in Ruhe durch. Unsere Spezialisten erfragen deine taeglichen koerperlichen Aktivitaeten, um deinen Leistungsumsatz zu berechnen und deinen taeglichen Gesamtkalorienbedarf zu ermitteln. Ergebnisse werden sofort ueber eine App bereitgestellt — mit Rezepten, optimaler Makronaehrstoff-Verteilung und deinem taeglichen Kalorienbudget.",
+      "Während des Termins fuehrst du einen kurzen Atemtest in Ruhe durch. Unsere Spezialisten erfragen deine täglichen körperlichen Aktivitaeten, um deinen Leistungsumsatz zu berechnen und deinen täglichen Gesamtkalorienbedarf zu ermitteln. Ergebnisse werden sofort ueber eine App bereitgestellt — mit Rezepten, optimaler Makronährstoff-Verteilung und deinem täglichen Kalorienbudget.",
     measures: [],
     includes: [
       "Exakte Messung Grundumsatz",
       "Analyse Fett- vs. Kohlenhydrat-Verbrennung",
-      "Individuelle Ernaehrungsempfehlung",
-      "Grundlage fuer Transformation",
+      "Individuelle Ernährungsempfehlung",
+      "Grundlage für Transformation",
     ],
     note: "Add-On zu anderen Leistungen: CHF 119",
   },
@@ -66,13 +66,13 @@ const analyses = [
     description:
       "Ein 20-minuetiger Stufentest (Spiroergometrie) bestimmt dein aktuelles Fitness-Level, deine kardiovaskulaere Kapazitaet und Stoffwechselfunktion. Du erfaehrst den Pulsbereich, in dem du am meisten Fett verbrennst, deine VO2max-Werte und den Punkt, an dem deine Muskulatur beginnt zu uebersaeuern.",
     detailedDescription:
-      "Die Ergebnisse werden sofort ueber eine App bereitgestellt und beinhalten einen personalisierten 6-Monats-Ausdauertrainingsplan mit individualisierten Herzfrequenz-Zonen. Ideal fuer gezieltes Ausdauer- und Krafttraining oder Wettkampfvorbereitung wie HYROX.",
+      "Die Ergebnisse werden sofort ueber eine App bereitgestellt und beinhalten einen personalisierten 6-Monats-Ausdauertrainingsplan mit individualisierten Herzfrequenz-Zonen. Ideal für gezieltes Ausdauer- und Krafttraining oder Wettkampfvorbereitung wie HYROX.",
     measures: [],
     includes: [
       "Maximale Sauerstoffaufnahme (VO2max)",
       "Individuelle Trainingszonen",
       "Fettverbrennungs-Pulsbereich",
-      "Uebersaeuerungsschwelle",
+      "Übersaeuerungsschwelle",
       "Herzfrequenz-Zonen",
       "6-Monate Ausdauertrainingsplan",
       "App-Zugang mit Ergebnissen",
@@ -86,8 +86,8 @@ export default function AnalysenPage() {
     <>
       <PageHero
         badge="Analysen & Diagnostik"
-        title="Kenne deinen Koerper."
-        description="Mit unserer Stoffwechsel-, Koerper- und Leistungsanalyse lernst du deinen Koerper besser kennen — fuer gezieltes, datenbasiertes Training."
+        title="Kenne deinen Körper."
+        description="Mit unserer Stoffwechsel-, Körper- und Leistungsanalyse lernst du deinen Körper besser kennen — für gezieltes, datenbasiertes Training."
       />
 
       <section className="section-padding bg-white">
@@ -101,7 +101,7 @@ export default function AnalysenPage() {
               <p className="mt-1 text-text-secondary">
                 Drei Analysen, die zusammen ein vollstaendiges Bild ergeben. Auf
                 Basis der Ergebnisse entwickeln wir individuell massgeschneiderte
-                Trainings- und Ernaehrungsstrategien, die perfekt in deinen Alltag
+                Trainings- und Ernährungsstrategien, die perfekt in deinen Alltag
                 passen.
               </p>
             </div>
@@ -196,8 +196,8 @@ export default function AnalysenPage() {
           </h2>
           <p className="mt-4 text-text-secondary">
             Die Resultate aller Analysen werden direkt ueber eine App bereitgestellt
-            — mit individuellen Trainingszonen, Ernaehrungsempfehlungen, Rezepten und
-            deinem persoenlichen Kalorienbudget.
+            — mit individuellen Trainingszonen, Ernährungsempfehlungen, Rezepten und
+            deinem persönlichen Kalorienbudget.
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function AnalysenPage() {
       </section>
 
       <CTABanner
-        title="Bereit, deinen Koerper kennenzulernen?"
+        title="Bereit, deinen Körper kennenzulernen?"
         description="Buche eine Analyse und erfahre, was in dir steckt. Alle Analysen koennen kombiniert oder als Add-On zu anderen Leistungen gebucht werden."
       />
     </>

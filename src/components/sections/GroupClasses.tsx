@@ -9,7 +9,7 @@ import { groupClasses } from "@/lib/content";
 
 /* Map course names to optional video sources */
 const courseVideos: Record<string, string | undefined> = {
-  HYROX: "/videos/hyrox-1.mp4",
+  Hyrox: "/videos/hyrox-1.mp4",
 };
 
 function CourseMedia({ name, image }: { name: string; image: string }) {

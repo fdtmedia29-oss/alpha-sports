@@ -31,16 +31,16 @@ const nextConfig: NextConfig = {
       { source: "/yoga-3", destination: "/gruppenkurse#yoga", permanent: true },
       { source: "/pilates", destination: "/gruppenkurse#pilates", permanent: true },
 
-      // Old booking pages → kontakt
-      { source: "/kostenloses-beratungsgespraech", destination: "/kontakt", permanent: true },
-      { source: "/terminbuchung-kostenloses-beratungsgespraech", destination: "/kontakt", permanent: true },
-      { source: "/terminbuchung-kostenloses-beratungsgespraech-probetraining", destination: "/kontakt", permanent: true },
-      { source: "/terminbuchung-gruppenkurs", destination: "/kontakt", permanent: true },
-      { source: "/terminbuchung-inbody-koerperanalyse", destination: "/kontakt", permanent: true },
-      { source: "/terminbuchung-stoffwechselanalyse", destination: "/kontakt", permanent: true },
-      { source: "/terminbuchung-leistungsanalyse", destination: "/kontakt", permanent: true },
-      { source: "/anamnese_fragebogen", destination: "/kontakt", permanent: true },
-      { source: "/beratung_fragebogen", destination: "/kontakt", permanent: true },
+      // Old booking pages → kostenloses-beratungsgespraech
+      { source: "/kontakt", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/terminbuchung-kostenloses-beratungsgespraech", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/terminbuchung-kostenloses-beratungsgespraech-probetraining", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/terminbuchung-gruppenkurs", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/terminbuchung-inbody-koerperanalyse", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/terminbuchung-stoffwechselanalyse", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/terminbuchung-leistungsanalyse", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/anamnese_fragebogen", destination: "/kostenloses-beratungsgespraech", permanent: true },
+      { source: "/beratung_fragebogen", destination: "/kostenloses-beratungsgespraech", permanent: true },
 
       // Old misc pages
       { source: "/gallerie", destination: "/ueber-uns", permanent: true },
@@ -62,7 +62,7 @@ const nextConfig: NextConfig = {
 
       // English pages → German equivalents
       { source: "/en/home", destination: "/", permanent: true },
-      { source: "/en/contact", destination: "/kontakt", permanent: true },
+      { source: "/en/contact", destination: "/kostenloses-beratungsgespraech", permanent: true },
       { source: "/en/about-us", destination: "/ueber-uns", permanent: true },
       { source: "/en/team-2", destination: "/ueber-uns", permanent: true },
       { source: "/en/pricing", destination: "/preise", permanent: true },
@@ -70,7 +70,7 @@ const nextConfig: NextConfig = {
       { source: "/en/goals", destination: "/personal-training", permanent: true },
       { source: "/en/analyzes", destination: "/analysen", permanent: true },
       { source: "/en/trainings-coachings", destination: "/personal-training", permanent: true },
-      { source: "/en/massages", destination: "/kontakt", permanent: true },
+      { source: "/en/massages", destination: "/kostenloses-beratungsgespraech", permanent: true },
       { source: "/en/blog-en", destination: "/", permanent: true },
       { source: "/en/en-blog-archive", destination: "/", permanent: true },
       { source: "/en/news-en", destination: "/", permanent: true },

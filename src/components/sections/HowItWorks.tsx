@@ -11,7 +11,7 @@ const steps = [
     icon: MessageCircle,
     title: "Kostenloses Beratungsgespräch",
     description:
-      "Wir lernen dich und deine Ziele kennen — ob Abnehmen, Muskelaufbau oder Schmerzfreiheit. 45 Minuten, unverbindlich.",
+      "Wir lernen dich, deine Ziele und deinen Gesundheitszustand besser kennen — ob Abnehmen, Muskelaufbau oder Schmerzfreiheit. 45 Minuten, unverbindlich.",
   },
   {
     number: "02",
@@ -25,14 +25,14 @@ const steps = [
     icon: Dumbbell,
     title: "Training im privaten Studio",
     description:
-      "Du trainierst 1:1 oder 1:2 — mit voller Aufmerksamkeit deines Trainers. Keine Ablenkung.",
+      "Du trainierst 1:1 oder 1:2 — mit voller Aufmerksamkeit deines Trainers.",
   },
   {
     number: "04",
     icon: TrendingUp,
     title: "Fortschritt messen & anpassen",
     description:
-      "Regelmässiges Fortschrittstracking mittels Analysen zeigen dir wo du stehst. Wir passen deinen Plan laufend an.",
+      "Regelmässiges Fortschrittstracking. Mittels Analysen zeigen dir wo du stehst. Wir passen deinen Plan laufend an.",
   },
 ];
 

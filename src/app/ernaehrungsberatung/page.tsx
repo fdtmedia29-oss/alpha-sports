@@ -5,41 +5,41 @@ import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import { Check, Leaf, BarChart3, Utensils, Heart, Star, Smartphone, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ernaehrungsberatung",
+  title: "Ernährungsberatung",
   description:
-    "Professionelle Ernaehrungsberatung in St. Gallen. Massgeschneiderte Ernaehrungsplaene fuer Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",
+    "Professionelle Ernährungsberatung in St. Gallen. Massgeschneiderte Ernährungsplaene für Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",
 };
 
 const keyBenefits = [
   {
     icon: Heart,
-    title: "Gesund abnehmen & wohlfuehlen",
-    text: "Nachhaltige Ernaehrungsstrategien, die in deinen Alltag passen. Kein Verzicht, keine Crash-Diaeten — sondern ein klarer Plan fuer deine Bestform.",
+    title: "Gesund abnehmen & wohlfühlen",
+    text: "Nachhaltige Ernährungsstrategien, die in deinen Alltag passen. Kein Verzicht, keine Crash-Diaeten — sondern ein klarer Plan für deine Bestform.",
   },
   {
     icon: Utensils,
-    title: "Individuelle Ernaehrungsplaene",
-    text: "Basierend auf deinen persoenlichen Messdaten, Grundumsatz und Energiebedarf — keine Ratespiele. Individuelle Makronaehrstoff-Verteilung berechnet.",
+    title: "Individuelle Ernährungsplaene",
+    text: "Basierend auf deinen persönlichen Messdaten, Grundumsatz und Energiebedarf — keine Ratespiele. Individuelle Makronährstoff-Verteilung berechnet.",
   },
   {
     icon: Zap,
     title: "Stoffwechsel-Optimierung",
-    text: "Verstehe, wie dein Koerper arbeitet. Mit gezielter Stoffwechselanalyse optimieren wir deine Ernaehrung fuer maximale Energie und Effizienz.",
+    text: "Verstehe, wie dein Körper arbeitet. Mit gezielter Stoffwechselanalyse optimieren wir deine Ernährung für maximale Energie und Effizienz.",
   },
   {
     icon: Leaf,
     title: "Mehr Energie",
-    text: "Neues Koerperbewusstsein, mehr Energie, besserer Schlaf, weniger Stress — gute Ernaehrung veraendert alles. Erreiche deine koerperliche Bestform.",
+    text: "Neues Körperbewusstsein, mehr Energie, besserer Schlaf, weniger Stress — gute Ernährung verändert alles. Erreiche deine körperliche Bestform.",
   },
 ];
 
-export default function ErnaehrungsberatungPage() {
+export default function ErnährungsberatungPage() {
   return (
     <>
       <PageHero
-        badge="Ernaehrungsberatung"
-        title="Dein Schluessel zur nachhaltigen Veraenderung."
-        description="Entdecke, wie eine gezielte Ernaehrungsstrategie dein Leben veraendern kann."
+        badge="Ernährungsberatung"
+        title="Dein Schluessel zur nachhaltigen Veränderung."
+        description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben veraendern kann."
       />
 
       {/* Intro */}
@@ -47,12 +47,12 @@ export default function ErnaehrungsberatungPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-text-secondary">
-              Entdecke, wie eine gezielte Ernaehrungsstrategie dein Leben veraendern
+              Entdecke, wie eine gezielte Ernährungsstrategie dein Leben veraendern
               kann. Mit unserer individuellen Beratung optimierst du deinen
               Stoffwechsel, erreichst deine Fitnessziele und findest die perfekte
-              Balance fuer Gesundheit und Wohlbefinden. Egal, ob Fettabbau,
+              Balance für Gesundheit und Wohlbefinden. Egal, ob Fettabbau,
               Muskelaufbau oder einfach mehr Energie — wir begleiten dich Schritt
-              fuer Schritt.
+              für Schritt.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function ErnaehrungsberatungPage() {
               Pakete
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Ernaehrungsberatung — flexibel buchbar.
+              Ernährungsberatung — flexibel buchbar.
             </h2>
           </div>
 
@@ -114,10 +114,10 @@ export default function ErnaehrungsberatungPage() {
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  "Persoenliches Erstgespraech",
-                  "Analyse deiner aktuellen Ernaehrung",
+                  "Persönliches Erstgespraech",
+                  "Analyse deiner aktuellen Ernährung",
                   "Individuelle Empfehlungen",
-                  "Fuer alle Altersgruppen geeignet",
+                  "Für alle Altersgruppen geeignet",
                 ].map((item) => (
                   <li
                     key={item}
@@ -141,13 +141,13 @@ export default function ErnaehrungsberatungPage() {
                 <span className="text-3xl font-black text-text">592.40</span>
               </div>
               <p className="mt-4 text-sm text-text-secondary">
-                Das umfassende Paket fuer nachhaltige Ernaehrungsumstellung.
+                Das umfassende Paket für nachhaltige Ernährungsumstellung.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
                   "2 Stunden Beratung",
-                  "Koerperanalysen",
-                  "Ernaehrungsdossier",
+                  "Körperanalysen",
+                  "Ernährungsdossier",
                   "Trainingsempfehlungen",
                   "Individuelle Rezepte",
                   "Tracking-App Zugang",
@@ -177,7 +177,7 @@ export default function ErnaehrungsberatungPage() {
           </h2>
           <p className="mt-4 text-text-secondary">
             Die Alpha Sports Tracking-App liefert dir Rezepte mit optimaler
-            Makronaehrstoff-Verteilung, einen Ueberblick ueber dein taegliches
+            Makronährstoff-Verteilung, einen Überblick ueber dein tägliches
             Kalorienbudget und viele weitere nuetzliche Tools und Informationen.
           </p>
         </div>
@@ -198,8 +198,8 @@ export default function ErnaehrungsberatungPage() {
       </section>
 
       <CTABanner
-        title="Bereit fuer den Wandel?"
-        description="Vereinbare ein kostenloses Beratungsgespraech und erfahre, wie die richtige Ernaehrung dein Leben veraendern kann."
+        title="Bereit für den Wandel?"
+        description="Vereinbare ein kostenloses Beratungsgespraech und erfahre, wie die richtige Ernährung dein Leben veraendern kann."
       />
     </>
   );

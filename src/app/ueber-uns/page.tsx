@@ -6,26 +6,26 @@ import { trainers } from "@/lib/content";
 import { Check, Shield, Users, Eye } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ueber uns",
+  title: "Über uns",
   description:
     "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Qualitop, EMR und SwissActive zertifiziert.",
 };
 
 const whatClientsValue = [
-  "Privatsphaere und persoenliche Atmosphaere",
+  "Privatsphäre und persönliche Atmosphäre",
   "Schnelle und sichtbare Ergebnisse",
   "Nachhaltige Fortschritte ohne restriktive Diaeten",
   "Kompetentes und motivierendes Coaching",
-  "Flexibilitaet bei der Terminplanung",
+  "Flexibilität bei der Terminplanung",
   "Motivierendes Umfeld",
   "Genuegend Parkplaetze",
 ];
 
-export default function UeberUnsPage() {
+export default function ÜberUnsPage() {
   return (
     <>
       <PageHero
-        badge="Ueber uns"
+        badge="Über uns"
         title="Die Menschen hinter Alpha Sports."
         description="Zertifizierte Experten mit Leidenschaft, die dich auf dem schnellsten Weg zu deiner Bestform begleiten — egal wo du startest."
       />
@@ -39,25 +39,25 @@ export default function UeberUnsPage() {
                 Unsere Mission
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Koerpertransformation & funktionelle Performance.
+                Körpertransformation & funktionelle Performance.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-text-secondary">
                 Bei Alpha Sports geht es um mehr als Fitness. Unser Team
-                spezialisiert sich auf Koerpertransformation und funktionelle
-                Performance — damit du dich staerker und leistungsfaehiger im Alltag
-                fuehlst. Wir kombinieren Training, Ernaehrung und Mindset fuer
-                Selbstvertrauen und koerperliche Widerstandsfaehigkeit.
+                spezialisiert sich auf Körpertransformation und funktionelle
+                Performance — damit du dich stärker und leistungsfähiger im Alltag
+                fühlst. Wir kombinieren Training, Ernährung und Mindset für
+                Selbstvertrauen und körperliche Widerstandsfähigkeit.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
                 In unserem privaten Studio in St. Gallen trainierst du in
-                familiaerer Atmosphaere — mit voller Aufmerksamkeit und modernster
-                Diagnostik. Kein anonymes Fitnessstudio, sondern dein persoenlicher
+                familiaerer Atmosphäre — mit voller Aufmerksamkeit und modernster
+                Diagnostik. Kein anonymes Fitnessstudio, sondern dein persönlicher
                 Trainingsort. Wir begleiten dich auf dem schnellsten Weg zu deiner
-                Bestform — mit Privatsphaere, Expertise und Effizienz.
+                Bestform — mit Privatsphäre, Expertise und Effizienz.
               </p>
               <p className="mt-4 text-text-secondary">
                 Alle Fitness-Levels sind willkommen. Wir legen Wert darauf, dass du
-                dich in unserem privaten Studio wohlfuehlst.
+                dich in unserem privaten Studio wohlfühlst.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
@@ -160,12 +160,12 @@ export default function UeberUnsPage() {
               {
                 icon: Users,
                 title: "Individuell",
-                text: "Kein Standardprogramm. Jeder Plan ist auf dich zugeschnitten — basierend auf Daten, nicht Vermutungen. Deine Ziele und deine persoenliche Ausgangslage stehen im Zentrum.",
+                text: "Kein Standardprogramm. Jeder Plan ist auf dich zugeschnitten — basierend auf Daten, nicht Vermutungen. Deine Ziele und deine persönliche Ausgangslage stehen im Zentrum.",
               },
               {
                 icon: Eye,
                 title: "Privat",
-                text: "Max. 2 Personen gleichzeitig im Studio. Volle Aufmerksamkeit, keine Wartezeiten, kein Stress. Familiaere Atmosphaere mit genuegend Parkplaetzen.",
+                text: "Max. 2 Personen gleichzeitig im Studio. Volle Aufmerksamkeit, keine Wartezeiten, kein Stress. Familiaere Atmosphäre mit genügend Parkplaetzen.",
               },
               {
                 icon: Shield,
@@ -205,8 +205,8 @@ export default function UeberUnsPage() {
       </section>
 
       <CTABanner
-        title="Lerne uns persoenlich kennen."
-        description="Komm vorbei fuer ein kostenloses Beratungsgespraech und lerne unser Studio und Team kennen."
+        title="Lerne uns persönlich kennen."
+        description="Komm vorbei für ein kostenloses Beratungsgespraech und lerne unser Studio und Team kennen."
       />
     </>
   );

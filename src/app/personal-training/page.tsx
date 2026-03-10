@@ -23,22 +23,22 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Personal Training",
   description:
-    "Individuelles 1:1 Personal Training im privaten Studio in St. Gallen. Abnehmen, Muskelaufbau, Schmerzfreiheit — massgeschneiderte Trainings- und Ernaehrungsstrategien. Krankenkassen anerkannt. Kostenloses Beratungsgespraech.",
+    "Individuelles 1:1 Personal Training im privaten Studio in St. Gallen. Abnehmen, Muskelaufbau, Schmerzfreiheit — massgeschneiderte Trainings- und Ernährungsstrategien. Krankenkassen anerkannt. Kostenloses Beratungsgespraech.",
 };
 
 const schwerpunkte = [
   "Individuelle Coachings",
   "Leistungsdiagnostik",
-  "Persoenliche Trainingsplanung mit individueller Strategie",
-  "Korrekte Uebungsausfuehrung fuer maximale Effizienz ohne Verletzungen",
-  "Spuerbare Fortschritte und sichtbare Ergebnisse",
+  "Persönliche Trainingsplanung mit individueller Strategie",
+  "Korrekte Übungsausfuehrung für maximale Effizienz ohne Verletzungen",
+  "Spürbare Fortschritte und sichtbare Ergebnisse",
   "Flexible Terminwahl (auch am Wochenende)",
 ];
 
 const schwangerschaftskursFeatures = [
-  "Sanfte Kraft- und Beweglichkeitsuebungen",
+  "Sanfte Kraft- und Beweglichkeitsübungen",
   "Beckenbodentraining",
-  "Uebungen zur Entspannung",
+  "Übungen zur Entspannung",
   "Geschuetzter Raum zum Austausch",
 ];
 
@@ -56,8 +56,8 @@ export default function PersonalTrainingPage() {
     <>
       <PageHero
         badge="Personal Training"
-        title="Individuell & effektiv fuer deine Bestform."
-        description="Bei Alpha Sports bekommst du keine Standardloesungen — sondern massgeschneiderte Trainings- und Ernaehrungsstrategien, die dich effizient und sicher zu deiner Bestform begleiten."
+        title="Individuell & effektiv für deine Bestform."
+        description="Bei Alpha Sports bekommst du keine Standardloesungen — sondern massgeschneiderte Trainings- und Ernährungsstrategien, die dich effizient und sicher zu deiner Bestform begleiten."
       />
 
       {/* Intro */}
@@ -66,20 +66,20 @@ export default function PersonalTrainingPage() {
           <div className="mx-auto max-w-3xl">
             <p className="text-lg leading-relaxed text-text-secondary">
               Bei Alpha Sports bekommst du keine Standardloesungen — sondern
-              massgeschneiderte Trainings- und Ernaehrungsstrategien, die dich
+              massgeschneiderte Trainings- und Ernährungsstrategien, die dich
               effizient und sicher zu deiner Bestform begleiten. Deine Ziele und
-              deine persoenliche Ausgangslage stehen bei uns an erster Stelle.
+              deine persönliche Ausgangslage stehen bei uns an erster Stelle.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-              In einer familiaeren & privaten Atmosphaere begleiten wir dich auf
-              deinem Weg. Dank modernster Analysen lernen wir deinen Koerper genau
+              In einer familiaeren & privaten Atmosphäre begleiten wir dich auf
+              deinem Weg. Dank modernster Analysen lernen wir deinen Körper genau
               kennen und entwickeln daraus eine zielgerichtete Trainingsstrategie,
               die perfekt zu dir und deinem Alltag passt. So erreichst du sichtbare
               Ergebnisse — schnell und nachhaltig.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
               Unser Anspruch ist es, dass du nicht nur Fortschritte siehst, sondern
-              dich staerker, energiegeladener und ausgeglichener fuehlst — im
+              dich stärker, energiegeladener und ausgeglichener fühlst — im
               Training sowie im Alltag.
             </p>
           </div>
@@ -121,7 +121,7 @@ export default function PersonalTrainingPage() {
           </p>
           <div className="mt-6">
             <Link
-              href="/kontakt"
+              href="/kostenloses-beratungsgespraech"
               className="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90"
             >
               Kostenloses Beratungsgespraech buchen
@@ -210,13 +210,13 @@ export default function PersonalTrainingPage() {
               </h2>
               <p className="mt-4 text-lg text-text-secondary">
                 Unser 1:1 Schwangerschaftscoaching bietet dir die perfekte
-                Moeglichkeit, aktiv und gesund durch deine Schwangerschaft zu gehen.
-                Wir beruecksichtigen nicht nur deine individuellen Beduerfnisse und
+                Möglichkeit, aktiv und gesund durch deine Schwangerschaft zu gehen.
+                Wir beruecksichtigen nicht nur deine individuellen Bedürfnisse und
                 Wuensche, sondern auch den aktuellen Verlauf deiner Schwangerschaft.
               </p>
               <p className="mt-4 text-text-secondary">
-                Ob Anfaengerin oder erfahrene Sportlerin — unser
-                Schwangerschaftscoaching ist fuer jede Frau geeignet. Gemeinsam
+                Ob Anfängerin oder erfahrene Sportlerin — unser
+                Schwangerschaftscoaching ist für jede Frau geeignet. Gemeinsam
                 schaffen wir eine Balance zwischen Aktivitaet und Entspannung. Dein
                 Wohlbefinden und das deines Babys stehen an erster Stelle.
               </p>

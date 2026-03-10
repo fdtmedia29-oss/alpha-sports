@@ -9,7 +9,7 @@ export default function PainPoints() {
   return (
     <section className="section-padding bg-white">
       <div className="mx-auto max-w-7xl">
-        {/* Header + quotes as simple text */}
+        {/* Header + quotes */}
         <div className="mb-16 grid items-start gap-12 lg:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold uppercase tracking-widest text-orange md:text-3xl">
@@ -38,7 +38,8 @@ export default function PainPoints() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Ja? Dann bist du bei uns genau richtig.
+              Ja? Dann bist du bei uns{" "}
+              <span className="text-orange">genau richtig.</span>
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
               Wir bringen dich auf schnellstem Weg zu deinem Ziel — mit
@@ -68,7 +69,6 @@ export default function PainPoints() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group rounded-3xl border border-border bg-white p-8 transition-all hover:shadow-lg"
             >
-              {/* Problem */}
               <div className="flex items-start gap-3">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-50">
                   <X className="h-4 w-4 text-red-500" />
@@ -78,12 +78,10 @@ export default function PainPoints() {
                 </p>
               </div>
 
-              {/* Arrow */}
               <div className="my-6 flex justify-center">
                 <ArrowDown className="h-5 w-5 text-border" />
               </div>
 
-              {/* Solution */}
               <div className="flex items-start gap-3">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-50">
                   <Check className="h-4 w-4 text-green-600" />

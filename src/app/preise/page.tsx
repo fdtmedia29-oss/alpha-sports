@@ -7,7 +7,7 @@ import { pricing } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Preise",
   description:
-    "Preise fuer Personal Training, Online Coaching, Gruppenkurse, Trainingspakete, Analysen, Ernaehrungsberatung und mehr bei Alpha Sports St. Gallen. Transparent und fair. Krankenkassen anerkannt.",
+    "Preise für Personal Training, Online Coaching, Gruppenkurse, Trainingspakete, Analysen, Ernährungsberatung und mehr bei Alpha Sports St. Gallen. Transparent und fair. Krankenkassen anerkannt.",
 };
 
 export default function PreisePage() {
@@ -107,12 +107,12 @@ export default function PreisePage() {
               </div>
               <p className="mt-4 text-text-secondary">
                 Alpha Sports ist Qualitop, EMR und SwissActive zertifiziert. Je nach
-                Zusatzversicherung kann ein Teil der Kosten fuer Personal Training und
+                Zusatzversicherung kann ein Teil der Kosten für Personal Training und
                 Gruppenkurse von deiner Krankenkasse uebernommen werden.
               </p>
               <p className="mt-2 text-sm text-muted">
-                Informiere dich auf qualitop.ch ueber moegliche finanzielle
-                Unterstuetzung.
+                Informiere dich auf qualitop.ch ueber mögliche finanzielle
+                Unterstützung.
               </p>
             </div>
             <div className="rounded-2xl border border-border bg-white p-8">
@@ -144,7 +144,7 @@ export default function PreisePage() {
 
       <CTABanner
         title="Fragen zu den Preisen?"
-        description="Im kostenlosen Beratungsgespraech finden wir das passende Angebot fuer dich und dein Budget."
+        description="Im kostenlosen Beratungsgespraech finden wir das passende Angebot für dich und dein Budget."
       />
     </>
   );

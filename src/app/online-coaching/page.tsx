@@ -17,13 +17,13 @@ import {
 export const metadata: Metadata = {
   title: "Online Coaching",
   description:
-    "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernaehrungsplan, persoenliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von ueberall trainieren.",
+    "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernährungsplan, persönliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von ueberall trainieren.",
 };
 
 const problemPoints = [
   "Du hast ein Abo im Fitnessstudio, aber keinen richtigen Plan",
   "Du balancierst Job und Familie mit wenig Zeit",
-  "Du trainierst regelmaessig, ohne sichtbare Fortschritte",
+  "Du trainierst regelmässig, ohne sichtbare Fortschritte",
   "Du willst von zu Hause oder unterwegs trainieren",
   "Du brauchst klare Ziele und ehrliches Feedback",
   "Du brauchst externe Motivation",
@@ -33,7 +33,7 @@ const problemPoints = [
 const sixFeatures = [
   { icon: MapPin, text: "Flexibles Training von ueberall" },
   { icon: Clock, text: "Maximale Zeiteffizienz" },
-  { icon: Utensils, text: "Individuelle Ernaehrung inklusive" },
+  { icon: Utensils, text: "Individuelle Ernährung inklusive" },
   { icon: BarChart3, text: "Progress-Tracking" },
   { icon: Video, text: "App & Video Coaching" },
   { icon: Zap, text: "Premium Coaching" },
@@ -45,7 +45,7 @@ export default function OnlineCoachingPage() {
       <PageHero
         badge="Online Coaching"
         title="In 12 Wochen zu deiner Bestform."
-        description="12-Wochen intensives 1:1 Online Coaching mit persoenlicher Betreuung via App — Training, Ernaehrung und Lifestyle. Von ueberall."
+        description="12-Wochen intensives 1:1 Online Coaching mit persönlicher Betreuung via App — Training, Ernährung und Lifestyle. Von ueberall."
       />
 
       {/* Problem section */}
@@ -57,7 +57,7 @@ export default function OnlineCoachingPage() {
                 Kennst du das?
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Online Coaching ist fuer dich, wenn...
+                Online Coaching ist für dich, wenn...
               </h2>
             </div>
             <div className="space-y-4">
@@ -82,7 +82,7 @@ export default function OnlineCoachingPage() {
               Was dich erwartet
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-              6 Komponenten fuer deinen Erfolg.
+              6 Komponenten für deinen Erfolg.
             </h2>
           </div>
 
@@ -129,10 +129,10 @@ export default function OnlineCoachingPage() {
               <ul className="mt-6 space-y-3">
                 {[
                   "Individueller Trainingsplan",
-                  "Ernaehrungsplan",
+                  "Ernährungsplan",
                   "Lifestyle-Optimierung",
                   "Coaching-App Zugang",
-                  "Woechentliche Anpassungen",
+                  "Wöchentliche Anpassungen",
                   "3 Monate Premium Support",
                 ].map((item) => (
                   <li
@@ -161,14 +161,14 @@ export default function OnlineCoachingPage() {
                 <span className="text-sm text-muted">/Monat</span>
               </div>
               <p className="mt-4 text-sm text-text-secondary">
-                Das Premium-Paket mit erweiterten Analysen und persoenlichem
+                Das Premium-Paket mit erweiterten Analysen und persönlichem
                 Training vor Ort.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
                   "Alles aus Shape",
                   "Stoffwechsel- & Leistungsanalyse",
-                  "InBody Koerperanalyse",
+                  "InBody Körperanalyse",
                   "FMS-Test (Functional Movement Screen)",
                   "Personal Training Session vor Ort",
                   "Priority Support",
@@ -202,9 +202,9 @@ export default function OnlineCoachingPage() {
             Alles in einer App.
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
-            Progress-Fotos, Koerpermasse (Taille, Huefte, Brust, Arme, Beine),
+            Progress-Fotos, Körpermasse (Taille, Huefte, Brust, Arme, Beine),
             Gewicht, Chat mit deinem Coach — alles an einem Ort. Einfach,
-            uebersichtlich, motivierend. Regelmaessige Dokumentation und gemeinsame
+            uebersichtlich, motivierend. Regelmässige Dokumentation und gemeinsame
             Analyse.
           </p>
         </div>

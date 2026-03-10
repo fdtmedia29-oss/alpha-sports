@@ -20,9 +20,9 @@ const detailedClasses = [
     icon: Flame,
     image: "/images/classes/bootcamp.png",
     shortDescription:
-      "Der energiegeladene Gruppenkurs fuer jedes Fitness-Level.",
+      "Der energiegeladene Gruppenkurs für jedes Fitness-Level.",
     description:
-      "Du willst fit werden, Koerperfett verbrennen und Muskeln aufbauen — aber nicht alleine? Unser Bootcamp ist ein hochintensives Gruppentraining mit abwechslungsreichen Uebungen. Kraft-Ausdauer, Herz-Kreislauf-Training, Fettverbrennung und Muskelaufbau stehen im Fokus. Der Nachbrenneffekt haelt bis zu 72 Stunden an — dein Stoffwechsel bleibt angekurbelt, Sauerstoffaufnahme verbessert und Muskeln werden aufgebaut.",
+      "Du willst fit werden, Körperfett verbrennen und Muskeln aufbauen — aber nicht alleine? Unser Bootcamp ist ein hochintensives Gruppentraining mit abwechslungsreichen Übungen. Kraft-Ausdauer, Herz-Kreislauf-Training, Fettverbrennung und Muskelaufbau stehen im Fokus. Der Nachbrenneffekt haelt bis zu 72 Stunden an — dein Stoffwechsel bleibt angekurbelt, Sauerstoffaufnahme verbessert und Muskeln werden aufgebaut.",
     highlights: [
       "Kraft, Ausdauer & Beweglichkeit",
       "Fettverbrennung & Muskelaufbau",
@@ -41,13 +41,13 @@ const detailedClasses = [
     shortDescription:
       "Fundiertes Hypertrophie-Training mit Fokus auf korrekte Technik.",
     description:
-      "Evidenzbasiertes Hypertrophie-Training in der Kleingruppe. Progressive Ueberlastung, Muskelspannung und gezielter Reiz fuer maximalen Muskelaufbau. Hanteln, Langhanteln und Bodyweight-Uebungen — mit praezisem Technik-Coaching bei allen Grunduebungen. Ideal fuer Muskelwachstum, bessere Gym-Performance oder Body Recomposition.",
+      "Evidenzbasiertes Hypertrophie-Training in der Kleingruppe. Progressive Überlastung, Muskelspannung und gezielter Reiz für maximalen Muskelaufbau. Hanteln, Langhanteln und Bodyweight-Übungen — mit praezisem Technik-Coaching bei allen Grundübungen. Ideal für Muskelwachstum, bessere Gym-Performance oder Body Recomposition.",
     highlights: [
-      "Progressive Ueberlastung",
-      "Technik-Coaching bei Grunduebungen",
+      "Progressive Überlastung",
+      "Technik-Coaching bei Grundübungen",
       "Hanteln, Langhantel & Bodyweight",
       "Muskelaufbau & Body Recomposition",
-      "Anfaenger & Fortgeschrittene",
+      "Anfänger & Fortgeschrittene",
     ],
   },
   {
@@ -60,12 +60,12 @@ const detailedClasses = [
     shortDescription:
       "Fusion aus Thaiboxen (Muay Thai) und HIIT-Training.",
     description:
-      "Steigere deine Power, dein Selbstvertrauen und dein Selbstbewusstsein mit unserer Fusion aus zwei Welten. Wir kombinieren das Beste aus Thaiboxen (Muay Thai) und HIIT Training — Kicks, Schlaege, Knie und Ellbogen mit hochintensiven Intervallen. Schnelle Uebungswechsel und kurze Pausen kurbeln deinen Stoffwechsel an. Kalorien werden noch lange nach dem Training verbrannt.",
+      "Steigere deine Power, dein Selbstvertrauen und dein Selbstbewusstsein mit unserer Fusion aus zwei Welten. Wir kombinieren das Beste aus Thaiboxen (Muay Thai) und HIIT Training — Kicks, Schlaege, Knie und Ellbogen mit hochintensiven Intervallen. Schnelle Übungswechsel und kurze Pausen kurbeln deinen Stoffwechsel an. Kalorien werden noch lange nach dem Training verbrannt.",
     highlights: [
       "Thaibox-Elemente: Kicks, Schlaege, Knie, Ellbogen",
       "Selbstverteidigung, Koordination & Gleichgewicht",
-      "Ganzkoerper-Workout aller Muskelgruppen",
-      "Schnelligkeit, Reaktionsfaehigkeit & Core-Stabilitaet",
+      "Ganzkörper-Workout aller Muskelgruppen",
+      "Schnelligkeit, Reaktionsfähigkeit & Core-Stabilitaet",
       "Gemeinschaftsgefuehl & gegenseitige Motivation",
     ],
   },
@@ -79,13 +79,13 @@ const detailedClasses = [
     shortDescription:
       "Staerke deine Mitte und finde die Balance.",
     description:
-      "Umfassendes Koerpertraining mit Fokus auf Core-Stabilitaet, bewusste Atmung und kontrollierte Bewegungen. Bauch-, Ruecken- und Beckenbodentraining, Rueckenschmerz-Praevention und verbesserte Koerperhaltung. Sanft aber effektiv — fuer alle Fitness-Levels und Altersgruppen. Ideale Ergaenzung zum Krafttraining.",
+      "Umfassendes Körpertraining mit Fokus auf Core-Stabilitaet, bewusste Atmung und kontrollierte Bewegungen. Bauch-, Rücken- und Beckenbodentraining, Rückenschmerz-Prävention und verbesserte Körperhaltung. Sanft aber effektiv — für alle Fitness-Levels und Altersgruppen. Ideale Ergaenzung zum Krafttraining.",
     highlights: [
-      "Core-Stabilitaet & Mobilitaet",
-      "Koerperhaltung verbessern",
-      "Bauch-, Ruecken- & Beckenbodentraining",
-      "Rueckenschmerz-Praevention",
-      "Fuer alle Levels & Altersgruppen",
+      "Core-Stabilitaet & Mobilität",
+      "Körperhaltung verbessern",
+      "Bauch-, Rücken- & Beckenbodentraining",
+      "Rückenschmerz-Prävention",
+      "Für alle Levels & Altersgruppen",
     ],
   },
   {
@@ -96,15 +96,15 @@ const detailedClasses = [
     icon: Heart,
     image: "/images/studio/studio-4.jpg",
     shortDescription:
-      "Koerper, Geist und Seele in Einklang bringen.",
+      "Körper, Geist und Seele in Einklang bringen.",
     description:
-      "Ganzheitliches Training fuer Koerper, Geist und Seele. Gezielte Atemtechniken, fliessende Bewegungen und achtsame Praxis foerdern koerperliches Wohlbefinden und innere Balance. Rueckenmuskulatur staerken, Koerperhaltung verbessern, Flexibilitaet und Mobilitaet steigern. Stressreduktion und innere Ruhe finden.",
+      "Ganzheitliches Training für Körper, Geist und Seele. Gezielte Atemtechniken, fliessende Bewegungen und achtsame Praxis fördern körperliches Wohlbefinden und innere Balance. Rückenmuskulatur staerken, Körperhaltung verbessern, Flexibilität und Mobilität steigern. Stressreduktion und innere Ruhe finden.",
     highlights: [
       "Ganzheitliches Training",
       "Atemtechniken & fliessende Bewegungen",
-      "Rueckenmuskulatur staerken",
+      "Rückenmuskulatur staerken",
       "Stressreduktion & innere Ruhe",
-      "Anfaenger & Fortgeschrittene",
+      "Anfänger & Fortgeschrittene",
     ],
   },
   {
@@ -115,12 +115,12 @@ const detailedClasses = [
     icon: StretchHorizontal,
     image: "/images/studio/studio-5.jpg",
     shortDescription:
-      "Flexibilitaet und Beweglichkeit verbessern.",
+      "Flexibilität und Beweglichkeit verbessern.",
     description:
-      "Dynamische und statische Dehnuebungen, die dir helfen, deine Beweglichkeit zu steigern und Flexibilitaet zu verbessern. Gelenke mobilisieren, Muskulatur entspannen und Verspannungen loesen. Professionell und abwechslungsreich gestaltet — hilft, Bewegungsfreiheit zu verbessern, Verletzungsrisiko zu verringern und sportliche Leistung zu steigern.",
+      "Dynamische und statische Dehnübungen, die dir helfen, deine Beweglichkeit zu steigern und Flexibilität zu verbessern. Gelenke mobilisieren, Muskulatur entspannen und Verspannungen loesen. Professionell und abwechslungsreich gestaltet — hilft, Bewegungsfreiheit zu verbessern, Verletzungsrisiko zu verringern und sportliche Leistung zu steigern.",
     highlights: [
-      "Erhoehte Flexibilitaet",
-      "Verbesserte Koerperhaltung",
+      "Erhöhte Flexibilität",
+      "Verbesserte Körperhaltung",
       "Reduziertes Verletzungsrisiko",
       "Bessere Bewegungsfreiheit",
       "Ideale Ergaenzung zum Training",
@@ -134,7 +134,7 @@ const pregnancyPrograms = [
     trainer: "Isabell Tatzl",
     schedule: "Sonntags 09:00–10:00",
     description:
-      "Sanfte Kraft- und Beweglichkeitsuebungen, die die Ausdauer foerdern. Beckenbodentraining fuer die Geburtsvorbereitung. Uebungen zur Entspannung und Atemtechniken. Geschuetzter Raum zum Austausch mit anderen werdenden Muettern. Max. 6 Teilnehmerinnen.",
+      "Sanfte Kraft- und Beweglichkeitsübungen, die die Ausdauer fördern. Beckenbodentraining für die Geburtsvorbereitung. Übungen zur Entspannung und Atemtechniken. Geschuetzter Raum zum Austausch mit anderen werdenden Muettern. Max. 6 Teilnehmerinnen.",
     price: "CHF 180 (6 Wochen)",
   },
   {
@@ -142,7 +142,7 @@ const pregnancyPrograms = [
     trainer: "Isabell Tatzl",
     schedule: "Individuell",
     description:
-      "Personalisierte Sessions angepasst an deine Schwangerschaftsphase und dein Fitness-Level. Gezielte Staerkung durch sanfte Uebungen, Schmerzlinderung (z.B. Rueckenschmerzen), Beckenbodentraining, Stressabbau und optimale Geburtsvorbereitung. Dein Wohlbefinden und das deines Babys stehen an erster Stelle.",
+      "Personalisierte Sessions angepasst an deine Schwangerschaftsphase und dein Fitness-Level. Gezielte Staerkung durch sanfte Übungen, Schmerzlinderung (z.B. Rückenschmerzen), Beckenbodentraining, Stressabbau und optimale Geburtsvorbereitung. Dein Wohlbefinden und das deines Babys stehen an erster Stelle.",
     price: "CHF 150 / Session",
   },
 ];
@@ -152,8 +152,8 @@ export default function GruppenkursePage() {
     <>
       <PageHero
         badge="Gruppenkurse"
-        title="Gemeinsam staerker."
-        description="Training in motivierender Gemeinschaft — mit Spass, Verletzungspraevention und individueller Betreuung in der Kleingruppe. Max. 8 Teilnehmer. Probetraining immer kostenlos."
+        title="Gemeinsam stärker."
+        description="Training in motivierender Gemeinschaft — mit Spass, Verletzungsprävention und individueller Betreuung in der Kleingruppe. Max. 8 Teilnehmer. Probetraining immer kostenlos."
       />
 
       {/* All classes */}
@@ -223,7 +223,7 @@ export default function GruppenkursePage() {
             </h2>
             <p className="mt-4 text-text-secondary">
               Speziell ausgebildete Trainerin, sicheres und individuell angepasstes
-              Training, verbesserte koerperliche und mentale Fitness, optimale
+              Training, verbesserte körperliche und mentale Fitness, optimale
               Geburtsvorbereitung.
             </p>
           </div>

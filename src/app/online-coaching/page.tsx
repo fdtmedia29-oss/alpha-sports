@@ -110,7 +110,7 @@ export default function OnlineCoachingPage() {
               Pakete
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Waehle dein Programm.
+              Wähle dein Programm.
             </h2>
           </div>
 
@@ -186,8 +186,7 @@ export default function OnlineCoachingPage() {
           </div>
 
           <p className="mt-8 text-center text-sm text-muted">
-            Optional können alle Online Programme in Hybrid Programme umgewandelt
-            werden.
+            So erreichst du schnell und nachhaltig — sichtbare Ergebnisse.
           </p>
         </div>
       </section>
@@ -202,7 +201,7 @@ export default function OnlineCoachingPage() {
             Alles in einer App.
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
-            Progress-Fotos, Körpermasse (Taille, Huefte, Brust, Arme, Beine),
+            Progress-Fotos, Körpermasse (Taille, Hüfte, Brust, Arme, Beine),
             Gewicht, Chat mit deinem Coach — alles an einem Ort. Einfach,
             übersichtlich, motivierend. Regelmässige Dokumentation und gemeinsame
             Analyse.

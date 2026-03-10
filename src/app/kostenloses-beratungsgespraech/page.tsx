@@ -157,7 +157,8 @@ export default function KontaktPage() {
           >
             Was dich erwartet:
           </motion.h2>
-          <div className="mt-14 space-y-0">
+          {/* Mobile: horizontal layout */}
+          <div className="mt-14 space-y-0 md:hidden">
             {consultationSteps.map((s, i) => (
               <motion.div
                 key={s.step}
@@ -165,19 +166,39 @@ export default function KontaktPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="relative flex gap-5 pb-12 last:pb-0"
+                className="relative flex gap-5 pb-10 last:pb-0"
               >
-                {/* Vertical connector line */}
                 {i < consultationSteps.length - 1 && (
                   <div className="absolute left-6 top-14 bottom-0 w-px bg-orange/20" />
                 )}
-                {/* Step number circle */}
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-lg shadow-orange/20">
                   {s.step}
                 </div>
                 <div className="pt-3">
                   <h3 className="text-lg font-bold text-text">{s.title}</h3>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Desktop: centered vertical layout */}
+          <div className="mt-14 hidden space-y-8 md:block">
+            {consultationSteps.map((s, i) => (
+              <motion.div
+                key={s.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className="flex flex-col items-center gap-3"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange text-sm font-bold text-white shadow-lg shadow-orange/20">
+                  {s.step}
+                </div>
+                <h3 className="text-lg font-bold text-text">{s.title}</h3>
+                {i < consultationSteps.length - 1 && (
+                  <div className="h-6 w-px bg-orange/20" />
+                )}
               </motion.div>
             ))}
           </div>

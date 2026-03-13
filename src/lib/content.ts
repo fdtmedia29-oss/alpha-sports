@@ -290,13 +290,19 @@ export const certifications = [
 
 export const studioImages = [
   "/images/studio/studio-1.jpg",
+  "/images/studio/studio-9.jpg",
   "/images/studio/studio-2.jpg",
   "/images/studio/studio-3.jpg",
+  "/images/studio/studio-10.jpg",
   "/images/studio/studio-4.jpg",
   "/images/studio/studio-5.jpg",
   "/images/studio/studio-6.jpg",
   "/images/studio/studio-7.jpg",
   "/images/studio/studio-8.jpg",
+  "/images/studio/2024-10-03.jpg",
+  "/images/classes/hyrox-abklatschen.jpg",
+  "/images/classes/hyrox-gruppenkurs.jpg",
+  "/images/classes/bootcamp.png",
 ];
 
 export const navItems = [

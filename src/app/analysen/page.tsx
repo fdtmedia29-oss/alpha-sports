@@ -101,6 +101,9 @@ export default function AnalysenPage() {
         badge="Analysen & Diagnostik"
         title="Lerne deinen Körper neu kennen."
         description="Mit unserer Stoffwechsel-, Körper- und Leistungsanalyse lernst du deinen Körper besser kennen — für gezieltes, datenbasiertes Training."
+        ctaText="Beratung buchen"
+        ctaHref="/kostenloses-beratungsgespraech"
+        backgroundImage="/images/analysen/stoffwechselanalyse.jpg"
       />
 
       <section className="section-padding bg-white">

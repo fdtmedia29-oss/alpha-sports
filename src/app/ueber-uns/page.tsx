@@ -12,13 +12,14 @@ export const metadata: Metadata = {
 };
 
 const whatClientsValue = [
-  "Privatsphäre und persönliche Atmosphäre",
-  "Schnelle und sichtbare Ergebnisse",
-  "Nachhaltige Fortschritte ohne restriktive Diaeten",
-  "Kompetentes und motivierendes Coaching",
-  "Flexibilität bei der Terminplanung",
-  "Motivierendes Umfeld",
-  "Genuegend Parkplaetze",
+  "Wohlfühlen dank Privatsphäre (Eigenes Studio)",
+  "Für jedes Fitness Level die perfekte Strategie",
+  "Schnell sichtbare Ergebnisse",
+  "Nachhaltige Erfolge ohne Diäten",
+  "Kompetente & individuelle Betreuung",
+  "Flexibilität",
+  "Motivationsfördernde Umgebung & Coaches",
+  "Genügend Parkplätze in unmittelbarer Nähe",
 ];
 
 export default function ÜberUnsPage() {
@@ -28,36 +29,39 @@ export default function ÜberUnsPage() {
         badge="Über uns"
         title="Die Menschen hinter Alpha Sports."
         description="Zertifizierte Experten mit Leidenschaft, die dich auf dem schnellsten Weg zu deiner Bestform begleiten — egal wo du startest."
+        ctaText="Kostenloses Beratungsgespräch"
+        ctaHref="/kostenloses-beratungsgespraech"
+        backgroundImage="/images/studio/studio-9.jpg"
       />
 
-      {/* Mission */}
+      {/* Philosophy */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-                Unsere Mission
+                Unsere Philosophie
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Körpertransformation & funktionelle Performance.
+                Körpertransformation & funktionelle Leistungsfähigkeit.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-                Bei Alpha Sports geht es um mehr als Fitness. Unser Team
-                spezialisiert sich auf Körpertransformation und funktionelle
-                Performance — damit du dich stärker und leistungsfähiger im Alltag
-                fühlst. Wir kombinieren Training, Ernährung und Mindset für
-                Selbstvertrauen und körperliche Widerstandsfähigkeit.
+                Egal wo du beginnst, jeder ist bei uns willkommen. In unserem
+                privaten Studio achten wir darauf, dass du dich rundum wohlfühlst
+                und deinem Fokus für dein Ziel nichts im Weg steht.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-                In unserem privaten Studio in St. Gallen trainierst du in
-                familiaerer Atmosphäre — mit voller Aufmerksamkeit und modernster
-                Diagnostik. Kein anonymes Fitnessstudio, sondern dein persönlicher
-                Trainingsort. Wir begleiten dich auf dem schnellsten Weg zu deiner
-                Bestform — mit Privatsphäre, Expertise und Effizienz.
+                Bei Alpha Sports steht deine persönliche Entwicklung im
+                Mittelpunkt. In unserem zentral gelegenen Studio in St. Gallen
+                schaffen wir Raum für effizientes, zielgerichtetes Training — mit
+                Privatsphäre, Expertise und einer klaren Mission: Dich auf
+                schnellstem Weg zu deiner Bestform zu begleiten!
               </p>
-              <p className="mt-4 text-text-secondary">
-                Alle Fitness-Levels sind willkommen. Wir legen Wert darauf, dass du
-                dich in unserem privaten Studio wohlfühlst.
+              <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+                Wir sind ein Team aus Experten mit langjähriger Erfahrung im
+                Bereich Training, Ernährung und Mindset, welches auf
+                Körpertransformation & funktionelle Leistungsfähigkeit
+                spezialisiert ist.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
@@ -72,13 +76,40 @@ export default function ÜberUnsPage() {
         </div>
       </section>
 
+      {/* Philosophy continued */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-lg leading-relaxed text-text-secondary">
+            Unser Fokus liegt darin, Menschen dabei zu helfen, sich in ihrem
+            Körper wieder wohl zu fühlen und ihnen dadurch zu mehr
+            Selbstvertrauen, innerer Stärke und körperlicher
+            Widerstandsfähigkeit zu verhelfen.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+            Unsere individuelle Betreuung, kombiniert mit unserer bewährten
+            Coaching-Strategie, sorgt dafür, dass du nicht nur besser aussiehst,
+            sondern dich auch im Alltag leistungsfähiger, belastbarer und
+            sicherer fühlst.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+            Denn wer sich stark fühlt, begegnet Herausforderungen mit
+            Leichtigkeit. Wir begleiten dich Schritt für Schritt — effizient,
+            persönlich und mit echter Leidenschaft — auf deinem Weg zu mehr
+            Energie, Klarheit und Selbstbewusstsein.
+          </p>
+          <p className="mt-6 text-xl font-bold text-text">
+            Alpha Sports — weil deine Bestform kein Zufall ist!
+          </p>
+        </div>
+      </section>
+
       {/* What clients value */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-                Das schaetzen unsere Kunden
+                Das schätzen unsere Kunden
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
                 Warum Alpha Sports?
@@ -107,7 +138,7 @@ export default function ÜberUnsPage() {
             </h2>
             <p className="mt-4 text-text-secondary">
               Erfahrene, zertifizierte Fitnessprofis, die dich sicher und effektiv
-              durch das Training fuehren.
+              durch das Training führen.
             </p>
           </div>
 
@@ -118,11 +149,13 @@ export default function ÜberUnsPage() {
                 className="rounded-2xl border border-border bg-white p-8"
               >
                 <div className="flex items-start gap-6">
-                  <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-dark text-2xl font-black text-white">
-                    {trainer.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
+                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src={trainer.image}
+                      alt={trainer.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-text">
@@ -165,7 +198,7 @@ export default function ÜberUnsPage() {
               {
                 icon: Eye,
                 title: "Privat",
-                text: "Max. 2 Personen gleichzeitig im Studio. Volle Aufmerksamkeit, keine Wartezeiten, kein Stress. Familiaere Atmosphäre mit genügend Parkplaetzen.",
+                text: "Max. 2 Personen gleichzeitig im Studio. Volle Aufmerksamkeit, keine Wartezeiten, kein Stress. Familiäre Atmosphäre mit genügend Parkplätzen.",
               },
               {
                 icon: Shield,

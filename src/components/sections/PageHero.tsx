@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 interface PageHeroProps {
@@ -10,12 +11,26 @@ interface PageHeroProps {
   description: string;
   ctaText?: string;
   ctaHref?: string;
+  backgroundImage?: string;
 }
 
-export default function PageHero({ badge, title, description, ctaText, ctaHref }: PageHeroProps) {
+export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-dark pt-28 pb-20 md:pt-36 md:pb-28">
-      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-dark-surface" />
+    <section className="relative overflow-hidden bg-dark pt-32 pb-16 md:pt-44 md:pb-24">
+      {backgroundImage ? (
+        <>
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-dark/70" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-dark-surface" />
+      )}
       <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

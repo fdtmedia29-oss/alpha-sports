@@ -22,11 +22,14 @@ export default function PhotoCarousel({ title, images }: PhotoCarouselProps) {
   };
 
   return (
-    <div className="mt-16">
+    <div>
       <div className="flex items-end justify-between">
-        <h3 className="text-lg font-bold text-text md:text-xl">
-          Einblicke: <span className="text-orange">{title}</span>
-        </h3>
+        <div className="flex items-center gap-3">
+          <div className="h-1 w-8 rounded-full bg-orange" />
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
+            Einblicke
+          </h3>
+        </div>
         <div className="hidden gap-2 md:flex">
           <button
             onClick={() => scroll("left")}

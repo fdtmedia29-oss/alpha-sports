@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
+import InlineVideo from "@/components/ui/InlineVideo";
 import {
-  Check,
   ArrowRight,
+  Users,
+  Activity,
+  Target,
+  ShieldCheck,
+  TrendingUp,
+  CalendarCheck,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -15,12 +21,12 @@ export const metadata: Metadata = {
 };
 
 const schwerpunkte = [
-  "Individuelle Coachings",
-  "Umfangreiche Diagnostik",
-  "Persönliche Trainingsplanung mit individueller Strategie",
-  "Korrekte Übungsausführung für maximale Effizienz ohne Verletzungen",
-  "Spürbare Fortschritte und sichtbare Ergebnisse",
-  "Flexible Terminwahl",
+  { icon: Users, text: "Individuelle Coachings" },
+  { icon: Activity, text: "Umfangreiche Diagnostik" },
+  { icon: Target, text: "Persönliche Trainingsplanung mit individueller Strategie" },
+  { icon: ShieldCheck, text: "Korrekte Übungsausführung für maximale Effizienz ohne Verletzungen" },
+  { icon: TrendingUp, text: "Spürbare Fortschritte und sichtbare Ergebnisse" },
+  { icon: CalendarCheck, text: "Flexible Terminwahl" },
 ];
 
 
@@ -31,29 +37,43 @@ export default function PersonalTrainingPage() {
         badge="Personal Training"
         title="Individuell & effektiv für deine Bestform."
         description="Bei Alpha Sports bekommst du keine Standardlösungen — sondern massgeschneiderte Trainings- und Ernährungsstrategien, die dich effizient und sicher zu deiner Bestform begleiten."
+        ctaText="Kostenloses Beratungsgespräch"
+        ctaHref="/kostenloses-beratungsgespraech"
+        backgroundImage="/images/pt/lerchenfeld-73.jpg"
       />
 
-      {/* Intro */}
+      {/* Intro with video */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-lg leading-relaxed text-text-secondary">
-              Bei Alpha Sports bekommst du keine Standardlösungen — sondern
-              massgeschneiderte Trainings- und Ernährungsstrategien, die dich
-              effizient und sicher zu deiner Bestform begleiten. Deine Ziele und
-              deine persönliche Ausgangslage stehen bei uns an erster Stelle.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-              In einer familiären & privaten Atmosphäre begleiten wir dich auf
-              deinem Weg. Dank modernster Analysen lernen wir deinen Körper genau
-              kennen und entwickeln daraus eine zielgerichtete Trainingsstrategie,
-              die perfekt zu dir und deinem Alltag passt. So erreichst du sichtbare
-              Ergebnisse — schnell und nachhaltig.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-              Unser Anspruch ist es, dass du nicht nur Fortschritte siehst, sondern
-              dass du Stärke, Selbstbewusstsein und Leistungsfähigkeit ausstrahlst.
-            </p>
+          <div className="grid items-center gap-10 lg:grid-cols-5 lg:gap-16">
+            <div className="lg:col-span-3">
+              <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+                Dein Weg zur Bestform
+              </span>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+                Keine Standardlösungen — sondern dein Plan.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-text-secondary">
+                Bei Alpha Sports bekommst du keine Standardlösungen — sondern
+                massgeschneiderte Trainings- und Ernährungsstrategien, die dich
+                effizient und sicher zu deiner Bestform begleiten. Deine Ziele und
+                deine persönliche Ausgangslage stehen bei uns an erster Stelle.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+                In einer familiären & privaten Atmosphäre begleiten wir dich auf
+                deinem Weg. Dank modernster Analysen lernen wir deinen Körper genau
+                kennen und entwickeln daraus eine zielgerichtete Trainingsstrategie,
+                die perfekt zu dir und deinem Alltag passt. So erreichst du sichtbare
+                Ergebnisse — schnell und nachhaltig.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+                Unser Anspruch ist es, dass du nicht nur Fortschritte siehst, sondern
+                dass du Stärke, Selbstbewusstsein und Leistungsfähigkeit ausstrahlst.
+              </p>
+            </div>
+            <div className="flex justify-center lg:col-span-2">
+              <InlineVideo src="/videos/pt-coaching.mp4" />
+            </div>
           </div>
         </div>
       </section>
@@ -61,25 +81,27 @@ export default function PersonalTrainingPage() {
       {/* Schwerpunkte */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
-              <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-                Schwerpunkte
-              </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Was dich erwartet.
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
-              {schwerpunkte.map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
-                    <Check className="h-3.5 w-3.5 text-orange" />
-                  </div>
-                  <span className="text-sm font-medium text-text">{item}</span>
+          <div className="mb-12 max-w-2xl">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Schwerpunkte
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Was dich erwartet.
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {schwerpunkte.map((item) => (
+              <div
+                key={item.text}
+                className="flex items-center gap-4 rounded-2xl border border-border bg-white p-6 transition-all hover:shadow-lg"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-light">
+                  <item.icon className="h-5 w-5 text-orange" />
                 </div>
-              ))}
-            </div>
+                <span className="font-medium text-text">{item.text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -87,17 +109,20 @@ export default function PersonalTrainingPage() {
       {/* CTA Section */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-lg leading-relaxed text-text-secondary">
+          <h2 className="text-2xl font-bold tracking-tight text-text md:text-3xl">
+            Bereit für den ersten Schritt?
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
             Vereinbare jetzt ein kostenloses Beratungsgespräch, in welchem wir eine
             Strategie zur Erreichung deiner Ziele ausarbeiten.
           </p>
-          <div className="mt-6">
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/kostenloses-beratungsgespraech"
-              className="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Kostenloses Beratungsgespräch buchen
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>
@@ -109,16 +134,16 @@ export default function PersonalTrainingPage() {
           <PhotoCarousel
             title="Personal Training"
             images={[
+              "/images/pt/pt-coach-lui-l-chelnd.png",
+              "/images/pt/alpha-personal-32.jpg",
+              "/images/pt/lerchenfeld-73.jpg",
               "/images/pt/alpha-personal-03.jpg",
               "/images/pt/alpha-personal-07.jpg",
               "/images/pt/alpha-personal-09.jpg",
               "/images/pt/alpha-personal-15.jpg",
               "/images/pt/alpha-personal-24.jpg",
               "/images/pt/alpha-personal-26.jpg",
-              "/images/pt/alpha-personal-32.jpg",
-              "/images/pt/lerchenfeld-73.jpg",
               "/images/pt/kal00470.jpg",
-              "/images/pt/kal00633.jpg",
               "/images/pt/kal00693.jpg",
             ]}
           />

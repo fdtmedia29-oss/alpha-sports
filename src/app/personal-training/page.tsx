@@ -3,6 +3,7 @@ import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import InlineVideo from "@/components/ui/InlineVideo";
+import Image from "next/image";
 import {
   ArrowRight,
   Users,

@@ -32,7 +32,7 @@ const detailedTestimonials = [
       "Signifikanter Muskelaufbau mit Fettabbau",
       "Blutwerte in kurzer Zeit hervorragend verbessert",
       "Nimmt jetzt die Treppe statt den Lift",
-      "Trainiert weiter um Gewicht zu halten und im Alter selbststaendig zu bleiben",
+      "Trainiert weiter um Gewicht zu halten und im Alter selbstständig zu bleiben",
     ],
   },
   {
@@ -51,7 +51,7 @@ const detailedTestimonials = [
     name: "Livio C.",
     result: "+10 kg Muskelmasse in 2 Jahren",
     quote:
-      "10 kg Muskelmasse in 2 Jahren aufgebaut durch gezieltes Training. Ich fuehle mich im Alltag ausgeglichener. Training hilft mir, den Arbeitsstress auszugleichen. Modernes Studio mit viel Platz und top motivierte Trainer. Positives Feedback von Bekannten motiviert zusaetzlich — und ich will meine sportlichen Grenzen weiter ausdehnen.",
+      "10 kg Muskelmasse in 2 Jahren aufgebaut durch gezieltes Training. Ich fühle mich im Alltag ausgeglichener. Training hilft mir, den Arbeitsstress auszugleichen. Modernes Studio mit viel Platz und top motivierte Trainer. Positives Feedback von Bekannten motiviert zusätzlich — und ich will meine sportlichen Grenzen weiter ausdehnen.",
     details: [
       "10 kg Muskelmasse in 2 Jahren",
       "Bessere Alltagsfitness",
@@ -68,7 +68,7 @@ const detailedTestimonials = [
       "Gewichtsverlust und Rückenschmerzen reduziert",
       "Mentale Transformation: Struktur, Energie, Ausdauer",
       "Körperakzeptanz und Selbstliebe gelernt",
-      "Trainiert jetzt selbststaendig mit positiver Einstellung",
+      "Trainiert jetzt selbstständig mit positiver Einstellung",
     ],
   },
 ];

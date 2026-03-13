@@ -126,15 +126,15 @@ export default function PreisePage() {
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Alle 1:1 Sessions inkl. 1 Proteinshake, 1 Sportgetraenk und Handtuchservice
+                  Alle 1:1 Sessions inkl. 1 Proteinshake, 1 Sportgetränk und Handtuchservice
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Verguenstigte Tarife bei Trainern Isabell und David
+                  Vergünstigte Tarife bei Trainern Isabell und David
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Analysen als Add-On zu anderen Leistungen guenstiger buchbar
+                  Analysen als Add-On zu anderen Leistungen günstiger buchbar
                 </li>
               </ul>
             </div>

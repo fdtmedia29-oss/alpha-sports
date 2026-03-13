@@ -289,6 +289,7 @@ export const certifications = [
 ];
 
 export const studioImages = [
+  // Studio
   "/images/studio/studio-1.jpg",
   "/images/studio/studio-9.jpg",
   "/images/studio/studio-2.jpg",
@@ -300,9 +301,44 @@ export const studioImages = [
   "/images/studio/studio-7.jpg",
   "/images/studio/studio-8.jpg",
   "/images/studio/2024-10-03.jpg",
+  // Personal Training
+  "/images/pt/alpha-personal-32.jpg",
+  "/images/pt/pt-coach-lui-l-chelnd.png",
+  "/images/pt/lerchenfeld-73.jpg",
+  "/images/pt/alpha-personal-03.jpg",
+  "/images/pt/alpha-personal-07.jpg",
+  "/images/pt/alpha-personal-09.jpg",
+  "/images/pt/alpha-personal-15.jpg",
+  "/images/pt/alpha-personal-24.jpg",
+  "/images/pt/alpha-personal-26.jpg",
+  "/images/pt/kal00470.jpg",
+  "/images/pt/kal00633.jpg",
+  "/images/pt/kal00693.jpg",
+  "/images/pt/facebook-beitrag-coach-lui-bergibt-hantel-an-samira.png",
+  // Gruppenkurse
   "/images/classes/hyrox-abklatschen.jpg",
   "/images/classes/hyrox-gruppenkurs.jpg",
+  "/images/classes/hyrox-ski-erg.jpg",
   "/images/classes/bootcamp.png",
+  // Analysen
+  "/images/analysen/erkl-r-foto-lui.jpg",
+  "/images/analysen/stoffwechselanalyse.jpg",
+  "/images/analysen/leistungsanalyse.jpg",
+  // Ernährung
+  "/images/ernaehrung/food-3654199-1280.jpg",
+  "/images/ernaehrung/food-1898194-1280.jpg",
+  "/images/ernaehrung/design-ohne-titel.png",
+  // Team
+  "/images/trainers/team.jpg",
+  "/images/trainers/team-foto.jpg",
+  "/images/trainers/team-foto-neu.jpg",
+  // Erfolgsgeschichten
+  "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
+  "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
+  "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
+  "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
+  "/images/results/vorher-nachher-vergleich-peter-meier.png",
+  "/images/results/vorher-nacher-vergleich-izadora-d..png",
 ];
 
 export const navItems = [

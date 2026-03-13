@@ -107,12 +107,19 @@ export default function PersonalTrainingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-text md:text-3xl">
+      <section className="relative overflow-hidden py-20 md:py-24">
+        <Image
+          src="/images/pt/kal00633.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-dark/75" />
+        <div className="relative mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-white md:text-4xl">
             Bereit für den ersten Schritt?
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             Vereinbare jetzt ein kostenloses Beratungsgespräch, in welchem wir eine
             Strategie zur Erreichung deiner Ziele ausarbeiten.
           </p>

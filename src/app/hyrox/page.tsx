@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
-import { Zap, Target, Users, Trophy, Dumbbell, Heart, Check } from "lucide-react";
+import InlineVideo from "@/components/ui/InlineVideo";
+import Image from "next/image";
+import { Check, ArrowRight, Shield } from "lucide-react";
+import Link from "next/link";
+import { certifications } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "HYROX Training",
@@ -16,98 +20,80 @@ export default function HyroxPage() {
       <PageHero
         badge="HYROX"
         title="Ein Ziel. Eine Challenge. Ein Team, das dich pusht!"
-        description="HYROX ist mehr als nur ein Workout — es ist die perfekte Kombination aus Kraft, Ausdauer und mentaler Staerke."
+        description="HYROX ist das weltweit erste Fitnessrennen, das funktionelles Training, Kraft und Ausdauer in einem einzigartigen Wettkampf vereint."
+        ctaText="Jetzt Buchen"
+        ctaHref="/kostenloses-beratungsgespraech"
+        backgroundImage="/images/classes/hyrox-gruppenkurs.jpg"
       />
 
+      {/* Intro with video */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-16 max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Was ist HYROX?
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-5xl">
-              Der Fitness-Wettkampf für alle.
-            </h2>
-            <p className="mt-4 text-lg text-text-secondary">
-              HYROX ist mehr als nur ein Workout — es ist die perfekte Kombination
-              aus Kraft, Ausdauer und mentaler Staerke. Dieses einzigartige
-              Wettkampfformat fordert dich mit 8 x 1 km Laufen und 8 intensiven
-              Workouts heraus.
-            </p>
-            <p className="mt-4 text-lg text-text-secondary">
-              Als offizieller HYROX-Partner bieten wir dir die perfekte Vorbereitung
-              auf dieses einzigartige Event. Mit professioneller Betreuung und einer
-              motivierenden Community helfen wir dir, dein volles Potenzial zu
-              entfalten und deine Bestleistung zu erreichen.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                icon: Zap,
-                title: "Explosives Workout",
-                text: "HYROX fordert deinen gesamten Körper — 8 x 1 km Laufen kombiniert mit 8 funktionellen Workouts für die ultimative Trainingserfahrung.",
-              },
-              {
-                icon: Target,
-                title: "Fight your limits",
-                text: "Geh an deine Grenzen und darüber hinaus. Mentale Staerke aufbauen, Ausdauer pushen und deine persönliche Bestleistung erreichen.",
-              },
-              {
-                icon: Trophy,
-                title: "Wettkampf Feeling",
-                text: "Von der Technik bis zur Rennstrategie — wir bereiten dich komplett auf den Race Day vor. Strukturierte Wettkampfvorbereitung für alle Level.",
-              },
-              {
-                icon: Users,
-                title: "Team Spirit",
-                text: "Lass dich von Gleichgesinnten pushen und überschreite deine Grenzen. Motivierende Community und gegenseitige Unterstützung.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-border bg-white p-8 transition-all hover:shadow-lg"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-light">
-                  <item.icon className="h-5 w-5 text-orange" />
-                </div>
-                <h3 className="mt-6 text-lg font-bold text-text">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                  {item.text}
-                </p>
+          <div className="grid items-center gap-10 lg:grid-cols-5 lg:gap-16">
+            <div className="lg:col-span-3">
+              <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+                HYROX Gruppenkurs
+              </span>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+                Mehr Power. Mehr Ausdauer. Mehr Selbstbewusstsein.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-text-secondary">
+                HYROX ist das weltweit erste Fitnessrennen, das funktionelles
+                Training, Kraft und Ausdauer in einem einzigartigen Wettkampf
+                vereint.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+                In unserem HYROX-Gruppenkurs trainierst du gezielt für diese
+                Herausforderung – mit Workouts, die dich stärker, schneller und
+                leistungsfähiger machen. Egal, ob du auf einen Wettkampf
+                hinarbeiten oder einfach deine Bestform erreichen willst, hier
+                findest du die perfekte Mischung aus Teamspirit, intensiver
+                Challenge und echter Weiterentwicklung.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/kostenloses-beratungsgespraech"
+                  className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+                >
+                  Jetzt Buchen
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
               </div>
-            ))}
+            </div>
+            <div className="flex justify-center lg:col-span-2">
+              <InlineVideo src="/videos/hyrox-1.mp4" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* What you train */}
+      {/* Was dich erwartet */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/classes/hyrox-ski-erg.jpg"
+                alt="HYROX Training"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-                Was du trainierst
+                Was dich erwartet
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
                 Ganzkörper-Athletik auf neuem Level.
               </h2>
-              <p className="mt-4 text-lg text-text-secondary">
-                HYROX fordert deinen gesamten Körper. Unser Training kombiniert
-                funktionelle Kraft mit Ausdauer für die ultimative
-                Trainingserfahrung — effektiv, fordernd und motivierend.
-              </p>
               <div className="mt-8 space-y-4">
                 {[
                   "Kraft, Ausdauer & funktionelle Performance",
-                  "Ganzkörper-athletisches Training",
-                  "Strukturierte Wettkampfvorbereitung",
-                  "Muskelaufbau & Körperkomposition",
-                  "Mentale Staerke aufbauen",
-                  "An deine Grenzen gehen — und darüber hinaus",
+                  "Athletisches Ganzkörpertraining",
+                  "Strukturierte Vorbereitung auf den Wettkampf",
+                  "Motivation & Wettkampf-Spirit",
+                  "Einsteiger & Fortgeschrittene",
+                  "Muskelaufbau, Kraftentwicklung & Bodyforming",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
@@ -118,67 +104,92 @@ export default function HyroxPage() {
                 ))}
               </div>
             </div>
-            <div>
-              <div className="rounded-2xl border border-border bg-white p-8">
-                <h3 className="text-lg font-bold text-text">HYROX Gruppenkurs</h3>
-                <p className="mt-3 text-sm text-text-secondary">
-                  Trainiere in der motivierenden Gruppenatmosphäre mit
-                  Gleichgesinnten. Für Anfänger und Fortgeschrittene — egal ob du
-                  dich auf ein HYROX-Race vorbereitest oder eine neue
-                  Fitness-Herausforderung suchst.
-                </p>
-                <div className="mt-6 space-y-3">
-                  <div className="flex items-center gap-2 text-sm text-text-secondary">
-                    <Dumbbell className="h-4 w-4 text-orange" />
-                    Funktionelle Kraft + Ausdauer
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-text-secondary">
-                    <Users className="h-4 w-4 text-orange" />
-                    Kleine Gruppe, max. 8 Teilnehmer
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-text-secondary">
-                    <Heart className="h-4 w-4 text-orange" />
-                    Probetraining kostenlos
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 rounded-2xl border border-border bg-white p-8">
-                <h3 className="text-lg font-bold text-text">HYROX 1:1 Coaching</h3>
-                <p className="mt-3 text-sm text-text-secondary">
-                  Maximale Performance mit individuellem Training. Rennstrategie,
-                  Technik-Optimierung und gezielter Aufbau — für deine Bestzeit am
-                  Race Day.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Trainers */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-text">
-            Deine HYROX-Trainer
+      {/* Mid-page CTA */}
+      <section className="relative overflow-hidden py-20 md:py-24">
+        <Image
+          src="/images/classes/hyrox-abklatschen.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-dark/75" />
+        <div className="relative mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-white md:text-4xl">
+            HYROX bei Alpha Sports.
           </h2>
-          <p className="mt-4 text-text-secondary">
-            <strong>Luigi Lieberherr</strong> und <strong>Nicole Walser</strong> sind
-            beide HYROX365 Foundation zertifiziert. Nicole ist aktive HYROX-Athletin
-            mit CrossFit-, Kletter- und Bouldern-Erfahrung. Luigi bringt 10+ Jahre
-            Fitness-Erfahrung und Kampfsport-Hintergrund mit.
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
+            Kombiniere funktionelle Kraft mit Ausdauer und erlebe das ultimative
+            Trainingserlebnis. Ob als Vorbereitung auf deinen nächsten
+            HYROX-Wettkampf oder als neue Herausforderung im Alltag — unser
+            HYROX-Gruppenkurs bringt dich an dein Limit und darüber hinaus.
+            Effektiv, fordernd und motivierend — in einer Community, die dich
+            pusht.
           </p>
+          <div className="mt-8">
+            <Link
+              href="/kostenloses-beratungsgespraech"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+            >
+              Jetzt Buchen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Photo Carousel */}
-      <section className="section-padding bg-bg-alt">
+      <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <PhotoCarousel
             title="HYROX Training"
             images={[
+              "/images/classes/hyrox-abklatschen.jpg",
+              "/images/classes/hyrox-ski-erg.jpg",
               "/images/classes/hyrox-gruppenkurs.jpg",
             ]}
           />
+        </div>
+      </section>
+
+      {/* Krankenkassen + Google Reviews */}
+      <section className="border-y border-border bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-6 md:flex-row">
+          <div className="flex items-center gap-2 text-sm text-text-secondary">
+            <Shield className="h-4 w-4 text-dark" />
+            <span className="font-medium">Krankenkassen anerkannt</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            {certifications.map((cert) =>
+              cert.logo.includes("qualitop") ? (
+                <Image
+                  key={cert.name}
+                  src={cert.logo}
+                  alt={cert.name}
+                  width={80}
+                  height={32}
+                  className="h-8 w-auto opacity-60 grayscale"
+                />
+              ) : (
+                <div
+                  key={cert.name}
+                  className="text-sm font-semibold uppercase tracking-widest text-muted"
+                >
+                  {cert.name}
+                </div>
+              )
+            )}
+            <div className="flex items-center gap-1.5 text-sm font-medium text-dark">
+              <span className="text-lg text-amber-500">★</span>
+              <span>
+                5.0 auf Google{" "}
+                <span className="text-muted">— 68 Bewertungen</span>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -17,6 +17,7 @@ const primaryLabels = new Set([
 export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const lastScrollY = useRef(0);
@@ -102,6 +103,7 @@ export default function Nav() {
   };
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
@@ -144,7 +146,10 @@ export default function Nav() {
 
           {/* Mobile toggle */}
           <button
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick={() => {
+              setMobileOpen(!mobileOpen);
+              if (mobileOpen) setMobileDropdown(null);
+            }}
             className={`rounded-lg p-2 lg:hidden ${
               scrolled || mobileOpen ? "text-text" : "text-white"
             }`}
@@ -171,65 +176,83 @@ export default function Nav() {
           </div>
         )}
       </nav>
+    </header>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="fixed inset-0 top-16 z-40 overflow-y-auto bg-white lg:hidden">
-          <div className="flex flex-col gap-2 p-6">
-            {navItems.map((item) =>
-              "children" in item && item.children ? (
-                <div key={item.label}>
-                  <button
-                    onClick={() =>
-                      setOpenDropdown(
-                        openDropdown === item.label ? null : item.label
-                      )
-                    }
-                    className="flex w-full items-center justify-between py-3 text-lg font-medium text-text"
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`h-5 w-5 text-muted transition-transform ${
-                        openDropdown === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {openDropdown === item.label && (
-                    <div className="ml-4 flex flex-col gap-1 border-l-2 border-border pl-4">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="py-2 text-base text-text-secondary transition-colors hover:text-text"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={item.label}
-                  href={"href" in item ? item.href : "#"}
-                  onClick={() => setMobileOpen(false)}
-                  className="py-3 text-lg font-medium text-text"
+      {/* Mobile menu — outside header to escape backdrop-blur stacking context */}
+      <div
+        className={`fixed inset-x-0 top-16 bottom-0 z-[60] overflow-y-auto bg-white transition-all duration-300 lg:hidden ${
+          mobileOpen
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col gap-2 p-6">
+          {navItems.map((item) =>
+            "children" in item && item.children ? (
+              <div key={item.label}>
+                <button
+                  onClick={() =>
+                    setMobileDropdown(
+                      mobileDropdown === item.label ? null : item.label
+                    )
+                  }
+                  className="flex w-full items-center justify-between py-3 text-lg font-medium text-text"
                 >
                   {item.label}
-                </Link>
-              )
-            )}
-            <Link
-              href={siteConfig.bookingUrl}
-              onClick={() => setMobileOpen(false)}
-              className="mt-4 block rounded-full bg-dark py-4 text-center text-base font-semibold text-white"
-            >
-              Beratung buchen
-            </Link>
-          </div>
+                  <ChevronDown
+                    className={`h-5 w-5 text-muted transition-transform duration-200 ${
+                      mobileDropdown === item.label ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`ml-4 flex flex-col gap-1 border-l-2 border-border pl-4 overflow-hidden transition-all duration-200 ${
+                    mobileDropdown === item.label
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMobileDropdown(null);
+                      }}
+                      className="py-2 text-base text-text-secondary transition-colors hover:text-text"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.label}
+                href={"href" in item ? item.href : "#"}
+                onClick={() => {
+                  setMobileOpen(false);
+                  setMobileDropdown(null);
+                }}
+                className="py-3 text-lg font-medium text-text"
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+          <Link
+            href={siteConfig.bookingUrl}
+            onClick={() => {
+              setMobileOpen(false);
+              setMobileDropdown(null);
+            }}
+            className="mt-4 block rounded-full bg-dark py-4 text-center text-base font-semibold text-white"
+          >
+            Beratung buchen
+          </Link>
         </div>
-      )}
-    </header>
+      </div>
+    </>
   );
 }

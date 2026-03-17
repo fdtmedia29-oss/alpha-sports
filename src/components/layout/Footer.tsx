@@ -7,8 +7,43 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        {/* Top section: links */}
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        {/* Location: Google Maps — first */}
+        <div className="pb-12">
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-lg font-bold text-white">
+                Zentral erreichbar im Herzen von St. Gallen.
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/60">
+                Unser Studio befindet sich direkt am Unterer Graben 21 - zentral gelegen mit genügend Parkplätzen in unmittelbarer Nähe. Ob mit Auto, Bus oder zu Fuss - du erreichst uns schnell und bequem.
+              </p>
+              <a
+                href="https://maps.google.com/?q=Unterer+Graben+21,+9000+St.+Gallen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-orange transition-colors hover:text-orange/80"
+              >
+                <MapPin className="h-4 w-4" />
+                Route planen
+              </a>
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.5!2d9.3715!3d47.4239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1e36cf364b9d%3A0x5e6d0a4a4a4b4b4b!2sUnterer%20Graben%2021%2C%209000%20St.%20Gallen!5e0!3m2!1sde!2sch!4v1700000000000"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Alpha Sports Standort"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Links */}
+        <div className="grid gap-12 border-t border-white/10 pt-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
             <Link href="/" className="relative inline-block h-12 w-36">
@@ -139,41 +174,6 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Location: Google Maps */}
-        <div className="mt-12 border-t border-white/10 pt-10">
-          <div className="grid items-center gap-8 lg:grid-cols-2">
-            <div>
-              <h3 className="text-lg font-bold text-white">
-                Zentral erreichbar im Herzen von St. Gallen.
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/60">
-                Unser Studio befindet sich direkt am Unterer Graben 21 - zentral gelegen mit genügend Parkplätzen in unmittelbarer Nähe. Ob mit Auto, Bus oder zu Fuss - du erreichst uns schnell und bequem.
-              </p>
-              <a
-                href="https://maps.google.com/?q=Unterer+Graben+21,+9000+St.+Gallen"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-orange transition-colors hover:text-orange/80"
-              >
-                <MapPin className="h-4 w-4" />
-                Route planen
-              </a>
-            </div>
-            <div className="overflow-hidden rounded-xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.5!2d9.3715!3d47.4239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1e36cf364b9d%3A0x5e6d0a4a4a4b4b4b!2sUnterer%20Graben%2021%2C%209000%20St.%20Gallen!5e0!3m2!1sde!2sch!4v1700000000000"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Alpha Sports Standort"
-              />
-            </div>
           </div>
         </div>
 

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
-import { Check, Star, Shield } from "lucide-react";
-import { pricing } from "@/lib/content";
+import PricingTabs from "@/components/sections/PricingTabs";
+import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Preise",
@@ -15,82 +15,13 @@ export default function PreisePage() {
     <>
       <PageHero
         badge="Preise"
-        title="Transparent. Fair. Flexibel."
-        description="Alle Preise auf einen Blick. Keine versteckten Kosten. Beratungsgespräch immer kostenlos. Stempelkarten 12 Monate gültig."
+        title="Investiere in dich selbst."
+        description="Beratungsgespräch immer kostenlos. Stempelkarten 12 Monate gültig."
       />
 
       <section className="section-padding bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="space-y-16">
-            {pricing.map((category) => (
-              <div key={category.title}>
-                <h2 className="mb-8 text-2xl font-bold text-text">
-                  {category.title}
-                </h2>
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                  {category.items.map((item) => (
-                    <div
-                      key={item.name}
-                      className={`relative rounded-2xl border p-6 transition-all hover:shadow-lg ${
-                        item.popular
-                          ? "border-orange bg-orange-light/30"
-                          : "border-border bg-white"
-                      }`}
-                    >
-                      {item.popular && (
-                        <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white">
-                          <Star className="h-3 w-3" />
-                          Beliebt
-                        </div>
-                      )}
-                      <h3 className="text-lg font-bold text-text">
-                        {item.name}
-                      </h3>
-                      <div className="mt-2 flex items-baseline gap-1">
-                        {item.price === "Kostenlos" ? (
-                          <span className="text-2xl font-black text-orange">
-                            Kostenlos
-                          </span>
-                        ) : item.price === "Auf Anfrage" ? (
-                          <span className="text-xl font-black text-orange">
-                            Auf Anfrage
-                          </span>
-                        ) : (
-                          <>
-                            <span className="text-sm text-muted">CHF</span>
-                            <span className="text-3xl font-black text-text">
-                              {item.price}
-                            </span>
-                            {item.unit && (
-                              <span className="text-sm text-muted">
-                                {item.unit}
-                              </span>
-                            )}
-                          </>
-                        )}
-                      </div>
-                      {item.note && (
-                        <p className="mt-2 text-sm text-muted">{item.note}</p>
-                      )}
-                      {item.includes && (
-                        <ul className="mt-4 space-y-2 border-t border-border pt-4">
-                          {item.includes.map((inc) => (
-                            <li
-                              key={inc}
-                              className="flex items-center gap-2 text-sm text-text-secondary"
-                            >
-                              <Check className="h-3.5 w-3.5 text-orange" />
-                              {inc}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="mx-auto max-w-4xl">
+          <PricingTabs />
         </div>
       </section>
 
@@ -127,10 +58,6 @@ export default function PreisePage() {
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
                   Alle 1:1 Sessions inkl. 1 Proteinshake, 1 Sportgetränk und Handtuchservice
-                </li>
-                <li className="flex items-start gap-2 text-sm text-text-secondary">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  Vergünstigte Tarife bei Trainern Isabell und David
                 </li>
                 <li className="flex items-start gap-2 text-sm text-text-secondary">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />

@@ -12,7 +12,6 @@ import {
   Zap,
   Clock,
   MapPin,
-  Star,
   ArrowRight,
   Shield,
 } from "lucide-react";
@@ -176,91 +175,6 @@ export default function OnlineCoachingPage() {
                   className="object-cover object-top"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Packages */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Pakete
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Wähle dein Programm.
-            </h2>
-          </div>
-
-          <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
-            {/* Shape */}
-            <div className="rounded-2xl border border-border bg-white p-8">
-              <h3 className="text-xl font-bold text-text">Alpha Sports Shape</h3>
-              <div className="mt-2 flex items-baseline gap-1">
-                <span className="text-sm text-muted">CHF</span>
-                <span className="text-3xl font-black text-text">420</span>
-                <span className="text-sm text-muted">/Monat</span>
-              </div>
-              <p className="mt-4 text-sm text-text-secondary">
-                12 Wochen intensives Coaching mit allem, was du brauchst.
-              </p>
-              <ul className="mt-6 space-y-3">
-                {[
-                  "Individueller Trainingsplan",
-                  "Ernährungsstrategie",
-                  "Lifestyle-Optimierung",
-                  "Coaching-App Zugang",
-                  "Wöchentliche Anpassungen",
-                  "3 Monate Premium Support",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-text-secondary"
-                  >
-                    <Check className="h-3.5 w-3.5 text-orange" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Shape Pro */}
-            <div className="relative rounded-2xl border border-orange bg-orange-light/30 p-8">
-              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white">
-                <Star className="h-3 w-3" />
-                Beliebt
-              </div>
-              <h3 className="text-xl font-bold text-text">
-                Alpha Sports Shape Pro
-              </h3>
-              <div className="mt-2 flex items-baseline gap-1">
-                <span className="text-sm text-muted">CHF</span>
-                <span className="text-3xl font-black text-text">620</span>
-                <span className="text-sm text-muted">/Monat</span>
-              </div>
-              <p className="mt-4 text-sm text-text-secondary">
-                Das Premium-Paket mit erweiterten Analysen und persönlichem
-                Training vor Ort.
-              </p>
-              <ul className="mt-6 space-y-3">
-                {[
-                  "Alles aus Shape",
-                  "Stoffwechsel- & Leistungsanalyse",
-                  "InBody Körperanalyse",
-                  "FMS-Test (Functional Movement Screen)",
-                  "Personal Training Session vor Ort",
-                  "Priority Support",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-text-secondary"
-                  >
-                    <Check className="h-3.5 w-3.5 text-orange" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>

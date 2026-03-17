@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+public/videos/web-banner.mp4
+public/videos/260107-Alpha-Sports-Personal-Training-Testimonial-01-V2(1).mp4
+public/videos/260228-Alpha-Sports-Testimonials-Jens-V2.mp4
+public/videos/260228-Alpha-Sports-Testimonials-Markus-V1.mp4
+public/videos/20260211_190058.mp4
+public/videos/20260225_193312.mp4

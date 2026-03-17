@@ -59,7 +59,8 @@ export default function Nav() {
           onMouseEnter={() => setOpenDropdown(item.label)}
           onMouseLeave={() => setOpenDropdown(null)}
         >
-          <button
+          <Link
+            href={"href" in item && item.href ? item.href : "#"}
             className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors ${
               scrolled
                 ? "text-text-secondary hover:text-text"
@@ -68,7 +69,7 @@ export default function Nav() {
           >
             {item.label}
             <ChevronDown className="h-3 w-3" />
-          </button>
+          </Link>
           {openDropdown === item.label && (
             <div className="absolute left-0 top-full pt-2">
               <div className="min-w-[200px] rounded-xl border border-border bg-white p-2 shadow-xl">
@@ -190,21 +191,32 @@ export default function Nav() {
           {navItems.map((item) =>
             "children" in item && item.children ? (
               <div key={item.label}>
-                <button
-                  onClick={() =>
-                    setMobileDropdown(
-                      mobileDropdown === item.label ? null : item.label
-                    )
-                  }
-                  className="flex w-full items-center justify-between py-3 text-lg font-medium text-text"
-                >
-                  {item.label}
-                  <ChevronDown
-                    className={`h-5 w-5 text-muted transition-transform duration-200 ${
-                      mobileDropdown === item.label ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={"href" in item && item.href ? item.href : "#"}
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setMobileDropdown(null);
+                    }}
+                    className="flex-1 py-3 text-lg font-medium text-text"
+                  >
+                    {item.label}
+                  </Link>
+                  <button
+                    onClick={() =>
+                      setMobileDropdown(
+                        mobileDropdown === item.label ? null : item.label
+                      )
+                    }
+                    className="p-3"
+                  >
+                    <ChevronDown
+                      className={`h-5 w-5 text-muted transition-transform duration-200 ${
+                        mobileDropdown === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
                 <div
                   className={`ml-4 flex flex-col gap-1 border-l-2 border-border pl-4 overflow-hidden transition-all duration-200 ${
                     mobileDropdown === item.label

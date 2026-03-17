@@ -6,8 +6,8 @@ import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react"
 
 const videos = [
   { src: "/videos/testimonial-1.mp4", title: "Testimonial 1" },
-  { src: null, title: "Testimonial 2" },
-  { src: null, title: "Testimonial 3" },
+  { src: "/videos/testimonial-jens.mp4", title: "Testimonial Jens" },
+  { src: "/videos/testimonial-markus.mp4", title: "Testimonial Markus" },
 ];
 
 function VideoCard({

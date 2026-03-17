@@ -3,18 +3,113 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Target, BarChart3, Zap } from "lucide-react";
+import { ArrowRight, Star, Target, BarChart3, Zap, Quote, Play, Volume2, VolumeX } from "lucide-react";
 import { siteConfig } from "@/lib/content";
+import { useRef, useState, useEffect } from "react";
+import PhotoCarousel from "@/components/ui/PhotoCarousel";
 
 const consultationSteps = [
   { step: "01", title: "Kennenlernen", description: "Wir lernen dich und deine Geschichte kennen." },
   { step: "02", title: "Ermittlung IST-Zustand", description: "Wo stehst du aktuell? Körperlich und mental." },
-  { step: "03", title: "Klares Definieren der Ziele", description: "Was willst du erreichen — und bis wann?" },
+  { step: "03", title: "Klares Definieren der Ziele", description: "Was willst du erreichen - und bis wann?" },
   { step: "04", title: "Check Up Gesundheitszustand", description: "Gibt es Einschränkungen oder Vorerkrankungen?" },
   { step: "05", title: "Planung individuelle Strategie", description: "Wir skizzieren deinen Weg zum Ziel." },
   { step: "06", title: "Passendes Angebot", description: "Du erhältst ein individuelles Angebot." },
-  { step: "07", title: "Start und Vereinbarung der ersten Termine", description: "Direkt loslegen — keine Wartezeit." },
+  { step: "07", title: "Start und Vereinbarung der ersten Termine", description: "Direkt loslegen - keine Wartezeit." },
 ];
+
+const textTestimonials = [
+  {
+    name: "Peter Meier",
+    text: "Personal Training hat mir auf vielfältige Weise weitergeholfen: individuelle Betreuung, Motivation und korrekte Technik. Durch das individualisierte Training konnte ich schneller Fortschritte sehen. Mehr Muskelmasse, viel weniger Körperfett. Meine Ärztin hat gestaunt, was ich in der kurzen Zeit alles verbessern konnte.",
+    image: "/images/results/vorher-nachher-vergleich-peter-meier.png",
+  },
+  {
+    name: "Philipp Krenn",
+    text: "Ich kann mit voller Überzeugung sagen, dass Luigi einer der Besten in seinem Fach ist. Als Arzt war ich besonders von Luigis tiefgreifendem Verständnis der Physiologie beeindruckt. Sein Engagement und seine Fachkenntnisse machen ihn zu einem aussergewöhnlichen Personal Trainer.",
+    image: "/images/trainers/philipp-krenn.jpg",
+  },
+  {
+    name: "Chantal",
+    text: "Das Personal Training ist mein physischer Ausgleich. Ich kann dadurch besser abschalten und fühle mich mental fitter. Durch das Training habe ich auch viel über korrekte Ernährung gelernt und konnte mein Wunschgewicht erreichen und halten.",
+  },
+  {
+    name: "Livio",
+    text: "Durch das Personal Training fühle ich mich im Alltag ausgeglichener. Ich konnte durch gezieltes Training und Wissensvermittlung in 2 Jahren 10kg Muskeln zunehmen. Das Studio ist sehr modern und einladend gestaltet.",
+  },
+];
+
+function TestimonialVideo({ src, autoPlay }: { src: string; autoPlay?: boolean }) {
+  const [playing, setPlaying] = useState(false);
+  const [muted, setMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!autoPlay || !videoRef.current || !containerRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current?.play();
+          setPlaying(true);
+        } else {
+          videoRef.current?.pause();
+          setPlaying(false);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [autoPlay]);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (playing) videoRef.current.pause();
+    else videoRef.current.play();
+    setPlaying(!playing);
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    videoRef.current.muted = !muted;
+    setMuted(!muted);
+  };
+
+  return (
+    <div ref={containerRef} className="relative aspect-[9/16] cursor-pointer overflow-hidden rounded-2xl bg-dark" onClick={togglePlay}>
+      <video ref={videoRef} src={src} muted playsInline loop className="h-full w-full object-cover" />
+      {!playing && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/40 bg-black/30 backdrop-blur-sm">
+            <Play className="h-7 w-7 text-white" fill="currentColor" />
+          </div>
+        </div>
+      )}
+      {playing && (
+        <button
+          onClick={toggleMute}
+          className={`absolute bottom-4 flex items-center gap-2 backdrop-blur-sm transition-all ${
+            muted
+              ? "left-1/2 -translate-x-1/2 animate-pulse rounded-full bg-white/90 px-5 py-2.5 text-dark shadow-lg"
+              : "right-4 rounded-full bg-black/40 p-2.5 hover:bg-black/60"
+          }`}
+          aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
+        >
+          {muted ? (
+            <>
+              <VolumeX className="h-5 w-5" />
+              <span className="text-sm font-semibold">Ton einschalten</span>
+            </>
+          ) : (
+            <Volume2 className="h-5 w-5 text-white" />
+          )}
+        </button>
+      )}
+    </div>
+  );
+}
 
 
 export default function KontaktPage() {
@@ -62,7 +157,7 @@ export default function KontaktPage() {
             </Link>
             <span className="flex items-center gap-1.5 text-sm text-white/50">
               <Star className="h-4 w-4 fill-orange text-orange" />
-              5.0 auf Google — 68 Bewertungen
+              5.0 auf Google - 68 Bewertungen
             </span>
           </motion.div>
         </div>
@@ -126,26 +221,10 @@ export default function KontaktPage() {
               </p>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            className="mt-6"
-          >
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-orange transition-all hover:gap-3"
-            >
-              Beratung buchen
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </motion.div>
         </div>
       </section>
 
-      {/* ── 7 Steps — Was dich erwartet ── */}
+      {/* ── 7 Steps ── */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-2xl">
           <motion.h2
@@ -157,7 +236,7 @@ export default function KontaktPage() {
           >
             Was dich erwartet:
           </motion.h2>
-          {/* Mobile: horizontal layout */}
+          {/* Mobile */}
           <div className="mt-14 space-y-0 md:hidden">
             {consultationSteps.map((s, i) => (
               <motion.div
@@ -180,8 +259,7 @@ export default function KontaktPage() {
               </motion.div>
             ))}
           </div>
-
-          {/* Desktop: centered vertical layout */}
+          {/* Desktop */}
           <div className="mt-14 hidden space-y-8 md:block">
             {consultationSteps.map((s, i) => (
               <motion.div
@@ -202,21 +280,155 @@ export default function KontaktPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Big CTA after steps */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="mt-10 text-center"
+            className="mt-12 text-center"
           >
             <Link
               href="/kostenloses-beratungsgespraech/buchen"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-orange transition-all hover:gap-3"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-10 py-5 text-lg font-bold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
-              Jetzt loslegen
-              <ArrowRight className="h-4 w-4" />
+              Jetzt Beratung buchen
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── Mid CTA ── */}
+      <section className="relative overflow-hidden py-16 md:py-20">
+        <Image
+          src="/images/pt/alpha-personal-03.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-dark/80" />
+        <div className="relative mx-auto max-w-2xl px-6 text-center">
+          <h2 className="text-2xl font-bold text-white md:text-3xl">
+            Kostenlos. Unverbindlich. 45 Minuten.
+          </h2>
+          <p className="mt-4 text-white/60">
+            Wir nehmen uns Zeit für dich - ganz ohne Druck. Danach entscheidest du.
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <Link
+              href="/kostenloses-beratungsgespraech/buchen"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+            >
+              Beratung buchen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10"
+            >
+              Per WhatsApp anfragen
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Video Testimonials ── */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-10 text-center"
+          >
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Kundenstimmen
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Das sagen unsere Kunden.
+            </h2>
+          </motion.div>
+          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+            <TestimonialVideo src="/videos/testimonial-1.mp4" autoPlay />
+            <TestimonialVideo src="/videos/testimonial-jens.mp4" />
+            <TestimonialVideo src="/videos/testimonial-markus.mp4" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Text Testimonials ── */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 md:grid-cols-2">
+            {textTestimonials.map((t) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="rounded-2xl border border-border bg-white p-8"
+              >
+                <Quote className="h-8 w-8 text-orange/30" />
+                <p className="mt-4 text-sm leading-relaxed text-text-secondary">
+                  {t.text}
+                </p>
+                <div className="mt-6 flex items-center gap-3">
+                  {t.image && (
+                    <div className="relative h-10 w-10 overflow-hidden rounded-full">
+                      <Image src={t.image} alt={t.name} fill className="object-cover" />
+                    </div>
+                  )}
+                  <span className="text-sm font-bold text-text">{t.name}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Transformation Carousel ── */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-10 text-center"
+          >
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Erfolgsgeschichten
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Ergebnisse, die für sich sprechen.
+            </h2>
+          </motion.div>
+          <PhotoCarousel
+            title=""
+            images={[
+              "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
+              "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
+              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
+              "/images/results/vorher-nacher-vergleich-izadora-d..png",
+              "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
+              "/images/results/vorher-nachher-vergleich-peter-meier.png",
+            ]}
+          />
+          <div className="mt-8 text-center">
+            <Link
+              href="/erfolgsgeschichten"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-orange transition-all hover:gap-3"
+            >
+              Alle Erfolgsgeschichten
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -255,7 +467,7 @@ export default function KontaktPage() {
             </a>
           </div>
           <p className="mt-8 text-sm text-white/40">
-            Alpha Sports — {siteConfig.address}
+            Alpha Sports - {siteConfig.address}
           </p>
         </motion.div>
       </section>

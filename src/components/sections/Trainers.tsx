@@ -48,46 +48,35 @@ export default function Trainers() {
         {/* Trainer cards */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {trainers.map((trainer, i) => (
-            <motion.div
-              key={trainer.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl border border-border bg-white p-6 transition-all hover:shadow-lg"
-            >
-              {/* Avatar */}
-              <div className="relative mx-auto h-24 w-24 overflow-hidden rounded-full">
-                <Image
-                  src={trainer.image}
-                  alt={trainer.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Info */}
-              <div className="mt-5 text-center">
-                <h3 className="text-base font-bold text-text">
-                  {trainer.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-text-secondary">
-                  {trainer.role}
-                </p>
-
-                {/* Credentials */}
-                <div className="mt-4 flex flex-wrap justify-center gap-1.5">
-                  {trainer.credentials.map((cred) => (
-                    <span
-                      key={cred}
-                      className="rounded-full bg-bg-alt px-2.5 py-1 text-[11px] text-text-secondary"
-                    >
-                      {cred}
-                    </span>
-                  ))}
+            <Link key={trainer.name} href="/ueber-uns" className="group block">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="rounded-2xl border border-border bg-white p-6 transition-all group-hover:shadow-lg group-hover:border-orange/30"
+              >
+                {/* Portrait */}
+                <div className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-xl">
+                  <Image
+                    src={trainer.image}
+                    alt={trainer.name}
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                  />
                 </div>
-              </div>
-            </motion.div>
+
+                {/* Info */}
+                <div className="mt-5 text-center">
+                  <h3 className="text-base font-bold text-text">
+                    {trainer.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-text-secondary">
+                    {trainer.role}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>

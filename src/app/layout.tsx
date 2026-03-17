@@ -159,7 +159,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} bg-white text-text antialiased`}>
         <Nav />
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />

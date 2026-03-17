@@ -19,7 +19,7 @@ const analyses = [
     icon: Activity,
     title: "InBody Körperanalyse",
     subtitle: "Dein Start in Richtung Bestform",
-    price: "CHF 80",
+    price: "",
     images: [
       "/images/analysen/2-inbody-k-rperanalyse.png",
       "/images/analysen/inbody-analyse.webp",
@@ -45,14 +45,14 @@ const analyses = [
       "Individuelle Empfehlung",
       "Ideal zur Zielverfolgung",
     ],
-    note: "3er Karte: CHF 210 | 12er Karte: CHF 810 | Add-On: CHF 60",
+    note: "",
   },
   {
     id: "stoffwechsel",
     icon: Flame,
     title: "Stoffwechsel- und Stressanalyse",
     subtitle: "Verstehe deinen Körper & erreiche deine Bestform",
-    price: "CHF 149",
+    price: "",
     description:
       "Eine 30-minütige Atemgasanalyse in Ruhe bestimmt deine exakte Stoffwechselsituation und dein Stresslevel. Du erfährst, welche Energiequelle (Kohlenhydrate, Proteine oder Fette) dein Körper aktuell bevorzugt und wie hoch dein genauer Grundumsatz ist.",
     detailedDescription:
@@ -70,14 +70,14 @@ const analyses = [
       "Individuelle Ernährungsempfehlung",
       "Grundlage für Transformation",
     ],
-    note: "Add-On zu Personal Training Stempelkarten: CHF 119",
+    note: "",
   },
   {
     id: "leistung",
     icon: Zap,
     title: "Leistungsanalyse",
     subtitle: "Trainiere gezielt & effizient auf dem Weg zu deiner Bestform",
-    price: "CHF 159",
+    price: "",
     description:
       "Mit unserer Spiroergometrie basierten Leistungsanalyse bestimmen wir auf genauste Art die Ergonomie deines Herzkreislaufsystems. Du erfährst den Pulsbereich, in dem du am meisten Fett verbrennst, deine VO2max-Werte und den Punkt, an dem deine Muskulatur beginnt zu übersäuern.",
     detailedDescription:
@@ -92,7 +92,7 @@ const analyses = [
       "6-Monate Ausdauertrainingsplan",
       "App-Zugang mit Ergebnissen",
     ],
-    note: "Add-On zu Personal Training Stempelkarten: CHF 129",
+    note: "",
   },
 ];
 
@@ -159,9 +159,11 @@ export default function AnalysenPage() {
                           <h3 className="text-xl font-bold text-text">
                             {a.title}
                           </h3>
+                          {a.price && (
                           <span className="text-lg font-semibold text-orange">
                             {a.price}
                           </span>
+                      )}
                         </div>
                       </div>
                       <p className="mt-2 text-sm font-medium text-text-secondary italic">

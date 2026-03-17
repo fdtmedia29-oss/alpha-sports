@@ -73,6 +73,19 @@ export const trainers: Trainer[] = [
     image: "/images/trainers/nicole-walser.jpg",
     bio: "HYROX-Athletin, CrossFit, Klettern, Bouldern, Snowboarden — motiviert dich zu Höchstleistungen in der Gruppe und am Race Day.",
   },
+  {
+    name: "Sandrine Benz",
+    role: "Trainerin & Triathlon-Coach",
+    credentials: [
+      "MSc Sport- und Bewegungswissenschaften (Uni Bern)",
+      "BSc Humanmedizin (Uni Fribourg)",
+      "Fitness-Instruktor",
+      "Trainer C Laufen (Swiss Athletics)",
+      "Trisutto Certified Triathlon Coach",
+    ],
+    image: "/images/trainers/sandrine-benz.jpg",
+    bio: "Mehrfache Schweizer-, Europa- und Weltmeisterin im Kurzdistanz-Triathlon. Vize-Europameisterin Halbdistanz-Triathlon und 2-fache Europa- und Weltmeisterin im Kurzdistanz-Duathlon.",
+  },
 ];
 
 export interface Service {
@@ -346,17 +359,19 @@ export const navItems = [
   { label: "Personal Training", href: "/personal-training" },
   {
     label: "Gruppenkurse",
+    href: "/gruppenkurse",
     children: [
+      { label: "HYROX", href: "/hyrox" },
       { label: "Bootcamp", href: "/gruppenkurse#bootcamp" },
       { label: "Pilates", href: "/gruppenkurse#pilates" },
       { label: "Strength", href: "/gruppenkurse#strength" },
-      { label: "HYROX", href: "/hyrox" },
     ],
   },
   { label: "Online Coaching", href: "/online-coaching" },
   { label: "Ernährungsberatung", href: "/ernaehrungsberatung" },
   {
     label: "Analysen",
+    href: "/analysen",
     children: [
       { label: "InBody Analyse", href: "/analysen#inbody" },
       { label: "Stoffwechsel & Stressanalyse", href: "/analysen#stoffwechsel" },
@@ -376,242 +391,4 @@ export const navItems = [
   },
 ] as const;
 
-export interface PricingCategory {
-  title: string;
-  items: PricingItem[];
-}
 
-export interface PricingItem {
-  name: string;
-  price: string;
-  unit?: string;
-  note?: string;
-  popular?: boolean;
-  includes?: string[];
-}
-
-export const pricing: PricingCategory[] = [
-  {
-    title: "Einzelbuchungen",
-    items: [
-      { name: "Beratungsgespräch", price: "Kostenlos", unit: "45 Min" },
-      { name: "1:1 Personal Training", price: "150", unit: "60 Min" },
-      { name: "1:2 Personal Training", price: "90", unit: "pro Person / 60 Min" },
-      { name: "Trainingsplanung", price: "65" },
-    ],
-  },
-  {
-    title: "1:1 Stempelkarten",
-    items: [
-      {
-        name: "12er Stempelkarte",
-        price: "580",
-        note: "CHF 145/h | Mit David: CHF 125/h (500/mtl)",
-        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
-      },
-      {
-        name: "24er Stempelkarte",
-        price: "1'120",
-        note: "CHF 140/h | Mit David: CHF 120/h (960/mtl)",
-        popular: true,
-        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
-      },
-      {
-        name: "36er Stempelkarte",
-        price: "1'560",
-        note: "CHF 130/h | Mit David: CHF 115/h (1'380/mtl)",
-        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
-      },
-      {
-        name: "48er Stempelkarte",
-        price: "1'920",
-        note: "CHF 120/h | Mit David: CHF 110/h (1'760/mtl)",
-        includes: ["1 Proteinshake pro Training", "1 Sportgetränk pro Training", "Handtuchservice"],
-      },
-    ],
-  },
-  {
-    title: "1:2 Stempelkarten",
-    items: [
-      {
-        name: "12er Stempelkarte",
-        price: "360",
-        note: "CHF 90/h p.P. | Mit David: CHF 70/h (280/mtl p.P.)",
-      },
-      {
-        name: "24er Stempelkarte",
-        price: "680",
-        note: "CHF 85/h p.P. | Mit David: CHF 65/h (520/mtl p.P.)",
-      },
-      {
-        name: "36er Stempelkarte",
-        price: "960",
-        note: "CHF 80/h p.P. | Mit David: CHF 60/h (720/mtl p.P.)",
-      },
-      {
-        name: "48er Stempelkarte",
-        price: "1'200",
-        note: "CHF 75/h p.P. | Mit David: CHF 60/h (960/mtl p.P.)",
-      },
-    ],
-  },
-  {
-    title: "Gruppenkurse",
-    items: [
-      { name: "Schnupperstunde", price: "Kostenlos" },
-      { name: "Einzeleintritt", price: "30" },
-      { name: "12er Karte", price: "324", note: "CHF 27/Kurs" },
-      { name: "24er Karte", price: "600", note: "CHF 25/Kurs", popular: true },
-      { name: "36er Karte", price: "864", note: "CHF 24/Kurs" },
-      { name: "48er Karte", price: "1'104", note: "CHF 23/Kurs" },
-    ],
-  },
-  {
-    title: "Trainingspakete (12 Wochen)",
-    items: [
-      {
-        name: "Abnehm Paket Silber",
-        price: "1'428",
-        unit: "/mtl",
-        includes: [
-          "24 Personal Trainings",
-          "2h Ernährungsberatung",
-          "4x InBody Analyse",
-          "Stoffwechsel- und Stressanalyse",
-          "Leistungsanalyse",
-          "4 Erfolgsgespräche",
-          "Wöchentliche Follow-ups",
-        ],
-      },
-      {
-        name: "Abnehm Paket Gold",
-        price: "1'947",
-        unit: "/mtl",
-        popular: true,
-        includes: [
-          "36 Personal Trainings",
-          "2h Ernährungsberatung",
-          "4x InBody Analyse",
-          "Stoffwechsel- und Stressanalyse",
-          "Leistungsanalyse",
-          "4 Erfolgsgespräche",
-          "Wöchentliche Follow-ups",
-        ],
-      },
-      {
-        name: "Muskelaufbau Silber",
-        price: "1'381",
-        unit: "/mtl",
-        includes: [
-          "24 Personal Trainings",
-          "2h Ernährungsberatung",
-          "4x InBody Analyse",
-          "Stoffwechsel- und Stressanalyse",
-          "4 Erfolgsgespräche",
-          "Wöchentliche Follow-ups",
-        ],
-      },
-      {
-        name: "Muskelaufbau Gold",
-        price: "1'900",
-        unit: "/mtl",
-        includes: [
-          "36 Personal Trainings",
-          "2h Ernährungsberatung",
-          "4x InBody Analyse",
-          "Stoffwechsel- und Stressanalyse",
-          "4 Erfolgsgespräche",
-          "Wöchentliche Follow-ups",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Mix Pakete (PT + Gruppenkurse)",
-    items: [
-      { name: "Abnehm Silber Budget", price: "915", unit: "/mtl" },
-      { name: "Abnehm Gold Budget", price: "1'015", unit: "/mtl" },
-      { name: "Muskelaufbau Silber Budget", price: "915", unit: "/mtl" },
-      { name: "Muskelaufbau Gold Budget", price: "1'015", unit: "/mtl" },
-    ],
-  },
-  {
-    title: "Gruppenkurs Pakete",
-    items: [
-      { name: "Abnehm Silber Budget", price: "908" },
-      { name: "Abnehm Gold Budget", price: "1'193" },
-      { name: "Muskelaufbau Silber Budget", price: "908" },
-      { name: "Muskelaufbau Gold Budget", price: "1'193" },
-    ],
-  },
-  {
-    title: "Online Coaching",
-    items: [
-      { name: "All-In-One Premium Check-In", price: "770" },
-      { name: "Basic Premium Check-In", price: "240" },
-      { name: "1 Monat Premium Online Betreuung", price: "360", unit: "/mtl" },
-      {
-        name: "Alpha Sports Shape Pro (12 Wochen)",
-        price: "620",
-        unit: "/mtl",
-        popular: true,
-        includes: [
-          "Alles aus Shape",
-          "Stoffwechsel- & Leistungsanalyse",
-          "InBody Körperanalyse",
-          "FMS-Test",
-          "Personal Training Session",
-          "Priority Support",
-        ],
-      },
-      {
-        name: "Alpha Sports Shape (12 Wochen)",
-        price: "420",
-        unit: "/mtl",
-        includes: [
-          "Individueller Trainingsplan",
-          "Ernährungsplan",
-          "App-Zugang",
-          "Lifestyle-Optimierung",
-          "Wöchentliche Anpassungen",
-          "3 Monate Premium Support",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Ernährungsberatung",
-    items: [
-      { name: "Einzelsession", price: "150", unit: "/Stunde" },
-      { name: "Shape Light", price: "592.40" },
-    ],
-  },
-  {
-    title: "Analysen",
-    items: [
-      { name: "InBody Analyse", price: "80" },
-      { name: "InBody 3er Karte", price: "210" },
-      { name: "InBody 12er Karte", price: "810" },
-      { name: "InBody Add-On", price: "60" },
-      { name: "Stoffwechsel- und Stressanalyse", price: "149" },
-      { name: "Stoffwechsel Add-On", price: "119" },
-      { name: "Leistungsanalyse", price: "159" },
-      { name: "Leistung Add-On", price: "129" },
-    ],
-  },
-  {
-    title: "Externe Coachings",
-    items: [
-      {
-        name: "Mental Coaching mit Robert Winzenried",
-        price: "800",
-        note: "3.5 Tage",
-      },
-      {
-        name: "Stress-Management mit Birgit Allweier",
-        price: "Auf Anfrage",
-        note: "Preise nach Vereinbarung",
-      },
-    ],
-  },
-];

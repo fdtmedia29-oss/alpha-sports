@@ -146,37 +146,35 @@ export default function ÜberUnsPage() {
             {trainers.map((trainer) => (
               <div
                 key={trainer.name}
-                className="rounded-2xl border border-border bg-white p-8"
+                className="overflow-hidden rounded-2xl border border-border bg-white"
               >
-                <div className="flex items-start gap-6">
-                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
-                    <Image
-                      src={trainer.image}
-                      alt={trainer.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-text">
-                      {trainer.name}
-                    </h3>
-                    <p className="mt-1 text-sm font-medium text-orange">
-                      {trainer.role}
-                    </p>
-                    <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                      {trainer.bio}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-1.5">
-                      {trainer.credentials.map((cred) => (
-                        <span
-                          key={cred}
-                          className="rounded-full bg-bg-alt px-2.5 py-1 text-[11px] text-text-secondary"
-                        >
-                          {cred}
-                        </span>
-                      ))}
-                    </div>
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src={trainer.image}
+                    alt={trainer.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-xl font-bold text-text">
+                    {trainer.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-orange">
+                    {trainer.role}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                    {trainer.bio}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {trainer.credentials.map((cred) => (
+                      <span
+                        key={cred}
+                        className="rounded-full bg-bg-alt px-2.5 py-1 text-[11px] text-text-secondary"
+                      >
+                        {cred}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>

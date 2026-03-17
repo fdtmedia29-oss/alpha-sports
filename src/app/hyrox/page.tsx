@@ -141,6 +141,45 @@ export default function HyroxPage() {
         </div>
       </section>
 
+      {/* Community Race Photos */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              HYROX Community
+            </span>
+            <h2 className="mt-4 text-2xl font-bold text-text md:text-3xl">
+              Unsere Athleten im Wettkampf.
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              "Hyrox Bild Chantal & Livio.jpeg",
+              "Hyrox Race Bild Rebekka Widmer.jpeg",
+              "Hyrox Race Bild Rebekka.jpeg",
+              "Katja Egli Hyrox Race Bild.jpeg",
+              "Martin Waldburger Hyrox Race Alpha Sports Logo.jpeg",
+              "Martin Waldburger Hyrox Race Wall Balls.jpeg",
+              "Katja Egli Wall Balls.jpg",
+              "21415_20260118_181449_610464714_socialmedia.jpg",
+              "21415_20260118_190213_610521623_socialmedia.jpg",
+              "21415_20260118_191245_610554984_socialmedia.jpg",
+              "21415_20260118_192022_610565971_socialmedia.jpg",
+              "21415_20260118_192327_610566743_socialmedia.jpg",
+            ].map((img) => (
+              <div key={img} className="relative aspect-square overflow-hidden rounded-xl">
+                <Image
+                  src={`/images/classes/hyrox-race/${img}`}
+                  alt="HYROX Race"
+                  fill
+                  className="object-cover transition-transform hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Photo Carousel */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
@@ -150,6 +189,14 @@ export default function HyroxPage() {
               "/images/classes/hyrox-abklatschen.jpg",
               "/images/classes/hyrox-ski-erg.jpg",
               "/images/classes/hyrox-gruppenkurs.jpg",
+              "/images/classes/hyrox-race/Hyrox Bild Chantal & Livio.jpeg",
+              "/images/classes/hyrox-race/Hyrox Race Bild Rebekka Widmer.jpeg",
+              "/images/classes/hyrox-race/Katja Egli Hyrox Race Bild.jpeg",
+              "/images/classes/hyrox-race/Martin Waldburger Hyrox Race Alpha Sports Logo.jpeg",
+              "/images/classes/hyrox-race/Katja Egli Wall Balls.jpg",
+              "/images/classes/hyrox-race/21415_20260118_181449_610464714_socialmedia.jpg",
+              "/images/classes/hyrox-race/21415_20260118_190213_610521623_socialmedia.jpg",
+              "/images/classes/hyrox-race/21415_20260118_192022_610565971_socialmedia.jpg",
             ]}
           />
         </div>

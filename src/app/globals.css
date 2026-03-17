@@ -32,11 +32,17 @@ html {
 }
 
 body {
-  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  background: #111111;
   color: #111111;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  background: #ffffff;
 }
 
 .section-padding {

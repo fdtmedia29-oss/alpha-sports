@@ -3,7 +3,7 @@ import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import Image from "next/image";
-import { Check, Leaf, Utensils, Heart, Star, Smartphone, Zap, ArrowRight, Shield } from "lucide-react";
+import { Leaf, Utensils, Heart, Smartphone, Zap, ArrowRight, Shield } from "lucide-react";
 import Link from "next/link";
 import { certifications } from "@/lib/content";
 
@@ -175,116 +175,6 @@ export default function ErnährungsberatungPage() {
                 5.0 auf Google{" "}
                 <span className="text-muted">— 68 Bewertungen</span>
               </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Packages */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Pakete
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Ernährungsberatung — flexibel buchbar.
-            </h2>
-          </div>
-
-          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-            {/* Einzelsession */}
-            <div className="rounded-2xl border border-border bg-white p-8">
-              <h3 className="text-xl font-bold text-text">Einzelsession</h3>
-              <div className="mt-2 flex items-baseline gap-1">
-                <span className="text-sm text-muted">CHF</span>
-                <span className="text-3xl font-black text-text">150</span>
-                <span className="text-sm text-muted">/Stunde</span>
-              </div>
-              <p className="mt-4 text-sm text-text-secondary">
-                Erstgespräch, Analyse und individuelle Beratung in einer Session.
-              </p>
-              <ul className="mt-6 space-y-3">
-                {[
-                  "Persönliches Erstgespräch",
-                  "Analyse deiner aktuellen Ernährung",
-                  "Individuelle Empfehlungen",
-                  "Für alle Altersgruppen geeignet",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-text-secondary"
-                  >
-                    <Check className="h-3.5 w-3.5 text-orange" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Shape Light */}
-            <div className="rounded-2xl border border-border bg-white p-8">
-              <h3 className="text-xl font-bold text-text">Alpha Sports Shape Light</h3>
-              <div className="mt-2 flex items-baseline gap-1">
-                <span className="text-sm text-muted">CHF</span>
-                <span className="text-3xl font-black text-text">592.40</span>
-              </div>
-              <p className="mt-4 text-sm text-text-secondary">
-                Das umfassende Paket für nachhaltige Ernährungsumstellung.
-              </p>
-              <ul className="mt-6 space-y-3">
-                {[
-                  "2h Ernährungsberatung",
-                  "1x Leistungsanalyse",
-                  "1x Stoffwechsel- und Stressanalyse",
-                  "1x InBody Körperanalyse",
-                  "Ernährungsdossier",
-                  "Trainingsempfehlung",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-text-secondary"
-                  >
-                    <Check className="h-3.5 w-3.5 text-orange" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Shape Plus */}
-            <div className="relative rounded-2xl border border-orange bg-orange-light/30 p-8">
-              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-orange px-3 py-1 text-xs font-semibold text-white">
-                <Star className="h-3 w-3" />
-                Empfohlen
-              </div>
-              <h3 className="text-xl font-bold text-text">Alpha Sports Shape Plus</h3>
-              <div className="mt-2 flex items-baseline gap-1">
-                <span className="text-sm text-muted">CHF</span>
-                <span className="text-3xl font-black text-text">389.50</span>
-                <span className="text-sm text-muted">/Monat</span>
-              </div>
-              <p className="mt-4 text-sm text-text-secondary">
-                Das Premium-Paket mit laufender Betreuung und Erfolgskontrolle.
-              </p>
-              <ul className="mt-6 space-y-3">
-                {[
-                  "4x InBody Analyse",
-                  "4x Erfolgsgespräch à 15 Min.",
-                  "1x Stoffwechsel- und Stressanalyse",
-                  "4 Körpervermessungen + Vorher-Nachher-Fotos",
-                  "Ernährungsberatung inkl. Dossier",
-                  "3 Ernährungspläne",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-text-secondary"
-                  >
-                    <Check className="h-3.5 w-3.5 text-orange" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>

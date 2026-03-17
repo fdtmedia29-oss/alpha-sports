@@ -57,22 +57,24 @@ const detailedClasses = [
   {
     id: "strength",
     name: "Strength",
-    subtitle: "Krafttraining in der Kleingruppe",
+    subtitle: "Dein Strength-Gruppenkurs für Muskelaufbau mit System & Technik",
     icon: Dumbbell,
     image: "/images/studio/studio-6.jpg",
     intro:
-      "Du willst stärker werden, Muskeln aufbauen und deine Technik verbessern – in einer motivierenden Kleingruppe? Dann ist unser Strength Kurs genau das Richtige für dich!",
+      "Du willst gezielt Muskeln aufbauen, stärker werden und dabei technisch sauber trainieren? Dann ist Strength der richtige Gruppenkurs in St. Gallen für dich.",
     description:
-      "Unser Strength Kurs kombiniert strukturiertes Krafttraining mit professionellem Technik-Coaching bei den Grundübungen. Für alle, die gezielt Kraft aufbauen und ihre Performance steigern wollen.",
+      "Hier steht nicht nur intensives Training im Vordergrund, sondern auch die perfekte Technik. Unser Kurs kombiniert fundiertes Hypertrophie-Training mit einem starken Fokus auf korrekte Übungsausführung, Progression und Trainingsqualität. So erzielst du sichtbare Resultate und bleibst langfristig verletzungsfrei.",
     highlights: [
-      "Gezielter Muskelaufbau & Kraftentwicklung",
-      "Technik-Coaching bei Grundübungen",
-      "Progressive Überlastung",
-      "Kleine Gruppe, individuelle Betreuung",
-      "Anfänger & Fortgeschrittene",
+      "Hypertrophie- & Krafttraining",
+      "Präzises Technik-Coaching",
+      "Progressiver Overload, Muskelspannung & gezielte Reize",
+      "Lang- & Kurzhanteln, Eigengewicht",
+      "Einsteiger & Fortgeschrittene",
+      "Kleingruppen-Setting",
+      "Muskelaufbau, Kraftentwicklung & Bodyforming",
     ],
     closing:
-      "Ob für mehr Kraft im Alltag, bessere Gym-Performance oder Body Recomposition – unser Strength Kurs bringt dich aufs nächste Level.",
+      "Egal ob dein Ziel Body Recomposition, mehr Leistung im Gym oder einfach ein definierter, starker Körper ist - Strength vereint Wissen, Technik & Intensität in einem Kurs.",
   },
   {
     id: "hyrox",

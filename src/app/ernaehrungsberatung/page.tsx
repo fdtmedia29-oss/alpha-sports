@@ -70,7 +70,7 @@ export default function ErnährungsberatungPage() {
               </p>
             </div>
             <div className="lg:col-span-2">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
                   src="/images/ernaehrung/food-3654199-1280.jpg"
                   alt="Gesunde Ernährung"

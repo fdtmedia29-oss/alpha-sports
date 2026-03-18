@@ -55,8 +55,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Gemeinsam sorgen wir dafür, dass du dich in deinem Körper
-            endlich wieder wohlfühlst.
+            Schnell & effektiv zu deinem WohlfühlKörper.
           </motion.p>
 
           {/* CTA */}

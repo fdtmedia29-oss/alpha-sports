@@ -82,6 +82,46 @@ export default function ErfolgsgeschichtenPage() {
         description="Was unsere Kunden über ihre Transformation bei Alpha Sports sagen. Physische und mentale Veränderungen, die das Leben verändern."
       />
 
+      {/* Before/After Photo Grid */}
+      <section className="section-padding bg-bg-alt">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Transformationen
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Vorher — Nachher
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-text-secondary">
+              Echte Ergebnisse unserer Kunden. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
+              "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
+              "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
+              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
+              "/images/results/vorher-nachher-vergleich-peter-meier.png",
+              "/images/results/vorher-nacher-vergleich-izadora-d..png",
+            ].map((src, i) => (
+              <div
+                key={src}
+                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white"
+              >
+                <Image
+                  src={src}
+                  alt={`Vorher-Nachher Transformation ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="space-y-8">
@@ -125,7 +165,7 @@ export default function ErfolgsgeschichtenPage() {
 
           <div className="mt-16 rounded-2xl bg-bg-alt p-8 text-center md:p-12">
             <h2 className="text-2xl font-bold text-text">
-              5.0 auf Google — 68+ Bewertungen
+              5.0 auf Google - 68+ Bewertungen
             </h2>
             <p className="mt-4 text-text-secondary">
               Unsere Kunden bewerten uns mit 5.0 von 5 Sternen.
@@ -139,45 +179,6 @@ export default function ErfolgsgeschichtenPage() {
             >
               Google Bewertungen lesen
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Before/After Photo Grid */}
-      <section className="section-padding bg-bg-alt">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12 text-center">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Transformationen
-            </span>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Vorher — Nachher
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-text-secondary">
-              Echte Ergebnisse unserer Kunden. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
-            </p>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
-              "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
-              "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
-              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
-              "/images/results/vorher-nachher-vergleich-peter-meier.png",
-              "/images/results/vorher-nacher-vergleich-izadora-d..png",
-            ].map((src, i) => (
-              <div
-                key={src}
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white"
-              >
-                <Image
-                  src={src}
-                  alt={`Vorher-Nachher Transformation ${i + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>

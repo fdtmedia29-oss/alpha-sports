@@ -193,7 +193,7 @@ export default function ErnährungsberatungPage() {
                 Ergebnisse direkt in der App.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-                Die Alpha Sports Tracking-App liefert dir Rezepte, Ernährungspläne und Trainingsempfehlungen, welche individuell auf dich angepasst sind.
+                Die Alpha Sports Tracking-App liefert dir deine Daten, Ernährungspläne und Trainingsempfehlungen, welche individuell auf dich angepasst sind.
               </p>
             </div>
             <div className="flex items-end justify-center gap-4">

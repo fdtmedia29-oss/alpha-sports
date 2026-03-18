@@ -52,7 +52,7 @@ export default function PersonalTrainingPage() {
                 Dein Weg zur Bestform
               </span>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
-                Keine Standardlösungen — sondern dein Plan.
+                Keine Standardlösungen - sondern eine Strategie die funktioniert.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-text-secondary">
                 Bei Alpha Sports bekommst du keine Standardlösungen — sondern

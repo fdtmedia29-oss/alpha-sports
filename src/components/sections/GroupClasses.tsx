@@ -82,7 +82,7 @@ export default function GroupClasses() {
             <span className="text-orange">Gruppenstunden</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-text-secondary">
-            Kostenlose Schnupperwoche bei allen Kursen.
+            Kostenlose Probewoche bei allen Kursen.
           </p>
         </div>
 

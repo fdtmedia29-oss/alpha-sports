@@ -22,7 +22,6 @@ const analyses = [
     price: "",
     images: [
       "/images/analysen/2-inbody-k-rperanalyse.png",
-      "/images/analysen/inbody-analyse.webp",
     ],
     description:
       "Die InBody-Analyse nutzt bioelektrische Impedanzanalyse (BIA), um deine Körperzusammensetzung in nur einer Minute zu bestimmen. Ein schwacher Strom wird durch deinen Körper geleitet — der spezifische elektrische Widerstand zeigt, wie viel fettfreie Körpermasse, Muskulatur, Fett sowie intra- und extrazelluläres Wasser dein Körper enthält.",
@@ -134,7 +133,7 @@ export default function AnalysenPage() {
               >
                 {/* Image header — two photos side by side */}
                 {"images" in a && (a as typeof a & { images: string[] }).images && (
-                  <div className="grid grid-cols-2 gap-px bg-border/50">
+                  <div className={`${(a as typeof a & { images: string[] }).images.length > 1 ? "grid grid-cols-2 gap-px bg-border/50" : ""}`}>
                     {(a as typeof a & { images: string[] }).images.map((img, i) => (
                       <div key={i} className="relative aspect-[16/9] overflow-hidden bg-bg-alt">
                         <Image
@@ -271,8 +270,7 @@ export default function AnalysenPage() {
           </h2>
           <p className="mt-4 text-text-secondary">
             Die Resultate aller Analysen werden direkt über eine App bereitgestellt
-            — mit individuellen Trainingszonen, Ernährungsempfehlungen, Rezepten und
-            deinem persönlichen Kalorienbudget.
+            - mit individuellen Trainingszonen und deinem persönlichen Kalorienbudget.
           </p>
         </div>
       </section>
@@ -287,7 +285,6 @@ export default function AnalysenPage() {
               "/images/analysen/2-inbody-k-rperanalyse.png",
               "/images/analysen/leistungsanalyse.jpg",
               "/images/analysen/stoffwechselanalyse.jpg",
-              "/images/analysen/inbody-analyse.webp",
             ]}
           />
         </div>

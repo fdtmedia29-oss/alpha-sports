@@ -133,7 +133,7 @@ const sections: PricingSection[] = [
       {
         label: "Einzelbuchungen",
         rows: [
-          { name: "Ernährungsberatung", price: "CHF 150.-/h" },
+          { name: "Ernährungsberatung (2h)", price: "CHF 280.-" },
           {
             name: "Alpha Sports Shape light",
             price: "CHF 592.40.-",
@@ -150,7 +150,7 @@ const sections: PricingSection[] = [
         label: "InBody Körperanalyse",
         rows: [
           { name: "InBody Körperanalyse", price: "CHF 80.-", note: "inkl. Auswertung" },
-          { name: "4er Karte InBody Körperanalyse", price: "CHF 270.-", note: "spare CHF 50.-" },
+          { name: "4er Karte InBody Körperanalyse", price: "CHF 280.-" },
           { name: "Optional", price: "CHF 60.-", note: "zu Ernährungsberatung, Stempelkarten & Paketen" },
         ],
       },
@@ -166,18 +166,6 @@ const sections: PricingSection[] = [
         rows: [
           { name: "Leistungsanalyse", price: "CHF 159.-" },
           { name: "Optional", price: "CHF 129.-", note: "zu Ernährungsberatung, Stempelkarten & Paketen" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Externe Coachings",
-    tabs: [
-      {
-        label: "Externe Coachings",
-        rows: [
-          { name: "Mental Coaching mit Robert Winzenried", price: "CHF 800.-", note: "3.5 Tage" },
-          { name: "Stress-Management mit Birgit Allweier", price: "Preise nach Vereinbarung" },
         ],
       },
     ],

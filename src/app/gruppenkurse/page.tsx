@@ -10,10 +10,32 @@ import { certifications } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Gruppenkurse",
   description:
-    "Gruppenkurse bei Alpha Sports St. Gallen: Indoor Bootcamp, Pilates, Strength & HYROX. Max. 8 Teilnehmer. Probetraining kostenlos. Krankenkassen anerkannt.",
+    "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp, Pilates & Strength. Max. 8 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",
 };
 
 const detailedClasses = [
+  {
+    id: "hyrox",
+    name: "HYROX",
+    subtitle: "Ein Ziel. Eine Challenge. Ein Team, das dich pusht!",
+    icon: Zap,
+    image: "/images/classes/hyrox-gruppenkurs.jpg",
+    intro:
+      "HYROX ist das weltweit erste Fitnessrennen, das funktionelles Training, Kraft und Ausdauer in einem einzigartigen Wettkampf vereint.",
+    description:
+      "In unserem HYROX-Gruppenkurs trainierst du gezielt für diese Herausforderung – mit Workouts, die dich stärker, schneller und leistungsfähiger machen. Egal, ob du auf einen Wettkampf hinarbeiten oder einfach deine Bestform erreichen willst, hier findest du die perfekte Mischung aus Teamspirit, intensiver Challenge und echter Weiterentwicklung.",
+    highlights: [
+      "Kraft, Ausdauer & funktionelle Performance",
+      "Athletisches Ganzkörpertraining",
+      "Strukturierte Vorbereitung auf den Wettkampf",
+      "Motivation & Wettkampf-Spirit",
+      "Einsteiger & Fortgeschrittene",
+      "Muskelaufbau, Kraftentwicklung & Bodyforming",
+    ],
+    closing:
+      "Kombiniere funktionelle Kraft mit Ausdauer und erlebe das ultimative Trainingserlebnis. Ob als Vorbereitung auf deinen nächsten HYROX-Wettkampf oder als neue Herausforderung im Alltag – unser HYROX-Gruppenkurs bringt dich an dein Limit und darüber hinaus. Effektiv, fordernd und motivierend – in einer Community, die dich pusht.",
+    href: "/hyrox",
+  },
   {
     id: "bootcamp",
     name: "Indoor Bootcamp",
@@ -21,9 +43,9 @@ const detailedClasses = [
     icon: Flame,
     image: "/images/classes/bootcamp.png",
     intro:
-      "Du willst fit werden, Körperfett verbrennen und Muskeln aufbauen – aber nicht alleine? Dann ist unser Indoor Bootcamp in St. Gallen genau das Richtige für dich!",
+      "Du willst fit werden, Körperfett verbrennen und Muskeln aufbauen - aber nicht alleine? Dann ist unser Indoor Bootcamp in St. Gallen genau das Richtige für dich!",
     description:
-      "In diesem hochintensiven Gruppenkurs erwarten dich funktionelle Übungen, motivierende Workouts und ein Team, das dich pusht – egal ob du Einsteiger/in oder Fortgeschrittene/r bist.",
+      "In diesem hochintensiven Gruppenkurs erwarten dich funktionelle Übungen, motivierende Workouts und ein Team, das dich pusht - egal ob du Einsteiger/in oder Fortgeschrittene/r bist.",
     highlights: [
       "Kraft, Ausdauer & Beweglichkeit",
       "Fettverbrennung & Muskelaufbau",
@@ -32,7 +54,7 @@ const detailedClasses = [
       "Musik, Energie & Spass",
     ],
     closing:
-      "Ob du deinen Körper formen willst, fit für den Alltag sein oder deine Leistung im Sport steigern möchtest – unser Indoor Bootcamp Gruppenkurs bringt dich aufs nächste Level.",
+      "Ob du deinen Körper formen willst, fit für den Alltag sein oder deine Leistung im Sport steigern möchtest - unser Indoor Bootcamp Gruppenkurs bringt dich aufs nächste Level.",
   },
   {
     id: "pilates",
@@ -43,7 +65,7 @@ const detailedClasses = [
     intro:
       "Du suchst nach effektivem, sanftem Training, das deinen Körper stärkt, deine Haltung verbessert und deine Beweglichkeit fördert? Dann ist unser Pilates Gruppenkurs in St. Gallen genau das Richtige für dich!",
     description:
-      "Pilates ist ein ganzheitliches Körpertraining mit Fokus auf die Stärkung der Körpermitte (Core), eine bewusste Atmung und kontrollierte Bewegungen. Ideal für alle, die gezielt etwas für ihre Gesundheit, ihre Haltung und ihr Wohlbefinden tun wollen – unabhängig vom Fitnesslevel oder Alter.",
+      "Pilates ist ein ganzheitliches Körpertraining mit Fokus auf die Stärkung der Körpermitte (Core), eine bewusste Atmung und kontrollierte Bewegungen. Ideal für alle, die gezielt etwas für ihre Gesundheit, ihre Haltung und ihr Wohlbefinden tun wollen - unabhängig vom Fitnesslevel oder Alter.",
     highlights: [
       "Rumpfstabilität, Beweglichkeit & Haltung",
       "Bauch, Rücken & Beckenboden",
@@ -52,7 +74,7 @@ const detailedClasses = [
       "Anfänger & Fortgeschrittene",
     ],
     closing:
-      "Ob zur Ergänzung deines Krafttrainings, zur Verbesserung deiner Körperhaltung oder für ein bewussteres Körpergefühl – unser Pilates Gruppenkurs bringt dich in Einklang mit dir selbst.",
+      "Ob zur Ergänzung deines Krafttrainings, zur Verbesserung deiner Körperhaltung oder für ein bewussteres Körpergefühl - unser Pilates Gruppenkurs bringt dich in Einklang mit dir selbst.",
   },
   {
     id: "strength",
@@ -76,28 +98,6 @@ const detailedClasses = [
     closing:
       "Egal ob dein Ziel Body Recomposition, mehr Leistung im Gym oder einfach ein definierter, starker Körper ist - Strength vereint Wissen, Technik & Intensität in einem Kurs.",
   },
-  {
-    id: "hyrox",
-    name: "HYROX",
-    subtitle: "Ein Ziel. Eine Challenge. Ein Team, das dich pusht!",
-    icon: Zap,
-    image: "/images/classes/hyrox-gruppenkurs.jpg",
-    intro:
-      "HYROX ist das weltweit erste Fitnessrennen, das funktionelles Training, Kraft und Ausdauer in einem einzigartigen Wettkampf vereint.",
-    description:
-      "In unserem HYROX-Gruppenkurs trainierst du gezielt für diese Herausforderung – mit Workouts, die dich stärker, schneller und leistungsfähiger machen. Egal, ob du auf einen Wettkampf hinarbeiten oder einfach deine Bestform erreichen willst, hier findest du die perfekte Mischung aus Teamspirit, intensiver Challenge und echter Weiterentwicklung.",
-    highlights: [
-      "Kraft, Ausdauer & funktionelle Performance",
-      "Athletisches Ganzkörpertraining",
-      "Strukturierte Vorbereitung auf den Wettkampf",
-      "Motivation & Wettkampf-Spirit",
-      "Einsteiger & Fortgeschrittene",
-      "Muskelaufbau, Kraftentwicklung & Bodyforming",
-    ],
-    closing:
-      "Kombiniere funktionelle Kraft mit Ausdauer und erlebe das ultimative Trainingserlebnis. Ob als Vorbereitung auf deinen nächsten HYROX-Wettkampf oder als neue Herausforderung im Alltag – unser HYROX-Gruppenkurs bringt dich an dein Limit und darüber hinaus. Effektiv, fordernd und motivierend – in einer Community, die dich pusht.",
-    href: "/hyrox",
-  },
 ];
 
 export default function GruppenkursePage() {
@@ -106,7 +106,7 @@ export default function GruppenkursePage() {
       <PageHero
         badge="Gruppenkurse"
         title="Gemeinsam stärker."
-        description="Bei dir steht Spass und Freude am Training im Vordergrund? Training in motivierender Gemeinschaft — mit individueller Betreuung in der Kleingruppe. Max. 8 Teilnehmer. Probetraining immer kostenlos."
+        description="Bei dir steht Spass und Freude am Training im Vordergrund? Training in motivierender Gemeinschaft - mit individueller Betreuung in der Kleingruppe. Max. 8 Teilnehmer. Kostenlose Probewoche."
         ctaText="Jetzt Starten"
         ctaHref="/kostenloses-beratungsgespraech"
         backgroundImage="/images/classes/hyrox-abklatschen.jpg"
@@ -185,18 +185,18 @@ export default function GruppenkursePage() {
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-            Probetraining
+            Kostenlose Probewoche
           </span>
           <h2 className="mt-4 text-2xl font-bold text-text md:text-3xl">
-            Schnupperstunde kostenlos. Immer.
+            Kostenlose Probewoche. Immer.
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
-            Egal welcher Kurs — deine erste Schnupperstunde ist immer kostenlos und
+            Egal welcher Kurs - deine erste Woche ist immer kostenlos und
             unverbindlich. Komm vorbei und probiere es aus.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {[
-              "Kostenlos testen",
+              "Kostenlose Probewoche",
               "Kleine Gruppen (max. 8)",
               "Alle Level willkommen",
               "Krankenkassen anerkannt",
@@ -215,7 +215,7 @@ export default function GruppenkursePage() {
               href="/kostenloses-beratungsgespraech"
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
-              Kostenloses Probetraining buchen
+              Kostenlose Probewoche starten
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
@@ -276,7 +276,7 @@ export default function GruppenkursePage() {
       </section>
 
       <CTABanner
-        title="Lust auf ein kostenloses Probetraining?"
+        title="Lust auf eine kostenlose Probewoche?"
         description="Wähle deinen Kurs und melde dich an. Einfach per WhatsApp oder über unser Kontaktformular."
       />
     </>

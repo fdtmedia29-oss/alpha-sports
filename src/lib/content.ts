@@ -142,6 +142,15 @@ export interface GroupClass {
 
 export const groupClasses: GroupClass[] = [
   {
+    name: "Hyrox",
+    trainer: "Nicole Walser",
+    schedule: "Mo 12:00, Mi 06:30 & 18:30, Fr 17:30",
+    description:
+      "Race-Day Vorbereitung als Gruppenkurs. Kombiniert Laufen mit funktionellen Übungen - Sled Push, Burpee Broad Jumps, Farmers Carry und mehr. Für Einsteiger und Wettkämpfer.",
+    href: "/hyrox",
+    image: "/images/classes/hyrox-gruppenkurs.jpg",
+  },
+  {
     name: "Bootcamp",
     trainer: "Nicole Walser",
     schedule: "Mo 18:30",
@@ -164,18 +173,9 @@ export const groupClasses: GroupClass[] = [
     trainer: "David Rogers",
     schedule: "Mi 12:00",
     description:
-      "Gezieltes Krafttraining in der Gruppe. Strukturierte Workouts für Muskelaufbau und funktionelle Stärke — für alle Levels.",
+      "Gezieltes Krafttraining in der Gruppe. Strukturierte Workouts für Muskelaufbau und funktionelle Stärke - für alle Levels.",
     href: "/gruppenkurse#strength",
     image: "/images/pt/alpha-personal-26.jpg",
-  },
-  {
-    name: "Hyrox",
-    trainer: "Nicole Walser",
-    schedule: "Mo 12:00, Mi 06:30 & 18:30, Fr 17:30",
-    description:
-      "Race-Day Vorbereitung als Gruppenkurs. Kombiniert Laufen mit funktionellen Übungen — Sled Push, Burpee Broad Jumps, Farmers Carry und mehr. Für Einsteiger und Wettkämpfer.",
-    href: "/hyrox",
-    image: "/images/classes/hyrox-gruppenkurs.jpg",
   },
 ];
 

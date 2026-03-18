@@ -39,8 +39,14 @@ const keyBenefits = [
 export default function ErnährungsberatungPage() {
   return (
     <>
-      {/* Hero removed temporarily */}
-      <div className="pt-24" />
+      <PageHero
+        badge="Ernährungsberatung"
+        title="Dein Schlüssel zur nachhaltigen Veränderung."
+        description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verbessert."
+        ctaText="Beratung buchen"
+        ctaHref="/kostenloses-beratungsgespraech"
+        backgroundImage="/images/ernaehrung/food-1898194-1280.jpg"
+      />
 
       {/* Intro with image */}
       <section className="section-padding bg-white">

@@ -106,12 +106,12 @@ export const services: Service[] = [
     image: "/images/pt/alpha-personal-03.jpg",
   },
   {
-    title: "Online Coaching",
+    title: "Gruppenkurse",
     description:
-      "12-Wochen Programme mit persönlicher Betreuung via App — von überall. Training, Ernährung und Lifestyle.",
-    href: "/online-coaching",
-    icon: "monitor",
-    image: "/images/studio/studio-7.jpg",
+      "Bootcamp, Pilates, Strength und HYROX — motivierendes Training in der Gruppe mit zertifizierten Trainern.",
+    href: "/gruppenkurse",
+    icon: "users",
+    image: "/images/classes/hyrox-abklatschen.jpg",
   },
   {
     title: "Ernährungsberatung",
@@ -222,6 +222,7 @@ export const painPointQuotes = [
   "Ich will mich wieder wohl in meinem Körper fühlen.",
   "Ich brauche jemanden, der eine Strategie hat, die funktioniert.",
   "Ich will mich endlich wieder gerne im Spiegel ansehen.",
+  "Ich will mein Bauchfett endlich loswerden.",
   "Ich brauche Verbindlichkeit, sonst finde ich immer eine Ausrede.",
   "Ich finde in meinem Alltag einfach keine Zeit für mich.",
 ];

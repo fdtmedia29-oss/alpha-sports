@@ -38,7 +38,9 @@ export default function PainPoints() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">
-              Ja? Dann bist du bei uns{" "}
+              Ja?
+              <br />
+              Dann bist du bei uns{" "}
               <span className="text-orange">genau richtig.</span>
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">

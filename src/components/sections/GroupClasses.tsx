@@ -182,7 +182,7 @@ export default function GroupClasses() {
             href="https://www.alpha-sports.ch/gruppenkurse"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3.5 text-sm font-semibold text-text transition-all hover:border-orange hover:text-orange"
+            className="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-orange-hover"
           >
             Jetzt buchen
           </a>

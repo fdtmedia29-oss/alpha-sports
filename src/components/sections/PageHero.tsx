@@ -11,25 +11,43 @@ interface PageHeroProps {
   ctaText?: string;
   ctaHref?: string;
   backgroundImage?: string;
+  backgroundImageDesktop?: string;
 }
 
-export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage }: PageHeroProps) {
+export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage, backgroundImageDesktop }: PageHeroProps) {
+  const overlay = "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.2) 100%)";
+  const desktopImg = backgroundImageDesktop || backgroundImage;
+
   return (
-    <section
-      className="relative flex min-h-[90vh] items-center md:min-h-[70vh]"
-      style={
-        backgroundImage
-          ? {
-              backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.2) 100%), url(${backgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }
-          : {
-              background: "linear-gradient(135deg, #111 0%, #111 60%, #222 100%)",
-            }
-      }
-    >
-      <div className="w-full px-6 pt-24">
+    <section className="relative flex min-h-[90vh] items-center md:min-h-[75vh]">
+      {/* Mobile background */}
+      {backgroundImage && (
+        <div
+          className="absolute inset-0 md:hidden"
+          style={{
+            backgroundImage: `${overlay}, url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      )}
+      {/* Desktop background */}
+      {desktopImg && (
+        <div
+          className="absolute inset-0 hidden md:block"
+          style={{
+            backgroundImage: `${overlay}, url(${desktopImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      )}
+      {/* Fallback when no image */}
+      {!backgroundImage && (
+        <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[#111] to-[#222]" />
+      )}
+
+      <div className="relative w-full px-6 pt-24">
         <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

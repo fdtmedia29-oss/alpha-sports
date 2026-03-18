@@ -46,6 +46,7 @@ export default function ErnährungsberatungPage() {
         ctaText="Beratung buchen"
         ctaHref="/kostenloses-beratungsgespraech"
         backgroundImage="/images/ernaehrung/food-1898194-1280.jpg"
+        backgroundImageDesktop="/images/ernaehrung/food-3654199-1280.jpg"
       />
 
       {/* Intro with image */}

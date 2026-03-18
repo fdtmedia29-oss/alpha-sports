@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
@@ -11,12 +11,6 @@ const inter = Inter({
   variable: "--font-sans",
   display: "swap",
 });
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  viewportFit: "cover",
-};
 
 export const metadata: Metadata = {
   title: {
@@ -163,9 +157,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} bg-white text-text antialiased`}>
+      <body className={`${inter.variable} text-text antialiased`}>
         <Nav />
-        <main className="min-h-screen">
+        <main>
           {children}
         </main>
         <Footer />

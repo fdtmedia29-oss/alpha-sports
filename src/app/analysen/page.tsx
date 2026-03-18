@@ -21,7 +21,7 @@ const analyses = [
     subtitle: "Dein Start in Richtung Bestform",
     price: "",
     images: [
-      "/images/analysen/2-inbody-k-rperanalyse.png",
+      "/images/analysen/2-inbody-k-rperanalyse.jpg",
     ],
     description:
       "Die InBody-Analyse nutzt bioelektrische Impedanzanalyse (BIA), um deine Körperzusammensetzung in nur einer Minute zu bestimmen. Ein schwacher Strom wird durch deinen Körper geleitet — der spezifische elektrische Widerstand zeigt, wie viel fettfreie Körpermasse, Muskulatur, Fett sowie intra- und extrazelluläres Wasser dein Körper enthält.",
@@ -282,7 +282,7 @@ export default function AnalysenPage() {
             title="Analysen & Diagnostik"
             images={[
               "/images/analysen/erkl-r-foto-lui.jpg",
-              "/images/analysen/2-inbody-k-rperanalyse.png",
+              "/images/analysen/2-inbody-k-rperanalyse.jpg",
               "/images/analysen/leistungsanalyse.jpg",
               "/images/analysen/stoffwechselanalyse.jpg",
             ]}

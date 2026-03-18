@@ -43,9 +43,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Schnell, effektiv
-            <br />
-            & individuell.
+            Schnell & effektiv zu deinem WohlfühlKörper.
           </motion.h1>
 
           {/* Subline */}
@@ -55,7 +53,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Schnell & effektiv zu deinem WohlfühlKörper.
+            Gemeinsam sorgen wir dafür, dass du dich in deinem Körper
+            endlich wieder wohlfühlst.
           </motion.p>
 
           {/* CTA */}

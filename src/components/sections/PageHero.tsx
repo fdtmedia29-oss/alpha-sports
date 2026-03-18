@@ -16,11 +16,11 @@ interface PageHeroProps {
 export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage }: PageHeroProps) {
   return (
     <section
-      className="relative flex min-h-[90vh] items-end md:min-h-[70vh]"
+      className="relative flex min-h-[90vh] items-center md:min-h-[70vh]"
       style={
         backgroundImage
           ? {
-              backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.15) 100%), url(${backgroundImage})`,
+              backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.2) 100%), url(${backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }
@@ -29,7 +29,7 @@ export default function PageHero({ badge, title, description, ctaText, ctaHref, 
             }
       }
     >
-      <div className="w-full px-6 pb-10 md:pb-16">
+      <div className="w-full px-6 pt-24">
         <div className="mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

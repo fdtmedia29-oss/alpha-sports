@@ -20,7 +20,7 @@ export default function PageHero({ badge, title, description, ctaText, ctaHref, 
       style={
         backgroundImage
           ? {
-              backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${backgroundImage})`,
+              backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.15) 100%), url(${backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }
@@ -41,7 +41,7 @@ export default function PageHero({ badge, title, description, ctaText, ctaHref, 
               <span className="h-1.5 w-1.5 rounded-full bg-orange" />
               {badge}
             </span>
-            <h1 className="mt-6 text-4xl font-black tracking-tight text-white md:text-6xl">
+            <h1 className="mt-6 text-4xl font-black tracking-tight text-white drop-shadow-lg md:text-6xl">
               {title}
             </h1>
             <p className="mt-4 text-lg text-white/60 md:text-xl">{description}</p>

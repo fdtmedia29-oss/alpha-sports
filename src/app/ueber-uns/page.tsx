@@ -222,23 +222,6 @@ export default function ÜberUnsPage() {
         </div>
       </section>
 
-      {/* Location */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-text">Unser Standort</h2>
-            <div className="mt-6">
-              <div className="mx-auto max-w-sm rounded-2xl border border-border p-6">
-                <h3 className="font-bold text-text">Studio</h3>
-                <p className="mt-2 text-sm text-text-secondary">
-                  Unterer Graben 21, 9000 St. Gallen
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CTABanner
         title="Lerne uns persönlich kennen."
         description="Komm vorbei für ein kostenloses Beratungsgespräch und lerne unser Studio und Team kennen."

@@ -18,7 +18,7 @@ export default function Footer() {
                 Unser Studio befindet sich direkt am Unterer Graben 21 - zentral gelegen mit genügend Parkplätzen in unmittelbarer Nähe. Ob mit Auto, Bus oder zu Fuss - du erreichst uns schnell und bequem.
               </p>
               <a
-                href="https://maps.google.com/?q=Unterer+Graben+21,+9000+St.+Gallen"
+                href="https://maps.app.goo.gl/jNAcLjyqeHENmsCd7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-orange transition-colors hover:text-orange/80"
@@ -164,7 +164,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://maps.google.com/?q=Unterer+Graben+21,+9000+St.+Gallen"
+                  href="https://maps.app.goo.gl/jNAcLjyqeHENmsCd7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2 text-sm text-white/50 transition-colors hover:text-white"

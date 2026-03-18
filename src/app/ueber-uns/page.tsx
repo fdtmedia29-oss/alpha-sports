@@ -142,13 +142,17 @@ export default function ÜberUnsPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {trainers.map((trainer) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {trainers.map((trainer, i) => (
               <div
                 key={trainer.name}
-                className="overflow-hidden rounded-2xl border border-border bg-white"
+                className={`overflow-hidden rounded-2xl border border-border bg-white${
+                  trainers.length % 3 !== 0 && i >= trainers.length - (trainers.length % 3) && i === trainers.length - (trainers.length % 3)
+                    ? " lg:col-start-2"
+                    : ""
+                }`}
               >
-                <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
                     src={trainer.image}
                     alt={trainer.name}
@@ -156,8 +160,8 @@ export default function ÜberUnsPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-text">
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-text">
                     {trainer.name}
                   </h3>
                   <p className="mt-1 text-sm font-medium text-orange">

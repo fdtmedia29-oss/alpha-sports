@@ -22,12 +22,10 @@ const textTestimonials = [
   {
     name: "Peter Meier",
     text: "Personal Training hat mir auf vielfältige Weise weitergeholfen: individuelle Betreuung, Motivation und korrekte Technik. Durch das individualisierte Training konnte ich schneller Fortschritte sehen. Mehr Muskelmasse, viel weniger Körperfett. Meine Ärztin hat gestaunt, was ich in der kurzen Zeit alles verbessern konnte.",
-    image: "/images/results/vorher-nachher-vergleich-peter-meier.png",
   },
   {
     name: "Philipp Krenn",
     text: "Ich kann mit voller Überzeugung sagen, dass Luigi einer der Besten in seinem Fach ist. Als Arzt war ich besonders von Luigis tiefgreifendem Verständnis der Physiologie beeindruckt. Sein Engagement und seine Fachkenntnisse machen ihn zu einem aussergewöhnlichen Personal Trainer.",
-    image: "/images/trainers/philipp-krenn.jpg",
   },
   {
     name: "Chantal",
@@ -358,6 +356,15 @@ export default function KontaktPage() {
             <TestimonialVideo src="/videos/testimonial-jens.mp4" />
             <TestimonialVideo src="/videos/testimonial-markus.mp4" />
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/kostenloses-beratungsgespraech/buchen"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+            >
+              Jetzt Beratung buchen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -378,16 +385,20 @@ export default function KontaktPage() {
                 <p className="mt-4 text-sm leading-relaxed text-text-secondary">
                   {t.text}
                 </p>
-                <div className="mt-6 flex items-center gap-3">
-                  {t.image && (
-                    <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                      <Image src={t.image} alt={t.name} fill className="object-cover" />
-                    </div>
-                  )}
+                <div className="mt-6">
                   <span className="text-sm font-bold text-text">{t.name}</span>
                 </div>
               </motion.div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/kostenloses-beratungsgespraech/buchen"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+            >
+              Jetzt Beratung buchen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -420,13 +431,13 @@ export default function KontaktPage() {
               "/images/results/vorher-nachher-vergleich-peter-meier.png",
             ]}
           />
-          <div className="mt-8 text-center">
+          <div className="mt-10 text-center">
             <Link
-              href="/erfolgsgeschichten"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-orange transition-all hover:gap-3"
+              href="/kostenloses-beratungsgespraech/buchen"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
-              Alle Erfolgsgeschichten
-              <ArrowRight className="h-4 w-4" />
+              Jetzt Beratung buchen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

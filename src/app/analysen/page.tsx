@@ -282,7 +282,6 @@ export default function AnalysenPage() {
             title="Analysen & Diagnostik"
             images={[
               "/images/analysen/erkl-r-foto-lui.jpg",
-              "/images/analysen/2-inbody-k-rperanalyse.jpg",
               "/images/analysen/leistungsanalyse.jpg",
               "/images/analysen/stoffwechselanalyse.jpg",
             ]}

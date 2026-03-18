@@ -16,7 +16,7 @@ interface PageHeroProps {
 
 export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-dark pt-32 pb-16 md:pt-44 md:pb-24">
+    <section className="relative flex min-h-[75vh] items-end overflow-hidden bg-dark md:min-h-0 md:pt-44 md:pb-24">
       {backgroundImage ? (
         <>
           <Image
@@ -26,12 +26,12 @@ export default function PageHero({ badge, title, description, ctaText, ctaHref, 
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-dark/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/40 to-dark/20" />
         </>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark to-dark-surface" />
       )}
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto w-full max-w-7xl px-6 pb-12 md:pb-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -45,7 +45,7 @@ export default function ErnährungsberatungPage() {
         description="Entdecke, wie eine gezielte Ernährungsstrategie dein Leben verbessert."
         ctaText="Beratung buchen"
         ctaHref="/kostenloses-beratungsgespraech"
-        backgroundImage="/images/ernaehrung/design-ohne-titel.png"
+        backgroundImage="/images/ernaehrung/design-ohne-titel.jpg"
       />
 
       {/* Intro with image */}
@@ -116,7 +116,7 @@ export default function ErnährungsberatungPage() {
       {/* Mid-page CTA */}
       <section className="relative overflow-hidden py-20 md:py-24">
         <Image
-          src="/images/ernaehrung/design-ohne-titel.png"
+          src="/images/ernaehrung/design-ohne-titel.jpg"
           alt=""
           fill
           className="object-cover"
@@ -225,7 +225,7 @@ export default function ErnährungsberatungPage() {
             images={[
               "/images/ernaehrung/food-1898194-1280.jpg",
               "/images/ernaehrung/food-3654199-1280.jpg",
-              "/images/ernaehrung/design-ohne-titel.png",
+              "/images/ernaehrung/design-ohne-titel.jpg",
             ]}
           />
         </div>

@@ -340,7 +340,7 @@ export const studioImages = [
   // Ernährung
   "/images/ernaehrung/food-3654199-1280.jpg",
   "/images/ernaehrung/food-1898194-1280.jpg",
-  "/images/ernaehrung/design-ohne-titel.png",
+  "/images/ernaehrung/design-ohne-titel.jpg",
   // Team
   "/images/trainers/team.jpg",
   "/images/trainers/team-foto.jpg",

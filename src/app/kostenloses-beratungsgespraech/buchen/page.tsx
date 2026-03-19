@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Script from "next/script";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { siteConfig } from "@/lib/content";
@@ -62,40 +63,25 @@ export default function BuchenPage() {
         </div>
       </section>
 
-      {/* ── Booking embed placeholder ── */}
+      {/* ── Virtuagym Booking Widget ── */}
       <section className="section-padding bg-white">
-        <div className="mx-auto max-w-2xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-2xl border border-border bg-bg-alt p-12"
-          >
-            <p className="text-lg font-semibold text-text">
-              Terminbuchung
-            </p>
-            <p className="mt-2 text-sm text-text-secondary">
-              Hier wird das Buchungstool eingebettet (z.B. Eversports / Cal.com).
-            </p>
-            <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <a
-                href={siteConfig.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
-              >
-                Per WhatsApp buchen
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-text transition-all hover:bg-bg-alt"
-              >
-                Anrufen: {siteConfig.phone}
-              </a>
-            </div>
-          </motion.div>
+        <div className="mx-auto max-w-2xl">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
+                <vg-guest-booking
+                  widget-key="64231731b19d6c001b9b9bfb"
+                  club-id="70387"
+                  lang="de"
+                  source=""
+                ></vg-guest-booking>
+              `,
+            }}
+          />
+          <Script
+            src="https://static.virtuagym.com/vg-guest-booking-widget/dist/js/app.js"
+            strategy="afterInteractive"
+          />
         </div>
       </section>
 

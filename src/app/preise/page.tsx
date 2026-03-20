@@ -37,7 +37,7 @@ export default function PreisePage() {
                 </h2>
               </div>
               <p className="mt-4 text-text-secondary">
-                Alpha Sports ist Qualitop, EMR und SwissActive zertifiziert. Je nach
+                Alpha Sports ist Qualitop zertifiziert. Je nach
                 Zusatzversicherung kann ein Teil der Kosten für Personal Training und
                 Gruppenkurse von deiner Krankenkasse übernommen werden.
               </p>

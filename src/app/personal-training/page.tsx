@@ -36,7 +36,7 @@ export default function PersonalTrainingPage() {
     <>
       <PageHero
         badge="Personal Training"
-        title="Individuell & effektiv für deine Bestform."
+        title="Individuell & effektiv zu deiner Bestform."
         description="Bei Alpha Sports bekommst du keine Standardlösungen — sondern massgeschneiderte Trainings- und Ernährungsstrategien, die dich effizient und sicher zu deiner Bestform begleiten."
         ctaText="Kostenloses Beratungsgespräch"
         ctaHref="/kostenloses-beratungsgespraech"
@@ -121,7 +121,7 @@ export default function PersonalTrainingPage() {
             Bereit für den ersten Schritt?
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-white/60">
-            Vereinbare jetzt ein kostenloses Beratungsgespräch, in welchem wir eine
+            Vereinbare jetzt ein kostenloses Beratungsgespräch, in welcher wir gemeinsam eine
             Strategie zur Erreichung deiner Ziele ausarbeiten.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

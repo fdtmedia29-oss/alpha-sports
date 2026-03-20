@@ -153,6 +153,14 @@ export default function KontaktPage() {
               Jetzt Beratung buchen
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
             </Link>
+            <a
+              href={siteConfig.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10"
+            >
+              Per WhatsApp anfragen
+            </a>
             <span className="flex items-center gap-1.5 text-sm text-white/50">
               <Star className="h-4 w-4 fill-orange text-orange" />
               5.0 auf Google - 68 Bewertungen
@@ -295,42 +303,6 @@ export default function KontaktPage() {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
-        </div>
-      </section>
-
-      {/* ── Mid CTA ── */}
-      <section className="relative overflow-hidden py-16 md:py-20">
-        <Image
-          src="/images/pt/alpha-personal-03.jpg"
-          alt=""
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-dark/80" />
-        <div className="relative mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-2xl font-bold text-white md:text-3xl">
-            Kostenlos. Unverbindlich. 45 Minuten.
-          </h2>
-          <p className="mt-4 text-white/60">
-            Wir nehmen uns Zeit für dich - ganz ohne Druck. Danach entscheidest du.
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
-              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
-            >
-              Beratung buchen
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            <a
-              href={siteConfig.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10"
-            >
-              Per WhatsApp anfragen
-            </a>
-          </div>
         </div>
       </section>
 

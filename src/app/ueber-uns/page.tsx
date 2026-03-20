@@ -8,7 +8,7 @@ import { Check, Shield, Users, Eye } from "lucide-react";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Qualitop, EMR und SwissActive zertifiziert.",
+    "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Qualitop zertifiziert.",
 };
 
 const whatClientsValue = [
@@ -170,7 +170,7 @@ export default function ÜberUnsPage() {
                     {trainer.credentials.map((cred) => (
                       <span
                         key={cred}
-                        className="rounded-full bg-bg-alt px-2.5 py-1 text-[11px] text-text-secondary"
+                        className="rounded-full bg-orange-light px-2.5 py-1 text-[11px] font-medium text-orange"
                       >
                         {cred}
                       </span>
@@ -196,12 +196,12 @@ export default function ÜberUnsPage() {
               {
                 icon: Eye,
                 title: "Privat",
-                text: "Max. 2 Personen gleichzeitig im Studio. Volle Aufmerksamkeit, keine Wartezeiten, kein Stress. Familiäre Atmosphäre mit genügend Parkplätzen.",
+                text: "Volle Aufmerksamkeit, keine Wartezeiten, kein Stress. Familiäre Atmosphäre mit genügend Parkplätzen.",
               },
               {
                 icon: Shield,
                 title: "Anerkannt",
-                text: "Qualitop, EMR und SwissActive zertifiziert. Professionelle Standards und Krankenkassen-Anerkennung. Ein Teil der Kosten kann übernommen werden.",
+                text: "Qualitop zertifiziert. Professionelle Standards und Krankenkassen-Anerkennung. Ein Teil der Kosten kann übernommen werden.",
               },
             ].map((v) => (
               <div key={v.title} className="text-center">

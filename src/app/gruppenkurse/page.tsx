@@ -10,7 +10,7 @@ import { certifications } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Gruppenkurse",
   description:
-    "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp, Pilates & Strength. Max. 8 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",
+    "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp, Pilates & Strength. Max. 12 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",
 };
 
 const detailedClasses = [
@@ -106,7 +106,7 @@ export default function GruppenkursePage() {
       <PageHero
         badge="Gruppenkurse"
         title="Gemeinsam stärker."
-        description="Bei dir steht Spass und Freude am Training im Vordergrund? Training in motivierender Gemeinschaft - mit individueller Betreuung in der Kleingruppe. Max. 8 Teilnehmer. Kostenlose Probewoche."
+        description="Bei dir steht Spass und Freude am Training im Vordergrund? Training in motivierender Gemeinschaft - mit individueller Betreuung in der Kleingruppe. Max. 12 Teilnehmer. Kostenlose Probewoche."
         ctaText="Jetzt Starten"
         ctaHref="#buchen"
         backgroundImage="/images/classes/hyrox-abklatschen.jpg"
@@ -188,7 +188,7 @@ export default function GruppenkursePage() {
             Kostenlose Probewoche
           </span>
           <h2 className="mt-4 text-2xl font-bold text-text md:text-3xl">
-            Kostenlose Probewoche. Immer.
+            Kostenlose Probewoche.
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
             Egal welcher Kurs - deine erste Woche ist immer kostenlos und
@@ -197,7 +197,7 @@ export default function GruppenkursePage() {
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {[
               "Kostenlose Probewoche",
-              "Kleine Gruppen (max. 8)",
+              "Kleine Gruppen (max. 12)",
               "Alle Level willkommen",
               "Krankenkassen anerkannt",
             ].map((item) => (

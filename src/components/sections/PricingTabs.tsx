@@ -53,7 +53,7 @@ const sections: PricingSection[] = [
           {
             name: "Alpha Sports Shape Plus Package",
             price: "CHF 389.50 mtl.",
-            note: "4x InBody Analyse; 4x Erfolgsgespräch à 15 Min., 1x Stoffwechselanalyse, 4 Körpervermessungen + Vorher-Nachher-Fotos, Ernährungsberatung (Sport- & Alltagsernährung inkl. Dossier), 3 Ernährungspläne",
+            note: "4x InBody Analyse; 4x Erfolgsgespräch à 15 Min., 1x Stoffwechselanalyse, Vorher-Nachher-Fotos,Ernährungsberatung (Sport- & Alltagsernährung inkl. Dossier), 3 Ernährungspläne",
           },
         ],
         footer: "inkl. 1 Proteinshake & 1 Sportgetränk pro Training, Handtuchservice, Optional: Weitere Angebot mit Rabatt wählbar",
@@ -75,7 +75,7 @@ const sections: PricingSection[] = [
           {
             name: "Alpha Sports Shape Plus Package",
             price: "CHF 389.50 mtl.",
-            note: "4x InBody Analyse; 4x Erfolgsgespräch à 15 Min., 1x Stoffwechselanalyse, 4 Körpervermessungen + Vorher-Nachher-Fotos, Ernährungsberatung (Sport- & Alltagsernährung inkl. Dossier), 3 Ernährungspläne",
+            note: "4x InBody Analyse; 4x Erfolgsgespräch à 15 Min., 1x Stoffwechselanalyse, Vorher-Nachher-Fotos,Ernährungsberatung (Sport- & Alltagsernährung inkl. Dossier), 3 Ernährungspläne",
           },
         ],
         footer: "inkl. 1 Proteinshake & 1 Sportgetränk pro Training, Handtuchservice, Optional: Weitere Angebot mit Rabatt wählbar",
@@ -100,7 +100,7 @@ const sections: PricingSection[] = [
           {
             name: "Alpha Sports Shape Plus Package (389.50.- mtl.)",
             price: "CHF 1168.-",
-            note: "4x InBody Analyse; 4x Erfolgsgespräch à 15 Min., 1x Stoffwechselanalyse, 4 Körpervermessungen + Vorher-Nachher-Fotos, Ernährungsberatung (Sport- & Alltagsernährung inkl. Dossier), 3 Ernährungspläne",
+            note: "4x InBody Analyse; 4x Erfolgsgespräch à 15 Min., 1x Stoffwechselanalyse, Vorher-Nachher-Fotos,Ernährungsberatung (Sport- & Alltagsernährung inkl. Dossier), 3 Ernährungspläne",
           },
         ],
       },

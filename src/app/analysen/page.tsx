@@ -56,7 +56,7 @@ const analyses = [
     description:
       "Eine 30-minütige Atemgasanalyse in Ruhe bestimmt deine exakte Stoffwechselsituation und dein Stresslevel. Du erfährst, welche Energiequelle (Kohlenhydrate, Proteine oder Fette) dein Körper aktuell bevorzugt und wie hoch dein genauer Grundumsatz ist.",
     detailedDescription:
-      "Während des Termins führst du einen Atemtest in Ruhe durch. Unsere Spezialisten erfragen deine täglichen körperlichen Aktivitäten, um deinen Leistungsumsatz zu berechnen und deinen täglichen Gesamtkalorienbedarf zu ermitteln. Ergebnisse werden sofort über eine App bereitgestellt — mit optimaler Makronährstoff-Verteilung und deinem täglichen Kalorienbudget.",
+      "Während des Termins führst du einen Atemtest in Ruhe durch. Unsere Spezialisten erfragen deine täglichen körperlichen Aktivitäten, um deinen Leistungsumsatz zu berechnen und deinen täglichen Gesamtkalorienbedarf zu ermitteln. Ergebnisse werden sofort über eine App bereitgestellt — mit deinem täglichen Kalorienbudget.",
     measures: [
       "Grundumsatz",
       "Metabolische Flexibilität",
@@ -89,7 +89,6 @@ const analyses = [
       "Fettverbrennungs-Pulsbereich",
       "Übersäuerungsschwelle",
       "Herzfrequenz-Zonen",
-      "6-Monate Ausdauertrainingsplan",
       "App-Zugang mit Ergebnissen",
     ],
     note: "",

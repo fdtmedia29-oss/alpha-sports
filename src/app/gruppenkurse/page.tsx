@@ -108,7 +108,7 @@ export default function GruppenkursePage() {
         title="Gemeinsam stärker."
         description="Bei dir steht Spass und Freude am Training im Vordergrund? Training in motivierender Gemeinschaft - mit individueller Betreuung in der Kleingruppe. Max. 8 Teilnehmer. Kostenlose Probewoche."
         ctaText="Jetzt Starten"
-        ctaHref="/kostenloses-beratungsgespraech"
+        ctaHref="#buchen"
         backgroundImage="/images/classes/hyrox-abklatschen.jpg"
       />
 
@@ -166,7 +166,7 @@ export default function GruppenkursePage() {
                     )}
                     <div className="mt-auto pt-6">
                       <Link
-                        href={"href" in cls && cls.href ? cls.href : "/kostenloses-beratungsgespraech"}
+                        href={"href" in cls && cls.href ? cls.href : "#buchen"}
                         className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
                       >
                         {"href" in cls && cls.href ? "Mehr erfahren" : "Jetzt Buchen"}
@@ -212,7 +212,7 @@ export default function GruppenkursePage() {
           </div>
           <div className="mt-8">
             <Link
-              href="/kostenloses-beratungsgespraech"
+              href="#buchen"
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Kostenlose Probewoche starten
@@ -271,6 +271,31 @@ export default function GruppenkursePage() {
                 <span className="text-muted">— 68 Bewertungen</span>
               </span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Eversports Booking */}
+      <section id="buchen" className="scroll-mt-24 section-padding bg-bg-alt">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Jetzt buchen
+            </span>
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-text md:text-3xl">
+              Gruppenkurs buchen.
+            </h2>
+            <p className="mt-3 text-text-secondary">
+              Wähle deinen Kurs und buche direkt über Eversports.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-border bg-white">
+            <iframe
+              src="https://www.eversports.ch/s/alpha-sports"
+              title="Eversports Gruppenkurse buchen"
+              className="h-[700px] w-full border-0"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

@@ -70,7 +70,7 @@ export default function BuchenPage() {
             dangerouslySetInnerHTML={{
               __html: `
                 <vg-guest-booking
-                  widget-key="64231731b19d6c001b9b9bfb"
+                  widget-key="65cf98905c1d120017507530"
                   club-id="70387"
                   lang="de"
                   source=""

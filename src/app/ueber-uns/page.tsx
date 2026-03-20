@@ -142,15 +142,11 @@ export default function ÜberUnsPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {trainers.map((trainer, i) => (
+          <div className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+            {trainers.map((trainer) => (
               <div
                 key={trainer.name}
-                className={`overflow-hidden rounded-2xl border border-border bg-white${
-                  trainers.length % 3 !== 0 && i >= trainers.length - (trainers.length % 3) && i === trainers.length - (trainers.length % 3)
-                    ? " lg:col-start-2"
-                    : ""
-                }`}
+                className="min-w-[260px] max-w-[280px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-white"
               >
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image

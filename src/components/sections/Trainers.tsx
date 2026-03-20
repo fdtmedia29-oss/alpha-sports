@@ -46,9 +46,9 @@ export default function Trainers() {
         </div>
 
         {/* Trainer cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
           {trainers.map((trainer, i) => (
-            <Link key={trainer.name} href="/ueber-uns" className="group block">
+            <Link key={trainer.name} href="/ueber-uns" className="group block min-w-[240px] max-w-[260px] shrink-0 snap-start">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

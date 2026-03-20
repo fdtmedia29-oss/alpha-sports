@@ -314,6 +314,9 @@ export const studioImages = [
   "/images/studio/studio-6.jpg",
   "/images/studio/studio-7.jpg",
   "/images/studio/studio-8.jpg",
+  "/images/studio/studio-11.jpg",
+  "/images/studio/studio-12.jpg",
+  "/images/studio/schaufenster.jpg",
   "/images/studio/2024-10-03.jpg",
   // Personal Training
   "/images/pt/alpha-personal-32.jpg",

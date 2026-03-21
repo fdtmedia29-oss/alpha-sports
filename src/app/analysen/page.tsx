@@ -190,7 +190,7 @@ export default function AnalysenPage() {
               "/images/analysen/erkl-r-foto-lui.jpg",
               "/images/analysen/stoffwechselanalyse-maske.jpg",
               "/images/analysen/leistungsanalyse-maske.jpg",
-              "/images/analysen/2-inbody-k-rperanalyse.jpg",
+              "/images/analysen/leistungsanalyse.jpg",
             ]}
           />
         </div>

@@ -8,7 +8,7 @@ export default function Einblicke() {
   return (
     <main className="bg-white">
       {/* Header */}
-      <section className="relative overflow-hidden pb-16 pt-32">
+      <section className="relative overflow-hidden pb-24 pt-44 md:pb-32 md:pt-52">
         <Image
           src="/images/studio/schaufenster.jpg"
           alt="Alpha Sports Studio Schaufenster"

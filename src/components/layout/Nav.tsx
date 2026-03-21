@@ -71,7 +71,7 @@ export default function Nav() {
             <ChevronDown className="h-3 w-3" />
           </Link>
           {openDropdown === item.label && (
-            <div className="absolute left-0 top-full pt-2">
+            <div className="absolute left-0 top-full z-50 pt-2">
               <div className="min-w-[200px] rounded-xl border border-border bg-white p-2 shadow-xl">
                 {item.children.map((child) => (
                   <Link

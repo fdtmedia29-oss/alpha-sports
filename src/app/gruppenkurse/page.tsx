@@ -5,7 +5,8 @@ import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import Script from "next/script";
-import { Check, Flame, Heart, Dumbbell, Zap, ArrowRight, Shield } from "lucide-react";
+import GruppenkurseCards from "@/components/sections/GruppenkurseCards";
+import { Check, ArrowRight, Shield } from "lucide-react";
 import { certifications } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ const detailedClasses = [
     id: "hyrox",
     name: "HYROX",
     subtitle: "Ein Ziel. Eine Challenge. Ein Team, das dich pusht!",
-    icon: Zap,
+    icon: "Zap",
     image: "/images/classes/hyrox-gruppenkurs.jpg",
     intro:
       "HYROX ist das weltweit erste Fitnessrennen, das funktionelles Training, Kraft und Ausdauer in einem einzigartigen Wettkampf vereint.",
@@ -41,7 +42,7 @@ const detailedClasses = [
     id: "bootcamp",
     name: "Indoor Bootcamp",
     subtitle: "Der energiegeladene Gruppenkurs für jedes Fitness-Level",
-    icon: Flame,
+    icon: "Flame",
     image: "/images/classes/bootcamp.png",
     intro:
       "Du willst fit werden, Körperfett verbrennen und Muskeln aufbauen - aber nicht alleine? Dann ist unser Indoor Bootcamp in St. Gallen genau das Richtige für dich!",
@@ -61,7 +62,7 @@ const detailedClasses = [
     id: "pilates",
     name: "Pilates",
     subtitle: "Stärke deine Mitte & finde die Balance",
-    icon: Heart,
+    icon: "Heart",
     image: "/images/studio/studio-3.jpg",
     intro:
       "Du suchst nach effektivem, sanftem Training, das deinen Körper stärkt, deine Haltung verbessert und deine Beweglichkeit fördert? Dann ist unser Pilates Gruppenkurs in St. Gallen genau das Richtige für dich!",
@@ -81,7 +82,7 @@ const detailedClasses = [
     id: "strength",
     name: "Strength",
     subtitle: "Dein Strength-Gruppenkurs für Muskelaufbau mit System & Technik",
-    icon: Dumbbell,
+    icon: "Dumbbell",
     image: "/images/studio/studio-6.jpg",
     intro:
       "Du willst gezielt Muskeln aufbauen, stärker werden und dabei technisch sauber trainieren? Dann ist Strength der richtige Gruppenkurs in St. Gallen für dich.",
@@ -116,69 +117,7 @@ export default function GruppenkursePage() {
       {/* All classes */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="space-y-12">
-            {detailedClasses.map((cls, index) => (
-              <div
-                key={cls.id}
-                id={cls.id}
-                className="scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-white transition-all hover:shadow-lg"
-              >
-                <div className={`grid lg:grid-cols-2 ${index % 2 === 1 ? "lg:grid-flow-dense" : ""}`}>
-                  <div className={`relative aspect-[4/3] overflow-hidden bg-surface lg:aspect-auto lg:min-h-[400px] ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                    <Image
-                      src={cls.image}
-                      alt={cls.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-col p-8 md:p-10">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-light">
-                        <cls.icon className="h-5 w-5 text-orange" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-text">{cls.name}</h3>
-                        {cls.subtitle && (
-                          <p className="mt-0.5 text-sm font-medium text-orange">{cls.subtitle}</p>
-                        )}
-                      </div>
-                    </div>
-                    <p className="mt-4 leading-relaxed text-text-secondary">
-                      {cls.intro}
-                    </p>
-                    <p className="mt-3 leading-relaxed text-text-secondary">
-                      {cls.description}
-                    </p>
-                    {cls.highlights.length > 0 && (
-                      <div className="mt-6 space-y-2">
-                        {cls.highlights.map((h) => (
-                          <div key={h} className="flex items-center gap-2 text-sm text-text-secondary">
-                            <Check className="h-3.5 w-3.5 shrink-0 text-orange" />
-                            {h}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    {cls.closing && (
-                      <p className="mt-4 text-sm leading-relaxed text-text-secondary">
-                        {cls.closing}
-                      </p>
-                    )}
-                    <div className="mt-auto pt-6">
-                      <Link
-                        href={"href" in cls && cls.href ? cls.href : "#buchen"}
-                        className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
-                      >
-                        {"href" in cls && cls.href ? "Mehr erfahren" : "Jetzt Buchen"}
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GruppenkurseCards classes={detailedClasses} />
         </div>
       </section>
 

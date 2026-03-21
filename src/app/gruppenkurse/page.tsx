@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
+import Script from "next/script";
 import { Check, Flame, Heart, Dumbbell, Zap, ArrowRight, Shield } from "lucide-react";
 import { certifications } from "@/lib/content";
 
@@ -277,27 +278,28 @@ export default function GruppenkursePage() {
 
       {/* Eversports Booking */}
       <section id="buchen" className="scroll-mt-24 section-padding bg-bg-alt">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-            Jetzt buchen
-          </span>
-          <h2 className="mt-4 text-2xl font-bold tracking-tight text-text md:text-3xl">
-            Gruppenkurs buchen.
-          </h2>
-          <p className="mt-3 text-text-secondary">
-            Wähle deinen Kurs und buche direkt über Eversports.
-          </p>
-          <div className="mt-8">
-            <a
-              href="https://www.eversports.ch/s/alpha-sports"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
-            >
-              Kurs auf Eversports buchen
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Jetzt buchen
+            </span>
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-text md:text-3xl">
+              Gruppenkurs buchen.
+            </h2>
+            <p className="mt-3 text-text-secondary">
+              Wähle deinen Kurs und buche direkt über Eversports.
+            </p>
           </div>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<div data-eversports-widget-id="4840c17a-c7eb-48bc-989d-f294ad5f104f"></div>`,
+            }}
+          />
+          <Script
+            src="https://widget-static.eversports.io/loader.js"
+            strategy="afterInteractive"
+            type="module"
+          />
         </div>
       </section>
 

@@ -136,6 +136,58 @@ export default function PersonalTrainingPage() {
         </div>
       </section>
 
+      {/* Transformationen */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
+              Vorher — Nachher
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
+              Echte Ergebnisse unserer Kunden.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
+              Diese Transformationen sprechen für sich. Mit der richtigen Strategie, konsequentem Training und professioneller Begleitung.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { src: "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg", name: "Dietmar G." },
+              { src: "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg", name: "Simon G." },
+              { src: "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png", name: "Claudine G." },
+              { src: "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg", name: "Markus R." },
+              { src: "/images/results/vorher-nachher-vergleich-peter-meier.png", name: "Peter M." },
+              { src: "/images/results/vorher-nacher-vergleich-izadora-d..png", name: "Izadora D." },
+            ].map((item) => (
+              <div key={item.name} className="overflow-hidden rounded-2xl border border-border bg-bg-alt">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={item.src}
+                    alt={`Vorher-Nachher Vergleich — ${item.name}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="px-4 py-3 text-center">
+                  <span className="text-sm font-semibold text-text">{item.name}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/erfolgsgeschichten"
+              className="group inline-flex items-center gap-2 text-base font-semibold text-orange transition-all hover:gap-3"
+            >
+              Alle Erfolgsgeschichten ansehen
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Photo Carousel */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">

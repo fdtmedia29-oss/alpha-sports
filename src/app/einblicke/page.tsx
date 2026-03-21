@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { studioImages } from "@/lib/content";
+import VideoTestimonials from "@/components/sections/VideoTestimonials";
 
 export default function Einblicke() {
   return (
@@ -30,6 +31,8 @@ export default function Einblicke() {
           </p>
         </div>
       </section>
+
+      <VideoTestimonials />
 
       {/* Gallery grid */}
       <section className="section-padding">

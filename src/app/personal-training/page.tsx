@@ -153,10 +153,10 @@ export default function PersonalTrainingPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
+              { src: "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg", name: "Markus R." },
               { src: "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg", name: "Dietmar G." },
               { src: "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg", name: "Simon G." },
               { src: "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png", name: "Claudine G." },
-              { src: "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg", name: "Markus R." },
               { src: "/images/results/vorher-nachher-vergleich-peter-meier.png", name: "Peter M." },
               { src: "/images/results/vorher-nacher-vergleich-izadora-d..png", name: "Izadora D." },
             ].map((item) => (
@@ -178,10 +178,10 @@ export default function PersonalTrainingPage() {
 
           <div className="mt-10 text-center">
             <Link
-              href="/erfolgsgeschichten"
-              className="group inline-flex items-center gap-2 text-base font-semibold text-orange transition-all hover:gap-3"
+              href="/kostenloses-beratungsgespraech"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
-              Alle Erfolgsgeschichten ansehen
+              Kostenloses Beratungsgespräch buchen
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>

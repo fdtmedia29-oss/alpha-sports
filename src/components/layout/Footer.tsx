@@ -27,17 +27,27 @@ export default function Footer() {
                 Route planen
               </a>
             </div>
-            <div className="overflow-hidden rounded-xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.5!2d9.3715!3d47.4239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1e36cf364b9d%3A0x5e6d0a4a4a4b4b4b!2sUnterer%20Graben%2021%2C%209000%20St.%20Gallen!5e0!3m2!1sde!2sch!4v1700000000000"
-                width="100%"
-                height="250"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Alpha Sports Standort"
-              />
+            <div className="space-y-3">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-xl">
+                <Image
+                  src="/images/studio/schaufenster.jpg"
+                  alt="Alpha Sports Studio Schaufenster"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.5!2d9.3715!3d47.4239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1e36cf364b9d%3A0x5e6d0a4a4a4b4b4b!2sUnterer%20Graben%2021%2C%209000%20St.%20Gallen!5e0!3m2!1sde!2sch!4v1700000000000"
+                  width="100%"
+                  height="200"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Alpha Sports Standort"
+                />
+              </div>
             </div>
           </div>
         </div>

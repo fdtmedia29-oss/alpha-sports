@@ -115,12 +115,13 @@ export default function ErnährungsberatungPage() {
       </section>
 
       {/* Mid-page CTA */}
-      <section className="relative overflow-hidden py-20 md:py-24">
+      <section className="relative overflow-hidden py-20 md:py-24 bg-dark">
         <Image
           src="/images/ernaehrung/design-ohne-titel.jpg"
           alt=""
           fill
-          className="object-cover"
+          sizes="100vw"
+          className="object-cover w-full h-full"
         />
         <div className="absolute inset-0 bg-dark/75" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">

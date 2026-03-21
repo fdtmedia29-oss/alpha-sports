@@ -136,13 +136,13 @@ export default function ÜberUnsPage() {
             </p>
           </div>
 
-          <div className="flex gap-4 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+          <div className="flex gap-3 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:gap-4 lg:overflow-visible lg:pb-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
             {trainers.map((trainer) => (
               <div
                 key={trainer.name}
-                className="min-w-[200px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-white lg:min-w-0"
+                className="w-[160px] min-w-[160px] shrink-0 snap-start overflow-hidden rounded-xl border border-border bg-white lg:w-auto lg:min-w-0 lg:rounded-2xl"
               >
-                <div className="relative aspect-square overflow-hidden lg:aspect-[3/4]">
+                <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
                     src={trainer.image}
                     alt={trainer.name}
@@ -150,21 +150,34 @@ export default function ÜberUnsPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-text">
+                <div className="p-3 lg:p-6">
+                  <h3 className="text-sm font-bold text-text lg:text-lg">
                     {trainer.name}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-orange">
+                  <p className="mt-0.5 text-xs font-medium text-orange lg:mt-1 lg:text-sm">
                     {trainer.role}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+                  <p className="mt-2 hidden text-sm leading-relaxed text-text-secondary lg:block">
                     {trainer.bio}
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {trainer.credentials.map((cred) => (
+                  <div className="mt-2 flex flex-wrap gap-1 lg:mt-4 lg:gap-1.5">
+                    {trainer.credentials.slice(0, 2).map((cred) => (
                       <span
                         key={cred}
-                        className="rounded-full bg-orange-light px-2.5 py-1 text-[11px] font-medium text-orange"
+                        className="rounded-full bg-orange-light px-2 py-0.5 text-[10px] font-medium text-orange lg:px-2.5 lg:py-1 lg:text-[11px]"
+                      >
+                        {cred}
+                      </span>
+                    ))}
+                    {trainer.credentials.length > 2 && (
+                      <span className="rounded-full bg-orange-light px-2 py-0.5 text-[10px] font-medium text-orange lg:hidden">
+                        +{trainer.credentials.length - 2}
+                      </span>
+                    )}
+                    {trainer.credentials.slice(2).map((cred) => (
+                      <span
+                        key={cred}
+                        className="hidden rounded-full bg-orange-light px-2.5 py-1 text-[11px] font-medium text-orange lg:inline-block"
                       >
                         {cred}
                       </span>

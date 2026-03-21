@@ -53,6 +53,9 @@ const analyses = [
     title: "Stoffwechsel- und Stressanalyse",
     subtitle: "Verstehe deinen Körper & erreiche deine Bestform",
     price: "",
+    images: [
+      "/images/analysen/stoffwechselanalyse-maske.jpg",
+    ],
     description:
       "Eine 30-minütige Atemgasanalyse in Ruhe bestimmt deine exakte Stoffwechselsituation und dein Stresslevel. Du erfährst, welche Energiequelle (Kohlenhydrate, Proteine oder Fette) dein Körper aktuell bevorzugt und wie hoch dein genauer Grundumsatz ist.",
     detailedDescription:
@@ -78,10 +81,13 @@ const analyses = [
     title: "Leistungsanalyse",
     subtitle: "Trainiere gezielt & effizient auf dem Weg zu deiner Bestform",
     price: "",
+    images: [
+      "/images/analysen/leistungsanalyse-maske.jpg",
+    ],
     description:
       "Mit unserer Spiroergometrie basierten Leistungsanalyse bestimmen wir auf genauste Art die Ergonomie deines Herzkreislaufsystems. Du erfährst den Pulsbereich, in dem du am meisten Fett verbrennst, deine VO2max-Werte und den Punkt, an dem deine Muskulatur beginnt zu übersäuern.",
     detailedDescription:
-      "Du erhältst deine individuellen Herzfrequenz-Zonen für dein Ausdauertraining, du erfährst in welcher Zone du deine Fettverbrennung trainierst, deine VO2max-Werte und deinen personalisierten 6-Monats-Ausdauertrainingsplan. Ideal für gezieltes Ausdauer- und Krafttraining oder Wettkampfvorbereitung wie HYROX.",
+      "Du erhältst deine individuellen Herzfrequenz-Zonen für dein Ausdauertraining, du erfährst in welcher Zone du deine Fettverbrennung trainierst und deine VO2max-Werte. Ideal für gezieltes Ausdauer- und Krafttraining oder Wettkampfvorbereitung wie HYROX.",
     measures: [],
     includes: [
       "Maximale Sauerstoffaufnahme (VO2max)",
@@ -284,6 +290,8 @@ export default function AnalysenPage() {
               "/images/analysen/erkl-r-foto-lui.jpg",
               "/images/analysen/leistungsanalyse.jpg",
               "/images/analysen/stoffwechselanalyse.jpg",
+              "/images/analysen/stoffwechselanalyse-maske.jpg",
+              "/images/analysen/leistungsanalyse-maske.jpg",
             ]}
           />
         </div>

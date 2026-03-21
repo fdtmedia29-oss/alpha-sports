@@ -395,9 +395,9 @@ export default function KontaktPage() {
           <PhotoCarousel
             title=""
             images={[
+              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
               "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
               "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
-              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
               "/images/results/vorher-nacher-vergleich-izadora-d..png",
               "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
               "/images/results/vorher-nachher-vergleich-peter-meier.png",

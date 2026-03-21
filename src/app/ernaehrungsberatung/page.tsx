@@ -115,15 +115,14 @@ export default function ErnährungsberatungPage() {
       </section>
 
       {/* Mid-page CTA */}
-      <section className="relative overflow-hidden py-20 md:py-24 bg-dark">
-        <Image
-          src="/images/ernaehrung/design-ohne-titel.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 bg-dark/75" />
+      <section
+        className="relative overflow-hidden py-20 md:py-24"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/images/ernaehrung/design-ohne-titel.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-white md:text-4xl">
             Bereit für eine Veränderung?

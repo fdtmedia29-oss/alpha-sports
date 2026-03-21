@@ -12,14 +12,15 @@ interface PageHeroProps {
   ctaHref?: string;
   backgroundImage?: string;
   backgroundImageDesktop?: string;
+  compact?: boolean;
 }
 
-export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage, backgroundImageDesktop }: PageHeroProps) {
+export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage, backgroundImageDesktop, compact }: PageHeroProps) {
   const overlay = "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.2) 100%)";
   const desktopImg = backgroundImageDesktop || backgroundImage;
 
   return (
-    <section className="relative flex min-h-[90vh] items-center md:min-h-[75vh]">
+    <section className={`relative flex items-center ${compact ? "min-h-0 pb-16 pt-40 md:pb-20 md:pt-44" : "min-h-[90vh] md:min-h-[75vh]"}`}>
       {/* Mobile background */}
       {backgroundImage && (
         <div

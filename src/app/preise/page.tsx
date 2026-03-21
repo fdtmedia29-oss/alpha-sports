@@ -17,6 +17,7 @@ export default function PreisePage() {
         badge="Preise"
         title="Investiere in dich selbst."
         description="Beratungsgespräch immer kostenlos. Stempelkarten 12 Monate gültig."
+        compact
       />
 
       <section className="section-padding bg-white">

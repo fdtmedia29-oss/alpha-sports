@@ -66,7 +66,7 @@ export default function ÜberUnsPage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
-                src="/images/trainers/team.jpg"
+                src="/images/trainers/team-foto-neu.jpg"
                 alt="Alpha Sports Team"
                 fill
                 className="object-cover"
@@ -76,37 +76,10 @@ export default function ÜberUnsPage() {
         </div>
       </section>
 
-      {/* Philosophy continued */}
-      <section className="section-padding bg-bg-alt">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-lg leading-relaxed text-text-secondary">
-            Unser Fokus liegt darin, Menschen dabei zu helfen, sich in ihrem
-            Körper wieder wohl zu fühlen und ihnen dadurch zu mehr
-            Selbstvertrauen, innerer Stärke und körperlicher
-            Widerstandsfähigkeit zu verhelfen.
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-            Unsere individuelle Betreuung, kombiniert mit unserer bewährten
-            Coaching-Strategie, sorgt dafür, dass du nicht nur besser aussiehst,
-            sondern dich auch im Alltag leistungsfähiger, belastbarer und
-            sicherer fühlst.
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-            Denn wer sich stark fühlt, begegnet Herausforderungen mit
-            Leichtigkeit. Wir begleiten dich Schritt für Schritt — effizient,
-            persönlich und mit echter Leidenschaft — auf deinem Weg zu mehr
-            Energie, Klarheit und Selbstbewusstsein.
-          </p>
-          <p className="mt-6 text-xl font-bold text-text">
-            Alpha Sports — weil deine Bestform kein Zufall ist!
-          </p>
-        </div>
-      </section>
-
-      {/* What clients value */}
+      {/* Warum Alpha Sports */}
       <section className="section-padding bg-bg-alt">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
               <span className="text-sm font-semibold uppercase tracking-widest text-orange">
                 Das schätzen unsere Kunden
@@ -114,8 +87,29 @@ export default function ÜberUnsPage() {
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-text md:text-4xl">
                 Warum Alpha Sports?
               </h2>
+              <p className="mt-6 leading-relaxed text-text-secondary">
+                Unser Fokus liegt darin, Menschen dabei zu helfen, sich in ihrem
+                Körper wieder wohl zu fühlen und ihnen dadurch zu mehr
+                Selbstvertrauen, innerer Stärke und körperlicher
+                Widerstandsfähigkeit zu verhelfen.
+              </p>
+              <p className="mt-4 leading-relaxed text-text-secondary">
+                Unsere individuelle Betreuung, kombiniert mit unserer bewährten
+                Coaching-Strategie, sorgt dafür, dass du nicht nur besser aussiehst,
+                sondern dich auch im Alltag leistungsfähiger, belastbarer und
+                sicherer fühlst.
+              </p>
+              <p className="mt-4 leading-relaxed text-text-secondary">
+                Denn wer sich stark fühlt, begegnet Herausforderungen mit
+                Leichtigkeit. Wir begleiten dich Schritt für Schritt — effizient,
+                persönlich und mit echter Leidenschaft — auf deinem Weg zu mehr
+                Energie, Klarheit und Selbstbewusstsein.
+              </p>
+              <p className="mt-6 text-lg font-bold text-text">
+                Alpha Sports — weil deine Bestform kein Zufall ist!
+              </p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 lg:pt-16">
               {whatClientsValue.map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-light">
@@ -146,9 +140,9 @@ export default function ÜberUnsPage() {
             {trainers.map((trainer) => (
               <div
                 key={trainer.name}
-                className="min-w-[260px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-white lg:min-w-0"
+                className="min-w-[200px] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-white lg:min-w-0"
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative aspect-square overflow-hidden lg:aspect-[3/4]">
                   <Image
                     src={trainer.image}
                     alt={trainer.name}

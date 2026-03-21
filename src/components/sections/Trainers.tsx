@@ -48,13 +48,13 @@ export default function Trainers() {
         {/* Trainer cards */}
         <div className="flex gap-4 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:overflow-visible lg:pb-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
           {trainers.map((trainer, i) => (
-            <Link key={trainer.name} href="/ueber-uns" className="group block min-w-[220px] shrink-0 snap-start lg:min-w-0">
+            <Link key={trainer.name} href="/ueber-uns" className="group flex min-w-[220px] shrink-0 snap-start lg:min-w-0">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl border border-border bg-white p-6 transition-all group-hover:shadow-lg group-hover:border-orange/30"
+                className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 transition-all group-hover:shadow-lg group-hover:border-orange/30"
               >
                 {/* Portrait */}
                 <div className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-xl">
@@ -67,11 +67,11 @@ export default function Trainers() {
                 </div>
 
                 {/* Info */}
-                <div className="mt-5 text-center">
+                <div className="mt-5 flex flex-1 flex-col justify-start text-center">
                   <h3 className="text-base font-bold text-text">
                     {trainer.name}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-text-secondary">
+                  <p className="mt-1 text-sm font-medium text-text-secondary line-clamp-2 min-h-[2.5rem]">
                     {trainer.role}
                   </p>
                 </div>

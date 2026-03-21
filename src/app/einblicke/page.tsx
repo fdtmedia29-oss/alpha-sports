@@ -8,8 +8,16 @@ export default function Einblicke() {
   return (
     <main className="bg-white">
       {/* Header */}
-      <section className="bg-dark pb-16 pt-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="relative overflow-hidden pb-16 pt-32">
+        <Image
+          src="/images/studio/schaufenster.jpg"
+          alt="Alpha Sports Studio Schaufenster"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-dark/70" />
+        <div className="relative mx-auto max-w-7xl px-6">
           <span className="text-sm font-semibold uppercase tracking-widest text-orange">
             Einblicke
           </span>

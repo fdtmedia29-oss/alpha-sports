@@ -120,7 +120,7 @@ const sections: PricingSection[] = [
           {
             name: "Alpha Sports Shape 12 Wochen Programm Plus",
             price: "CHF 620.- mtl.",
-            note: "Stoffwechselanalyse, Leistungsanalyse, InBody Analyse, FMS Test, Körpervermessung, Vorher-Nachher-Foto, Personal Training, Ernährungs- und Trainingsplan, Live Onboarding, Erläuterung der Alpha Sports App & Strategie Besprechung. Inkl. 3 Monate Premium Online Betreuung über Alpha Sports App (wöchentliche Anpassung & Feedback, Support durch das Alpha Sports Team)",
+            note: "Stoffwechselanalyse, Leistungsanalyse, InBody Analyse, FMS Test, Vorher-Nachher-Foto, Personal Training, Ernährungs- und Trainingsplan, Live Onboarding, Erläuterung der Alpha Sports App & Strategie Besprechung. Inkl. 3 Monate Premium Online Betreuung über Alpha Sports App (wöchentliche Anpassung & Feedback, Support durch das Alpha Sports Team)",
           },
         ],
         footer: "*Optional können alle Online Coaching Programme in Hybrid Programme umgewandelt werden.",

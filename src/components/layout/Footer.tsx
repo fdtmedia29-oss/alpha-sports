@@ -6,11 +6,11 @@ import { siteConfig } from "@/lib/content";
 export default function Footer() {
   return (
     <footer className="bg-dark text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto max-w-7xl px-6 py-20">
         {/* Location */}
-        <div className="pb-12">
-          <div className="grid items-stretch gap-8 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-auto">
+        <div className="pb-16">
+          <div className="grid items-stretch gap-12 lg:grid-cols-2">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-auto lg:min-h-[420px]">
               <Image
                 src="/images/studio/schaufenster.jpg"
                 alt="Alpha Sports Studio Schaufenster"
@@ -18,19 +18,19 @@ export default function Footer() {
                 className="object-cover"
               />
             </div>
-            <div className="flex flex-col justify-between gap-6">
+            <div className="flex flex-col justify-between gap-8">
               <div>
-                <h3 className="text-lg font-bold text-white">
+                <h3 className="text-xl font-bold text-white">
                   Zentral erreichbar im Herzen von St. Gallen.
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">
+                <p className="mt-4 text-sm leading-relaxed text-white/60">
                   Unser Studio befindet sich direkt am Unterer Graben 21 - zentral gelegen mit genügend Parkplätzen in unmittelbarer Nähe. Ob mit Auto, Bus oder zu Fuss - du erreichst uns schnell und bequem.
                 </p>
                 <a
                   href="https://maps.app.goo.gl/jNAcLjyqeHENmsCd7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-orange transition-colors hover:text-orange/80"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-orange transition-colors hover:text-orange/80"
                 >
                   <MapPin className="h-4 w-4" />
                   Route planen

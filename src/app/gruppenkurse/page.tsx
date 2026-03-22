@@ -4,8 +4,8 @@ import Link from "next/link";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
-import Script from "next/script";
 import GruppenkurseCards from "@/components/sections/GruppenkurseCards";
+import EversportsWidget from "@/components/ui/EversportsWidget";
 import { Check, ArrowRight, Shield } from "lucide-react";
 import { certifications } from "@/lib/content";
 
@@ -217,7 +217,7 @@ export default function GruppenkursePage() {
 
       {/* Eversports Booking */}
       <section id="buchen" className="scroll-mt-24 section-padding bg-bg-alt">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-8 text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-orange">
               Jetzt buchen
@@ -229,16 +229,7 @@ export default function GruppenkursePage() {
               Wähle deinen Kurs und buche direkt über Eversports.
             </p>
           </div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `<div data-eversports-widget-id="4840c17a-c7eb-48bc-989d-f294ad5f104f"></div>`,
-            }}
-          />
-          <Script
-            src="https://widget-static.eversports.io/loader.js"
-            strategy="afterInteractive"
-            type="module"
-          />
+          <EversportsWidget widgetId="4840c17a-c7eb-48bc-989d-f294ad5f104f" />
         </div>
       </section>
 

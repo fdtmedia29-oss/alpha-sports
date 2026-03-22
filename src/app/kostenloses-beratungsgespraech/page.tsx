@@ -20,11 +20,11 @@ const consultationSteps = [
 
 const textTestimonials = [
   {
-    name: "Peter Meier",
+    name: "Peter M.",
     text: "Personal Training hat mir auf vielfältige Weise weitergeholfen: individuelle Betreuung, Motivation und korrekte Technik. Durch das individualisierte Training konnte ich schneller Fortschritte sehen. Mehr Muskelmasse, viel weniger Körperfett. Meine Ärztin hat gestaunt, was ich in der kurzen Zeit alles verbessern konnte.",
   },
   {
-    name: "Philipp Krenn",
+    name: "Philipp K.",
     text: "Ich kann mit voller Überzeugung sagen, dass Luigi einer der Besten in seinem Fach ist. Als Arzt war ich besonders von Luigis tiefgreifendem Verständnis der Physiologie beeindruckt. Sein Engagement und seine Fachkenntnisse machen ihn zu einem aussergewöhnlichen Personal Trainer.",
   },
   {

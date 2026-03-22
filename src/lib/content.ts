@@ -247,22 +247,22 @@ export const painPointCards = [
 
 export const googleReviews = [
   {
-    name: "Artiola Lenjani",
+    name: "Artiola L.",
     quote:
       "Luigi ist der beste Personaltrainer überhaupt! Ich hatte bereits mehrere Gespräche und Probetrainings bei verschiedenen Personaltrainern und kann mit voller Überzeugung sagen, dass Luigi heraussticht.",
   },
   {
-    name: "Melanie Frei",
+    name: "Melanie F.",
     quote:
       "Ich trainiere seit rund 6 Monaten bei Lui und bin sehr happy damit. Lui ist ein ausgezeichneter Trainer, der auf meine Bedürfnisse eingeht, Schwachpunkte erkennt und diese gezielt mit mir trainiert.",
   },
   {
-    name: "Ornella Vicentini",
+    name: "Ornella V.",
     quote:
       "Ich trainiere seit 3 Monaten 2 mal die Woche bei Alpha Sports. Das Training ist super effektiv, anstrengend und macht wahnsinnig viel Spass. Trainer Luigi ist hoch professionell, super nett und ein toller Motivator.",
   },
   {
-    name: "Rebecca Pfau",
+    name: "Rebecca P.",
     quote:
       "Luigi ist ein super Personal Trainer! Sehr motivierend, professionell und immer gut gelaunt. Das Training ist effektiv und macht richtig Spass. Klare Empfehlung!",
   },
@@ -277,17 +277,17 @@ export const googleReviews = [
       "Das Training bei Luigi und David ist einfach nur top und macht Spass. Ich kann es allen empfehlen — auch solchen, die vorher nie ein Fitnessstudio besucht haben.",
   },
   {
-    name: "Reto Scherrer",
+    name: "Reto S.",
     quote:
       "Die Trainings bei Luigi von Alpha Sports sind perfekt auf meine Bedürfnisse abgestimmt. Er versteht es die Trainings herausfordernd und mit Spass zu gestalten. Schwachstellen erkennt er sofort und bearbeitet diese konsequent.",
   },
   {
-    name: "Markus Richina",
+    name: "Markus R.",
     quote:
       "Gute Übungen, beobachtet mich immer und korrigiert sofort meine Fehlhaltungen. Bringt mich an die Grenzen (ohne ihn hätte ich schon lange vorher aufgegeben). Verbesserungen sind im Sport spürbar.",
   },
   {
-    name: "Claudine Giason",
+    name: "Claudine G.",
     quote:
       "Luigi ist eine offene und herzliche Persönlichkeit. Seine Freude an seiner Arbeit ist spürbar. Er ist bedacht das passende Training für einem zu finden und ist dabei sehr aufmerksam. Zusammen mit seiner Partnerin Julia war die Betreuung fachlich wie auch menschlich super.",
   },

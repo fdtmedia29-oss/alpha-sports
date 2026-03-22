@@ -161,23 +161,10 @@ export default function ÜberUnsPage() {
                     {trainer.bio}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-1 lg:mt-4 lg:gap-1.5">
-                    {trainer.credentials.slice(0, 2).map((cred) => (
+                    {trainer.credentials.map((cred) => (
                       <span
                         key={cred}
                         className="rounded-full bg-orange-light px-2 py-0.5 text-[10px] font-medium text-orange lg:px-2.5 lg:py-1 lg:text-[11px]"
-                      >
-                        {cred}
-                      </span>
-                    ))}
-                    {trainer.credentials.length > 2 && (
-                      <span className="rounded-full bg-orange-light px-2 py-0.5 text-[10px] font-medium text-orange lg:hidden">
-                        +{trainer.credentials.length - 2}
-                      </span>
-                    )}
-                    {trainer.credentials.slice(2).map((cred) => (
-                      <span
-                        key={cred}
-                        className="hidden rounded-full bg-orange-light px-2.5 py-1 text-[11px] font-medium text-orange lg:inline-block"
                       >
                         {cred}
                       </span>

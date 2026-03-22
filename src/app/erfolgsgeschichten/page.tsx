@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const detailedTestimonials = [
   {
-    name: "Dr. med. univ. Philipp Krenn",
+    name: "Dr. med. univ. Philipp K.",
     result: "Arzt & Sportler",
     quote:
       "Luigi ist einer der Besten in seinem Fach. Er hat umfangreiches Wissen in Ernährung und passt das Training perfekt an meine Bedürfnisse an — trotz Skoliose. Mein Training wurde auf ein neues Level gehoben. Das gut ausgestattete Studio und die Boot Camp Kurse runden das Angebot perfekt ab. Luigi ist flexibel bei der Terminplanung und zeigt echtes physiologisches Verständnis.",

@@ -6,7 +6,7 @@ import { trainers } from "@/lib/content";
 import { Check, Shield, Users, Eye } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Über uns",
+  title: "Über uns — Das Team hinter Alpha Sports",
   description:
     "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Qualitop zertifiziert.",
 };

@@ -131,7 +131,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 ["InBody Analyse", "/analysen#inbody"],
-                ["Stoffwechsel- und Stressanalyse", "/analysen#metabolismus"],
+                ["Stoffwechsel- und Stressanalyse", "/analysen#stoffwechsel"],
                 ["Leistungsanalyse", "/analysen#leistung"],
                 ["Ernährungsberatung", "/ernaehrungsberatung"],
                 ["Preise", "/preise"],

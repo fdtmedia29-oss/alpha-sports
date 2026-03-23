@@ -10,7 +10,7 @@ import { certifications } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Ernährungsberatung",
   description:
-    "Professionelle Ernährungsberatung in St. Gallen. Massgeschneiderte Ernährungsplaene für Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",
+    "Professionelle Ernährungsberatung in St. Gallen. Massgeschneiderte Ernährungspläne für Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",
 };
 
 const keyBenefits = [

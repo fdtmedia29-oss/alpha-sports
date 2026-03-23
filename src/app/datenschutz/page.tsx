@@ -153,70 +153,6 @@ export default function DatenschutzPage() {
               Covina, CA 91723, USA
             </p>
 
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Google Cloud CDN
-            </h3>
-            <p className="mt-3">
-              Wir nutzen das Content Delivery Network Google Cloud CDN. Anbieter
-              ist die Google Ireland Limited (&bdquo;Google&ldquo;), Gordon
-              House, Barrow Street, Dublin 4, Irland.
-            </p>
-            <p className="mt-3">
-              Google bietet ein weltweit verteiltes Content Delivery Network an.
-              Dabei wird technisch der Informationstransfer zwischen Ihrem
-              Browser und unserer Website über das Netzwerk von Google geleitet.
-              Hierdurch können wir die weltweite Erreichbarkeit und die
-              Leistungsfähigkeit unserer Website erhöhen.
-            </p>
-            <p className="mt-3">
-              Der Einsatz von Google Cloud CDN beruht auf unserem berechtigten
-              Interesse an einer möglichst fehlerfreien und sicheren
-              Bereitstellung unseres Webangebotes (Art. 6 Abs. 1 lit. f DSGVO).
-            </p>
-            <p className="mt-3">
-              Die Datenübertragung in die USA wird auf die
-              Standardvertragsklauseln der EU-Kommission gestützt. Details
-              finden Sie hier:{" "}
-              <a
-                href="https://cloud.google.com/terms/eu-model-contract-clause"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://cloud.google.com/terms/eu-model-contract-clause
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Weitere Informationen zu Google Cloud CDN finden Sie hier:{" "}
-              <a
-                href="https://cloud.google.com/cdn/docs/overview?hl=de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://cloud.google.com/cdn/docs/overview?hl=de
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-              </a>
-            </p>
           </div>
 
           {/* ==================== 3. Allgemeine Hinweise und Pflichtinformationen ==================== */}
@@ -647,278 +583,10 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ==================== 5. Soziale Medien ==================== */}
-          <div>
-            <h2 className="text-xl font-bold text-text">5. Soziale Medien</h2>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">Facebook</h3>
-            <p className="mt-3">
-              Auf dieser Website sind Elemente des sozialen Netzwerks Facebook
-              integriert. Anbieter dieses Dienstes ist die Meta Platforms
-              Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Die
-              erfassten Daten werden nach Aussage von Facebook jedoch auch in die
-              USA und in andere Drittländer übertragen.
-            </p>
-            <p className="mt-3">
-              Eine Übersicht über die Facebook Social-Media-Elemente finden Sie
-              hier:{" "}
-              <a
-                href="https://developers.facebook.com/docs/plugins/?locale=de_DE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://developers.facebook.com/docs/plugins/?locale=de_DE
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Wenn das Social-Media-Element aktiv ist, wird eine direkte
-              Verbindung zwischen Ihrem Endgerät und dem Facebook-Server
-              hergestellt. Facebook erhält dadurch die Information, dass Sie mit
-              Ihrer IP-Adresse diese Website besucht haben. Wenn Sie den
-              Facebook &bdquo;Like-Button&ldquo; anklicken, während Sie in Ihrem
-              Facebook-Account eingeloggt sind, können Sie die Inhalte dieser
-              Website auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook
-              den Besuch dieser Website Ihrem Benutzerkonto zuordnen. Wir weisen
-              darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom
-              Inhalt der übermittelten Daten sowie deren Nutzung durch Facebook
-              erhalten. Weitere Informationen hierzu finden Sie in der
-              Datenschutzerklärung von Facebook unter:{" "}
-              <a
-                href="https://de-de.facebook.com/privacy/explanation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://de-de.facebook.com/privacy/explanation
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Soweit eine Einwilligung (Consent) eingeholt wurde, erfolgt der
-              Einsatz des o.&nbsp;g. Dienstes auf Grundlage von Art. 6 Abs. 1
-              lit. a DSGVO und &sect;&nbsp;25 TTDSG. Die Einwilligung ist
-              jederzeit widerrufbar. Soweit keine Einwilligung eingeholt wurde,
-              erfolgt die Verwendung des Dienstes auf Grundlage unseres
-              berechtigten Interesses an einer möglichst umfassenden
-              Sichtbarkeit in den Sozialen Medien.
-            </p>
-            <p className="mt-3">
-              Soweit mit Hilfe des hier beschriebenen Tools personenbezogene
-              Daten auf unserer Website erfasst und an Facebook weitergeleitet
-              werden, sind wir und die Meta Platforms Ireland Limited, 4 Grand
-              Canal Square, Grand Canal Harbour, Dublin 2, Irland gemeinsam für
-              diese Datenverarbeitung verantwortlich (Art. 26 DSGVO). Die
-              gemeinsame Verantwortlichkeit beschränkt sich dabei ausschließlich
-              auf die Erfassung der Daten und deren Weitergabe an Facebook. Die
-              nach der Weiterleitung erfolgende Verarbeitung durch Facebook ist
-              nicht Teil der gemeinsamen Verantwortung. Die uns gemeinsam
-              obliegenden Verpflichtungen wurden in einer Vereinbarung über
-              gemeinsame Verarbeitung festgehalten. Den Wortlaut der
-              Vereinbarung finden Sie unter:{" "}
-              <a
-                href="https://www.facebook.com/legal/controller_addendum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.facebook.com/legal/controller_addendum
-              </a>
-              . Laut dieser Vereinbarung sind wir für die Erteilung der
-              Datenschutzinformationen beim Einsatz des Facebook-Tools und für
-              die datenschutzrechtlich sichere Implementierung des Tools auf
-              unserer Website verantwortlich. Für die Datensicherheit der
-              Facebook-Produkte ist Facebook verantwortlich. Betroffenenrechte
-              (z.&nbsp;B. Auskunftsersuchen) hinsichtlich der bei Facebook
-              verarbeiteten Daten können Sie direkt bei Facebook geltend machen.
-              Wenn Sie die Betroffenenrechte bei uns geltend machen, sind wir
-              verpflichtet, diese an Facebook weiterzuleiten.
-            </p>
-            <p className="mt-3">
-              Die Datenübertragung in die USA wird auf die
-              Standardvertragsklauseln der EU-Kommission gestützt. Details finden
-              Sie hier:{" "}
-              <a
-                href="https://www.facebook.com/legal/EU_data_transfer_addendum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.facebook.com/legal/EU_data_transfer_addendum
-              </a>
-              ,{" "}
-              <a
-                href="https://de-de.facebook.com/help/566994660333381"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://de-de.facebook.com/help/566994660333381
-              </a>
-              {" "}und{" "}
-              <a
-                href="https://www.facebook.com/policy.php"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.facebook.com/policy.php
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt0000000GnywAAC&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt0000000GnywAAC&status=Active
-              </a>
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">Instagram</h3>
-            <p className="mt-3">
-              Auf dieser Website sind Funktionen des Dienstes Instagram
-              eingebunden. Diese Funktionen werden angeboten durch die Meta
-              Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal
-              Harbour, Dublin 2, Irland.
-            </p>
-            <p className="mt-3">
-              Wenn das Social-Media-Element aktiv ist, wird eine direkte
-              Verbindung zwischen Ihrem Endgerät und dem Instagram-Server
-              hergestellt. Instagram erhält dadurch Informationen über den Besuch
-              dieser Website durch Sie.
-            </p>
-            <p className="mt-3">
-              Wenn Sie in Ihrem Instagram-Account eingeloggt sind, können Sie
-              durch Anklicken des Instagram-Buttons die Inhalte dieser Website
-              mit Ihrem Instagram-Profil verlinken. Dadurch kann Instagram den
-              Besuch dieser Website Ihrem Benutzerkonto zuordnen. Wir weisen
-              darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom
-              Inhalt der übermittelten Daten sowie deren Nutzung durch Instagram
-              erhalten.
-            </p>
-            <p className="mt-3">
-              Soweit eine Einwilligung (Consent) eingeholt wurde, erfolgt der
-              Einsatz des o.&nbsp;g. Dienstes auf Grundlage von Art. 6 Abs. 1
-              lit. a DSGVO und &sect;&nbsp;25 TTDSG. Die Einwilligung ist
-              jederzeit widerrufbar. Soweit keine Einwilligung eingeholt wurde,
-              erfolgt die Verwendung des Dienstes auf Grundlage unseres
-              berechtigten Interesses an einer möglichst umfassenden
-              Sichtbarkeit in den Sozialen Medien.
-            </p>
-            <p className="mt-3">
-              Soweit mit Hilfe des hier beschriebenen Tools personenbezogene
-              Daten auf unserer Website erfasst und an Facebook bzw. Instagram
-              weitergeleitet werden, sind wir und die Meta Platforms Ireland
-              Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2,
-              Irland gemeinsam für diese Datenverarbeitung verantwortlich
-              (Art. 26 DSGVO). Die gemeinsame Verantwortlichkeit beschränkt sich
-              dabei ausschließlich auf die Erfassung der Daten und deren
-              Weitergabe an Facebook bzw. Instagram. Die nach der Weiterleitung
-              erfolgende Verarbeitung durch Facebook bzw. Instagram ist nicht
-              Teil der gemeinsamen Verantwortung. Die uns gemeinsam obliegenden
-              Verpflichtungen wurden in einer Vereinbarung über gemeinsame
-              Verarbeitung festgehalten. Den Wortlaut der Vereinbarung finden
-              Sie unter:{" "}
-              <a
-                href="https://www.facebook.com/legal/controller_addendum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.facebook.com/legal/controller_addendum
-              </a>
-              . Laut dieser Vereinbarung sind wir für die Erteilung der
-              Datenschutzinformationen beim Einsatz des Facebook- bzw.
-              Instagram-Tools und für die datenschutzrechtlich sichere
-              Implementierung des Tools auf unserer Website verantwortlich. Für
-              die Datensicherheit der Facebook bzw. Instagram-Produkte ist
-              Facebook verantwortlich. Betroffenenrechte (z.&nbsp;B.
-              Auskunftsersuchen) hinsichtlich der bei Facebook bzw. Instagram
-              verarbeiteten Daten können Sie direkt bei Facebook geltend machen.
-              Wenn Sie die Betroffenenrechte bei uns geltend machen, sind wir
-              verpflichtet, diese an Facebook weiterzuleiten.
-            </p>
-            <p className="mt-3">
-              Die Datenübertragung in die USA wird auf die
-              Standardvertragsklauseln der EU-Kommission gestützt. Details finden
-              Sie hier:{" "}
-              <a
-                href="https://www.facebook.com/legal/EU_data_transfer_addendum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.facebook.com/legal/EU_data_transfer_addendum
-              </a>
-              ,{" "}
-              <a
-                href="https://privacycenter.instagram.com/policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://privacycenter.instagram.com/policy/
-              </a>
-              {" "}und{" "}
-              <a
-                href="https://de-de.facebook.com/help/566994660333381"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://de-de.facebook.com/help/566994660333381
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Weitere Informationen hierzu finden Sie in der
-              Datenschutzerklärung von Instagram:{" "}
-              <a
-                href="https://privacycenter.instagram.com/policy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://privacycenter.instagram.com/policy/
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt0000000GnywAAC&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt0000000GnywAAC&status=Active
-              </a>
-            </p>
-          </div>
-
-          {/* ==================== 6. Analyse-Tools und Werbung ==================== */}
+          {/* ==================== 5. Analyse-Tools und Werbung ==================== */}
           <div>
             <h2 className="text-xl font-bold text-text">
-              6. Analyse-Tools und Werbung
+              5. Analyse-Tools und Werbung
             </h2>
 
             <h3 className="mt-6 text-lg font-semibold text-text">
@@ -1158,10 +826,10 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ==================== 7. Plugins und Tools ==================== */}
+          {/* ==================== 6. Plugins und Tools ==================== */}
           <div>
             <h2 className="text-xl font-bold text-text">
-              7. Plugins und Tools
+              6. Plugins und Tools
             </h2>
 
             <h3 className="mt-6 text-lg font-semibold text-text">YouTube</h3>
@@ -1303,49 +971,6 @@ export default function DatenschutzPage() {
             </p>
 
             <h3 className="mt-6 text-lg font-semibold text-text">
-              Font Awesome
-            </h3>
-            <p className="mt-3">
-              Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten
-              und Symbolen Font Awesome. Anbieter ist die Fonticons, Inc., 6
-              Porter Road Apartment 3R, Cambridge, Massachusetts, USA.
-            </p>
-            <p className="mt-3">
-              Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in
-              ihren Browsercache, um Texte, Schriftarten und Symbole korrekt
-              anzuzeigen. Zu diesem Zweck muss der von Ihnen verwendete Browser
-              Verbindung zu den Servern von Font Awesome aufnehmen. Hierdurch
-              erlangt Font Awesome Kenntnis darüber, dass über Ihre IP-Adresse
-              diese Website aufgerufen wurde. Die Nutzung von Font Awesome
-              erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben
-              ein berechtigtes Interesse an der einheitlichen Darstellung des
-              Schriftbildes auf unserer Website. Sofern eine entsprechende
-              Einwilligung abgefragt wurde, erfolgt die Verarbeitung
-              ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und
-              &sect;&nbsp;25 Abs. 1 TTDSG, soweit die Einwilligung die
-              Speicherung von Cookies oder den Zugriff auf Informationen im
-              Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne
-              des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-            </p>
-            <p className="mt-3">
-              Wenn Ihr Browser Font Awesome nicht unterstützt, wird eine
-              Standardschrift von Ihrem Computer genutzt.
-            </p>
-            <p className="mt-3">
-              Weitere Informationen zu Font Awesome finden Sie und in der
-              Datenschutzerklärung von Font Awesome unter:{" "}
-              <a
-                href="https://fontawesome.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://fontawesome.com/privacy
-              </a>
-              .
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">
               Google Maps
             </h3>
             <p className="mt-3">
@@ -1433,10 +1058,10 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ==================== 8. eCommerce und Zahlungsanbieter ==================== */}
+          {/* ==================== 7. eCommerce und Zahlungsanbieter ==================== */}
           <div>
             <h2 className="text-xl font-bold text-text">
-              8. eCommerce und Zahlungsanbieter
+              7. eCommerce und Zahlungsanbieter
             </h2>
 
             <h3 className="mt-6 text-lg font-semibold text-text">

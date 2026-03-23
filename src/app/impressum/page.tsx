@@ -7,40 +7,71 @@ export const metadata: Metadata = {
 
 export default function ImpressumPage() {
   return (
-    <section className="section-padding bg-white pt-28">
-      <div className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold text-text">Impressum</h1>
+    <section className="bg-white pb-20 pt-44 md:pb-28 md:pt-52">
+      <div className="mx-auto max-w-3xl px-6">
+        <h1 className="text-3xl font-bold text-text md:text-4xl">Impressum</h1>
 
-        <div className="mt-8 space-y-8 text-text-secondary leading-relaxed">
+        <div className="mt-10 space-y-8 text-text-secondary leading-relaxed">
           <div>
-            <h2 className="text-lg font-semibold text-text">Unternehmen</h2>
+            <h2 className="text-lg font-semibold text-text">Angaben gemäss § 5 TMG</h2>
             <p className="mt-2">
               Alpha Sports GmbH
               <br />
-              Unterer Graben 21
+              Rorschacherstr. 59
               <br />
               9000 St. Gallen
-              <br />
-              Schweiz
             </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-text">Handelsregister</h2>
+            <p className="mt-2">
+              CH-320.4.090.700-6
+              <br />
+              Handelsregister-Amt St. Gallen
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-text">Vertreten durch</h2>
+            <p className="mt-2">Luigi Lieberherr</p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold text-text">Kontakt</h2>
             <p className="mt-2">
-              Telefon: +41 76 390 36 79
+              Telefon:{" "}
+              <a href="tel:+41763903679" className="underline underline-offset-4 hover:text-orange">
+                +41 76 390 36 79
+              </a>
               <br />
-              E-Mail: info@alpha-sports.ch
-              <br />
-              Website: alpha-sports.ch
+              E-Mail:{" "}
+              <a href="mailto:info@alpha-sports.ch" className="underline underline-offset-4 hover:text-orange">
+                info@alpha-sports.ch
+              </a>
             </p>
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-text">
-              Vertretungsberechtigte Person
-            </h2>
-            <p className="mt-2">Luigi Lieberherr, Geschäftsführer</p>
+            <h2 className="text-lg font-semibold text-text">Umsatzsteuer-ID</h2>
+            <p className="mt-2">
+              Umsatzsteuer-Identifikationsnummer gemäss § 27 a Umsatzsteuergesetz:
+              <br />
+              CHE-429.490.058
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-text">Wirtschafts­identifikations­nummer</h2>
+            <p className="mt-2">CHE-429.490.058</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-text">Verbraucher­streit­beilegung / Universal­schlichtungs­stelle</h2>
+            <p className="mt-2">
+              Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+              vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
           </div>
 
           <div>

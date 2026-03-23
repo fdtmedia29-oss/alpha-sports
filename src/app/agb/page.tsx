@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function AGBPage() {
   return (
-    <section className="section-padding bg-white pt-28">
-      <div className="mx-auto max-w-3xl">
+    <section className="bg-white pb-20 pt-44 md:pb-28 md:pt-52">
+      <div className="mx-auto max-w-3xl px-6">
         <h1 className="text-3xl font-bold text-text">
           Allgemeine Geschäftsbedingungen
         </h1>

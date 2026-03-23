@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function DatenschutzPage() {
   return (
-    <section className="section-padding bg-white pt-28">
-      <div className="mx-auto max-w-3xl">
-        <h1 className="text-3xl font-bold text-text">Datenschutzerklärung</h1>
+    <section className="bg-white pb-20 pt-44 md:pb-28 md:pt-52">
+      <div className="mx-auto max-w-3xl px-6">
+        <h1 className="text-3xl font-bold text-text md:text-4xl">Datenschutzerklärung</h1>
 
         <div className="mt-8 space-y-8 text-text-secondary leading-relaxed">
           <div>

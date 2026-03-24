@@ -196,7 +196,6 @@ export default function Footer() {
           <div className="flex gap-6">
             {[
               ["Impressum", "/impressum"],
-              ["AGB", "/agb"],
               ["Datenschutz", "/datenschutz"],
             ].map(([label, href]) => (
               <Link

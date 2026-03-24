@@ -140,7 +140,7 @@ export default function ÜberUnsPage() {
             {trainers.map((trainer) => (
               <div
                 key={trainer.name}
-                className="w-[72vw] min-w-[72vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-white lg:w-auto lg:min-w-0"
+                className="w-[72vw] min-w-[72vw] shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-white lg:w-full lg:min-w-0"
               >
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image

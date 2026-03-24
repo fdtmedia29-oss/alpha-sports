@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alpha-sports.ch"),
   title: {
     default: "Alpha Sports — Personal Training Studio St. Gallen",
     template: "%s | Alpha Sports St. Gallen",
@@ -47,6 +48,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_CH",
     siteName: "Alpha Sports",
+    url: "https://alpha-sports.ch",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
   robots: {
     index: true,

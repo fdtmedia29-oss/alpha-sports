@@ -4,6 +4,7 @@ import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -106,7 +107,7 @@ export default function RootLayout({
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
-                reviewCount: "68",
+                reviewCount: "70",
                 bestRating: "5",
               },
               priceRange: "CHF 30 - CHF 1760",
@@ -177,6 +178,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );

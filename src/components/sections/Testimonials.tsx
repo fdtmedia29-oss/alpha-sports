@@ -79,7 +79,7 @@ export default function Testimonials() {
               </span>
             </div>
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-text md:text-4xl">
-              68 zufriedene Kunden sprechen für sich.
+              70 zufriedene Kunden sprechen für sich.
             </h2>
             <TrustindexBadge />
           </div>
@@ -161,7 +161,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mt-3 text-sm font-medium text-text-secondary">
-                Alle 68 Bewertungen lesen
+                Alle 70 Bewertungen lesen
               </p>
               <a
                 href="https://www.google.com/maps/place/Alpha+Sports"

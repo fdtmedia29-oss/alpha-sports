@@ -163,7 +163,7 @@ export default function KontaktPage() {
             </a>
             <span className="flex items-center gap-1.5 text-sm text-white/50">
               <Star className="h-4 w-4 fill-orange text-orange" />
-              5.0 auf Google - 68 Bewertungen
+              5.0 auf Google - 70+ Bewertungen
             </span>
           </motion.div>
         </div>

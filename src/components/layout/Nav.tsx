@@ -192,16 +192,30 @@ export default function Nav() {
             "children" in item && item.children ? (
               <div key={item.label}>
                 <div className="flex items-center justify-between">
-                  <Link
-                    href={"href" in item && item.href ? item.href : "#"}
-                    onClick={() => {
-                      setMobileOpen(false);
-                      setMobileDropdown(null);
-                    }}
-                    className="flex-1 py-3 text-lg font-medium text-text"
-                  >
-                    {item.label}
-                  </Link>
+                  {"href" in item && item.href ? (
+                    <Link
+                      href={item.href}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMobileDropdown(null);
+                      }}
+                      className="flex-1 py-3 text-lg font-medium text-text"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setMobileDropdown(
+                          mobileDropdown === item.label ? null : item.label
+                        )
+                      }
+                      className="flex-1 py-3 text-left text-lg font-medium text-text"
+                    >
+                      {item.label}
+                    </button>
+                  )}
                   <button
                     onClick={() =>
                       setMobileDropdown(

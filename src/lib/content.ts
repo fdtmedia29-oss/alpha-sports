@@ -390,9 +390,114 @@ export const navItems = [
       { label: "Einblicke", href: "/einblicke" },
       { label: "Erfolgsgeschichten", href: "/erfolgsgeschichten" },
       { label: "Preise", href: "/preise" },
+      { label: "FAQ", href: "/faq" },
       { label: "Kontakt", href: "/kostenloses-beratungsgespraech" },
     ],
   },
 ] as const;
+
+export const faqSections = [
+  {
+    category: "Personal Training",
+    items: [
+      {
+        q: "Was ist Personal Training?",
+        a: "Personal Training ist ein individuell betreutes Krafttraining, bei dem ein Coach gezielt auf deine Ziele, deinen Gesundheitszustand und dein Fitnesslevel eingeht. Das Ziel ist es, das Training so zu gestalten, dass es maximal effizient ist und der Kunde sein Ziel auf schnellstem Weg erreicht.",
+      },
+      {
+        q: "Was beinhaltet ein Personal Training?",
+        a: "Ein Personal Training umfasst individuelle Trainingsplanung, 1:1 Betreuung, Technik-Optimierung, Motivation sowie Anpassungen an deine Fortschritte. Gewährleistung einer möglichst schnellen Progression, ohne sich dabei zu verletzen.",
+      },
+      {
+        q: "Für wen ist Personal Training geeignet?",
+        a: "Personal Training ist für alle geeignet, egal ob Anfänger, Fortgeschrittene oder Personen mit speziellen Zielen oder Einschränkungen.",
+      },
+      {
+        q: "Kann ich auch als Anfänger mit Personal Training starten?",
+        a: "Ja, Personal Training ist ideal für Anfänger, da du von Beginn an die richtige Technik und Struktur lernst.",
+      },
+      {
+        q: "Bei welchen Zielen kann mich ein Personal Trainer unterstützen?",
+        a: "Typische Ziele sind Fettabbau, Muskelaufbau, mehr Fitness, Schmerzreduktion, Haltung, Mobilität verbessern oder sportliche Leistungssteigerung.",
+      },
+      {
+        q: "Wie lange dauert es, bis ich mein Ziel erreiche?",
+        a: "Das hängt von deinem Ziel, deiner Ausgangssituation und deiner Konsequenz ab. Erste Fortschritte sind meist nach wenigen Wochen sichtbar.",
+      },
+      {
+        q: "Warum lohnt sich ein Personal Training?",
+        a: "Du trainierst effizienter, vermeidest Fehler, bleibst motivierter und erreichst deine Ziele deutlich schneller als alleine. Zudem ist es wie eine Ausbildung im Bereich Krafttraining und Ernährung, welche jeder einmal gemacht haben sollte, da man das ganze Leben davon profitiert: effizienteres Training und eine Ernährungsstruktur, die in den individuellen Alltag passt und dadurch nachhaltig ist.",
+      },
+      {
+        q: "Ist Personal Training auch bei körperlichen Beschwerden möglich?",
+        a: "Ja, das Training wird individuell angepasst. Bei Beschwerden arbeiten wir gezielt und sicher im Rahmen deiner Möglichkeiten.",
+      },
+    ],
+  },
+  {
+    category: "Preise & Investment",
+    items: [
+      {
+        q: "Wie viel kostet ein Personal Training?",
+        a: "Die Kosten hängen vom gewählten Paket (1:1 oder 1:2 Training, Häufigkeit und Dauer) ab. Im kostenlosen Beratungsgespräch findest du das passende Angebot.",
+      },
+      {
+        q: "Gibt es auch günstigere Optionen oder kleinere Budgets?",
+        a: "Ja, 1:2 Personal Training, Gruppenkurse, Online-Coachings usw. sind die kostengünstigeren Alternativen zum 1:1 Coaching.",
+      },
+      {
+        q: "Warum ist Personal Training eine Investition wert?",
+        a: "Du investierst in Gesundheit, Wissen, Betreuung und nachhaltige Ergebnisse statt kurzfristiger Lösungen. Das ganze Wissen, welches du im Coaching von erfahrenen Trainern lernst, steht dir für den Rest deines Lebens zur Verfügung und sorgt dafür, dass du auch nach dem Coaching effizient trainierst und deine Ergebnisse nachhaltig sind.",
+      },
+    ],
+  },
+  {
+    category: "Ablauf & Terminbuchung",
+    items: [
+      {
+        q: "Wie kann ich einen Termin vereinbaren?",
+        a: "Du kannst ganz einfach online oder direkt über den Kalender (unter „Buchen“ verlinkt) ein kostenloses Beratungsgespräch buchen.",
+      },
+      {
+        q: "Was passiert im kostenlosen Beratungsgespräch?",
+        a: "Wir besprechen deine Ziele, deinen Gesundheitszustand und finden gemeinsam das passende Trainingsangebot für dich.",
+      },
+      {
+        q: "Muss ich mich vorab entscheiden, welches Training ich möchte?",
+        a: "Nein, das passende Angebot wird gemeinsam im Beratungsgespräch festgelegt.",
+      },
+    ],
+  },
+  {
+    category: "Gruppenkurse (Hyrox & Bootcamp)",
+    items: [
+      {
+        q: "Was sind die Gruppenkurse?",
+        a: "Unsere Gruppenkurse bestehen aus Hyrox-Training und Bootcamp-Einheiten für Kraft, Ausdauer und Fettverbrennung.",
+      },
+      {
+        q: "Kann ich die Gruppenkurse ausprobieren?",
+        a: "Ja, du kannst eine kostenlose Trial Week buchen und alle Gruppenkurse unverbindlich testen.",
+      },
+      {
+        q: "Für wen sind die Gruppenkurse geeignet?",
+        a: "Für alle Fitnesslevel. Die Übungen werden angepasst, sodass Anfänger und Fortgeschrittene gemeinsam trainieren können.",
+      },
+    ],
+  },
+  {
+    category: "Vergleich & Entscheidungen",
+    items: [
+      {
+        q: "Was ist der Unterschied zwischen Personal Training und Gruppenkursen?",
+        a: "1:1 und 1:2 Personal Training sind individuell auf dich zugeschnittene Trainings, während Gruppenkurse in der Gruppe stattfinden und eher allgemein strukturiert sind.",
+      },
+      {
+        q: "Was ist besser für mich, Personal Training oder Gruppenkurse?",
+        a: "Das hängt von deinem Ziel, Budget und deinem Bedarf an individueller Betreuung ab. Im Beratungsgespräch finden wir das gemeinsam heraus.",
+      },
+    ],
+  },
+];
 
 

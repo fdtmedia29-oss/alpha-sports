@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/preise",
     "/ueber-uns",
     "/erfolgsgeschichten",
+    "/faq",
     "/kostenloses-beratungsgespraech",
     "/kostenloses-beratungsgespraech/buchen",
     "/impressum",

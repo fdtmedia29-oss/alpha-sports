@@ -51,7 +51,7 @@ export default function DatenschutzPage() {
             <p className="mt-3">
               Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
               mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die
-              Sie in ein Kontaktformular eingeben.
+              Sie bei einer Terminbuchung oder Kontaktaufnahme angeben.
             </p>
             <p className="mt-3">
               Andere Daten werden automatisch oder nach Ihrer Einwilligung beim
@@ -95,12 +95,15 @@ export default function DatenschutzPage() {
             </h3>
             <p className="mt-3">
               Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch
-              ausgewertet werden. Das geschieht vor allem mit sogenannten
-              Analyseprogrammen.
+              ausgewertet werden. Wir verwenden hierfür Vercel Web Analytics,
+              ein Analyse-Tool, das ohne Cookies arbeitet und keine
+              personenbezogenen Profile erstellt. Daneben binden wir einzelne
+              Dienste von Drittanbietern ein (z.&nbsp;B. Google Maps sowie
+              Buchungs-Widgets von Virtuagym und Eversports).
             </p>
             <p className="mt-3">
-              Detaillierte Informationen zu diesen Analyseprogrammen finden Sie
-              in der folgenden Datenschutzerklärung.
+              Detaillierte Informationen zu diesen Tools finden Sie in der
+              folgenden Datenschutzerklärung.
             </p>
           </div>
 
@@ -479,35 +482,29 @@ export default function DatenschutzPage() {
               erfolgt.
             </p>
             <p className="mt-3">
-              Cookies können von uns (First-Party-Cookies) oder von
-              Drittunternehmen stammen (sog. Third-Party-Cookies).
-              Third-Party-Cookies ermöglichen die Einbindung bestimmter
-              Dienstleistungen von Drittunternehmen innerhalb von Webseiten
-              (z.&nbsp;B. Cookies zur Abwicklung von
-              Zahlungsdienstleistungen).
-            </p>
-            <p className="mt-3">
-              Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind
-              technisch notwendig, da bestimmte Webseitenfunktionen ohne diese
-              nicht funktionieren würden (z.&nbsp;B. die Warenkorbfunktion oder
-              die Anzeige von Videos). Andere Cookies können zur Auswertung des
-              Nutzerverhaltens oder zu Werbezwecken verwendet werden.
+              Diese Website setzt selbst keine Cookies zu Analyse- oder
+              Werbezwecken ein. Cookies können jedoch durch eingebundene
+              Dienste von Drittunternehmen gesetzt werden
+              (Third-Party-Cookies), namentlich durch Google Maps sowie die
+              Buchungs-Widgets von Virtuagym und Eversports. Diese Dienste sind
+              in dieser Datenschutzerklärung im Abschnitt &bdquo;Plugins und
+              Tools&ldquo; beschrieben.
             </p>
             <p className="mt-3">
               Cookies, die zur Durchführung des elektronischen
               Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen
-              erwünschter Funktionen (z.&nbsp;B. für die Warenkorbfunktion) oder
-              zur Optimierung der Website (z.&nbsp;B. Cookies zur Messung des
-              Webpublikums) erforderlich sind (notwendige Cookies), werden auf
-              Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern
-              keine andere Rechtsgrundlage angegeben wird. Der Websitebetreiber
-              hat ein berechtigtes Interesse an der Speicherung von notwendigen
-              Cookies zur technisch fehlerfreien und optimierten Bereitstellung
-              seiner Dienste. Sofern eine Einwilligung zur Speicherung von
-              Cookies und vergleichbaren Wiedererkennungstechnologien abgefragt
-              wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage
-              dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und &sect;&nbsp;25
-              Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar.
+              erwünschter Funktionen (z.&nbsp;B. einer Terminbuchung) oder zur
+              Optimierung der Website erforderlich sind (notwendige Cookies),
+              werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert,
+              sofern keine andere Rechtsgrundlage angegeben wird. Der
+              Websitebetreiber hat ein berechtigtes Interesse an der Speicherung
+              von notwendigen Cookies zur technisch fehlerfreien und optimierten
+              Bereitstellung seiner Dienste. Sofern eine Einwilligung zur
+              Speicherung von Cookies und vergleichbaren
+              Wiedererkennungstechnologien abgefragt wurde, erfolgt die
+              Verarbeitung ausschließlich auf Grundlage dieser Einwilligung
+              (Art. 6 Abs. 1 lit. a DSGVO und &sect;&nbsp;25 Abs. 1 TTDSG); die
+              Einwilligung ist jederzeit widerrufbar.
             </p>
             <p className="mt-3">
               Sie können Ihren Browser so einstellen, dass Sie über das Setzen
@@ -517,46 +514,12 @@ export default function DatenschutzPage() {
               beim Schließen des Browsers aktivieren. Bei der Deaktivierung von
               Cookies kann die Funktionalität dieser Website eingeschränkt sein.
             </p>
-            <p className="mt-3">
-              Welche Cookies und Dienste auf dieser Website eingesetzt werden,
-              können Sie dieser Datenschutzerklärung entnehmen.
-            </p>
 
             <h3 className="mt-6 text-lg font-semibold text-text">
-              Kontaktformular
+              Anfrage per E-Mail, Telefon oder WhatsApp
             </h3>
             <p className="mt-3">
-              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden
-              Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort
-              angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für
-              den Fall von Anschlussfragen bei uns gespeichert. Diese Daten
-              geben wir nicht ohne Ihre Einwilligung weiter.
-            </p>
-            <p className="mt-3">
-              Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6
-              Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines
-              Vertrags zusammenhängt oder zur Durchführung vorvertraglicher
-              Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die
-              Verarbeitung auf unserem berechtigten Interesse an der effektiven
-              Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
-              DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)
-              sofern diese abgefragt wurde; die Einwilligung ist jederzeit
-              widerrufbar.
-            </p>
-            <p className="mt-3">
-              Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei
-              uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur
-              Speicherung widerrufen oder der Zweck für die Datenspeicherung
-              entfällt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer
-              Anfrage). Zwingende gesetzliche Bestimmungen - insbesondere
-              Aufbewahrungsfristen - bleiben unberührt.
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Anfrage per E-Mail, Telefon oder Telefax
-            </h3>
-            <p className="mt-3">
-              Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird
+              Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, wird
               Ihre Anfrage inklusive aller daraus hervorgehenden
               personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung
               Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten
@@ -583,246 +546,44 @@ export default function DatenschutzPage() {
             </p>
           </div>
 
-          {/* ==================== 5. Analyse-Tools und Werbung ==================== */}
+          {/* ==================== 5. Analyse-Tools ==================== */}
           <div>
             <h2 className="text-xl font-bold text-text">
-              5. Analyse-Tools und Werbung
+              5. Analyse-Tools
             </h2>
 
             <h3 className="mt-6 text-lg font-semibold text-text">
-              Google Tag Manager
+              Vercel Web Analytics
             </h3>
             <p className="mt-3">
-              Wir setzen den Google Tag Manager ein. Anbieter ist die Google
-              Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
+              Diese Website nutzt Vercel Web Analytics, einen
+              Webanalysedienst der Vercel Inc., 440 N Barranca Ave #4133,
+              Covina, CA 91723, USA.
             </p>
             <p className="mt-3">
-              Der Google Tag Manager ist ein Tool, mit dessen Hilfe wir
-              Tracking- oder Statistik-Tools und andere Technologien auf unserer
-              Website einbinden können. Der Google Tag Manager selbst erstellt
-              keine Nutzerprofile, speichert keine Cookies und nimmt keine
-              eigenständigen Analysen vor. Er dient lediglich der Verwaltung und
-              Ausspielung der über ihn eingebundenen Tools. Der Google Tag
-              Manager erfasst jedoch Ihre IP-Adresse, die auch an das
-              Mutterunternehmen von Google in die Vereinigten Staaten übertragen
-              werden kann.
+              Vercel Web Analytics arbeitet ohne Cookies und ohne
+              geräteübergreifendes Tracking. Es werden keine personenbezogenen
+              Profile erstellt und keine Informationen dauerhaft auf Ihrem
+              Endgerät gespeichert. Erfasst werden aggregierte, anonymisierte
+              Nutzungsdaten wie Seitenaufrufe, Herkunftsland, Browser- und
+              Gerätetyp. Eine Identifizierung einzelner Besucher ist damit
+              nicht möglich.
             </p>
             <p className="mt-3">
-              Der Einsatz des Google Tag Managers erfolgt auf Grundlage von
-              Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
-              berechtigtes Interesse an einer schnellen und unkomplizierten
-              Einbindung und Verwaltung verschiedener Tools auf seiner Website.
-              Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt
-              die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1
-              lit. a DSGVO und &sect;&nbsp;25 Abs. 1 TTDSG, soweit die
-              Einwilligung die Speicherung von Cookies oder den Zugriff auf
-              Informationen im Endgerät des Nutzers (z.&nbsp;B.
-              Device-Fingerprinting) im Sinne des TTDSG umfasst. Die
-              Einwilligung ist jederzeit widerrufbar.
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
+              Die Nutzung dieses Analyse-Tools erfolgt auf Grundlage von Art. 6
+              Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes
+              Interesse an der anonymisierten Analyse des Nutzerverhaltens, um
+              sein Webangebot zu optimieren. Weitere Informationen finden Sie
+              in der Datenschutzerklärung von Vercel:{" "}
               <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
+                href="https://vercel.com/legal/privacy-policy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
+                className="text-orange underline underline-offset-4 hover:text-orange/80"
               >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-              </a>
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Google Analytics
-            </h3>
-            <p className="mt-3">
-              Diese Website nutzt Funktionen des Webanalysedienstes Google
-              Analytics. Anbieter ist die Google Ireland Limited
-              (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4,
-              Irland.
-            </p>
-            <p className="mt-3">
-              Google Analytics ermöglicht es dem Websitebetreiber, das Verhalten
-              der Websitebesucher zu analysieren. Hierbei erhält der
-              Websitebetreiber verschiedene Nutzungsdaten, wie z.&nbsp;B.
-              Seitenaufrufe, Verweildauer, verwendete Betriebssysteme und
-              Herkunft des Nutzers. Diese Daten werden in einer User-ID
-              zusammengefasst und dem jeweiligen Endgerät des Websitebesuchers
-              zugeordnet.
-            </p>
-            <p className="mt-3">
-              Des Weiteren können wir mit Google Analytics u.&nbsp;a. Ihre Maus-
-              und Scrollbewegungen und Klicks aufzeichnen. Ferner verwendet
-              Google Analytics verschiedene Modellierungsansätze, um die
-              erfassten Datensätze zu ergänzen und setzt
-              Machine-Learning-Technologien bei der Datenanalyse ein.
-            </p>
-            <p className="mt-3">
-              Google Analytics verwendet Technologien, die die Wiedererkennung
-              des Nutzers zum Zwecke der Analyse des Nutzerverhaltens
-              ermöglichen (z.&nbsp;B. Cookies oder Device-Fingerprinting). Die
-              von Google erfassten Informationen über die Benutzung dieser
-              Website werden in der Regel an einen Server von Google in den USA
-              übertragen und dort gespeichert.
-            </p>
-            <p className="mt-3">
-              Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer
-              Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und &sect;&nbsp;25
-              Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar.
-            </p>
-            <p className="mt-3">
-              Die Datenübertragung in die USA wird auf die
-              Standardvertragsklauseln der EU-Kommission gestützt. Details finden
-              Sie hier:{" "}
-              <a
-                href="https://privacy.google.com/businesses/controllerterms/mccs/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://privacy.google.com/businesses/controllerterms/mccs/
+                https://vercel.com/legal/privacy-policy
               </a>
               .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-              </a>
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Browser Plugin
-            </h3>
-            <p className="mt-3">
-              Sie können die Erfassung und Verarbeitung Ihrer Daten durch Google
-              verhindern, indem Sie das unter dem folgenden Link verfügbare
-              Browser-Plugin herunterladen und installieren:{" "}
-              <a
-                href="https://tools.google.com/dlpage/gaoptout?hl=de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://tools.google.com/dlpage/gaoptout?hl=de
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics
-              finden Sie in der Datenschutzerklärung von Google:{" "}
-              <a
-                href="https://support.google.com/analytics/answer/6004245?hl=de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://support.google.com/analytics/answer/6004245?hl=de
-              </a>
-              .
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Google-Signale
-            </h3>
-            <p className="mt-3">
-              Wir nutzen Google-Signale. Wenn Sie unsere Website besuchen,
-              erfasst Google Analytics u.&nbsp;a. Ihren Standort, Suchverlauf
-              und YouTube-Verlauf sowie demografische Daten (Besucherdaten).
-              Diese Daten können mit Hilfe von Google-Signal für personalisierte
-              Werbung verwendet werden. Wenn Sie über ein Google-Konto verfügen,
-              werden die Besucherdaten von Google-Signal mit Ihrem Google-Konto
-              verknüpft und für personalisierte Werbebotschaften verwendet. Die
-              Daten werden außerdem für die Erstellung anonymisierter Statistiken
-              zum Nutzerverhalten unserer User verwendet.
-            </p>
-
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Google Ads
-            </h3>
-            <p className="mt-3">
-              Der Websitebetreiber verwendet Google Ads. Google Ads ist ein
-              Online-Werbeprogramm der Google Ireland Limited
-              (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4,
-              Irland.
-            </p>
-            <p className="mt-3">
-              Google Ads ermöglicht es uns Werbeanzeigen in der
-              Google-Suchmaschine oder auf Drittwebseiten auszuspielen, wenn der
-              Nutzer bestimmte Suchbegriffe bei Google eingibt
-              (Keyword-Targeting). Ferner können zielgerichtete Werbeanzeigen
-              anhand der bei Google vorhandenen Nutzerdaten (z.&nbsp;B.
-              Standortdaten und Interessen) ausgespielt werden
-              (Zielgruppen-Targeting). Wir als Websitebetreiber können diese
-              Daten quantitativ auswerten, indem wir beispielsweise analysieren,
-              welche Suchbegriffe zur Ausspielung unserer Werbeanzeigen geführt
-              haben und wie viele Anzeigen zu entsprechenden Klicks geführt
-              haben.
-            </p>
-            <p className="mt-3">
-              Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer
-              Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und &sect;&nbsp;25
-              Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar.
-            </p>
-            <p className="mt-3">
-              Die Datenübertragung in die USA wird auf die
-              Standardvertragsklauseln der EU-Kommission gestützt. Details finden
-              Sie hier:{" "}
-              <a
-                href="https://policies.google.com/privacy/frameworks"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://policies.google.com/privacy/frameworks
-              </a>
-              {" "}und{" "}
-              <a
-                href="https://privacy.google.com/businesses/controllerterms/mccs/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://privacy.google.com/businesses/controllerterms/mccs/
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-              </a>
             </p>
           </div>
 
@@ -832,142 +593,14 @@ export default function DatenschutzPage() {
               6. Plugins und Tools
             </h2>
 
-            <h3 className="mt-6 text-lg font-semibold text-text">YouTube</h3>
-            <p className="mt-3">
-              Diese Website bindet Videos der Website YouTube ein. Betreiber der
-              Website ist die Google Ireland Limited (&bdquo;Google&ldquo;),
-              Gordon House, Barrow Street, Dublin 4, Irland.
-            </p>
-            <p className="mt-3">
-              Wenn Sie eine unserer Webseiten besuchen, auf denen YouTube
-              eingebunden ist, wird eine Verbindung zu den Servern von YouTube
-              hergestellt. Dabei wird dem YouTube-Server mitgeteilt, welche
-              unserer Seiten Sie besucht haben.
-            </p>
-            <p className="mt-3">
-              Des Weiteren kann YouTube verschiedene Cookies auf Ihrem Endgerät
-              speichern oder vergleichbare Technologien zur Wiedererkennung
-              verwenden (z.&nbsp;B. Device-Fingerprinting). Auf diese Weise kann
-              YouTube Informationen über Besucher dieser Website erhalten. Diese
-              Informationen werden u.&nbsp;a. verwendet, um Videostatistiken zu
-              erfassen, die Anwenderfreundlichkeit zu verbessern und
-              Betrugsversuchen vorzubeugen.
-            </p>
-            <p className="mt-3">
-              Wenn Sie in Ihrem YouTube-Account eingeloggt sind, ermöglichen Sie
-              YouTube, Ihr Surfverhalten direkt Ihrem persönlichen Profil
-              zuzuordnen. Dies können Sie verhindern, indem Sie sich aus Ihrem
-              YouTube-Account ausloggen.
-            </p>
-            <p className="mt-3">
-              Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden
-              Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes
-              Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Sofern
-              eine entsprechende Einwilligung abgefragt wurde, erfolgt die
-              Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a
-              DSGVO und &sect;&nbsp;25 Abs. 1 TTDSG, soweit die Einwilligung die
-              Speicherung von Cookies oder den Zugriff auf Informationen im
-              Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne
-              des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-            </p>
-            <p className="mt-3">
-              Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der
-              Datenschutzerklärung von YouTube unter:{" "}
-              <a
-                href="https://policies.google.com/privacy?hl=de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://policies.google.com/privacy?hl=de
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-              </a>
-            </p>
-
             <h3 className="mt-6 text-lg font-semibold text-text">
-              Google Fonts
+              Schriftarten (lokales Hosting)
             </h3>
             <p className="mt-3">
-              Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so
-              genannte Google Fonts, die von Google bereitgestellt werden. Beim
-              Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren
-              Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
-            </p>
-            <p className="mt-3">
-              Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung
-              zu den Servern von Google aufnehmen. Hierdurch erlangt Google
-              Kenntnis darüber, dass über Ihre IP-Adresse diese Website
-              aufgerufen wurde. Die Nutzung von Google Fonts erfolgt auf
-              Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber
-              hat ein berechtigtes Interesse an der einheitlichen Darstellung des
-              Schriftbildes auf seiner Website. Sofern eine entsprechende
-              Einwilligung abgefragt wurde, erfolgt die Verarbeitung
-              ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und
-              &sect;&nbsp;25 Abs. 1 TTDSG, soweit die Einwilligung die
-              Speicherung von Cookies oder den Zugriff auf Informationen im
-              Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne
-              des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-            </p>
-            <p className="mt-3">
-              Wenn Ihr Browser Google Fonts nicht unterstützt, wird eine
-              Standardschrift von Ihrem Computer genutzt.
-            </p>
-            <p className="mt-3">
-              Weitere Informationen zu Google Fonts finden Sie unter{" "}
-              <a
-                href="https://developers.google.com/fonts/faq"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://developers.google.com/fonts/faq
-              </a>
-              {" "}und in der Datenschutzerklärung von Google:{" "}
-              <a
-                href="https://policies.google.com/privacy?hl=de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://policies.google.com/privacy?hl=de
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
-              <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
-              </a>
+              Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten
+              die Schriftart Inter. Die Schriftart ist lokal auf unserem Server
+              installiert. Eine Verbindung zu Servern von Google (Google Fonts)
+              oder anderen Drittanbietern findet dabei nicht statt.
             </p>
 
             <h3 className="mt-6 text-lg font-semibold text-text">
@@ -975,19 +608,19 @@ export default function DatenschutzPage() {
             </h3>
             <p className="mt-3">
               Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die
-              Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow
-              Street, Dublin 4, Irland.
+              Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House,
+              Barrow Street, Dublin 4, Irland.
             </p>
             <p className="mt-3">
               Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre
-              IP-Adresse zu speichern. Diese Informationen werden in der Regel an
-              einen Server von Google in den USA übertragen und dort gespeichert.
-              Der Anbieter dieser Seite hat keinen Einfluss auf diese
-              Datenübertragung. Wenn Google Maps aktiviert ist, kann Google zum
-              Zwecke der einheitlichen Darstellung der Schriftarten Google Fonts
-              verwenden. Beim Aufruf von Google Maps lädt Ihr Browser die
-              benötigten Web Fonts in ihren Browsercache, um Texte und
-              Schriftarten korrekt anzuzeigen.
+              IP-Adresse zu speichern. Diese Informationen werden in der Regel
+              an einen Server von Google in den USA übertragen und dort
+              gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf
+              diese Datenübertragung. Wenn Google Maps aktiviert ist, kann
+              Google zum Zwecke der einheitlichen Darstellung der Schriftarten
+              Google Fonts verwenden. Beim Aufruf von Google Maps lädt Ihr
+              Browser die benötigten Web Fonts in ihren Browsercache, um Texte
+              und Schriftarten korrekt anzuzeigen.
             </p>
             <p className="mt-3">
               Die Nutzung von Google Maps erfolgt im Interesse einer
@@ -997,31 +630,19 @@ export default function DatenschutzPage() {
               Abs. 1 lit. f DSGVO dar. Sofern eine entsprechende Einwilligung
               abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf
               Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect;&nbsp;25
-              Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies
-              oder den Zugriff auf Informationen im Endgerät des Nutzers
-              (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die
-              Einwilligung ist jederzeit widerrufbar.
+              Abs. 1 TTDSG; die Einwilligung ist jederzeit widerrufbar.
             </p>
             <p className="mt-3">
               Die Datenübertragung in die USA wird auf die
-              Standardvertragsklauseln der EU-Kommission gestützt. Details finden
-              Sie hier:{" "}
+              Standardvertragsklauseln der EU-Kommission gestützt. Details
+              finden Sie hier:{" "}
               <a
                 href="https://privacy.google.com/businesses/gdprcontrollerterms/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
+                className="text-orange underline underline-offset-4 hover:text-orange/80"
               >
                 https://privacy.google.com/businesses/gdprcontrollerterms/
-              </a>
-              {" "}und{" "}
-              <a
-                href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
-              >
-                https://privacy.google.com/businesses/gdprcontrollerterms/sccs/
               </a>
               .
             </p>
@@ -1032,29 +653,81 @@ export default function DatenschutzPage() {
                 href="https://policies.google.com/privacy?hl=de"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
+                className="text-orange underline underline-offset-4 hover:text-orange/80"
               >
                 https://policies.google.com/privacy?hl=de
               </a>
               .
             </p>
+
+            <h3 className="mt-6 text-lg font-semibold text-text">
+              Virtuagym (Terminbuchung)
+            </h3>
             <p className="mt-3">
-              Das Unternehmen verfügt über eine Zertifizierung nach dem
-              &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein
-              Übereinkommen zwischen der Europäischen Union und den USA, der die
-              Einhaltung europäischer Datenschutzstandards bei
-              Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem
-              DPF zertifizierte Unternehmen verpflichtet sich, diese
-              Datenschutzstandards einzuhalten. Weitere Informationen hierzu
-              erhalten Sie vom Anbieter unter folgendem Link:{" "}
+              Für die Online-Buchung von Beratungsgesprächen und Analysen
+              nutzen wir ein Buchungs-Widget von Virtuagym. Anbieter ist die
+              Virtuagym B.V., Amsterdam, Niederlande.
+            </p>
+            <p className="mt-3">
+              Wenn Sie eine Seite mit dem Buchungs-Widget aufrufen, wird eine
+              Verbindung zu den Servern von Virtuagym hergestellt. Dabei kann
+              Virtuagym technische Daten (z.&nbsp;B. Ihre IP-Adresse)
+              verarbeiten und Cookies setzen. Wenn Sie über das Widget einen
+              Termin buchen, werden die von Ihnen eingegebenen Daten
+              (z.&nbsp;B. Name, E-Mail-Adresse, Telefonnummer, gewünschter
+              Termin) zum Zwecke der Terminvereinbarung und -verwaltung
+              verarbeitet.
+            </p>
+            <p className="mt-3">
+              Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b
+              DSGVO (Durchführung vorvertraglicher Maßnahmen bzw.
+              Vertragserfüllung) sowie unseres berechtigten Interesses an einer
+              einfachen und effizienten Terminverwaltung (Art. 6 Abs. 1 lit. f
+              DSGVO). Weitere Informationen finden Sie in der
+              Datenschutzerklärung von Virtuagym:{" "}
               <a
-                href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
+                href="https://business.virtuagym.com/privacy-policy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80 break-all"
+                className="text-orange underline underline-offset-4 hover:text-orange/80"
               >
-                https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
+                https://business.virtuagym.com/privacy-policy/
               </a>
+              .
+            </p>
+
+            <h3 className="mt-6 text-lg font-semibold text-text">
+              Eversports (Kursplan und Buchung)
+            </h3>
+            <p className="mt-3">
+              Für die Anzeige und Buchung unserer Gruppenkurse nutzen wir ein
+              Widget von Eversports. Anbieter ist die Eversports GmbH, Wien,
+              Österreich.
+            </p>
+            <p className="mt-3">
+              Wenn Sie eine Seite mit dem Eversports-Widget aufrufen, wird eine
+              Verbindung zu den Servern von Eversports hergestellt. Dabei kann
+              Eversports technische Daten (z.&nbsp;B. Ihre IP-Adresse)
+              verarbeiten und Cookies setzen. Wenn Sie über das Widget einen
+              Kurs buchen, werden die von Ihnen eingegebenen Daten zum Zwecke
+              der Buchungsabwicklung verarbeitet.
+            </p>
+            <p className="mt-3">
+              Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b
+              DSGVO (Durchführung vorvertraglicher Maßnahmen bzw.
+              Vertragserfüllung) sowie unseres berechtigten Interesses an einer
+              einfachen Kursbuchung (Art. 6 Abs. 1 lit. f DSGVO). Weitere
+              Informationen finden Sie in der Datenschutzerklärung von
+              Eversports:{" "}
+              <a
+                href="https://www.eversports.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange underline underline-offset-4 hover:text-orange/80"
+              >
+                https://www.eversports.com/privacy
+              </a>
+              .
             </p>
           </div>
 
@@ -1086,7 +759,7 @@ export default function DatenschutzPage() {
           </div>
 
           {/* ==================== Stand ==================== */}
-          <p className="text-sm text-text-secondary">Stand: März 2026</p>
+          <p className="text-sm text-text-secondary">Stand: Juli 2026</p>
         </div>
       </div>
     </section>

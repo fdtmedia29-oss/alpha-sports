@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Target, BarChart3, Zap, Quote, Play, Volume2, VolumeX } from "lucide-react";
-import { siteConfig } from "@/lib/content";
+import { siteConfig, faqSections } from "@/lib/content";
 import { useRef, useState, useEffect } from "react";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
+import PageFAQ from "@/components/sections/PageFAQ";
 
 const consultationSteps = [
   { step: "01", title: "Kennenlernen", description: "Wir lernen dich und deine Geschichte kennen." },
@@ -414,6 +415,13 @@ export default function KontaktPage() {
           </div>
         </div>
       </section>
+
+      <PageFAQ
+        idPrefix="beratung-faq"
+        title="Häufige Fragen zur Terminbuchung."
+        bg="alt"
+        items={faqSections.find((s) => s.category === "Ablauf & Terminbuchung")!.items}
+      />
 
       {/* ── Final CTA ── */}
       <section className="relative overflow-hidden bg-dark py-24 md:py-32">

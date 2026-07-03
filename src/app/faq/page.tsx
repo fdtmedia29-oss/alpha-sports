@@ -35,11 +35,13 @@ export default function FAQPage() {
 
       <PageHero
         compact
+        centered
         badge="FAQ"
         title="Häufige Fragen"
         description="Die wichtigsten Antworten rund um Personal Training, Preise, Ablauf und Kurse bei Alpha Sports."
         ctaText="Beratung buchen"
         ctaHref="/kostenloses-beratungsgespraech"
+        backgroundImage="/images/studio/studio-1.jpg"
       />
 
       <section className="section-padding bg-white">

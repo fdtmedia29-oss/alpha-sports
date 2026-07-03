@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import PageFAQ from "@/components/sections/PageFAQ";
+import { faqSections } from "@/lib/content";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import InlineVideo from "@/components/ui/InlineVideo";
 import Image from "next/image";
@@ -209,6 +211,14 @@ export default function PersonalTrainingPage() {
           />
         </div>
       </section>
+
+      <PageFAQ
+        idPrefix="pt-faq"
+        title="Häufige Fragen zum Personal Training."
+        items={faqSections
+          .find((s) => s.category === "Personal Training")!
+          .items.filter((_, i) => [2, 3, 4, 5, 7].includes(i))}
+      />
 
       <CTABanner
         title="Starte mit einem kostenlosen Beratungsgespräch."

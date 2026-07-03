@@ -13,9 +13,10 @@ interface PageHeroProps {
   backgroundImage?: string;
   backgroundImageDesktop?: string;
   compact?: boolean;
+  centered?: boolean;
 }
 
-export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage, backgroundImageDesktop, compact }: PageHeroProps) {
+export default function PageHero({ badge, title, description, ctaText, ctaHref, backgroundImage, backgroundImageDesktop, compact, centered }: PageHeroProps) {
   const overlay = "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.2) 100%)";
   const desktopImg = backgroundImageDesktop || backgroundImage;
 
@@ -54,7 +55,7 @@ export default function PageHero({ badge, title, description, ctaText, ctaHref, 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="max-w-3xl"
+            className={`max-w-3xl ${centered ? "mx-auto text-center" : ""}`}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-orange" />

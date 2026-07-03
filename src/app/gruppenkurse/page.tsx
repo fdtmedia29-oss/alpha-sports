@@ -6,8 +6,9 @@ import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import GruppenkurseCards from "@/components/sections/GruppenkurseCards";
 import EversportsWidget from "@/components/ui/EversportsWidget";
+import PageFAQ from "@/components/sections/PageFAQ";
 import { Check, ArrowRight, Shield } from "lucide-react";
-import { certifications } from "@/lib/content";
+import { certifications, faqSections } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Gruppenkurse",
@@ -232,6 +233,15 @@ export default function GruppenkursePage() {
           <EversportsWidget widgetId="4840c17a-c7eb-48bc-989d-f294ad5f104f" />
         </div>
       </section>
+
+      <PageFAQ
+        idPrefix="gk-faq"
+        title="Häufige Fragen zu den Gruppenkursen."
+        items={[
+          ...faqSections.find((s) => s.category === "Gruppenkurse (Hyrox & Bootcamp)")!.items,
+          ...faqSections.find((s) => s.category === "Vergleich & Entscheidungen")!.items,
+        ]}
+      />
 
       <CTABanner
         title="Lust auf eine kostenlose Probewoche?"

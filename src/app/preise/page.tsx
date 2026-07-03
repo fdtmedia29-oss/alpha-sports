@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PricingTabs from "@/components/sections/PricingTabs";
+import PageFAQ from "@/components/sections/PageFAQ";
+import { faqSections } from "@/lib/content";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -69,6 +71,12 @@ export default function PreisePage() {
           </div>
         </div>
       </section>
+
+      <PageFAQ
+        idPrefix="preise-faq"
+        title="Häufige Fragen zu den Preisen."
+        items={faqSections.find((s) => s.category === "Preise & Investment")!.items}
+      />
 
       <CTABanner
         title="Fragen zu den Preisen?"

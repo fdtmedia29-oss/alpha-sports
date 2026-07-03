@@ -383,6 +383,7 @@ export const navItems = [
     ],
   },
   { label: "Hyrox", href: "/hyrox" },
+  { label: "FAQ", href: "/faq" },
   {
     label: "Mehr",
     children: [
@@ -390,7 +391,6 @@ export const navItems = [
       { label: "Einblicke", href: "/einblicke" },
       { label: "Erfolgsgeschichten", href: "/erfolgsgeschichten" },
       { label: "Preise", href: "/preise" },
-      { label: "FAQ", href: "/faq" },
       { label: "Kontakt", href: "/kostenloses-beratungsgespraech" },
     ],
   },

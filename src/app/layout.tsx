@@ -4,6 +4,9 @@ import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
+// Custom Gemini widget kept for reference / future product; Alpha runs on Voiceflow.
+// import ChatWidget from "@/components/chat/ChatWidget";
+import VoiceflowWidget from "@/components/chat/VoiceflowWidget";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -178,6 +181,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
+        <VoiceflowWidget />
         <Analytics />
       </body>
     </html>

@@ -11,6 +11,7 @@ import { Check, ArrowRight, Shield } from "lucide-react";
 import { certifications, faqSections } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/gruppenkurse" },
   title: "Gruppenkurse",
   description:
     "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp, Pilates & Strength. Max. 12 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",

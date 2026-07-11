@@ -8,6 +8,7 @@ import Link from "next/link";
 import { certifications } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ernaehrungsberatung" },
   title: "Ernährungsberatung",
   description:
     "Professionelle Ernährungsberatung in St. Gallen. Massgeschneiderte Ernährungspläne für Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/impressum" },
   title: "Impressum",
   description: "Impressum und rechtliche Angaben von Alpha Sports GmbH, St. Gallen.",
 };

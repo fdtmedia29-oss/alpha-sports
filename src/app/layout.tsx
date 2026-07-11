@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://alpha-sports.ch",
+    canonical: "/",
   },
 };
 

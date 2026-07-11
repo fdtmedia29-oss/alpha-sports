@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/agb" },
   title: "AGB",
   description: "Allgemeine Geschäftsbedingungen der Alpha Sports GmbH, St. Gallen.",
 };

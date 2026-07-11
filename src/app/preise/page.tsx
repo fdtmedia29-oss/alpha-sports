@@ -7,6 +7,7 @@ import { faqSections } from "@/lib/content";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/preise" },
   title: "Preise für Personal Training, Coaching & Gruppenkurse",
   description:
     "Preise für Personal Training, Online Coaching, Gruppenkurse, Trainingspakete, Analysen, Ernährungsberatung und mehr bei Alpha Sports St. Gallen. Transparent und fair. Krankenkassen anerkannt.",

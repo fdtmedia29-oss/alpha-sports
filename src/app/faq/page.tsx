@@ -5,6 +5,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import { faqSections } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq" },
   title: "Häufige Fragen (FAQ)",
   description:
     "Antworten auf die häufigsten Fragen zu Personal Training, Preisen, Ablauf, Gruppenkursen und Ernährungsberatung bei Alpha Sports in St. Gallen.",

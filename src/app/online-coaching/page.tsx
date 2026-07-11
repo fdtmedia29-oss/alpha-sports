@@ -19,6 +19,7 @@ import Link from "next/link";
 import { certifications } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/online-coaching" },
   title: "Online Coaching",
   description:
     "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernährungsplan, persönliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von überall trainieren.",

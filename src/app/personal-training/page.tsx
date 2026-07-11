@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/personal-training" },
   title: "Personal Training",
   description:
     "Individuelles 1:1 Personal Training im privaten Studio in St. Gallen. Abnehmen, Muskelaufbau, Schmerzfreiheit — massgeschneiderte Trainings- und Ernährungsstrategien. Krankenkassen anerkannt. Kostenloses Beratungsgespräch.",

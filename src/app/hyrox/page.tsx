@@ -9,6 +9,7 @@ import Link from "next/link";
 import { certifications } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/hyrox" },
   title: "HYROX Training",
   description:
     "HYROX Training und Wettkampfvorbereitung bei Alpha Sports St. Gallen. HYROX365 zertifizierte Trainer. Funktionelle Kraft und Ausdauer.",

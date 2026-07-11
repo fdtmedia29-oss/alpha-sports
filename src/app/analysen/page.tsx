@@ -10,6 +10,7 @@ import { certifications } from "@/lib/content";
 import AnalysenBooking from "@/components/sections/AnalysenBooking";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/analysen" },
   title: "Analysen & Diagnostik",
   description:
     "InBody Körperanalyse, Stoffwechsel- und Stressanalyse und Leistungsanalyse in St. Gallen. Datenbasiertes Training für messbare Ergebnisse bei Alpha Sports.",

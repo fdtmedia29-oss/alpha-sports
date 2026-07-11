@@ -5,6 +5,7 @@ import CTABanner from "@/components/sections/CTABanner";
 import { Star, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/erfolgsgeschichten" },
   title: "Erfolgsgeschichten",
   description:
     "Erfolgsgeschichten und Testimonials von Alpha Sports Kunden. Abnehmen, Muskelaufbau, Schmerzfreiheit — echte Ergebnisse von echten Menschen in St. Gallen.",

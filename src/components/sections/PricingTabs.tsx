@@ -30,7 +30,7 @@ const sections: PricingSection[] = [
       {
         label: "Einzelbuchungen",
         rows: [
-          { name: "Beratungsgespräch", price: "kostenlos", note: "30 Minuten" },
+          { name: "Beratungsgespräch", price: "kostenlos", note: "45 Minuten" },
           { name: "1:1 Personal Training", price: "150.-", note: "60 Minuten" },
           { name: "1:2 Personal Training", price: "90.- p.P.", note: "60 Minuten" },
           { name: "Trainingsplanung", price: "65.-", note: "zu Stempelkarten & Personal Trainings" },

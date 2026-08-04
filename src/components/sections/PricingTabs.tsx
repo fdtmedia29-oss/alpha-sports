@@ -8,6 +8,7 @@ interface PriceRow {
   name: string;
   price: string;
   note?: string;
+  sub?: string;
 }
 
 interface PricingTab {
@@ -39,10 +40,10 @@ const sections: PricingSection[] = [
       {
         label: "1:1 Stempelkarte",
         rows: [
-          { name: "12er Stempelkarte", price: "ab CHF 580.- mtl.", note: "Entspricht 1 Training pro Woche, im Zeitraum von 3 Monaten" },
-          { name: "24er Stempelkarte", price: "ab CHF 960.- mtl.", note: "Entspricht 2 Trainings pro Woche, im Zeitraum von 3 Monaten" },
-          { name: "36er Stempelkarte", price: "ab CHF 1380.- mtl.", note: "Entspricht 3 Trainings pro Woche, im Zeitraum von 3 Monaten" },
-          { name: "48er Stempelkarte", price: "ab CHF 1760.- mtl.", note: "Entspricht 4 Trainings pro Woche, im Zeitraum von 3 Monaten" },
+          { name: "12er Stempelkarte", price: "CHF 145.-/Training", note: "1 Training pro Woche über 3 Monate", sub: "Gesamtpreis CHF 1'740.- · 3× 580.-/Mt." },
+          { name: "24er Stempelkarte", price: "CHF 140.-/Training", note: "2 Trainings pro Woche über 3 Monate", sub: "Gesamtpreis CHF 3'360.- · 3× 1'120.-/Mt." },
+          { name: "36er Stempelkarte", price: "CHF 130.-/Training", note: "2 Trainings pro Woche über 3 Monate", sub: "Gesamtpreis CHF 4'680.- · 3× 1'560.-/Mt." },
+          { name: "48er Stempelkarte", price: "CHF 120.-/Training", note: "3 Trainings pro Woche über 3 Monate", sub: "Gesamtpreis CHF 5'760.- · 3× 1'920.-/Mt." },
         ],
         ergaenzung: [
           {
@@ -61,10 +62,10 @@ const sections: PricingSection[] = [
       {
         label: "1:2 Stempelkarte",
         rows: [
-          { name: "12er Stempelkarte", price: "ab CHF 280.- mtl.", note: "Entspricht 1 Training pro Woche, im Zeitraum von 3 Monaten" },
-          { name: "24er Stempelkarte", price: "ab CHF 520.- mtl.", note: "Entspricht 2 Trainings pro Woche, im Zeitraum von 3 Monaten" },
-          { name: "36er Stempelkarte", price: "ab CHF 720.- mtl.", note: "Entspricht 3 Trainings pro Woche, im Zeitraum von 3 Monaten" },
-          { name: "48er Stempelkarte", price: "ab CHF 960.- mtl.", note: "Entspricht 4 Trainings pro Woche, im Zeitraum von 3 Monaten" },
+          { name: "12er Stempelkarte", price: "CHF 90.-/Training p.P.", note: "1 Training pro Woche über 3 Monate", sub: "Gesamtpreis CHF 1'080.- p.P. · 3× 360.-/Mt." },
+          { name: "24er Stempelkarte", price: "CHF 85.-/Training p.P.", note: "Mit Coach Lui · 2 Trainings pro Woche über 3 Monate", sub: "Gesamtpreis CHF 2'040.- p.P. · 3× 680.-/Mt." },
+          { name: "36er Stempelkarte", price: "CHF 80.-/Training p.P.", note: "Mit Coach Lui · 3 Trainings pro Woche über 3 Monate", sub: "Gesamtpreis CHF 2'880.- p.P. · 3× 960.-/Mt." },
+          { name: "48er Stempelkarte", price: "CHF 75.-/Training p.P.", note: "Mit Coach Lui · 4 Trainings pro Woche über 3 Monate", sub: "Gesamtpreis CHF 3'600.- p.P. · 3× 1'200.-/Mt." },
         ],
         ergaenzung: [
           {
@@ -180,12 +181,17 @@ function PriceRowComponent({ row }: { row: PriceRow }) {
           {row.name}
         </span>
         <span className="mx-2 mb-1 hidden flex-1 shrink-0 border-b-2 border-dotted border-border md:block" />
-        <span className="shrink-0 text-base font-semibold text-text md:text-lg">
+        <span className="shrink-0 whitespace-nowrap text-base font-semibold text-text md:text-lg">
           {row.price}
         </span>
       </div>
-      {row.note && (
-        <p className="mt-1 text-sm text-muted">{row.note}</p>
+      {(row.note || row.sub) && (
+        <div className="mt-1 flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+          {row.note && <p className="text-sm text-muted">{row.note}</p>}
+          {row.sub && (
+            <p className="text-sm text-muted sm:shrink-0 sm:text-right">{row.sub}</p>
+          )}
+        </div>
       )}
     </div>
   );

@@ -254,7 +254,8 @@ const S: Record<string, React.CSSProperties> = {
   page: {
     background: "#F7F7F7",
     minHeight: "100vh",
-    padding: "40px 16px 80px",
+    // Die Navigation liegt fix über der Seite, darum oben Platz lassen
+    padding: "132px 16px 80px",
     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
     color: "#111",
   },

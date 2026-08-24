@@ -83,7 +83,15 @@ function person(d: Record<string, unknown>, p: "" | "p_", wer: string): Person {
   };
 }
 
-/** Grober Missbrauchsschutz. Serverless-Instanzen sind kurzlebig, das ist Absicht: es reicht gegen stumpfes Hämmern. */
+/**
+ * Grober Missbrauchsschutz gegen stumpfes Hämmern.
+ *
+ * Bewusst grosszügig: hier zählt JEDER Versuch mit, auch die mit einem Tippfehler
+ * im Formular. Zu eng eingestellt sperrt es echte Leute aus — ein Gym-WLAN teilt
+ * sich eine IP, und wer sich viermal vertippt, darf beim fünften Mal nicht vor
+ * einer Fehlermeldung stehen. Gegen Fluten reicht diese Grenze, gegen Massen-
+ * anmeldungen wirkt ohnehin der Unique-Index auf der E-Mail.
+ */
 const letzte = new Map<string, number[]>();
 function zuSchnell(ip: string) {
   const jetzt = Date.now();
@@ -91,7 +99,7 @@ function zuSchnell(ip: string) {
   fenster.push(jetzt);
   letzte.set(ip, fenster);
   if (letzte.size > 500) letzte.clear();
-  return fenster.length > 5;
+  return fenster.length > 20;
 }
 
 export async function POST(req: Request) {

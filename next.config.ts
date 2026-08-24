@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return {
+      // Die Race-Seite liegt als statisches HTML in public/race/.
+      beforeFiles: [{ source: "/race", destination: "/race/index.html" }],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
+
   async redirects() {
     return [
       // Old landing pages → new pages

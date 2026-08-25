@@ -94,16 +94,16 @@ export default function RacePopup() {
           {/* Statisches HTML-Asset der Race-Seite, darum bewusst kein next/image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/race/img/hero.jpg"
+            src="/race/img/hero-popup.jpg"
             alt=""
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
           <div className="absolute bottom-4 left-5 right-5">
-            <div className="text-[14px] font-extrabold uppercase tracking-[1.8px] text-orange sm:text-[15px]">
+            <div className="text-[23px] font-black uppercase leading-none tracking-[1.1px] text-orange sm:text-[25px]">
               5 Jahre Alpha Sports
             </div>
-            <div className="mt-1 text-[22px] font-black leading-tight tracking-tight text-white">
+            <div className="mt-1.5 text-[18px] font-extrabold leading-tight tracking-tight text-white sm:text-[19px]">
               HYROX Race Simulation
             </div>
           </div>

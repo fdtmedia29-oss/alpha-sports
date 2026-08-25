@@ -8,13 +8,12 @@ import { X, ArrowRight } from "lucide-react";
  * Pop-up für die HYROX Race Simulation am 3. Oktober 2026.
  *
  * Verschwindet von selbst, sobald der Anmeldeschluss durch ist — niemand muss
- * daran denken, es wieder auszubauen. Erscheint pro Besucher nur alle 10 Tage
- * einmal und nie auf der Race-Seite selbst.
+ * daran denken, es wieder auszubauen. Erscheint einmal pro Browser-Sitzung und
+ * nie auf der Race-Seite selbst.
  */
 
 const ENDE = new Date("2026-10-01T00:00:00+02:00");
 const SPEICHER = "race2026-popup";
-const PAUSE_TAGE = 10;
 const VERZOEGERUNG = 2600;
 
 export default function RacePopup() {
@@ -27,8 +26,7 @@ export default function RacePopup() {
     if (pfad?.startsWith("/race")) return;
 
     try {
-      const zuletzt = window.localStorage.getItem(SPEICHER);
-      if (zuletzt && Date.now() - Number(zuletzt) < PAUSE_TAGE * 864e5) return;
+      if (window.sessionStorage.getItem(SPEICHER)) return;
     } catch {
       // Privater Modus oder blockierte Speicherung: dann zeigen wir es halt.
     }
@@ -54,7 +52,7 @@ export default function RacePopup() {
 
   function schliessen() {
     try {
-      window.localStorage.setItem(SPEICHER, String(Date.now()));
+      window.sessionStorage.setItem(SPEICHER, "gesehen");
     } catch {
       // nicht schlimm, dann sieht der Besucher es beim nächsten Mal nochmal
     }

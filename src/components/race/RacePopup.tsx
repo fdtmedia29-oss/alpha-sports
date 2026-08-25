@@ -102,7 +102,7 @@ export default function RacePopup() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
           <div className="absolute bottom-4 left-5 right-5">
-            <div className="text-[11px] font-bold uppercase tracking-[1.6px] text-orange">
+            <div className="text-[14px] font-extrabold uppercase tracking-[1.8px] text-orange sm:text-[15px]">
               5 Jahre Alpha Sports
             </div>
             <div className="mt-1 text-[22px] font-black leading-tight tracking-tight text-white">
@@ -114,9 +114,9 @@ export default function RacePopup() {
         <div className="p-5 sm:p-6">
           <p id="race-popup-titel" className="text-[15px] leading-relaxed text-text-secondary">
             Am <b className="font-bold text-text">Samstag, 3. Oktober</b> feiern wir
-            unser Jubiläum mit einem Race bei uns im Studio. Full oder Half, alleine
-            oder zu zweit. <b className="font-bold text-text">52 Startplätze</b>, die
-            Teilnahme ist kostenlos.
+            <b className="font-bold text-text"> 5 Jahre Alpha Sports</b> mit einer
+            HYROX Race Simulation. Full oder Half, alleine oder zu zweit – du kannst
+            dich kostenlos anmelden.
           </p>
 
           <a

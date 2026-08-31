@@ -16,12 +16,20 @@ const ENDE = new Date("2026-10-01T00:00:00+02:00");
 const SPEICHER = "race2026-popup";
 const VERZOEGERUNG = 2600;
 
+/**
+ * Vorübergehend AUS (31.08.2026, auf Luigis Wunsch — er passt am Race noch
+ * etwas an). Zum Wiedereinschalten: auf `false` setzen. Das Pop-up geht dann
+ * wieder von selbst an und nach dem Anmeldeschluss von selbst aus.
+ */
+const PAUSIERT = true;
+
 export default function RacePopup() {
   const pfad = usePathname();
   const [offen, setOffen] = useState(false);
   const [sichtbar, setSichtbar] = useState(false);
 
   useEffect(() => {
+    if (PAUSIERT) return;
     if (Date.now() >= ENDE.getTime()) return;
     if (pfad?.startsWith("/race")) return;
 

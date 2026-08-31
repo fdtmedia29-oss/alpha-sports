@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import Script from "next/script";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { siteConfig } from "@/lib/content";
+import { buchungsLinks } from "@/lib/booking";
+import NutrilizeBooking from "@/components/sections/NutrilizeBooking";
 
 const qualificationQuestions = [
   "Willst du in deinem Leben wirklich etwas verändern?",
@@ -63,27 +64,19 @@ export default function BuchenPage() {
         </div>
       </section>
 
-      {/* ── Virtuagym Booking Widget ── */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-2xl">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-                <vg-guest-booking
-                  widget-key="65cf98905c1d120017507530"
-                  club-id="70387"
-                  lang="de"
-                  source=""
-                ></vg-guest-booking>
-              `,
-            }}
-          />
-          <Script
-            src="https://static.virtuagym.com/vg-guest-booking-widget/dist/js/app.js"
-            strategy="afterInteractive"
-          />
-        </div>
-      </section>
+      {/* ── nutrilize Booking ── */}
+      <NutrilizeBooking
+        optionen={[
+          {
+            label: "Kostenloses Beratungsgespräch",
+            url: buchungsLinks.beratungsgespraech,
+            beschreibung:
+              "45 Minuten, kostenlos. Wir lernen uns kennen, klären dein Ziel und zeigen dir den schnellsten Weg dorthin.",
+          },
+        ]}
+        ueberschrift="Termin wählen."
+        text="Such dir einen Termin aus, der dir passt."
+      />
 
       {/* ── Qualification questions ── */}
       <section className="section-padding bg-bg-alt">

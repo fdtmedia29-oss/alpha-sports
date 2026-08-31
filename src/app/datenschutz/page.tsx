@@ -100,7 +100,9 @@ export default function DatenschutzPage() {
               ein Analyse-Tool, das ohne Cookies arbeitet und keine
               personenbezogenen Profile erstellt. Daneben binden wir einzelne
               Dienste von Drittanbietern ein (z.&nbsp;B. Google Maps sowie
-              Buchungs-Widgets von Virtuagym und Eversports).
+              das Kursplan-Widget von Eversports). Die Terminbuchung läuft über
+              nutrilize, allerdings erst nach einem Klick in einem neuen
+              Fenster, nicht eingebettet.
             </p>
             <p className="mt-3">
               Detaillierte Informationen zu diesen Tools finden Sie in der
@@ -486,10 +488,11 @@ export default function DatenschutzPage() {
               Diese Website setzt selbst keine Cookies zu Analyse- oder
               Werbezwecken ein. Cookies können jedoch durch eingebundene
               Dienste von Drittunternehmen gesetzt werden
-              (Third-Party-Cookies), namentlich durch Google Maps sowie die
-              Buchungs-Widgets von Virtuagym und Eversports. Diese Dienste sind
-              in dieser Datenschutzerklärung im Abschnitt &bdquo;Plugins und
-              Tools&ldquo; beschrieben.
+              (Third-Party-Cookies), namentlich durch Google Maps sowie das
+              Kursplan-Widget von Eversports. Diese Dienste sind in dieser
+              Datenschutzerklärung im Abschnitt &bdquo;Plugins und
+              Tools&ldquo; beschrieben. Cookies des Buchungsportals nutrilize
+              werden erst gesetzt, wenn Sie es über einen Klick öffnen.
             </p>
             <p className="mt-3">
               Cookies, die zur Durchführung des elektronischen
@@ -662,22 +665,24 @@ export default function DatenschutzPage() {
             </p>
 
             <h3 className="mt-6 text-lg font-semibold text-text">
-              Virtuagym (Terminbuchung)
+              nutrilize (Terminbuchung)
             </h3>
             <p className="mt-3">
               Für die Online-Buchung von Beratungsgesprächen und Analysen
-              nutzen wir ein Buchungs-Widget von Virtuagym. Anbieter ist die
-              Virtuagym B.V., Amsterdam, Niederlande.
+              nutzen wir das Buchungsportal nutrilize. Anbieter ist die
+              nutrilize GmbH, Am Hochufer 15, 76773 Kuhardt, Deutschland.
             </p>
             <p className="mt-3">
-              Wenn Sie eine Seite mit dem Buchungs-Widget aufrufen, wird eine
-              Verbindung zu den Servern von Virtuagym hergestellt. Dabei kann
-              Virtuagym technische Daten (z.&nbsp;B. Ihre IP-Adresse)
-              verarbeiten und Cookies setzen. Wenn Sie über das Widget einen
-              Termin buchen, werden die von Ihnen eingegebenen Daten
-              (z.&nbsp;B. Name, E-Mail-Adresse, Telefonnummer, gewünschter
-              Termin) zum Zwecke der Terminvereinbarung und -verwaltung
-              verarbeitet.
+              Auf unserer Website ist kein Buchungs-Widget eingebettet. Beim
+              blossen Aufruf unserer Seiten wird keine Verbindung zu nutrilize
+              hergestellt. Erst wenn Sie auf &laquo;Termin buchen&raquo;
+              klicken, werden Sie in einem neuen Fenster zum Buchungsportal
+              unter portal.nutrilize.app weitergeleitet. Ab diesem Zeitpunkt
+              kann nutrilize technische Daten (z.&nbsp;B. Ihre IP-Adresse)
+              verarbeiten und Cookies setzen. Wenn Sie dort einen Termin
+              buchen, werden die von Ihnen eingegebenen Daten (z.&nbsp;B. Name,
+              E-Mail-Adresse, Telefonnummer, gewünschter Termin) zum Zwecke der
+              Terminvereinbarung und -verwaltung verarbeitet.
             </p>
             <p className="mt-3">
               Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b
@@ -685,14 +690,14 @@ export default function DatenschutzPage() {
               Vertragserfüllung) sowie unseres berechtigten Interesses an einer
               einfachen und effizienten Terminverwaltung (Art. 6 Abs. 1 lit. f
               DSGVO). Weitere Informationen finden Sie in der
-              Datenschutzerklärung von Virtuagym:{" "}
+              Datenschutzerklärung von nutrilize:{" "}
               <a
-                href="https://business.virtuagym.com/privacy-policy/"
+                href="https://nutrilize.app/datenschutz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-orange underline underline-offset-4 hover:text-orange/80"
               >
-                https://business.virtuagym.com/privacy-policy/
+                https://nutrilize.app/datenschutz
               </a>
               .
             </p>

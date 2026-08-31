@@ -73,10 +73,6 @@ export default function NutrilizeBooking({
             </a>
           ))}
         </div>
-
-        <p className="mt-6 text-center text-sm text-text-secondary">
-          Die Buchung öffnet sich in einem neuen Fenster.
-        </p>
       </div>
     </section>
   );

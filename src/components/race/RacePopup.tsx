@@ -5,23 +5,24 @@ import { usePathname } from "next/navigation";
 import { X, ArrowRight } from "lucide-react";
 
 /**
- * Pop-up für die HYROX Race Simulation am 3. Oktober 2026.
+ * Pop-up für die HYROX Race Simulation am 7. November 2026.
  *
  * Verschwindet von selbst, sobald der Anmeldeschluss durch ist — niemand muss
  * daran denken, es wieder auszubauen. Erscheint einmal pro Browser-Sitzung und
  * nie auf der Race-Seite selbst.
  */
 
-const ENDE = new Date("2026-10-01T00:00:00+02:00");
+const ENDE = new Date("2026-11-05T00:00:00+01:00");
 const SPEICHER = "race2026-popup";
 const VERZOEGERUNG = 2600;
 
 /**
- * Vorübergehend AUS (31.08.2026, auf Luigis Wunsch — er passt am Race noch
- * etwas an). Zum Wiedereinschalten: auf `false` setzen. Das Pop-up geht dann
- * wieder von selbst an und nach dem Anmeldeschluss von selbst aus.
+ * Notschalter. Am 31.08.2026 auf Luigis Wunsch kurz auf `true` gestellt, weil er
+ * das Datum noch anpassen wollte; seit dem 01.09.2026 wieder `false`, das neue
+ * Datum steht. Auf `true` setzen, wenn das Pop-up nochmal schweigen soll. Nach
+ * dem Anmeldeschluss geht es ohnehin von selbst aus.
  */
-const PAUSIERT = true;
+const PAUSIERT = false;
 
 export default function RacePopup() {
   const pfad = usePathname();
@@ -119,7 +120,7 @@ export default function RacePopup() {
 
         <div className="p-5 sm:p-6">
           <p id="race-popup-titel" className="text-[15px] leading-relaxed text-text-secondary">
-            Am <b className="font-bold text-text">Samstag, 3. Oktober</b> feiern wir
+            Am <b className="font-bold text-text">Samstag, 7. November</b> feiern wir
             <b className="font-bold text-text"> 5 Jahre Alpha Sports</b> mit einer
             HYROX Race Simulation. Full oder Half, alleine oder zu zweit – du kannst
             dich kostenlos anmelden.

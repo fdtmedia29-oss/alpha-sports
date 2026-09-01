@@ -119,7 +119,7 @@ export async function POST(req: Request) {
         {
           ok: false,
           fehler:
-            "Die Anmeldefrist ist am 30. September abgelaufen. Melde dich bei info@alpha-sports.ch, wir schauen, was noch geht.",
+            "Die Anmeldefrist ist am 4. November abgelaufen. Melde dich bei info@alpha-sports.ch, wir schauen, was noch geht.",
         },
         { status: 400 },
       );

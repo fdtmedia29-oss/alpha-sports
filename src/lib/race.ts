@@ -22,8 +22,15 @@ export function istKategorie(v: unknown): v is Kategorie {
   return typeof v === "string" && v in KATEGORIEN;
 }
 
-/** Anmeldeschluss (von Luigi bestätigt 24.08): 30. September 2026, Ende des Tages. */
-export const ANMELDESCHLUSS = new Date("2026-09-30T23:59:59+02:00");
+/**
+ * Anmeldeschluss: Mittwoch, 4. November 2026, Ende des Tages.
+ *
+ * Das Event wurde am 01.09.2026 vom 3. Oktober auf den 7. November verschoben.
+ * Der Abstand von drei Tagen vor dem Event ist der gleiche wie bei Luigis
+ * urspruenglicher Bestaetigung (24.08). Achtung Zeitzone: im November gilt
+ * CET (+01:00), nicht mehr CEST.
+ */
+export const ANMELDESCHLUSS = new Date("2026-11-04T23:59:59+01:00");
 
 export function anmeldungGeschlossen(jetzt = new Date()) {
   return jetzt.getTime() > ANMELDESCHLUSS.getTime();

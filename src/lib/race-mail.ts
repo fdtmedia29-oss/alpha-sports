@@ -93,13 +93,13 @@ async function anTeilnehmer(d: MailDaten) {
     to: d.email,
     replyTo: REPLY_TO,
     subject: warte
-      ? "Du stehst auf der Warteliste — HYROX Race Simulation, 3. Oktober"
-      : "Startplatz reserviert — HYROX Race Simulation, 3. Oktober",
+      ? "Du stehst auf der Warteliste — HYROX Race Simulation, 7. November"
+      : "Startplatz reserviert — HYROX Race Simulation, 7. November",
     html: huelle(`${kopf}
 <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #eee;border-bottom:1px solid #eee;margin:4px 0 20px">
 ${zeile("Kategorie", kat.label)}
 ${partner}
-${zeile("Datum", "Samstag, 3. Oktober 2026")}
+${zeile("Datum", "Samstag, 7. November 2026")}
 ${zeile("Check-in", "ab 08:00 Uhr")}
 ${zeile("Ort", "Unterer Graben 21, 9000 St. Gallen")}
 ${zeile("Startgeld", "Kostenlos")}
@@ -115,7 +115,7 @@ ${
 }
 
 Kategorie: ${kat.label}${d.partner ? `\nPartner: ${d.partner.vorname} ${d.partner.nachname}` : ""}
-Datum: Samstag, 3. Oktober 2026
+Datum: Samstag, 7. November 2026
 Check-in: ab 08:00 Uhr
 Ort: Unterer Graben 21, 9000 St. Gallen
 Startgeld: Kostenlos

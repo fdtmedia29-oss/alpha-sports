@@ -191,7 +191,7 @@ export default async function Page({
       <div style={S.wrap}>
         <div style={S.head}>
           <div>
-            <div style={S.eyebrow}>Alpha Sports · 3. Oktober 2026</div>
+            <div style={S.eyebrow}>Alpha Sports · 7. November 2026</div>
             <h1 style={S.h1}>Anmeldungen HYROX Race Simulation</h1>
             <p style={S.sub}>
               {angemeldet.length} von 52 Startplätzen vergeben · {personenAngemeldet}{" "}

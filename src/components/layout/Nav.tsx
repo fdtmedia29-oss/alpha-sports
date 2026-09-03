@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import SectionLink from "@/components/ui/SectionLink";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { navItems, siteConfig } from "@/lib/content";
@@ -59,28 +60,49 @@ export default function Nav() {
           onMouseEnter={() => setOpenDropdown(item.label)}
           onMouseLeave={() => setOpenDropdown(null)}
         >
-          <Link
-            href={"href" in item && item.href ? item.href : "#"}
-            className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors ${
+          {/* "Mehr" hat keine eigene Seite. Frueher stand hier href="#", das
+              sprang beim Klick an den Seitenanfang. Ohne Ziel ist es kein Link. */}
+          {(() => {
+            const klassen = `flex items-center gap-1 rounded-lg px-3 py-1.5 text-[13px] font-medium transition-colors ${
               scrolled
                 ? "text-text-secondary hover:text-text"
                 : "text-white/70 hover:text-white"
-            }`}
-          >
-            {item.label}
-            <ChevronDown className="h-3 w-3" />
-          </Link>
+            }`;
+            const inhalt = (
+              <>
+                {item.label}
+                <ChevronDown className="h-3 w-3" />
+              </>
+            );
+            return "href" in item && item.href ? (
+              <Link href={item.href} className={klassen}>
+                {inhalt}
+              </Link>
+            ) : (
+              <button
+                type="button"
+                aria-expanded={openDropdown === item.label}
+                onClick={() =>
+                  setOpenDropdown(openDropdown === item.label ? null : item.label)
+                }
+                className={klassen}
+              >
+                {inhalt}
+              </button>
+            );
+          })()}
           {openDropdown === item.label && (
             <div className="absolute left-0 top-full z-50 pt-2">
               <div className="min-w-[200px] rounded-xl border border-border bg-white p-2 shadow-xl">
                 {item.children.map((child) => (
-                  <Link
+                  <SectionLink
                     key={child.href}
                     href={child.href}
+                    onClick={() => setOpenDropdown(null)}
                     className="block rounded-lg px-4 py-2.5 text-sm text-text-secondary transition-colors hover:bg-bg-alt hover:text-text"
                   >
                     {child.label}
-                  </Link>
+                  </SectionLink>
                 ))}
               </div>
             </div>
@@ -239,7 +261,7 @@ export default function Nav() {
                   }`}
                 >
                   {item.children.map((child) => (
-                    <Link
+                    <SectionLink
                       key={child.href}
                       href={child.href}
                       onClick={() => {
@@ -249,7 +271,7 @@ export default function Nav() {
                       className="py-2 text-base text-text-secondary transition-colors hover:text-text"
                     >
                       {child.label}
-                    </Link>
+                    </SectionLink>
                   ))}
                 </div>
               </div>

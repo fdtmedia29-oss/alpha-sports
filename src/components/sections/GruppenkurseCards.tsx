@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import BuchungsLink from "@/components/ui/BuchungsLink";
+import { gruppenkurseBuchung } from "@/lib/booking";
 import { Check, ArrowRight, ChevronDown, Zap, Flame, Heart, Dumbbell } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -82,13 +83,17 @@ function ClassCard({ cls, index }: { cls: DetailedClass; index: number }) {
 
           {/* Toggle + CTA */}
           <div className="mt-auto pt-6 flex flex-wrap items-center gap-4">
-            <Link
-              href={cls.href ? cls.href : "#buchen"}
+            {/* Kurse ohne eigene Seite fuehren direkt in die Buchung. Frueher
+                stand hier "#buchen" auf den Eversports-Abschnitt der Seite —
+                den gibt es nicht mehr, und ein Anker griff ohnehin nur beim
+                ersten Klick. */}
+            <BuchungsLink
+              href={cls.href ? cls.href : gruppenkurseBuchung}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               {cls.href ? "Mehr erfahren" : "Jetzt Buchen"}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
             <button
               onClick={() => setExpanded(!expanded)}
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-text-secondary transition-colors hover:text-text"

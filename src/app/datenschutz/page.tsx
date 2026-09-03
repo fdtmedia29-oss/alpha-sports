@@ -99,10 +99,9 @@ export default function DatenschutzPage() {
               ausgewertet werden. Wir verwenden hierfür Vercel Web Analytics,
               ein Analyse-Tool, das ohne Cookies arbeitet und keine
               personenbezogenen Profile erstellt. Daneben binden wir einzelne
-              Dienste von Drittanbietern ein (z.&nbsp;B. Google Maps sowie
-              das Kursplan-Widget von Eversports). Die Terminbuchung läuft über
-              nutrilize, allerdings erst nach einem Klick in einem neuen
-              Fenster, nicht eingebettet.
+              Dienste von Drittanbietern ein (z.&nbsp;B. Google Maps). Die
+              Termin- und Kursbuchung läuft über nutrilize, allerdings erst
+              nach einem Klick in einem neuen Fenster, nicht eingebettet.
             </p>
             <p className="mt-3">
               Detaillierte Informationen zu diesen Tools finden Sie in der
@@ -488,11 +487,11 @@ export default function DatenschutzPage() {
               Diese Website setzt selbst keine Cookies zu Analyse- oder
               Werbezwecken ein. Cookies können jedoch durch eingebundene
               Dienste von Drittunternehmen gesetzt werden
-              (Third-Party-Cookies), namentlich durch Google Maps sowie das
-              Kursplan-Widget von Eversports. Diese Dienste sind in dieser
-              Datenschutzerklärung im Abschnitt &bdquo;Plugins und
-              Tools&ldquo; beschrieben. Cookies des Buchungsportals nutrilize
-              werden erst gesetzt, wenn Sie es über einen Klick öffnen.
+              (Third-Party-Cookies), namentlich durch Google Maps. Dieser
+              Dienst ist in dieser Datenschutzerklärung im Abschnitt
+              &bdquo;Plugins und Tools&ldquo; beschrieben. Cookies des
+              Buchungsportals nutrilize werden erst gesetzt, wenn Sie es über
+              einen Klick öffnen.
             </p>
             <p className="mt-3">
               Cookies, die zur Durchführung des elektronischen
@@ -702,39 +701,6 @@ export default function DatenschutzPage() {
               .
             </p>
 
-            <h3 className="mt-6 text-lg font-semibold text-text">
-              Eversports (Kursplan und Buchung)
-            </h3>
-            <p className="mt-3">
-              Für die Anzeige und Buchung unserer Gruppenkurse nutzen wir ein
-              Widget von Eversports. Anbieter ist die Eversports GmbH, Wien,
-              Österreich.
-            </p>
-            <p className="mt-3">
-              Wenn Sie eine Seite mit dem Eversports-Widget aufrufen, wird eine
-              Verbindung zu den Servern von Eversports hergestellt. Dabei kann
-              Eversports technische Daten (z.&nbsp;B. Ihre IP-Adresse)
-              verarbeiten und Cookies setzen. Wenn Sie über das Widget einen
-              Kurs buchen, werden die von Ihnen eingegebenen Daten zum Zwecke
-              der Buchungsabwicklung verarbeitet.
-            </p>
-            <p className="mt-3">
-              Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b
-              DSGVO (Durchführung vorvertraglicher Maßnahmen bzw.
-              Vertragserfüllung) sowie unseres berechtigten Interesses an einer
-              einfachen Kursbuchung (Art. 6 Abs. 1 lit. f DSGVO). Weitere
-              Informationen finden Sie in der Datenschutzerklärung von
-              Eversports:{" "}
-              <a
-                href="https://www.eversports.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange underline underline-offset-4 hover:text-orange/80"
-              >
-                https://www.eversports.com/privacy
-              </a>
-              .
-            </p>
           </div>
 
           {/* ==================== 7. eCommerce und Zahlungsanbieter ==================== */}

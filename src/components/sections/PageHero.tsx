@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import SectionLink from "@/components/ui/SectionLink";
+import BuchungsLink from "@/components/ui/BuchungsLink";
 
 interface PageHeroProps {
   badge: string;
@@ -72,13 +73,25 @@ export default function PageHero({ badge, title, description, ctaText, ctaHref, 
                 transition={{ duration: 0.4, delay: 0.3 }}
                 className="mt-8"
               >
-                <Link
-                  href={ctaHref}
-                  className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
-                >
-                  {ctaText}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
+                {/* Anker auf derselben Seite brauchen SectionLink, sonst greift
+                    der Button nur beim ersten Klick (siehe SectionLink.tsx). */}
+                {ctaHref.startsWith("#") ? (
+                  <SectionLink
+                    href={ctaHref as `#${string}`}
+                    className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+                  >
+                    {ctaText}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </SectionLink>
+                ) : (
+                  <BuchungsLink
+                    href={ctaHref}
+                    className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
+                  >
+                    {ctaText}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </BuchungsLink>
+                )}
               </motion.div>
             )}
           </motion.div>

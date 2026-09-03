@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import GruppenkurseCards from "@/components/sections/GruppenkurseCards";
-import EversportsWidget from "@/components/ui/EversportsWidget";
+import BuchungsLink from "@/components/ui/BuchungsLink";
 import PageFAQ from "@/components/sections/PageFAQ";
 import { Check, ArrowRight, Shield } from "lucide-react";
 import { certifications, faqSections } from "@/lib/content";
+import { gruppenkurseBuchung } from "@/lib/booking";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/gruppenkurse" },
@@ -112,7 +112,7 @@ export default function GruppenkursePage() {
         title="Gemeinsam stärker."
         description="Bei dir steht Spass und Freude am Training im Vordergrund? Training in motivierender Gemeinschaft - mit individueller Betreuung in der Kleingruppe. Max. 12 Teilnehmer. Kostenlose Probewoche."
         ctaText="Jetzt Starten"
-        ctaHref="#buchen"
+        ctaHref={gruppenkurseBuchung}
         backgroundImage="/images/classes/hyrox-abklatschen.jpg"
       />
 
@@ -153,13 +153,13 @@ export default function GruppenkursePage() {
             ))}
           </div>
           <div className="mt-8">
-            <Link
-              href="#buchen"
+            <BuchungsLink
+              href={gruppenkurseBuchung}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Kostenlose Probewoche starten
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
           </div>
         </div>
       </section>
@@ -214,24 +214,6 @@ export default function GruppenkursePage() {
               </span>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Eversports Booking */}
-      <section id="buchen" className="scroll-mt-24 section-padding bg-bg-alt">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 text-center">
-            <span className="text-sm font-semibold uppercase tracking-widest text-orange">
-              Jetzt buchen
-            </span>
-            <h2 className="mt-4 text-2xl font-bold tracking-tight text-text md:text-3xl">
-              Gruppenkurs buchen.
-            </h2>
-            <p className="mt-3 text-text-secondary">
-              Wähle deinen Kurs und buche direkt über Eversports.
-            </p>
-          </div>
-          <EversportsWidget widgetId="4840c17a-c7eb-48bc-989d-f294ad5f104f" />
         </div>
       </section>
 

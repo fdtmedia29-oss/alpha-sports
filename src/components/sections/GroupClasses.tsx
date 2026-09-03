@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import BuchungsLink from "@/components/ui/BuchungsLink";
+import { gruppenkurseBuchung } from "@/lib/booking";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, User, ArrowRight } from "lucide-react";
@@ -178,14 +180,12 @@ export default function GroupClasses() {
             Alle Kurse ansehen
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
-          <a
-            href="https://www.alpha-sports.ch/gruppenkurse"
-            target="_blank"
-            rel="noopener noreferrer"
+          <BuchungsLink
+            href={gruppenkurseBuchung}
             className="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-orange-hover"
           >
             Jetzt buchen
-          </a>
+          </BuchungsLink>
         </div>
       </div>
     </section>

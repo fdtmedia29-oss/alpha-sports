@@ -16,6 +16,26 @@ export const buchungsLinks = {
     "https://portal.nutrilize.app/appointment/ouxaHBDmE4hUuk6yM7Ef",
 } as const;
 
+/**
+ * ⚠️ OFFEN — Buchungslink für die GRUPPENKURSE.
+ *
+ * Stand 03.09.2026: Luigi hat gemeldet, dass die Kursbuchung nicht mehr über
+ * Eversports läuft, und will einen neuen nutrilize-Link schicken. Solange der
+ * fehlt, zeigen die Kurs-Buttons auf die eigene Buchungsseite für das
+ * kostenlose Beratungsgespräch — die funktioniert und ist der übliche
+ * Einstieg. Das alte Eversports-Widget ist raus, es rendert seit dem Wechsel
+ * nur noch eine leere Fläche.
+ *
+ * SOBALD DER LINK DA IST: hier die nutrilize-URL eintragen, sonst nichts.
+ * Beide Kurs-Buttons und der „Jetzt buchen"-Knopf auf der Startseite hängen
+ * daran. Prüfen ist dann noch: hat die kostenlose Probewoche einen eigenen
+ * Link oder ist sie derselbe Kalender? (Frage an Luigi offen.)
+ */
+export const gruppenkurseBuchung = "/kostenloses-beratungsgespraech/buchen";
+
+/** Zeigt die Kursbuchung schon auf nutrilize? Steuert target/rel der Buttons. */
+export const gruppenkurseExtern = gruppenkurseBuchung.startsWith("http");
+
 export const analysenOptionen = [
   {
     label: "InBody Körperanalyse",

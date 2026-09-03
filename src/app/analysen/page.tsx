@@ -5,7 +5,7 @@ import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import Image from "next/image";
 import AnalysenCards from "@/components/sections/AnalysenCards";
 import { BarChart3, Smartphone, ArrowRight, Shield } from "lucide-react";
-import Link from "next/link";
+import SectionLink from "@/components/ui/SectionLink";
 import { certifications } from "@/lib/content";
 import AnalysenBooking from "@/components/sections/AnalysenBooking";
 
@@ -155,13 +155,13 @@ export default function AnalysenPage() {
             und erfahre, welche Analyse am besten zu dir passt.
           </p>
           <div className="mt-8">
-            <Link
+            <SectionLink
               href="#buchen"
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Jetzt Analyse buchen
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </SectionLink>
           </div>
         </div>
       </section>

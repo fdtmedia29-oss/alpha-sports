@@ -17,21 +17,22 @@ export const buchungsLinks = {
 } as const;
 
 /**
- * ⚠️ OFFEN — Buchungslink für die GRUPPENKURSE.
+ * Buchungslink für die GRUPPENKURSE — der nutrilize-Kursplan.
  *
- * Stand 03.09.2026: Luigi hat gemeldet, dass die Kursbuchung nicht mehr über
- * Eversports läuft, und will einen neuen nutrilize-Link schicken. Solange der
- * fehlt, zeigen die Kurs-Buttons auf die eigene Buchungsseite für das
- * kostenlose Beratungsgespräch — die funktioniert und ist der übliche
- * Einstieg. Das alte Eversports-Widget ist raus, es rendert seit dem Wechsel
- * nur noch eine leere Fläche.
+ * Von Luigi per WhatsApp am 04.09.2026: „Das wär de Link fürd Websitä."
+ * Löst das alte Eversports-Widget ab, das seit dem Wechsel nur noch eine leere
+ * Fläche rendert hat. Hängt dran: beide Kurs-Buttons auf /gruppenkurse, die
+ * drei „Jetzt Buchen" der Kurskarten und der Knopf auf der Startseite.
  *
- * SOBALD DER LINK DA IST: hier die nutrilize-URL eintragen, sonst nichts.
- * Beide Kurs-Buttons und der „Jetzt buchen"-Knopf auf der Startseite hängen
- * daran. Prüfen ist dann noch: hat die kostenlose Probewoche einen eigenen
- * Link oder ist sie derselbe Kalender? (Frage an Luigi offen.)
+ * ⏳ Luigi hat im selben Atemzug angekündigt: „Sobald denn d Alpha Sports App
+ * fertig isch, schick ich dir den neu." Wenn der neue Link kommt, wird hier
+ * eine Zeile getauscht, sonst nichts.
+ *
+ * Die kostenlose Probewoche läuft bewusst über denselben Kalender — Luigi hat
+ * einen Link für die Website geschickt, keinen zweiten für die Probewoche.
  */
-export const gruppenkurseBuchung = "/kostenloses-beratungsgespraech/buchen";
+export const gruppenkurseBuchung =
+  "https://portal.nutrilize.app/profile/ZhZwxOv4tTStfB8OFqptdYZ7gD52/classes";
 
 /** Zeigt die Kursbuchung schon auf nutrilize? Steuert target/rel der Buttons. */
 export const gruppenkurseExtern = gruppenkurseBuchung.startsWith("http");

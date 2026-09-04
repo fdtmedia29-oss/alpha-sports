@@ -108,7 +108,7 @@ export const services: Service[] = [
   {
     title: "Gruppenkurse",
     description:
-      "Bootcamp, Pilates, Strength und HYROX — motivierendes Training in der Gruppe mit zertifizierten Trainern.",
+      "HYROX, Bootcamp und HYROX Strength — motivierendes Training in der Gruppe mit zertifizierten Trainern.",
     href: "/gruppenkurse",
     icon: "users",
     image: "/images/classes/hyrox-abklatschen.jpg",
@@ -142,7 +142,7 @@ export interface GroupClass {
 
 export const groupClasses: GroupClass[] = [
   {
-    name: "Hyrox",
+    name: "HYROX",
     trainer: "Nicole Walser",
     schedule: "Mo 12:00, Mi 06:30 & 18:30, Fr 17:30",
     description:
@@ -160,20 +160,12 @@ export const groupClasses: GroupClass[] = [
     image: "/images/classes/bootcamp.png",
   },
   {
-    name: "Pilates",
-    trainer: "David Rogers",
-    schedule: "Di 19:00 & Fr 12:00",
-    description:
-      "Stärke deine Mitte und finde die Balance. Core-Stabilität, Mobilität und Körperhaltung verbessern. Bauch-, Rücken- und Beckenbodentraining. Ideale Ergänzung zum Krafttraining.",
-    href: "/gruppenkurse#pilates",
-    image: "/images/pt/alpha-personal-15.jpg",
-  },
-  {
-    name: "Strength",
+    // Umbenannt 04.09.2026 (vorher "Strength"). Anker bleibt #strength.
+    name: "HYROX Strength",
     trainer: "David Rogers",
     schedule: "Mi 12:00",
     description:
-      "Gezieltes Krafttraining in der Gruppe. Strukturierte Workouts für Muskelaufbau und funktionelle Stärke - für alle Levels.",
+      "Athletischer Körperaufbau für mehr Kraft und Race Performance. Strukturiertes Kraft- und Hypertrophietraining in der Kleingruppe — für Muskelaufbau, Body Recomposition und eine starke Grundlage fürs HYROX Race.",
     href: "/gruppenkurse#strength",
     image: "/images/pt/alpha-personal-26.jpg",
   },
@@ -367,8 +359,7 @@ export const navItems = [
     children: [
       { label: "HYROX", href: "/hyrox" },
       { label: "Bootcamp", href: "/gruppenkurse#bootcamp" },
-      { label: "Pilates", href: "/gruppenkurse#pilates" },
-      { label: "Strength", href: "/gruppenkurse#strength" },
+      { label: "HYROX Strength", href: "/gruppenkurse#strength" },
     ],
   },
   { label: "Online Coaching", href: "/online-coaching" },
@@ -382,7 +373,7 @@ export const navItems = [
       { label: "Leistungsanalyse", href: "/analysen#leistung" },
     ],
   },
-  { label: "Hyrox", href: "/hyrox" },
+  { label: "HYROX", href: "/hyrox" },
   { label: "FAQ", href: "/faq" },
   {
     label: "Mehr",
@@ -469,11 +460,11 @@ export const faqSections = [
     ],
   },
   {
-    category: "Gruppenkurse (Hyrox & Bootcamp)",
+    category: "Gruppenkurse",
     items: [
       {
         q: "Was sind die Gruppenkurse?",
-        a: "Unsere Gruppenkurse bestehen aus Hyrox-Training und Bootcamp-Einheiten für Kraft, Ausdauer und Fettverbrennung.",
+        a: "Unsere Gruppenkurse sind HYROX, Indoor Bootcamp und HYROX Strength — für Kraft, Ausdauer, Muskelaufbau und Fettverbrennung.",
       },
       {
         q: "Kann ich die Gruppenkurse ausprobieren?",

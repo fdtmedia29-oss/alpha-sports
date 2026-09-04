@@ -145,7 +145,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Gruppenkurse",
-                      description: "Bootcamp, HIIT Boxing, Yoga, Pilates und mehr",
+                      description: "HYROX, Indoor Bootcamp und HYROX Strength",
                     },
                   },
                 ],

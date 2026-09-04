@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/gruppenkurse" },
   title: "Gruppenkurse",
   description:
-    "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp, Pilates & Strength. Max. 12 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",
+    "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp & HYROX Strength. Max. 12 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",
 };
 
 const detailedClasses = [
@@ -61,46 +61,33 @@ const detailedClasses = [
       "Ob du deinen Körper formen willst, fit für den Alltag sein oder deine Leistung im Sport steigern möchtest - unser Indoor Bootcamp Gruppenkurs bringt dich aufs nächste Level.",
   },
   {
-    id: "pilates",
-    name: "Pilates",
-    subtitle: "Stärke deine Mitte & finde die Balance",
-    icon: "Heart",
-    image: "/images/studio/studio-3.jpg",
-    intro:
-      "Du suchst nach effektivem, sanftem Training, das deinen Körper stärkt, deine Haltung verbessert und deine Beweglichkeit fördert? Dann ist unser Pilates Gruppenkurs in St. Gallen genau das Richtige für dich!",
-    description:
-      "Pilates ist ein ganzheitliches Körpertraining mit Fokus auf die Stärkung der Körpermitte (Core), eine bewusste Atmung und kontrollierte Bewegungen. Ideal für alle, die gezielt etwas für ihre Gesundheit, ihre Haltung und ihr Wohlbefinden tun wollen - unabhängig vom Fitnesslevel oder Alter.",
-    highlights: [
-      "Rumpfstabilität, Beweglichkeit & Haltung",
-      "Bauch, Rücken & Beckenboden",
-      "Prävention von Rückenschmerzen",
-      "Kleingruppen-Setting",
-      "Anfänger & Fortgeschrittene",
-    ],
-    closing:
-      "Ob zur Ergänzung deines Krafttrainings, zur Verbesserung deiner Körperhaltung oder für ein bewussteres Körpergefühl - unser Pilates Gruppenkurs bringt dich in Einklang mit dir selbst.",
-  },
-  {
+    // Umbenannt am 04.09.2026 auf Luigis Wunsch (vorher "Strength").
+    // Die id bleibt "strength", damit /gruppenkurse#strength und der
+    // Navigations-Eintrag weiterhin greifen.
     id: "strength",
-    name: "Strength",
-    subtitle: "Dein Strength-Gruppenkurs für Muskelaufbau mit System & Technik",
+    name: "HYROX Strength",
+    subtitle:
+      "Athletischer Körperaufbau für mehr Kraft und Race Performance",
     icon: "Dumbbell",
     image: "/images/studio/studio-6.jpg",
     intro:
-      "Du willst gezielt Muskeln aufbauen, stärker werden und dabei technisch sauber trainieren? Dann ist Strength der richtige Gruppenkurs in St. Gallen für dich.",
+      "Du möchtest einen starken, definierten und leistungsfähigen Körper aufbauen? Dann ist HYROX Strength der richtige Gruppenkurs für dich.",
     description:
-      "Hier steht nicht nur intensives Training im Vordergrund, sondern auch die perfekte Technik. Unser Kurs kombiniert fundiertes Hypertrophie-Training mit einem starken Fokus auf korrekte Übungsausführung, Progression und Trainingsqualität. So erzielst du sichtbare Resultate und bleibst langfristig verletzungsfrei.",
+      "Im Mittelpunkt dieses Kurses steht der gezielte Aufbau eines athletischen Körpers. Durch strukturiertes Kraft- und Hypertrophietraining entwickelst du Muskulatur, verbesserst deine Körperkomposition und formst einen definierten Körper. Dabei trainierst du nicht nur für die Optik, sondern baust gleichzeitig Kraft, Stabilität und Belastbarkeit auf. Genau diese Kombination wirkt sich positiv auf deine Leistung im HYROX Race aus: mehr funktionelle Muskelmasse und eine gut entwickelte Kraftbasis helfen dir dabei, Disziplinen wie Sled Push, Sled Pull, Lunges und Wall Balls effizienter zu bewältigen. Ein HYROX Race muss jedoch nicht dein primäres Ziel sein. Der Kurs richtet sich ebenso an alle, die ihren Körper athletisch formen, Muskulatur aufbauen und sich stärker fühlen möchten. Bei HYROX Strength geht es deshalb nicht darum, einfach nur möglichst hart zu trainieren. Entscheidend sind eine saubere Übungsausführung, gezielte Trainingsreize und eine kontinuierliche Steigerung deiner Leistung. Im Kleingruppen-Setting erhältst du persönliches Coaching und trainierst strukturiert auf dein individuelles Ziel hin.",
     highlights: [
-      "Hypertrophie- & Krafttraining",
+      "Gezielter Aufbau eines starken und athletischen Körpers",
+      "Strukturiertes Hypertrophie- und Krafttraining",
+      "Unterstützung bei Muskelaufbau und Body Recomposition",
+      "Mehr Kraft, Stabilität und Belastbarkeit",
+      "Eine starke körperliche Grundlage für dein HYROX Race",
       "Präzises Technik-Coaching",
-      "Progressiver Overload, Muskelspannung & gezielte Reize",
-      "Lang- & Kurzhanteln, Eigengewicht",
-      "Einsteiger & Fortgeschrittene",
-      "Kleingruppen-Setting",
-      "Muskelaufbau, Kraftentwicklung & Bodyforming",
+      "Progressive Steigerung von Gewicht und Belastung",
+      "Training mit Langhanteln, Kurzhanteln und dem eigenen Körpergewicht",
+      "Persönliche Betreuung in der Kleingruppe",
+      "Geeignet für Einsteiger und Fortgeschrittene",
     ],
     closing:
-      "Egal ob dein Ziel Body Recomposition, mehr Leistung im Gym oder einfach ein definierter, starker Körper ist - Strength vereint Wissen, Technik & Intensität in einem Kurs.",
+      "Wie alle unsere Gruppenkurse kannst du auch HYROX Strength mit unserem Ernährungs- und Leistungsdiagnostik-Package ergänzen. Mithilfe gezielter Analysen machen wir deine Ausgangslage und deine Entwicklung messbar, sodass Training und Ernährung noch genauer auf dein persönliches Ziel abgestimmt werden können. So erhältst du ein ganzheitliches Konzept, bei dem Training, Ernährung und Leistungsdiagnostik sinnvoll ineinandergreifen. HYROX Strength verbindet Körperaufbau und Leistungsfähigkeit: Dein Körper soll nicht nur athletisch aussehen, er soll auch athletisch funktionieren.",
   },
 ];
 
@@ -221,7 +208,7 @@ export default function GruppenkursePage() {
         idPrefix="gk-faq"
         title="Häufige Fragen zu den Gruppenkursen."
         items={[
-          ...faqSections.find((s) => s.category === "Gruppenkurse (Hyrox & Bootcamp)")!.items,
+          ...faqSections.find((s) => s.category === "Gruppenkurse")!.items,
           ...faqSections.find((s) => s.category === "Vergleich & Entscheidungen")!.items,
         ]}
       />

@@ -6,7 +6,7 @@ import type { MouseEvent, ReactNode } from "react";
 
 /**
  * Link auf einen Abschnitt — als reiner Anker ("#buchen") oder mit Pfad
- * ("/gruppenkurse#pilates").
+ * ("/gruppenkurse#strength").
  *
  * WARUM ES DAS GIBT (03.09.2026, gemeldet von Luigi):
  * Mit `next/link` greift ein Sprung auf DIESELBE Seite nur EINMAL. Beim ersten

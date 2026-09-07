@@ -144,7 +144,11 @@ export const groupClasses: GroupClass[] = [
   {
     name: "HYROX",
     trainer: "Nicole Walser",
-    schedule: "Mo 12:00, Mi 06:30 & 18:30, Fr 17:30",
+    // Zeiten am 07.09.2026 gegen den nutrilize-Kursplan geprueft (10 Wochen,
+    // 07.09.-15.11.): Mi 06:30, Mi 18:30 und Fr 17:30 laufen. Der Montags-Slot
+    // war 18:30 (nicht 12:00) und ist in jeder Woche als abgesagt eingetragen —
+    // Luigi hat den Montag bestaetigt gestrichen.
+    schedule: "Mi 06:30 & 18:30, Fr 17:30",
     description:
       "Race-Day Vorbereitung als Gruppenkurs. Kombiniert Laufen mit funktionellen Übungen - Sled Push, Burpee Broad Jumps, Farmers Carry und mehr. Für Einsteiger und Wettkämpfer.",
     href: "/hyrox",

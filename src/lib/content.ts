@@ -140,14 +140,28 @@ export interface GroupClass {
   image: string;
 }
 
+/**
+ * Gruppenkurse — Zeiten kommen aus dem nutrilize-Kursplan (`gruppenkurseBuchung`
+ * in `booking.ts`), NICHT aus dem Kopf. Zuletzt abgeglichen am 07.09.2026 ueber
+ * den Zeitraum 31.08.-15.11.2026 (Start des Kursplans bis 10 Wochen voraus).
+ *
+ * Regulaer laufen laut Plan:
+ *   Mo 18:30-19:30  Indoor Bootcamp  (Nikki)
+ *   Mi 06:30-07:30  HYROX            (Nikki)
+ *   Mi 18:30-19:30  HYROX            (Nikki)
+ *   Fr 17:30-18:30  HYROX            (David)
+ *
+ * Der Montags-HYROX (18:30) steht zwar im Plan, ist aber ab dem 07.09. in jeder
+ * Woche abgesagt — Luigi hat ihn am 07.09.2026 gestrichen.
+ *
+ * Der Kursplan ist immer aktueller als diese Datei. Bei jeder Kursaenderung hier
+ * gegenpruefen, sonst widerspricht die Website dem Buchungskalender.
+ */
 export const groupClasses: GroupClass[] = [
   {
     name: "HYROX",
-    trainer: "Nicole Walser",
-    // Zeiten am 07.09.2026 gegen den nutrilize-Kursplan geprueft (10 Wochen,
-    // 07.09.-15.11.): Mi 06:30, Mi 18:30 und Fr 17:30 laufen. Der Montags-Slot
-    // war 18:30 (nicht 12:00) und ist in jeder Woche als abgesagt eingetragen —
-    // Luigi hat den Montag bestaetigt gestrichen.
+    // Mittwoch Nicole, Freitag David — so steht es im nutrilize-Kursplan.
+    trainer: "Nicole Walser & David Rogers",
     schedule: "Mi 06:30 & 18:30, Fr 17:30",
     description:
       "Race-Day Vorbereitung als Gruppenkurs. Kombiniert Laufen mit funktionellen Übungen - Sled Push, Burpee Broad Jumps, Farmers Carry und mehr. Für Einsteiger und Wettkämpfer.",
@@ -167,7 +181,10 @@ export const groupClasses: GroupClass[] = [
     // Umbenannt 04.09.2026 (vorher "Strength"). Anker bleibt #strength.
     name: "HYROX Strength",
     trainer: "David Rogers",
-    schedule: "Mi 12:00",
+    // Kein fester Termin: HYROX Strength kommt im nutrilize-Kursplan seit dessen
+    // Start (31.08.2026) genau einmal vor — Mo 07.09. 17:30 mit Julia, und der
+    // war abgesagt. Das frueher hier stehende "Mi 12:00" gibt es im Plan nicht.
+    schedule: "Termine im Kursplan",
     description:
       "Athletischer Körperaufbau für mehr Kraft und Race Performance. Strukturiertes Kraft- und Hypertrophietraining in der Kleingruppe — für Muskelaufbau, Body Recomposition und eine starke Grundlage fürs HYROX Race.",
     href: "/gruppenkurse#strength",

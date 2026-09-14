@@ -5,6 +5,7 @@ import PageFAQ from "@/components/sections/PageFAQ";
 import { faqSections } from "@/lib/content";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
 import InlineVideo from "@/components/ui/InlineVideo";
+import TransformationSlideshow from "@/components/sections/TransformationSlideshow";
 import Image from "next/image";
 import {
   ArrowRight,
@@ -154,30 +155,7 @@ export default function PersonalTrainingPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { src: "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg", name: "Markus R." },
-              { src: "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg", name: "Dietmar G." },
-              { src: "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg", name: "Simon G." },
-              { src: "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png", name: "Claudine G." },
-              { src: "/images/results/vorher-nachher-vergleich-peter-meier.png", name: "Peter M." },
-              { src: "/images/results/vorher-nacher-vergleich-izadora-d..png", name: "Izadora D." },
-            ].map((item) => (
-              <div key={item.name} className="overflow-hidden rounded-2xl border border-border bg-bg-alt">
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={item.src}
-                    alt={`Vorher-Nachher Vergleich — ${item.name}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="px-4 py-3 text-center">
-                  <span className="text-sm font-semibold text-text">{item.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TransformationSlideshow />
 
           <div className="mt-10 text-center">
             <Link

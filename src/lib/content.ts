@@ -311,6 +311,33 @@ export const googleReviews = [
   },
 ];
 
+// Vorher-Nachher im neuen Design (Drive 14.09.2026, von Luigi neu gestaltet).
+// Pro Person drei Ansichten, links Vorher, rechts Nachher. Reihenfolge nach
+// Luigis Wunsch: zuerst Seite, dann vorne, dann hinten. In Luigis ZIPs heissen
+// sie 1 = vorne, 2 = hinten, 3 = Seite.
+export const transformationViews = ["Seite", "Vorne", "Hinten"] as const;
+
+export interface Transformation {
+  name: string;
+  images: [string, string, string];
+}
+
+const slides = (slug: string): [string, string, string] => [
+  `/images/results/slides/${slug}-seite.jpg`,
+  `/images/results/slides/${slug}-vorne.jpg`,
+  `/images/results/slides/${slug}-hinten.jpg`,
+];
+
+export const transformations: Transformation[] = [
+  { name: "Markus R.", images: slides("markus-r") },
+  { name: "Dietmar G.", images: slides("dietmar-g") },
+  { name: "Simon G.", images: slides("simon-g") },
+  { name: "Claudine G.", images: slides("claudine-g") },
+  { name: "Peter M.", images: slides("peter-m") },
+  { name: "Izadora D.", images: slides("izadora-d") },
+  { name: "Marie-Luise A.", images: slides("marie-luise-a") },
+];
+
 export const certifications = [
   { name: "Qualitop", logo: "/images/certs/qualitop.png" },
 ];
@@ -362,13 +389,14 @@ export const studioImages = [
   "/images/trainers/team.jpg",
   "/images/trainers/team-foto.jpg",
   "/images/trainers/team-foto-neu.jpg",
-  // Erfolgsgeschichten
-  "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
-  "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
-  "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
-  "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
-  "/images/results/vorher-nachher-vergleich-peter-meier.png",
-  "/images/results/vorher-nacher-vergleich-izadora-d..png",
+  // Erfolgsgeschichten (neues Design, Seitenansicht)
+  "/images/results/slides/markus-r-seite.jpg",
+  "/images/results/slides/dietmar-g-seite.jpg",
+  "/images/results/slides/simon-g-seite.jpg",
+  "/images/results/slides/claudine-g-seite.jpg",
+  "/images/results/slides/peter-m-seite.jpg",
+  "/images/results/slides/izadora-d-seite.jpg",
+  "/images/results/slides/marie-luise-a-seite.jpg",
 ];
 
 export const navItems = [

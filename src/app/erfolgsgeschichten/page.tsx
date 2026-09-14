@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
+import TransformationSlideshow from "@/components/sections/TransformationSlideshow";
 import { Star, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -94,31 +94,10 @@ export default function ErfolgsgeschichtenPage() {
               Vorher — Nachher
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-text-secondary">
-              Echte Ergebnisse unserer Kunden. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
+              Echte Ergebnisse unserer Kunden, von der Seite, von vorne und von hinten. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
-              "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
-              "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
-              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
-              "/images/results/vorher-nachher-vergleich-peter-meier.png",
-              "/images/results/vorher-nacher-vergleich-izadora-d..png",
-            ].map((src, i) => (
-              <div
-                key={src}
-                className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-white"
-              >
-                <Image
-                  src={src}
-                  alt={`Vorher-Nachher Transformation ${i + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
+          <TransformationSlideshow />
         </div>
       </section>
 

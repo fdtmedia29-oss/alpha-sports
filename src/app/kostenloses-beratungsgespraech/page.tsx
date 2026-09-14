@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star, Target, BarChart3, Zap, Quote, Play, Volume2, VolumeX } from "lucide-react";
 import { siteConfig, faqSections } from "@/lib/content";
 import { useRef, useState, useEffect } from "react";
-import PhotoCarousel from "@/components/ui/PhotoCarousel";
+import TransformationSlideshow from "@/components/sections/TransformationSlideshow";
 import PageFAQ from "@/components/sections/PageFAQ";
 
 const consultationSteps = [
@@ -393,17 +393,7 @@ export default function KontaktPage() {
               Ergebnisse, die für sich sprechen.
             </h2>
           </motion.div>
-          <PhotoCarousel
-            title=""
-            images={[
-              "/images/results/vorher-nachher-vergleich-markus-richina-jpg.jpg",
-              "/images/results/beitrag-vorher-nachher-vergleich-dietmar-grichnik.jpg",
-              "/images/results/beitrag-vorher-nachher-vergleich-simon-gisler.jpg",
-              "/images/results/vorher-nacher-vergleich-izadora-d..png",
-              "/images/results/vorher-nachher-vergleich-claudine-g.-beitrag.png",
-              "/images/results/vorher-nachher-vergleich-peter-meier.png",
-            ]}
-          />
+          <TransformationSlideshow layout="carousel" />
           <div className="mt-10 text-center">
             <Link
               href="/kostenloses-beratungsgespraech/buchen"

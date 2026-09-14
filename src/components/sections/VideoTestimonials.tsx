@@ -4,8 +4,13 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react";
 
+// Dietmar + Peter kamen am 14.09.2026 von Luigi (Drive "Testimonials Neu"),
+// aus 4K auf 1080x1920 heruntergerechnet. Stehen an Platz 2 und 3, damit sie
+// auf dem Desktop ohne Pfeil-Klick sichtbar sind.
 const videos = [
   { src: "/videos/testimonial-1.mp4", title: "Testimonial 1" },
+  { src: "/videos/testimonial-dietmar.mp4", title: "Testimonial Dietmar" },
+  { src: "/videos/testimonial-peter.mp4", title: "Testimonial Peter" },
   { src: "/videos/testimonial-jens.mp4", title: "Testimonial Jens" },
   { src: "/videos/testimonial-markus.mp4", title: "Testimonial Markus" },
 ];
@@ -70,7 +75,7 @@ function VideoCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="w-[70vw] shrink-0 snap-start sm:w-[45vw] md:w-auto"
+      className="w-[70vw] shrink-0 snap-start sm:w-[45vw] md:w-[calc((100%-2.5rem)/3)]"
     >
       <div
         className="group relative aspect-[9/16] cursor-pointer overflow-hidden rounded-3xl border border-border bg-dark"
@@ -137,10 +142,14 @@ function VideoCard({
 export default function VideoTestimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Eine Karte pro Klick (Kartenbreite + gap-5)
   const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -380 : 380,
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.firstElementChild as HTMLElement | null;
+    const step = card ? card.offsetWidth + 20 : 380;
+    el.scrollBy({
+      left: direction === "left" ? -step : step,
       behavior: "smooth",
     });
   };
@@ -156,11 +165,11 @@ export default function VideoTestimonials() {
           </h2>
         </div>
 
-        {/* Video grid: 3 on desktop, carousel on mobile */}
+        {/* Karussell überall: 3 sichtbar auf Desktop, Pfeile blättern weiter */}
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-visible md:overflow-y-visible md:pb-0"
+            className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory md:pb-0"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",

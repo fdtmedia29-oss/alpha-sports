@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -32,18 +32,9 @@ function setWidthOf(el: HTMLDivElement | null) {
   return second.offsetLeft - first.offsetLeft;
 }
 
-// iOS erlaubt keine Lautstärke per Code (nur die Tasten am Gerät),
-// dort bleibt es beim Stummschalt-Knopf
-let volumeProbe: boolean | null = null;
-function canAdjustVolume() {
-  if (volumeProbe === null) {
-    const probe = document.createElement("video");
-    probe.volume = 0.5;
-    volumeProbe = probe.volume === 0.5;
-  }
-  return volumeProbe;
-}
-const noSubscribe = () => () => {};
+// Bewusst kein Lautstärke-Regler: auf iPhones lässt sich die Lautstärke per
+// Code nicht ändern (nur mit den Tasten), der Regler tat dort nichts.
+// Ton an/aus funktioniert überall. Entscheid Francesco 15.09.2026.
 
 type Mode = "idle" | "preview" | "sound" | "paused";
 
@@ -51,17 +42,11 @@ function VideoCard({
   video,
   id,
   autoPlay,
-  volume,
-  onVolume,
-  volumeAdjustable,
   onSoundChange,
 }: {
   video: (typeof videos)[number];
   id: string;
   autoPlay: boolean;
-  volume: number;
-  onVolume: (v: number) => void;
-  volumeAdjustable: boolean;
   onSoundChange: (id: string, playing: boolean) => void;
 }) {
   // idle: noch nie gestartet · preview: spielt stumm von selbst ·
@@ -80,11 +65,6 @@ function VideoCard({
     },
     [id, onSoundChange]
   );
-
-  // Lautstärke gilt für alle Videos gleich
-  useEffect(() => {
-    if (videoRef.current) videoRef.current.volume = volume;
-  }, [volume]);
 
   // Sichtbarkeit: stumme Vorschau starten (nur erstes Video), alles andere
   // anhalten, sobald die Karte aus dem Bild scrollt
@@ -140,7 +120,6 @@ function VideoCard({
     window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: id }));
     if (fromStart) v.currentTime = 0;
     v.muted = false;
-    v.volume = volume;
     setMuted(false);
     v.play()
       .then(() => changeMode("sound"))
@@ -171,18 +150,7 @@ function VideoCard({
     const v = videoRef.current;
     if (!v) return;
     v.muted = !muted;
-    if (!v.muted && v.volume === 0) onVolume(0.5);
     setMuted(!muted);
-  };
-
-  const changeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const next = Number(e.target.value);
-    onVolume(next);
-    const v = videoRef.current;
-    if (!v) return;
-    const shouldMute = next === 0;
-    v.muted = shouldMute;
-    setMuted(shouldMute);
   };
 
   return (
@@ -225,33 +193,17 @@ function VideoCard({
           </div>
         )}
 
-        {/* Mit Ton: Stummschalten + Lautstärke */}
+        {/* Mit Ton: Ton an/aus */}
         {mode === "sound" && (
-          <div
-            className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-full bg-black/50 px-3 py-2 backdrop-blur-sm"
-            onClick={(e) => e.stopPropagation()}
+          <button
+            type="button"
+            onClick={toggleMute}
+            className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/50 px-4 py-2.5 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+            aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
           >
-            <button
-              type="button"
-              onClick={toggleMute}
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white hover:bg-white/15"
-              aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
-            >
-              {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-            </button>
-            {volumeAdjustable && (
-              <input
-                type="range"
-                min={0}
-                max={1}
-                step={0.05}
-                value={muted ? 0 : volume}
-                onChange={changeVolume}
-                className="h-1 w-full cursor-pointer accent-orange"
-                aria-label="Lautstärke"
-              />
-            )}
-          </div>
+            {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
+            <span className="text-sm font-semibold">{muted ? "Ton an" : "Ton aus"}</span>
+          </button>
         )}
       </div>
     </div>
@@ -260,8 +212,6 @@ function VideoCard({
 
 export default function VideoTestimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [volume, setVolume] = useState(1);
-  const volumeAdjustable = useSyncExternalStore(noSubscribe, canAdjustVolume, () => false);
   const soundPlaying = useRef(new Set<string>());
   const settleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -356,9 +306,6 @@ export default function VideoTestimonials() {
                   video={video}
                   // stumme Vorschau nur beim ersten echten Video
                   autoPlay={copy === 1 && i === 0}
-                  volume={volume}
-                  onVolume={setVolume}
-                  volumeAdjustable={volumeAdjustable}
                   onSoundChange={onSoundChange}
                 />
               ))

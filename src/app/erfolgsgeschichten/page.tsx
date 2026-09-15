@@ -94,7 +94,7 @@ export default function ErfolgsgeschichtenPage() {
               Vorher — Nachher
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-text-secondary">
-              Echte Ergebnisse unserer Kunden, von der Seite, von vorne und von hinten. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
+              Echte Ergebnisse unserer Kunden, von vorne, von der Seite und von hinten. Jede Transformation ist einzigartig — und jede beginnt mit dem ersten Schritt.
             </p>
           </div>
           <TransformationSlideshow />

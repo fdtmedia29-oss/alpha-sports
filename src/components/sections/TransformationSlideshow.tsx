@@ -158,7 +158,7 @@ function SlideCard({
 }
 
 /**
- * Vorher-Nachher als Slideshow: pro Person Seite → Vorne → Hinten.
+ * Vorher-Nachher als Slideshow: pro Person Vorne → Seite → Hinten.
  * Handy: alle Karten untereinander. Ab Tablet zwei pro Reihe, eine
  * übrige Karte steht mittig.
  */

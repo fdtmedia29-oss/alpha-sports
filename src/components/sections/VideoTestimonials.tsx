@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -8,146 +8,312 @@ import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react"
 // aus 4K auf 1080x1920 heruntergerechnet. Stehen an Platz 2 und 3, damit sie
 // auf dem Desktop ohne Pfeil-Klick sichtbar sind.
 const videos = [
-  { src: "/videos/testimonial-1.mp4", title: "Testimonial 1" },
-  { src: "/videos/testimonial-dietmar.mp4", title: "Testimonial Dietmar" },
-  { src: "/videos/testimonial-peter.mp4", title: "Testimonial Peter" },
-  { src: "/videos/testimonial-jens.mp4", title: "Testimonial Jens" },
-  { src: "/videos/testimonial-markus.mp4", title: "Testimonial Markus" },
+  { src: "/videos/testimonial-1.mp4", poster: "/videos/posters/testimonial-1.jpg", title: "Testimonial 1" },
+  { src: "/videos/testimonial-dietmar.mp4", poster: "/videos/posters/testimonial-dietmar.jpg", title: "Testimonial Dietmar" },
+  { src: "/videos/testimonial-peter.mp4", poster: "/videos/posters/testimonial-peter.jpg", title: "Testimonial Peter" },
+  { src: "/videos/testimonial-jens.mp4", poster: "/videos/posters/testimonial-jens.jpg", title: "Testimonial Jens" },
+  { src: "/videos/testimonial-markus.mp4", poster: "/videos/posters/testimonial-markus.jpg", title: "Testimonial Markus" },
 ];
+
+// Die Liste steht dreimal hintereinander (Kopie, echt, Kopie). Nach jedem
+// Scrollen springt die Position unsichtbar zurück in den mittleren Satz,
+// dadurch geht es nach dem letzten Video endlos wieder mit dem ersten weiter.
+const COPIES = 3;
+const GAP_PX = 20; // gap-5
+
+// Nur ein Video spielt gleichzeitig: wer startet, meldet sich hier
+const PLAY_EVENT = "alpha-testimonial-play";
+
+// Breite eines ganzen Satzes (5 Karten inkl. Abstand)
+function setWidthOf(el: HTMLDivElement | null) {
+  if (!el || el.children.length < videos.length * 2) return 0;
+  const first = el.children[0] as HTMLElement;
+  const second = el.children[videos.length] as HTMLElement;
+  return second.offsetLeft - first.offsetLeft;
+}
+
+// iOS erlaubt keine Lautstärke per Code (nur die Tasten am Gerät),
+// dort bleibt es beim Stummschalt-Knopf
+let volumeProbe: boolean | null = null;
+function canAdjustVolume() {
+  if (volumeProbe === null) {
+    const probe = document.createElement("video");
+    probe.volume = 0.5;
+    volumeProbe = probe.volume === 0.5;
+  }
+  return volumeProbe;
+}
+const noSubscribe = () => () => {};
+
+type Mode = "idle" | "preview" | "sound" | "paused";
 
 function VideoCard({
   video,
-  index,
+  id,
   autoPlay,
+  volume,
+  onVolume,
+  volumeAdjustable,
+  onSoundChange,
 }: {
   video: (typeof videos)[number];
-  index: number;
-  autoPlay?: boolean;
+  id: string;
+  autoPlay: boolean;
+  volume: number;
+  onVolume: (v: number) => void;
+  volumeAdjustable: boolean;
+  onSoundChange: (id: string, playing: boolean) => void;
 }) {
-  const [playing, setPlaying] = useState(false);
+  // idle: noch nie gestartet · preview: spielt stumm von selbst ·
+  // sound: vom Besucher gestartet, mit Ton · paused: vom Besucher angehalten
+  const [mode, setMode] = useState<Mode>("idle");
   const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const modeRef = useRef<Mode>("idle");
 
-  /* Autoplay first video (muted) when scrolled into view, pause when out */
+  const changeMode = useCallback(
+    (next: Mode) => {
+      modeRef.current = next;
+      setMode(next);
+      onSoundChange(id, next === "sound");
+    },
+    [id, onSoundChange]
+  );
+
+  // Lautstärke gilt für alle Videos gleich
   useEffect(() => {
-    if (!autoPlay || !video.src || !videoRef.current || !containerRef.current)
-      return;
+    if (videoRef.current) videoRef.current.volume = volume;
+  }, [volume]);
 
+  // Sichtbarkeit: stumme Vorschau starten (nur erstes Video), alles andere
+  // anhalten, sobald die Karte aus dem Bild scrollt
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
+        const v = videoRef.current;
+        if (!v) return;
+        const current = modeRef.current;
         if (entry.isIntersecting) {
-          videoRef.current?.play();
-          setPlaying(true);
-        } else {
-          videoRef.current?.pause();
-          setPlaying(false);
+          if (autoPlay && current === "idle") {
+            v.muted = true;
+            v.play().then(() => changeMode("preview")).catch(() => {});
+          }
+        } else if (current === "preview") {
+          v.pause();
+          changeMode("idle");
+        } else if (current === "sound") {
+          v.pause();
+          changeMode("paused");
         }
       },
       { threshold: 0.5 }
     );
-
-    observer.observe(containerRef.current);
+    observer.observe(el);
     return () => observer.disconnect();
-  }, [autoPlay, video.src]);
+  }, [autoPlay, changeMode]);
 
-  const togglePlay = () => {
-    if (!videoRef.current || !video.src) return;
-    if (playing) {
-      videoRef.current.pause();
+  // Startet ein anderes Video, hält dieses an
+  useEffect(() => {
+    const onOtherPlay = (e: Event) => {
+      if ((e as CustomEvent<string>).detail === id) return;
+      const v = videoRef.current;
+      if (!v) return;
+      const current = modeRef.current;
+      if (current === "preview") {
+        v.pause();
+        changeMode("idle");
+      } else if (current === "sound") {
+        v.pause();
+        changeMode("paused");
+      }
+    };
+    window.addEventListener(PLAY_EVENT, onOtherPlay);
+    return () => window.removeEventListener(PLAY_EVENT, onOtherPlay);
+  }, [id, changeMode]);
+
+  const startWithSound = (fromStart: boolean) => {
+    const v = videoRef.current;
+    if (!v) return;
+    window.dispatchEvent(new CustomEvent(PLAY_EVENT, { detail: id }));
+    if (fromStart) v.currentTime = 0;
+    v.muted = false;
+    v.volume = volume;
+    setMuted(false);
+    v.play()
+      .then(() => changeMode("sound"))
+      .catch(() => {
+        // Browser verweigert Ton: dann wenigstens stumm abspielen
+        v.muted = true;
+        setMuted(true);
+        v.play().then(() => changeMode("sound")).catch(() => {});
+      });
+  };
+
+  const handleClick = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (mode === "sound") {
+      v.pause();
+      changeMode("paused");
+    } else if (mode === "paused") {
+      startWithSound(false);
     } else {
-      videoRef.current.play();
+      // idle oder stumme Vorschau: mit Ton von vorne
+      startWithSound(true);
     }
-    setPlaying(!playing);
   };
 
   const toggleMute = (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (!videoRef.current) return;
-    videoRef.current.muted = !muted;
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !muted;
+    if (!v.muted && v.volume === 0) onVolume(0.5);
     setMuted(!muted);
   };
 
+  const changeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const next = Number(e.target.value);
+    onVolume(next);
+    const v = videoRef.current;
+    if (!v) return;
+    const shouldMute = next === 0;
+    v.muted = shouldMute;
+    setMuted(shouldMute);
+  };
+
   return (
-    <motion.div
+    <div
       ref={containerRef}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
       className="w-[70vw] shrink-0 snap-start sm:w-[45vw] md:w-[calc((100%-2.5rem)/3)]"
     >
       <div
         className="group relative aspect-[9/16] cursor-pointer overflow-hidden rounded-3xl border border-border bg-dark"
-        onClick={togglePlay}
+        onClick={handleClick}
       >
-        {video.src ? (
-          <>
-            <video
-              ref={videoRef}
-              src={video.src}
-              muted
-              playsInline
-              loop
-              className="h-full w-full object-cover"
-            />
-            {/* Play overlay — shown when paused */}
-            {!playing && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/40 bg-black/30 backdrop-blur-sm transition-all group-hover:border-orange group-hover:bg-orange/20">
-                  <Play
-                    className="h-7 w-7 text-white transition-colors group-hover:text-orange"
-                    fill="currentColor"
-                  />
-                </div>
-              </div>
-            )}
-            {/* Mute/unmute — prominent label when muted, small icon when unmuted */}
-            {playing && (
-              <button
-                onClick={toggleMute}
-                className={`absolute bottom-4 flex items-center gap-2 backdrop-blur-sm transition-all ${
-                  muted
-                    ? "left-1/2 -translate-x-1/2 animate-pulse rounded-full bg-white/90 px-5 py-2.5 text-dark shadow-lg"
-                    : "right-4 rounded-full bg-black/40 p-2.5 hover:bg-black/60"
-                }`}
-                aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
-              >
-                {muted ? (
-                  <>
-                    <VolumeX className="h-5 w-5" />
-                    <span className="text-sm font-semibold">Ton einschalten</span>
-                  </>
-                ) : (
-                  <Volume2 className="h-5 w-5 text-white" />
-                )}
-              </button>
-            )}
-          </>
-        ) : (
-          <div className="flex h-full flex-col items-center justify-center">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/20 transition-colors group-hover:border-orange group-hover:bg-orange/10">
-              <Play className="h-7 w-7 text-white/40 transition-colors group-hover:text-orange" />
+        <video
+          ref={videoRef}
+          src={video.src}
+          poster={video.poster}
+          preload="metadata"
+          muted
+          playsInline
+          loop
+          className="h-full w-full object-cover"
+        />
+
+        {/* Play-Knopf, solange nichts läuft */}
+        {(mode === "idle" || mode === "paused") && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/40 bg-black/30 backdrop-blur-sm transition-all group-hover:border-orange group-hover:bg-orange/20">
+              <Play
+                className="h-7 w-7 text-white transition-colors group-hover:text-orange"
+                fill="currentColor"
+              />
             </div>
-            <p className="mt-4 text-sm font-medium text-white/40">
-              Video folgt
-            </p>
+          </div>
+        )}
+
+        {/* Stumme Vorschau: Hinweis, dass ein Klick mit Ton startet */}
+        {mode === "preview" && (
+          <div className="pointer-events-none absolute bottom-4 left-1/2 flex -translate-x-1/2 animate-pulse items-center gap-2 rounded-full bg-white/90 px-5 py-2.5 text-dark shadow-lg backdrop-blur-sm">
+            <VolumeX className="h-5 w-5" />
+            <span className="whitespace-nowrap text-sm font-semibold">Mit Ton ansehen</span>
+          </div>
+        )}
+
+        {/* Mit Ton: Stummschalten + Lautstärke */}
+        {mode === "sound" && (
+          <div
+            className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-full bg-black/50 px-3 py-2 backdrop-blur-sm"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={toggleMute}
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white hover:bg-white/15"
+              aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
+            >
+              {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
+            </button>
+            {volumeAdjustable && (
+              <input
+                type="range"
+                min={0}
+                max={1}
+                step={0.05}
+                value={muted ? 0 : volume}
+                onChange={changeVolume}
+                className="h-1 w-full cursor-pointer accent-orange"
+                aria-label="Lautstärke"
+              />
+            )}
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function VideoTestimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [volume, setVolume] = useState(1);
+  const volumeAdjustable = useSyncExternalStore(noSubscribe, canAdjustVolume, () => false);
+  const soundPlaying = useRef(new Set<string>());
+  const settleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Zurück in den mittleren Satz springen (sieht gleich aus, darum unsichtbar)
+  const normalize = useCallback(() => {
+    const el = scrollRef.current;
+    const w = setWidthOf(el);
+    if (!el || !w) return;
+    // Nicht springen, solange ein Video mit Ton läuft, sonst reisst es ab
+    if (soundPlaying.current.size > 0) return;
+    if (el.scrollLeft < w - 2) el.scrollLeft += w;
+    else if (el.scrollLeft >= 2 * w - 2) el.scrollLeft -= w;
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const start = () => {
+      const w = setWidthOf(el);
+      if (w) el.scrollLeft = w;
+    };
+    start();
+    const onScroll = () => {
+      if (settleTimer.current) clearTimeout(settleTimer.current);
+      settleTimer.current = setTimeout(normalize, 150);
+    };
+    let lastWidth = el.clientWidth;
+    const onResize = () => {
+      if (el.clientWidth === lastWidth) return;
+      lastWidth = el.clientWidth;
+      start();
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      if (settleTimer.current) clearTimeout(settleTimer.current);
+    };
+  }, [normalize]);
+
+  const onSoundChange = useCallback((id: string, playing: boolean) => {
+    if (playing) soundPlaying.current.add(id);
+    else soundPlaying.current.delete(id);
+  }, []);
 
   // Eine Karte pro Klick (Kartenbreite + gap-5)
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
     if (!el) return;
     const card = el.firstElementChild as HTMLElement | null;
-    const step = card ? card.offsetWidth + 20 : 380;
+    const step = card ? card.offsetWidth + GAP_PX : 380;
     el.scrollBy({
       left: direction === "left" ? -step : step,
       behavior: "smooth",
@@ -165,8 +331,14 @@ export default function VideoTestimonials() {
           </h2>
         </div>
 
-        {/* Karussell überall: 3 sichtbar auf Desktop, Pfeile blättern weiter */}
-        <div className="relative">
+        {/* Endlos-Karussell: 3 sichtbar auf Desktop, Pfeile blättern weiter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="relative"
+        >
           <div
             ref={scrollRef}
             className="flex gap-5 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory md:pb-0"
@@ -176,14 +348,21 @@ export default function VideoTestimonials() {
               overscrollBehaviorX: "none",
             }}
           >
-            {videos.map((video, i) => (
-              <VideoCard
-                key={i}
-                video={video}
-                index={i}
-                autoPlay={i === 0}
-              />
-            ))}
+            {Array.from({ length: COPIES }).flatMap((_, copy) =>
+              videos.map((video, i) => (
+                <VideoCard
+                  key={`${copy}-${i}`}
+                  id={`${copy}-${i}`}
+                  video={video}
+                  // stumme Vorschau nur beim ersten echten Video
+                  autoPlay={copy === 1 && i === 0}
+                  volume={volume}
+                  onVolume={setVolume}
+                  volumeAdjustable={volumeAdjustable}
+                  onSoundChange={onSoundChange}
+                />
+              ))
+            )}
           </div>
 
           {/* Desktop arrows */}
@@ -203,7 +382,7 @@ export default function VideoTestimonials() {
               <ChevronRight className="h-5 w-5 text-text" />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

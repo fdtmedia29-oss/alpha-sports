@@ -393,7 +393,7 @@ export default function KontaktPage() {
               Ergebnisse, die für sich sprechen.
             </h2>
           </motion.div>
-          <TransformationSlideshow layout="carousel" />
+          <TransformationSlideshow />
           <div className="mt-10 text-center">
             <Link
               href="/kostenloses-beratungsgespraech/buchen"

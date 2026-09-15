@@ -52,8 +52,8 @@ function SlideCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: Math.min(index, 3) * 0.08 }}
-      className={`group shrink-0 snap-start overflow-hidden rounded-2xl border border-border bg-dark ${className}`}
+      transition={{ duration: 0.4, delay: (index % 2) * 0.08 }}
+      className={`group overflow-hidden rounded-2xl border border-border bg-dark ${className}`}
     >
       <div className="relative aspect-[4/5]">
         {/* Bild antippen = nächste Ansicht */}
@@ -69,7 +69,7 @@ function SlideCard({
               src={src}
               alt={`Vorher-Nachher ${item.name}, Ansicht ${transformationViews[i]}`}
               fill
-              sizes="(min-width: 1024px) 400px, (min-width: 640px) 45vw, 80vw"
+              sizes="(min-width: 1024px) 500px, (min-width: 640px) 50vw, 100vw"
               className={`object-cover transition-opacity duration-500 ${
                 i === active ? "opacity-100" : "opacity-0"
               }`}
@@ -96,7 +96,7 @@ function SlideCard({
                       duration: SLIDE_MS / 1000,
                       ease: "linear",
                       // Karten nicht alle gleichzeitig umblättern lassen
-                      delay: active === 0 ? (index % 3) * 0.9 : 0,
+                      delay: active === 0 ? (index % 2) * 1.2 : 0,
                     }}
                     onAnimationComplete={() => setActive((a) => (a + 1) % 3)}
                   />
@@ -159,69 +159,20 @@ function SlideCard({
 
 /**
  * Vorher-Nachher als Slideshow: pro Person Seite → Vorne → Hinten.
- * layout="grid": Mobile wischbar, ab Desktop alle Karten im Raster.
- * layout="carousel": auf allen Grössen eine Reihe mit Pfeilen.
+ * Handy: alle Karten untereinander. Ab Tablet zwei pro Reihe, eine
+ * übrige Karte steht mittig.
  */
-export default function TransformationSlideshow({
-  layout = "grid",
-}: {
-  layout?: "grid" | "carousel";
-}) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const grid = layout === "grid";
-
-  const scroll = (direction: "left" | "right") => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const card = el.firstElementChild as HTMLElement | null;
-    const step = card ? card.offsetWidth + 24 : 400;
-    el.scrollBy({ left: direction === "left" ? -step : step, behavior: "smooth" });
-  };
-
+export default function TransformationSlideshow() {
   return (
-    <div className="relative">
-      <div
-        ref={scrollRef}
-        className={`flex gap-6 overflow-x-auto overflow-y-hidden pb-4 snap-x snap-mandatory ${
-          grid
-            ? "lg:flex-wrap lg:justify-center lg:overflow-visible lg:pb-0"
-            : ""
-        }`}
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-          overscrollBehaviorX: "none",
-        }}
-      >
-        {transformations.map((item, i) => (
-          <SlideCard
-            key={item.name}
-            item={item}
-            index={i}
-            className="w-[80vw] sm:w-[45vw] lg:w-[calc((100%-3rem)/3)]"
-          />
-        ))}
-      </div>
-
-      {/* Reihen-Pfeile, nur wenn ab Desktop nicht alles im Raster steht */}
-      <div className={grid ? "hidden" : "hidden lg:block"}>
-        <button
-          type="button"
-          onClick={() => scroll("left")}
-          className="absolute -left-5 top-[45%] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-white shadow-md transition-colors hover:bg-bg-alt"
-          aria-label="Zurück"
-        >
-          <ChevronLeft className="h-5 w-5 text-text" />
-        </button>
-        <button
-          type="button"
-          onClick={() => scroll("right")}
-          className="absolute -right-5 top-[45%] flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-white shadow-md transition-colors hover:bg-bg-alt"
-          aria-label="Weiter"
-        >
-          <ChevronRight className="h-5 w-5 text-text" />
-        </button>
-      </div>
+    <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-6">
+      {transformations.map((item, i) => (
+        <SlideCard
+          key={item.name}
+          item={item}
+          index={i}
+          className="w-full sm:w-[calc((100%-1.5rem)/2)]"
+        />
+      ))}
     </div>
   );
 }

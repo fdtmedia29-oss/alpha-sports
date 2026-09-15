@@ -193,16 +193,15 @@ function VideoCard({
           </div>
         )}
 
-        {/* Mit Ton: Ton an/aus */}
+        {/* Mit Ton: nur das Lautsprecher-Symbol zum An- und Ausschalten */}
         {mode === "sound" && (
           <button
             type="button"
             onClick={toggleMute}
-            className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-black/50 px-4 py-2.5 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
+            className="absolute bottom-4 right-4 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
             aria-label={muted ? "Ton einschalten" : "Ton ausschalten"}
           >
             {muted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-            <span className="text-sm font-semibold">{muted ? "Ton an" : "Ton aus"}</span>
           </button>
         )}
       </div>

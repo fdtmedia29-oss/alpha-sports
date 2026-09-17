@@ -38,7 +38,7 @@ const textTestimonials = [
   },
 ];
 
-function TestimonialVideo({ src, autoPlay }: { src: string; autoPlay?: boolean }) {
+function TestimonialVideo({ src, poster, autoPlay }: { src: string; poster: string; autoPlay?: boolean }) {
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -78,7 +78,8 @@ function TestimonialVideo({ src, autoPlay }: { src: string; autoPlay?: boolean }
 
   return (
     <div ref={containerRef} className="relative aspect-[9/16] cursor-pointer overflow-hidden rounded-2xl bg-dark" onClick={togglePlay}>
-      <video ref={videoRef} src={src} muted playsInline loop className="h-full w-full object-cover" />
+      {/* preload="none": das Video lädt erst beim Abspielen, bis dahin nur das Posterbild */}
+      <video ref={videoRef} src={src} poster={poster} preload="none" muted playsInline loop className="h-full w-full object-cover" />
       {!playing && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/20">
           <div className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/40 bg-black/30 backdrop-blur-sm">
@@ -325,9 +326,9 @@ export default function KontaktPage() {
             </h2>
           </motion.div>
           <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-            <TestimonialVideo src="/videos/testimonial-1.mp4" autoPlay />
-            <TestimonialVideo src="/videos/testimonial-jens.mp4" />
-            <TestimonialVideo src="/videos/testimonial-markus.mp4" />
+            <TestimonialVideo src="/videos/testimonial-1.mp4" poster="/videos/posters/testimonial-1.jpg" autoPlay />
+            <TestimonialVideo src="/videos/testimonial-jens.mp4" poster="/videos/posters/testimonial-jens.jpg" />
+            <TestimonialVideo src="/videos/testimonial-markus.mp4" poster="/videos/posters/testimonial-markus.jpg" />
           </div>
           <div className="mt-10 text-center">
             <Link

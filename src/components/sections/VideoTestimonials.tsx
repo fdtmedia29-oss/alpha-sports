@@ -4,9 +4,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Play, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react";
 
-// Dietmar + Peter kamen am 14.09.2026 von Luigi (Drive "Testimonials Neu"),
-// aus 4K auf 1080x1920 heruntergerechnet. Stehen an Platz 2 und 3, damit sie
-// auf dem Desktop ohne Pfeil-Klick sichtbar sind.
+// Dietmar + Peter kamen am 14.09.2026 von Luigi (Drive "Testimonials Neu").
+// Stehen an Platz 2 und 3, damit sie auf dem Desktop ohne Pfeil-Klick sichtbar
+// sind. Alle Videos seit 17.09.2026 auf 720x1280 (H.264, CRF 23), je 6-8 MB:
+// die Rohfassungen mit bis zu 82 MB frassen 93 % des Vercel-Datenvolumens.
 const videos = [
   { src: "/videos/testimonial-1.mp4", poster: "/videos/posters/testimonial-1.jpg", title: "Testimonial 1" },
   { src: "/videos/testimonial-dietmar.mp4", poster: "/videos/posters/testimonial-dietmar.jpg", title: "Testimonial Dietmar" },
@@ -166,7 +167,8 @@ function VideoCard({
           ref={videoRef}
           src={video.src}
           poster={video.poster}
-          preload="metadata"
+          // 15 Karten (Liste dreimal): nichts vorladen, erst beim Abspielen
+          preload="none"
           muted
           playsInline
           loop

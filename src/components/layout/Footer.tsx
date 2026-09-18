@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, Facebook, Youtube, Phone, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/lib/content";
+import SectionLink from "@/components/ui/SectionLink";
 
 export default function Footer() {
   return (
@@ -137,12 +138,13 @@ export default function Footer() {
                 ["Preise", "/preise"],
               ].map(([label, href]) => (
                 <li key={href}>
-                  <Link
+                  {/* SectionLink, weil /analysen#… auf /analysen selbst sonst nur beim ersten Klick springt */}
+                  <SectionLink
                     href={href}
                     className="text-sm text-white/50 transition-colors hover:text-white"
                   >
                     {label}
-                  </Link>
+                  </SectionLink>
                 </li>
               ))}
             </ul>

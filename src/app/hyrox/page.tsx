@@ -156,7 +156,7 @@ export default function HyroxPage() {
           </div>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
             {[
-              "Hyrox Bild Chantal & Livio.jpeg",
+              "Hyrox Bild Chantal und Livio.jpeg",
               "Hyrox Race Bild Rebekka Widmer.jpeg",
               "Hyrox Race Bild Rebekka.jpeg",
               "Katja Egli Hyrox Race Bild.jpeg",
@@ -191,7 +191,7 @@ export default function HyroxPage() {
               "/images/classes/hyrox-abklatschen.jpg",
               "/images/classes/hyrox-ski-erg.jpg",
               "/images/classes/hyrox-gruppenkurs.jpg",
-              "/images/classes/hyrox-race/Hyrox Bild Chantal & Livio.jpeg",
+              "/images/classes/hyrox-race/Hyrox Bild Chantal und Livio.jpeg",
               "/images/classes/hyrox-race/Hyrox Race Bild Rebekka Widmer.jpeg",
               "/images/classes/hyrox-race/Katja Egli Hyrox Race Bild.jpeg",
               "/images/classes/hyrox-race/Martin Waldburger Hyrox Race Alpha Sports Logo.jpeg",

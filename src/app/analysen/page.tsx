@@ -8,6 +8,7 @@ import { BarChart3, Smartphone, ArrowRight, Shield } from "lucide-react";
 import SectionLink from "@/components/ui/SectionLink";
 import { certifications } from "@/lib/content";
 import AnalysenBooking from "@/components/sections/AnalysenBooking";
+import { buchungsLinks } from "@/lib/booking";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/analysen" },
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 const analyses = [
   {
     id: "inbody",
+    buchungsUrl: buchungsLinks.inbody,
     icon: "Activity",
     title: "InBody Körperanalyse",
     subtitle: "Dein Start in Richtung Bestform",
@@ -51,6 +53,7 @@ const analyses = [
   },
   {
     id: "stoffwechsel",
+    buchungsUrl: buchungsLinks.stoffwechselanalyse,
     icon: "Flame",
     title: "Stoffwechsel- und Stressanalyse",
     subtitle: "Verstehe deinen Körper & erreiche deine Bestform",
@@ -79,6 +82,7 @@ const analyses = [
   },
   {
     id: "leistung",
+    buchungsUrl: buchungsLinks.leistungsanalyse,
     icon: "Zap",
     title: "Leistungsanalyse",
     subtitle: "Trainiere gezielt & effizient auf dem Weg zu deiner Bestform",

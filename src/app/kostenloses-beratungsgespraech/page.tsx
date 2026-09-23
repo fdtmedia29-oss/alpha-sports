@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import BuchungsLink from "@/components/ui/BuchungsLink";
+import { buchungsLinks } from "@/lib/booking";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Target, BarChart3, Zap, Quote, Play, Volume2, VolumeX } from "lucide-react";
@@ -148,13 +149,13 @@ export default function KontaktPage() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-10 flex flex-col items-center gap-4"
           >
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
+            <BuchungsLink
+              href={buchungsLinks.beratungsgespraech}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-orange px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Jetzt Beratung buchen
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
             <a
               href={siteConfig.whatsapp}
               target="_blank"
@@ -297,13 +298,13 @@ export default function KontaktPage() {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="mt-12 text-center"
           >
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
+            <BuchungsLink
+              href={buchungsLinks.beratungsgespraech}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-10 py-5 text-lg font-bold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Jetzt Beratung buchen
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
           </motion.div>
         </div>
       </section>
@@ -331,13 +332,13 @@ export default function KontaktPage() {
             <TestimonialVideo src="/videos/testimonial-markus.mp4" poster="/videos/posters/testimonial-markus.jpg" />
           </div>
           <div className="mt-10 text-center">
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
+            <BuchungsLink
+              href={buchungsLinks.beratungsgespraech}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Jetzt Beratung buchen
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
           </div>
         </div>
       </section>
@@ -366,13 +367,13 @@ export default function KontaktPage() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
+            <BuchungsLink
+              href={buchungsLinks.beratungsgespraech}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Jetzt Beratung buchen
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
           </div>
         </div>
       </section>
@@ -396,13 +397,13 @@ export default function KontaktPage() {
           </motion.div>
           <TransformationSlideshow />
           <div className="mt-10 text-center">
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
+            <BuchungsLink
+              href={buchungsLinks.beratungsgespraech}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Jetzt Beratung buchen
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
           </div>
         </div>
       </section>
@@ -432,13 +433,13 @@ export default function KontaktPage() {
             einmal mehr aufs nächste Jahr zu verschieben.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/kostenloses-beratungsgespraech/buchen"
+            <BuchungsLink
+              href={buchungsLinks.beratungsgespraech}
               className="group inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all hover:bg-orange/90 hover:gap-3"
             >
               Beratung buchen
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </BuchungsLink>
             <a
               href={siteConfig.whatsapp}
               target="_blank"

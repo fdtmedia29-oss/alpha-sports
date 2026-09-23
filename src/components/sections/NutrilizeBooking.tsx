@@ -3,7 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 
 /**
- * Buchungs-Auswahl für nutrilize (portal.nutrilize.app).
+ * Buchungs-Auswahl für nutrilize (seit 23.09.2026 über die Alpha Sports App, alpha-sports-app.web.app).
  *
  * Löst die alten Virtuagym-Widgets ab (Umstellung 31.08.2026, Links von Luigi).
  *

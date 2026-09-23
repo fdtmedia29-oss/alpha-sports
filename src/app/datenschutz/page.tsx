@@ -676,7 +676,8 @@ export default function DatenschutzPage() {
               blossen Aufruf unserer Seiten wird keine Verbindung zu nutrilize
               hergestellt. Erst wenn Sie auf &laquo;Termin buchen&raquo;
               klicken, werden Sie in einem neuen Fenster zum Buchungsportal
-              unter portal.nutrilize.app weitergeleitet. Ab diesem Zeitpunkt
+              unter alpha-sports-app.web.app (unsere Alpha Sports App, betrieben
+              mit nutrilize) weitergeleitet. Ab diesem Zeitpunkt
               kann nutrilize technische Daten (z.&nbsp;B. Ihre IP-Adresse)
               verarbeiten und Cookies setzen. Wenn Sie dort einen Termin
               buchen, werden die von Ihnen eingegebenen Daten (z.&nbsp;B. Name,

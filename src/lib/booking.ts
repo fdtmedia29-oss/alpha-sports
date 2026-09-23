@@ -4,16 +4,20 @@
  * Quelle: Luigi, "Nutrilize Buchungslinks für Webseite", 31.08.2026.
  * Ersetzt die früheren Virtuagym-Widgets. Ändert Luigi einen Link,
  * wird er nur hier getauscht.
+ *
+ * Seit 23.09.2026 über die neue Alpha Sports App (alpha-sports-app.web.app,
+ * nutrilize unter Luigis eigenem Namen). Von Luigi per WhatsApp. Die IDs sind
+ * dieselben wie vorher auf portal.nutrilize.app, nur die Domain ist neu.
  */
 
 export const buchungsLinks = {
   beratungsgespraech:
-    "https://portal.nutrilize.app/appointment/RsF3dl6gELoRqamgEoaq",
-  inbody: "https://portal.nutrilize.app/appointment/CCI5Cir86OsMIRzj230d",
+    "https://alpha-sports-app.web.app/appointment/RsF3dl6gELoRqamgEoaq",
+  inbody: "https://alpha-sports-app.web.app/appointment/CCI5Cir86OsMIRzj230d",
   leistungsanalyse:
-    "https://portal.nutrilize.app/appointment/t2iG09pTw0rusXQbBeuE",
+    "https://alpha-sports-app.web.app/appointment/t2iG09pTw0rusXQbBeuE",
   stoffwechselanalyse:
-    "https://portal.nutrilize.app/appointment/ouxaHBDmE4hUuk6yM7Ef",
+    "https://alpha-sports-app.web.app/appointment/ouxaHBDmE4hUuk6yM7Ef",
 } as const;
 
 /**
@@ -24,15 +28,14 @@ export const buchungsLinks = {
  * Fläche rendert hat. Hängt dran: beide Kurs-Buttons auf /gruppenkurse, die
  * drei „Jetzt Buchen" der Kurskarten und der Knopf auf der Startseite.
  *
- * ⏳ Luigi hat im selben Atemzug angekündigt: „Sobald denn d Alpha Sports App
- * fertig isch, schick ich dir den neu." Wenn der neue Link kommt, wird hier
- * eine Zeile getauscht, sonst nichts.
+ * ✅ Luigi hatte angekündigt: „Sobald denn d Alpha Sports App fertig isch,
+ * schick ich dir den neu." Am 23.09.2026 kam er, jetzt auf der App-Domain.
  *
  * Die kostenlose Probewoche läuft bewusst über denselben Kalender — Luigi hat
  * einen Link für die Website geschickt, keinen zweiten für die Probewoche.
  */
 export const gruppenkurseBuchung =
-  "https://portal.nutrilize.app/profile/ZhZwxOv4tTStfB8OFqptdYZ7gD52/classes";
+  "https://alpha-sports-app.web.app/profile/ZhZwxOv4tTStfB8OFqptdYZ7gD52/classes";
 
 /** Zeigt die Kursbuchung schon auf nutrilize? Steuert target/rel der Buttons. */
 export const gruppenkurseExtern = gruppenkurseBuchung.startsWith("http");

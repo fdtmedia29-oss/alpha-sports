@@ -102,6 +102,9 @@ export default function DatenschutzPage() {
               Dienste von Drittanbietern ein (z.&nbsp;B. Google Maps). Die
               Termin- und Kursbuchung läuft über nutrilize, allerdings erst
               nach einem Klick in einem neuen Fenster, nicht eingebettet.
+              Die aktuelle Zahl unserer Google-Bewertungen lädt die Seite von
+              einem Server unseres Webdienstleisters DomAI, der ebenfalls bei
+              Vercel liegt. Dabei werden keine Daten an Google übertragen.
             </p>
             <p className="mt-3">
               Detaillierte Informationen zu diesen Tools finden Sie in der

@@ -8,6 +8,7 @@ import { Check, ArrowRight, Shield } from "lucide-react";
 import BuchungsLink from "@/components/ui/BuchungsLink";
 import { gruppenkurseBuchung } from "@/lib/booking";
 import { certifications } from "@/lib/content";
+import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/hyrox" },
@@ -234,8 +235,8 @@ export default function HyroxPage() {
             <div className="flex items-center gap-1.5 text-sm font-medium text-dark">
               <span className="text-lg text-amber-500">★</span>
               <span>
-                5.0 auf Google{" "}
-                <span className="text-muted">— 70+ Bewertungen</span>
+                <GoogleRatingValue /> auf Google{" "}
+                <span className="text-muted">— <GoogleReviewCount plus /> Bewertungen</span>
               </span>
             </div>
           </div>

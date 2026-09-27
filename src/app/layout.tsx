@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import RacePopup from "@/components/race/RacePopup";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { getGoogleRating } from "@/lib/googleRating";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,11 +73,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const googleRating = await getGoogleRating();
   return (
     <html lang="de">
       <head>
@@ -107,8 +109,8 @@ export default function RootLayout({
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "5.0",
-                reviewCount: "70",
+                ratingValue: googleRating.rating.toFixed(1),
+                reviewCount: String(googleRating.count),
                 bestRating: "5",
               },
               priceRange: "CHF 30 - CHF 1760",

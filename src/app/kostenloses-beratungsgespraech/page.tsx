@@ -9,6 +9,7 @@ import { siteConfig, faqSections } from "@/lib/content";
 import { useRef, useState, useEffect } from "react";
 import TransformationSlideshow from "@/components/sections/TransformationSlideshow";
 import PageFAQ from "@/components/sections/PageFAQ";
+import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating";
 
 const consultationSteps = [
   { step: "01", title: "Kennenlernen", description: "Wir lernen dich und deine Geschichte kennen." },
@@ -166,7 +167,7 @@ export default function KontaktPage() {
             </a>
             <span className="flex items-center gap-1.5 text-sm text-white/50">
               <Star className="h-4 w-4 fill-orange text-orange" />
-              5.0 auf Google - 70+ Bewertungen
+              <GoogleRatingValue /> auf Google - <GoogleReviewCount plus /> Bewertungen
             </span>
           </motion.div>
         </div>

@@ -3,6 +3,7 @@ import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import TransformationSlideshow from "@/components/sections/TransformationSlideshow";
 import { Star, Quote } from "lucide-react";
+import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/erfolgsgeschichten" },
@@ -145,7 +146,7 @@ export default function ErfolgsgeschichtenPage() {
 
           <div className="mt-16 rounded-2xl bg-bg-alt p-8 text-center md:p-12">
             <h2 className="text-2xl font-bold text-text">
-              5.0 auf Google - 70+ Bewertungen
+              <GoogleRatingValue /> auf Google - <GoogleReviewCount plus /> Bewertungen
             </h2>
             <p className="mt-4 text-text-secondary">
               Unsere Kunden bewerten uns mit 5.0 von 5 Sternen.

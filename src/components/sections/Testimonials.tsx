@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Info, ShieldCheck } from "lucide-react";
 import { googleReviews } from "@/lib/content";
+import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating";
 
 function TrustindexBadge() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -75,11 +76,11 @@ export default function Testimonials() {
                 ))}
               </div>
               <span className="text-sm font-medium text-text-secondary">
-                5.0 auf Google
+                <GoogleRatingValue /> auf Google
               </span>
             </div>
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-text md:text-4xl">
-              70 zufriedene Kunden sprechen für sich.
+              <GoogleReviewCount /> zufriedene Kunden sprechen für sich.
             </h2>
             <TrustindexBadge />
           </div>
@@ -161,7 +162,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="mt-3 text-sm font-medium text-text-secondary">
-                Alle 70 Bewertungen lesen
+                Alle <GoogleReviewCount /> Bewertungen lesen
               </p>
               <a
                 href="https://www.google.com/maps/place/Alpha+Sports"

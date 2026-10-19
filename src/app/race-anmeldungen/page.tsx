@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import type { Metadata } from "next";
 import { KATEGORIEN, belegung, ensureSchema, sql, type Kategorie } from "@/lib/race";
+import { LoeschenKnopf } from "./LoeschenKnopf";
 
 export const dynamic = "force-dynamic";
 
@@ -66,6 +67,7 @@ export default async function Page({
     );
   }
 
+  const schluessel = key;
   await ensureSchema();
   const q = sql();
   const [zeilen, kategorien] = await Promise.all([
@@ -100,6 +102,7 @@ export default async function Page({
             <thead>
               <tr>
                 {[
+                  "",
                   "Nr.",
                   "Eingang",
                   "Kategorie",
@@ -124,6 +127,17 @@ export default async function Page({
                 return (
                   <Fragment key={z.id}>
                     <tr style={i % 2 ? S.trAlt : undefined}>
+                      <td style={S.td}>
+                        <LoeschenKnopf
+                          id={z.id}
+                          name={
+                            doppel && z.p_vorname
+                              ? `${z.vorname} ${z.nachname} + ${z.p_vorname} ${z.p_nachname}`
+                              : `${z.vorname} ${z.nachname}`
+                          }
+                          schluessel={schluessel}
+                        />
+                      </td>
                       <td style={S.td}>{z.id}</td>
                       <td style={S.td}>{datum(z.created_at)}</td>
                       <td style={{ ...S.td, ...S.tdStrong }}>
@@ -150,6 +164,7 @@ export default async function Page({
                     </tr>
                     {doppel && z.p_vorname && (
                       <tr style={i % 2 ? S.trAlt : undefined}>
+                        <td style={S.td}></td>
                         <td style={S.td}></td>
                         <td style={{ ...S.td, ...S.tdPartner }}>Partner</td>
                         <td style={S.td}></td>
@@ -243,7 +258,9 @@ export default async function Page({
 
         <p style={S.fuss}>
           Die Liste aktualisiert sich bei jedem Neuladen. Bei Doubles stehen beide
-          Teilnehmer untereinander, das Paar belegt zusammen einen Startplatz.
+          Teilnehmer untereinander, das Paar belegt zusammen einen Startplatz. Sagt
+          jemand ab, mit «Löschen» entfernen; bei einem Double gehen beide raus und
+          der Startplatz wird wieder frei.
         </p>
       </div>
     </main>

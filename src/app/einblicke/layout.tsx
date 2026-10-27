@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/einblicke" },
+  openGraph: pageOpenGraph("/einblicke"),
   title: "Einblicke ins Studio",
   description:
     "Einblicke in das Alpha Sports Personal Training Studio in St. Gallen. Privat, modern und voll ausgestattet. Video-Testimonials und Studio-Galerie.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import TransformationSlideshow from "@/components/sections/TransformationSlideshow";
@@ -7,6 +8,7 @@ import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/erfolgsgeschichten" },
+  openGraph: pageOpenGraph("/erfolgsgeschichten"),
   title: "Erfolgsgeschichten",
   description:
     "Erfolgsgeschichten und Testimonials von Alpha Sports Kunden. Abnehmen, Muskelaufbau, Schmerzfreiheit — echte Ergebnisse von echten Menschen in St. Gallen.",

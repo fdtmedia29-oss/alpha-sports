@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
@@ -10,6 +11,7 @@ import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ernaehrungsberatung" },
+  openGraph: pageOpenGraph("/ernaehrungsberatung"),
   title: "Ernährungsberatung",
   description:
     "Professionelle Ernährungsberatung in St. Gallen. Massgeschneiderte Ernährungspläne für Abnehmen, Muskelaufbau und Wohlbefinden. Qualitop zertifiziert.",

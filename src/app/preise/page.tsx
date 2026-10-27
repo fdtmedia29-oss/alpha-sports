@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PricingTabs from "@/components/sections/PricingTabs";
@@ -8,6 +9,7 @@ import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/preise" },
+  openGraph: pageOpenGraph("/preise"),
   title: "Preise für Personal Training, Coaching & Gruppenkurse",
   description:
     "Preise für Personal Training, Online Coaching, Gruppenkurse, Trainingspakete, Analysen, Ernährungsberatung und mehr bei Alpha Sports St. Gallen. Transparent und fair. Krankenkassen anerkannt.",

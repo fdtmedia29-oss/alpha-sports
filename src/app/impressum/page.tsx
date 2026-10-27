@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/impressum" },
+  openGraph: pageOpenGraph("/impressum"),
   title: "Impressum",
   description: "Impressum und rechtliche Angaben von Alpha Sports GmbH, St. Gallen.",
 };

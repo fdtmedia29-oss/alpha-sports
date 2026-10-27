@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
@@ -13,6 +14,7 @@ import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/analysen" },
+  openGraph: pageOpenGraph("/analysen"),
   title: "Analysen & Diagnostik",
   description:
     "InBody Körperanalyse, Stoffwechsel- und Stressanalyse und Leistungsanalyse in St. Gallen. Datenbasiertes Training für messbare Ergebnisse bei Alpha Sports.",

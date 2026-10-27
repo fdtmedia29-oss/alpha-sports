@@ -61,3 +61,11 @@ body {
     padding: 6rem 4rem;
   }
 }
+
+/* Voiceflow-Chat: eigene Ebene über Navigation (z-50) und WhatsApp-Knopf (z-40), unter
+   dem Handy-Menü (z-[60]) und dem Race-Popup (z-[70]). Ohne das liegt der Chat-Knopf
+   über dem abgedunkelten Popup und dem offenen Menü. */
+#voiceflow-chat {
+  position: relative;
+  z-index: 55;
+}

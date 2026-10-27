@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/datenschutz" },
+  openGraph: pageOpenGraph("/datenschutz"),
   title: "Datenschutz",
   description: "Datenschutzerklärung der Alpha Sports GmbH, St. Gallen.",
 };

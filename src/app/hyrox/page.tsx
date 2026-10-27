@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import PhotoCarousel from "@/components/ui/PhotoCarousel";
@@ -12,6 +13,7 @@ import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/hyrox" },
+  openGraph: pageOpenGraph("/hyrox"),
   title: "HYROX Training",
   description:
     "HYROX Training und Wettkampfvorbereitung bei Alpha Sports St. Gallen. HYROX365 zertifizierte Trainer. Funktionelle Kraft und Ausdauer.",

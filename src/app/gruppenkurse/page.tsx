@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
@@ -13,6 +14,7 @@ import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/gruppenkurse" },
+  openGraph: pageOpenGraph("/gruppenkurse"),
   title: "Gruppenkurse",
   description:
     "Gruppenkurse bei Alpha Sports St. Gallen: HYROX, Indoor Bootcamp & HYROX Strength. Max. 12 Teilnehmer. Kostenlose Probewoche. Krankenkassen anerkannt.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
 import CoachingTimeline from "@/components/sections/CoachingTimeline";
@@ -21,6 +22,7 @@ import { GoogleRatingValue, GoogleReviewCount } from "@/components/GoogleRating"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/online-coaching" },
+  openGraph: pageOpenGraph("/online-coaching"),
   title: "Online Coaching",
   description:
     "12-Wochen Online Coaching Programm von Alpha Sports. Individueller Trainings- & Ernährungsplan, persönliche Betreuung via App. Alpha Sports Shape & Shape Pro. Von überall trainieren.",

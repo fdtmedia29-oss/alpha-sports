@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/agb" },
+  openGraph: pageOpenGraph("/agb"),
   title: "AGB",
   description: "Allgemeine Geschäftsbedingungen der Alpha Sports GmbH, St. Gallen.",
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/seo";
 import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import CTABanner from "@/components/sections/CTABanner";
@@ -7,6 +8,7 @@ import { Check, Shield, Users, Eye } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ueber-uns" },
+  openGraph: pageOpenGraph("/ueber-uns"),
   title: "Über uns — Das Team hinter Alpha Sports",
   description:
     "Lerne das Alpha Sports Team kennen. Zertifizierte Personal Trainer, Physiotherapeutin und Fitness-Experten in St. Gallen. Qualitop zertifiziert.",

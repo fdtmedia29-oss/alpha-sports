@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { pageOpenGraph } from "@/lib/seo";
 import { getGoogleRating } from "@/lib/googleRating";
 
 const inter = Inter({
@@ -43,23 +44,7 @@ export const metadata: Metadata = {
     "Fitness Coach St. Gallen",
     "Krankenkassen anerkannt Training",
   ],
-  openGraph: {
-    title: "Alpha Sports — Personal Training Studio St. Gallen",
-    description:
-      "Individuelles Personal Training, Ernährungsberatung und Gruppenkurse im privaten Studio in St. Gallen. Krankenkassen anerkannt.",
-    type: "website",
-    locale: "de_CH",
-    siteName: "Alpha Sports",
-    url: "https://alpha-sports.ch",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Alpha Sports — Personal Training Studio St. Gallen",
-      },
-    ],
-  },
+  openGraph: pageOpenGraph("/"),
   twitter: {
     card: "summary_large_image",
   },

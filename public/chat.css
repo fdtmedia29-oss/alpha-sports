@@ -1,0 +1,8 @@
+/* Wird über assistant.stylesheet IN den Voiceflow-Chat geladen (dessen Inneres ist von
+   aussen nicht erreichbar). Einzige Aufgabe: der Chat-Knopf sitzt über dem grünen
+   WhatsApp-Knopf (WhatsAppButton.tsx: bottom 24px, right 24px, 56px hoch).
+   24 + 56 + 12 Abstand = 92px. */
+.vfrc-launcher__container {
+  bottom: 92px !important;
+  right: 24px !important;
+}

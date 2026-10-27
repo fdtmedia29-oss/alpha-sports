@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import RacePopup from "@/components/race/RacePopup";
+import VoiceflowWidget from "@/components/chat/VoiceflowWidget";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { getGoogleRating } from "@/lib/googleRating";
@@ -182,6 +183,7 @@ export default async function RootLayout({
         <Footer />
         <WhatsAppButton />
         <RacePopup />
+        <VoiceflowWidget />
         <Analytics />
       </body>
     </html>

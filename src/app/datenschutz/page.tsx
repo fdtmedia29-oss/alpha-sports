@@ -705,6 +705,45 @@ export default function DatenschutzPage() {
               .
             </p>
 
+            <h3 className="mt-6 text-lg font-semibold text-text">
+              Chat-Assistent (Voiceflow)
+            </h3>
+            <p className="mt-3">
+              Auf unserer Website ist ein KI-gestützter Chat-Assistent
+              eingebunden. Er beantwortet Fragen zu unseren Angeboten und
+              verweist auf die passenden Seiten. Betrieben wird er mit dem
+              Dienst Voiceflow der Voiceflow Inc., Kanada.
+            </p>
+            <p className="mt-3">
+              Beim Aufruf unserer Seiten wird das Chat-Fenster von Voiceflow
+              geladen. Dabei werden technische Daten wie Ihre IP-Adresse an
+              Voiceflow übermittelt. Wenn Sie den Chat nutzen, werden Ihre
+              Eingaben zur Beantwortung an Voiceflow übertragen, dort mit Hilfe
+              eines KI-Sprachmodells verarbeitet und als Gesprächsverlauf
+              gespeichert. Der Chat speichert den Verlauf zudem in Ihrem
+              Browser, damit er beim nächsten Seitenwechsel erhalten bleibt.
+              Der Chat fragt nicht nach Name, Telefonnummer oder E-Mail-Adresse.
+              Bitte geben Sie im Chat keine sensiblen Daten, insbesondere keine
+              Gesundheitsdaten, ein.
+            </p>
+            <p className="mt-3">
+              Die Verarbeitung erfolgt auf Grundlage unseres berechtigten
+              Interesses, Fragen von Besucherinnen und Besuchern schnell zu
+              beantworten (Art. 6 Abs. 1 lit. f DSGVO). Dabei kann es zu einer
+              Übermittlung in Länder ausserhalb der Schweiz und der EU kommen.
+              Weitere Informationen finden Sie in der Datenschutzerklärung von
+              Voiceflow:{" "}
+              <a
+                href="https://www.voiceflow.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange underline underline-offset-4 hover:text-orange/80"
+              >
+                https://www.voiceflow.com/privacy
+              </a>
+              .
+            </p>
+
           </div>
 
           {/* ==================== 7. eCommerce und Zahlungsanbieter ==================== */}
@@ -735,7 +774,7 @@ export default function DatenschutzPage() {
           </div>
 
           {/* ==================== Stand ==================== */}
-          <p className="text-sm text-text-secondary">Stand: Juli 2026</p>
+          <p className="text-sm text-text-secondary">Stand: Oktober 2026</p>
         </div>
       </div>
     </section>

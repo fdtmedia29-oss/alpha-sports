@@ -30,7 +30,8 @@ export function istKategorie(v: unknown): v is Kategorie {
  * urspruenglicher Bestaetigung (24.08). Achtung Zeitzone: im November gilt
  * CET (+01:00), nicht mehr CEST.
  */
-export const ANMELDESCHLUSS = new Date("2026-11-04T23:59:59+01:00");
+// 03.11.2026: auf Julias Wunsch (WhatsApp 02.11) vorzeitig geschlossen, statt Mi 04.11.
+export const ANMELDESCHLUSS = new Date("2026-11-03T09:00:00+01:00");
 
 export function anmeldungGeschlossen(jetzt = new Date()) {
   return jetzt.getTime() > ANMELDESCHLUSS.getTime();

@@ -12,7 +12,7 @@ import { X, ArrowRight } from "lucide-react";
  * nie auf der Race-Seite selbst.
  */
 
-const ENDE = new Date("2026-11-05T00:00:00+01:00");
+const ENDE = new Date("2026-11-03T09:00:00+01:00");
 const SPEICHER = "race2026-popup";
 const VERZOEGERUNG = 2600;
 

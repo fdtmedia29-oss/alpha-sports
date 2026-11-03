@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HYROX Race Simulation 2026 — Alpha Sports St. Gallen</title>
-<meta name="description" content="Am 7. November 2026 feiert Alpha Sports 5 Jahre mit einer HYROX Race Simulation in St. Gallen. Full oder Half, Single oder Double, 52 Startplätze, Teilnahme kostenlos. Anmeldeschluss 4. November.">
+<meta name="description" content="Am 7. November 2026 feiert Alpha Sports 5 Jahre mit einer HYROX Race Simulation in St. Gallen. Full oder Half, Single oder Double, 52 Startplätze, Teilnahme kostenlos. Die Anmeldung ist geschlossen.">
 <link rel="canonical" href="https://alpha-sports.ch/race">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alpha-sports.ch/race">
 <meta property="og:site_name" content="Alpha Sports St. Gallen">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="HYROX Race Simulation — 7. November 2026, St. Gallen">
-<meta property="og:description" content="5 Jahre Alpha Sports. Full oder Half, Single oder Double. 52 Startplätze, Teilnahme kostenlos. Anmeldeschluss 4. November.">
+<meta property="og:description" content="5 Jahre Alpha Sports. Full oder Half, Single oder Double. 52 Startplätze, Teilnahme kostenlos. Die Anmeldung ist geschlossen.">
 <meta property="og:image" content="https://alpha-sports.ch/race/img/hero.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="800">
@@ -339,7 +339,7 @@ table.w tbody tr:nth-child(even){background:var(--bg-alt)}
       <a href="#anmeldung" class="btn">Startplatz sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="#kategorien" class="btn btn-o">Kategorien ansehen</a>
     </div>
-    <div class="hnote"><span class="pulse"></span><span id="hnote">Nur <b>52 Startplätze</b> · Teilnahme kostenlos · Anmeldeschluss 4. November</span></div>
+    <div class="hnote"><span class="pulse"></span><span id="hnote">Anmeldung geschlossen · Race am Samstag, 7. November</span></div>
   </div>
 </header>
 
@@ -490,7 +490,7 @@ table.w tbody tr:nth-child(even){background:var(--bg-alt)}
     <div class="ic-row"><div class="ic-k">Wo</div><div class="ic-v">Unterer Graben 21, 9000 St. Gallen<span>Alpha Sports Personal Training</span></div></div>
     <div class="ic-row"><div class="ic-k">Kategorien</div><div class="ic-v">Full oder Half, Single oder Double<span>Full 8 × 1000 m, Half 8 × 500 m, je 8 Übungs-Stationen</span></div></div>
     <div class="ic-row"><div class="ic-k">Startplätze</div><div class="ic-v">52 insgesamt<span>Full Single 20 · Full Double 10 · Half Single 10 · Half Double 12</span></div></div>
-    <div class="ic-row"><div class="ic-k">Anmeldeschluss</div><div class="ic-v">Mittwoch, 4. November 2026<span>Danach nehmen wir nur noch auf Anfrage jemanden auf</span></div></div>
+    <div class="ic-row"><div class="ic-k">Anmeldeschluss</div><div class="ic-v">Anmeldung geschlossen<span>Wer trotzdem noch dabei sein möchte, schreibt an info@alpha-sports.ch</span></div></div>
     <div class="ic-row"><div class="ic-k">Gewichte</div><div class="ic-v">Offizielle HYROX-Open-Gewichte<span>Bei Doubles frei zwischen beiden aufteilbar</span></div></div>
     <div class="ic-row"><div class="ic-k">Kosten</div><div class="ic-v">Kostenlos<span>Für Mitglieder und alle von ausserhalb</span></div></div>
     <div class="ic-row"><div class="ic-k">Mitbringen</div><div class="ic-v">Trainingskleidung und Hallenschuhe<span>Bitte keine Strassenschuhe</span></div></div>
@@ -738,7 +738,9 @@ table.w tbody tr:nth-child(even){background:var(--bg-alt)}
       });
 
       // Hero + Fussnote
-      if (hnote){
+      if (hnote && d.geschlossen){
+        hnote.innerHTML = 'Anmeldung geschlossen · Race am Samstag, 7. November';
+      } else if (hnote){
         hnote.innerHTML = d.freiGesamt > 0
           ? 'Noch <b>' + d.freiGesamt + ' von ' + d.plaetzeGesamt + ' Startplätzen</b> · Teilnahme kostenlos · Anmeldeschluss 4. November'
           : 'Alle <b>' + d.plaetzeGesamt + ' Startplätze</b> vergeben · Warteliste offen · Anmeldeschluss 4. November';
@@ -755,8 +757,8 @@ table.w tbody tr:nth-child(even){background:var(--bg-alt)}
   }
 
   function geschlossen(){
-    form.innerHTML = '<div class="closed"><h3>Die Anmeldefrist ist abgelaufen</h3>' +
-      '<p>Anmeldeschluss war der 4. November 2026. Schreib uns an ' +
+    form.innerHTML = '<div class="closed"><h3>Die Anmeldung ist geschlossen</h3>' +
+      '<p>Schreib uns an ' +
       '<a href="mailto:info@alpha-sports.ch">info@alpha-sports.ch</a>, wenn du trotzdem noch dabei sein möchtest.</p></div>';
   }
 

@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/analysen",
     "/gruppenkurse",
     "/hyrox",
-    "/race",
     "/preise",
     "/ueber-uns",
     "/erfolgsgeschichten",
@@ -26,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" || route === "/race" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route === "/race" || route === "/preise" ? 0.9 : 0.8,
+    changeFrequency: route === "" ? "weekly" : "monthly",
+    priority: route === "" ? 1 : route === "/preise" ? 0.9 : 0.8,
   }));
 }

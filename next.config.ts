@@ -1,17 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return {
-      // Die Race-Seite liegt als statisches HTML in public/race/.
-      beforeFiles: [{ source: "/race", destination: "/race/index.html" }],
-      afterFiles: [],
-      fallback: [],
-    };
-  },
-
   async redirects() {
     return [
+      // Race war am 07.11.2026: die Seite ist vorbei. Nicht dauerhaft, falls es 2027 wieder eines gibt.
+      { source: "/race", destination: "/hyrox", permanent: false },
+      { source: "/race/index.html", destination: "/hyrox", permanent: false },
+
       // Old landing pages → new pages
       { source: "/personal-traininglp", destination: "/personal-training", permanent: true },
       { source: "/lp-online-coaching", destination: "/online-coaching", permanent: true },

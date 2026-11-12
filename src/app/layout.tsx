@@ -4,7 +4,6 @@ import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
-import RacePopup from "@/components/race/RacePopup";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { getGoogleRating } from "@/lib/googleRating";
@@ -181,7 +180,6 @@ export default async function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
-        <RacePopup />
         <Analytics />
       </body>
     </html>

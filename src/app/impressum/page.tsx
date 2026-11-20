@@ -103,12 +103,12 @@ export default function ImpressumPage() {
             <p className="mt-2">
               Design & Entwicklung:{" "}
               <a
-                href="https://domai.ch"
+                href="https://pharon.ch"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-text underline underline-offset-4 hover:text-orange"
               >
-                DomAI
+                Pharon
               </a>
             </p>
           </div>
